@@ -62,4 +62,4 @@ Virtue Premium comes with premium content like the Kadence Slider, Cyclone Slide
 
 #Documentation#
 
-http://docs.kadencethemes.com/virtue/
+http://docs.kadencethemes.com/virtue/?ref=5
