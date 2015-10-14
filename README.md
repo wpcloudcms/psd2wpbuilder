@@ -29,7 +29,7 @@ Virtue Premium comes with premium content like the Kadence Slider, Cyclone Slide
 
 Virtue Premium is Translation ready! This theme comes with Italian, French and Spanish language files as well as the needed .po files to translate into any language.
 
-for more info click 
+for more info click my affiliate link below
 
 http://www.kadencethemes.com/product/virtue-premium-theme/?ref=5
 
