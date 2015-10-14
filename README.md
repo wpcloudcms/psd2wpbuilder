@@ -13,7 +13,7 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
 
 -------------------------------------------------------
-WPCloudCMS is Child Theme of Virtue Premium by kadencethemes.
+WPCloudCMS is Child Theme of Virtue Premium.
 -------------------------------------------------------
 
 #Credits#
