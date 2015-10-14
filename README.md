@@ -1,12 +1,17 @@
 #About Theme#
 
 Theme Name: WPCloudCMS
+
 Theme URI: http://bigcloudcms.com/wpcloudcms/
+
 Version: 1.0.0
+
 Tested up to: WP 4.3.1
 
 License: GNU General Public License v3.0
+
 License URI: http://www.gnu.org/licenses/gpl.html
+
 -------------------------------------------------------
 WPCloudCMS theme, Copyright 2015 bigcloudcms.com
 WPCloudCMS WordPress theme is distributed under the terms of the GNU GPL
@@ -26,7 +31,8 @@ Virtue Premium comes with premium content like the Kadence Slider, Cyclone Slide
 
 Virtue Premium is Translation ready! This theme comes with Italian, French and Spanish language files as well as the needed .po files to translate into any language.
 
-for more info click below 
+for more info click 
+
 http://www.kadencethemes.com/product/virtue-premium-theme/?ref=5
 
 #Requirements#
