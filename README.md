@@ -13,9 +13,11 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
 
 -------------------------------------------------------
+
 WPCloudCMS theme, Copyright 2015 bigcloudcms.com
 WPCloudCMS WordPress theme is distributed under the terms of the GNU GPL
 WPCloudCMS is Child Theme of Virtue Premium by kadencethemes.
+
 -------------------------------------------------------
 
 #Credits#
