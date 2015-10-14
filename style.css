@@ -1,13 +1,15 @@
 /*
- Theme Name:   WPCloudCMS
- Theme URI:    http://bigcloudcms.com/wpcloudcms/
+ Theme Name:        WPCloudCMS
+ Theme URI:         http://bigcloudcms.com/wpcloudcms/
+ Version:           1.0.0
  Description:  
- Author:       Webtimiser Team
- Author URI:   http://www.webtimiser.dk/
- Template:     virtue_premium
- Version:      1.0.0
- Tags:         light, dark, two-columns, responsive-layout
- Text Domain:  virtue-child
+ Author:            Webtimiser Team
+ Author URI:        http://www.webtimiser.dk/
+ Template:          virtue_premium
+ Template Version:  3.3.1
+ Tags:              light, dark, two-columns, responsive-layout
+GitHub Theme URI:   https://github.com/bigcloudcms/wpcloudcms
+GitHub Branch:      master
 */
 
 @import url("../virtue_premium/style.css");
