@@ -446,9 +446,9 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['secondary_menu_size'])) {
-  $smenu_width = '#nav-second ul.sf-menu>li {width:'.$virtue_premium['secondary_menu_size'].';}';
+  $smenu_padding = '#nav-second ul.sf-menu>li {padding: 0px '.$virtue_premium['secondary_menu_size'].'; width: auto;}';
   } else {
-  $smenu_width = '';
+  $smenu_padding = '';
   } 
   if(isset($virtue_premium['hide_author']) and ($virtue_premium['hide_author'] == 0)) {
   $show_author = '.kad-hidepostauthortop, .postauthortop {display:none;}';
@@ -555,7 +555,7 @@ if (!empty($virtue_premium['custom_css'])) {
 
 $kad_custom_css = '<style type="text/css">'.$site_width_below_992px.$site_width_above_992px.$site_top_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$color_grayfont.$color_footerfont
 .$color_primary.$color_smenu_hover.$color_smenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color
-.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_width.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.'</style>';
+.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.'</style>';
 
   echo $kad_custom_css;
 }
