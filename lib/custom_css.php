@@ -446,7 +446,7 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['secondary_menu_size'])) {
-  $smenu_padding = '#nav-second ul.sf-menu>li {padding-left:'.$virtue_premium['secondary_menu_size'].'; padding-right:'.$virtue_premium['secondary_menu_size'].'; width: auto;}';
+  $smenu_padding = '#nav-second ul.sf-menu>li {padding-left:'.$virtue_premium['secondary_menu_size'].'px; padding-right:'.$virtue_premium['secondary_menu_size'].'px; width: auto;}';
   } else {
   $smenu_padding = '';
   } 
