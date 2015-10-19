@@ -3522,6 +3522,13 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'virtue'),
             //'validate' => 'css',
             ),
+             array(
+            'id'=>'custom_js',
+            'type' => 'textarea',
+            'title' => __('Custom JS', 'virtue'), 
+            'subtitle' => __('Quickly add some JS to your theme by adding it to this block.', 'virtue'),
+            //'validate' => 'js',
+            ),
     ),
 ) );
 Redux::setSection( $opt_name, array(
