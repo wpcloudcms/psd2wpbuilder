@@ -531,7 +531,7 @@ Redux::setSection( $opt_name, array(
             "min"       => "0",
             "step"      => "5",
             "max"       => "300",
-            ), 
+            ),  
             array(
             'id'=>'info_calltoaction_sitewide',
             'type' => 'info',
