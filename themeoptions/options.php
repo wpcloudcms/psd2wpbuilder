@@ -646,10 +646,10 @@ Redux::setSection( $opt_name, array(
             'id'=>'font_copyrt_text',
             'type' => 'typography', 
             'title' => __('Copyrights Font', 'virtue'),
-            //'compiler'=>true, // Use if you want to hook in your own CSS compiler
+            'compiler'=>true, // Use if you want to hook in your own CSS compiler
             'font-family'=>true, 
             'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
-            'font-backup'=>true, // Select a backup non-google font in addition to a google font
+            'font-backup'=>false, // Select a backup non-google font in addition to a google font
             'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
             'subsets'=>true, // Only appears if google is true and subsets not set to false
             'font-size'=>true,
