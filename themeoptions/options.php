@@ -648,7 +648,7 @@ Redux::setSection( $opt_name, array(
             'title' => __('Footer Copyrights Text', 'virtue'), 
             'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'virtue'),
             'default' => '<div class="credit">
-                        <span class="pow-by">Powered by:</span>
+                        <span class="pow-by">Powered and Designed by:</span>
                         <span  class="company"><a href="#">Company.com</a></span>
                         </div>',
             ),
