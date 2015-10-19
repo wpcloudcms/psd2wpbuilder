@@ -3541,6 +3541,22 @@ Redux::setSection( $opt_name, array(
     ),
 ) );
 Redux::setSection( $opt_name, array(
+    'id' => 'hints_for_ndevs',
+    'icon' => 'icon-tools',
+    'icon_class' => 'icon-large',
+    'title' => __('Hints for Non Devs', 'virtue'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Hints for Non Developers', 'virtue')."</h3></div>",
+    'fields' => array( 
+                 array(
+                    'id'=>'custom_js',
+                    'type' => 'textarea',
+                    'title' => __('Custom JS', 'virtue'), 
+                    'subtitle' => __('Quickly add some JS to your theme by adding it to this block.', 'virtue'),
+                    //'validate' => 'js',
+                    ),
+                ),
+            );
+Redux::setSection( $opt_name, array(
                     'id' => 'import_export',
                     'title'  => __( 'Import / Export', 'virtue' ),
                     'desc'   => __( 'Import and Export your Theme Options from text or URL.', 'virtue' ),
