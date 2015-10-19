@@ -446,12 +446,12 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['secondary_menu_width'])) {
-  $smenu_padding = '#nav-second ul.sf-menu>li, #nav-second ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;}';
+  $smenu_padding = '#nav-second ul.sf-menu>li {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;}';
   } else {
   $smenu_padding = '';
   } 
 if(isset($virtue_premium['secondary_menu_height'])) {
-  $smenu_height = '#nav-second ul.sf-menu>li, #nav-second ul.sf-menu>li>a {line-height:'.$virtue_premium['secondary_menu_height'].'px;';
+  $smenu_height = '#nav-second ul.sf-menu>li {line-height:'.$virtue_premium['secondary_menu_height'].'px;';
   } else {
   $smenu_height = '';
   } 
