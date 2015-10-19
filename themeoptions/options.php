@@ -2968,10 +2968,10 @@ Redux::setSection( $opt_name, array(
             'validate' => 'color',
             ),
          array(
-            'id'=>'secondary_menu_width',
+            'id'=>'secondary_menu_height',
             'type' => 'slider', 
-            'title' => __('Secondary Menu Item Width', 'virtue'),
-            'subtitle' => __('Choose px for left and right padding', 'virtue'),
+            'title' => __('Secondary Menu Item Height', 'virtue'),
+            'subtitle' => __('Choose px for height', 'virtue'),
             "default"       => "0",
             "min"       => "0",
             "step"      => "1",
