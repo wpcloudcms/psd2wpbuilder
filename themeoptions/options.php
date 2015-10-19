@@ -163,7 +163,7 @@ Redux::setSection( $opt_name, array(
             "default"       => "970",
             "min"       => "400",
             "step"      => "5",
-            "max"       => "990",
+            "max"       => "1200",
             'required' => array('set_site_width','=','below 992px'),
             ), 
           array(
@@ -172,7 +172,7 @@ Redux::setSection( $opt_name, array(
             'title' => __('For Large Screen Size', 'virtue'),
             'subtitle' => __('@media (min-width: 1200px)', 'virtue'),
             "default"       => "1170",
-            "min"       => "990",
+            "min"       => "400",
             "step"      => "5",
             "max"       => "1600",
             'required' => array('set_site_width','=','above 992px'),
