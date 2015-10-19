@@ -135,7 +135,7 @@ if(!empty($virtue_premium['primary20_color'])) {
   $color_primary30 = '';
 }
 if(!empty($virtue_premium['link_text_color'])) {
-  $link_text_color = 'a, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover, .woocommerce-message:before, .woocommerce-info:before, #nav-second ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color:'.$virtue_premium['link_text_color'].';}';
+  $link_text_color = 'a, a:active, a:hover, a:link, a:visited, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover, .woocommerce-message:before, .woocommerce-info:before, #nav-second ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color:'.$virtue_premium['link_text_color'].';}';
   } else {
   $link_text_color = '';
   }
