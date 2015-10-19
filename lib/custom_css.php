@@ -450,11 +450,11 @@ if(isset($virtue_premium['secondary_menu_width'])) {
   } else {
   $smenu_padding = '';
   } 
-//if(isset($virtue_premium['secondary_menu_height'])) {
-//  $smenu_height = '#nav-second ul.sf-menu>li, #nav-second ul.sf-menu>li>a {line-height:'.$virtue_premium['secondary_menu_height'].'px;';
-//  } else {
-//  $smenu_height = '';
-//  } 
+if(isset($virtue_premium['secondary_menu_height'])) {
+  $smenu_height = '#nav-second ul.sf-menu>li, #nav-second ul.sf-menu>li>a {line-height:'.$virtue_premium['secondary_menu_height'].'px;}';
+  } else {
+  $smenu_height = '';
+  } 
   if(isset($virtue_premium['hide_author']) and ($virtue_premium['hide_author'] == 0)) {
   $show_author = '.kad-hidepostauthortop, .postauthortop {display:none;}';
   } else {
