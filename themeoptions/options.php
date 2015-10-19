@@ -627,6 +627,13 @@ Redux::setSection( $opt_name, array(
             'type' => 'text',
             'title' => __('Add shortcode here for output just above footer.', 'virtue'),
             ),
+            array(
+            'id'=>'footer_text',
+            'type' => 'textarea',
+            'title' => __('Footer Copyright Text', 'virtue'), 
+            'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'virtue'),
+            'default' => '[copyright] [the-year] [site-name] [theme-credit]',
+            ),
         ),
 ) );
 Redux::setSection( $opt_name, array(
@@ -3355,13 +3362,6 @@ Redux::setSection( $opt_name, array(
             'msg' => __('Enter a valid email address.', 'virtue'),
             'default' => 'test@test.com'
             ),  
-        array(
-            'id'=>'footer_text',
-            'type' => 'textarea',
-            'title' => __('Footer Copyright Text', 'virtue'), 
-            'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'virtue'),
-            'default' => '[copyright] [the-year] [site-name] [theme-credit]',
-            ),
         array(
             'id'=>'info_search_sidebars',
             'type' => 'info',
