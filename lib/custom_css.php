@@ -18,6 +18,11 @@ $site_top_margin = 'div#wrapper {margin-top:'.$virtue_premium['site_top_margin']
 } else {
   $site_top_margin = 'div#wrapper {margin-top: 0px;}';
 }
+if(isset($virtue_premium['site_bottom_margin'])) {
+$site_bottom_margin = 'div#wrapper {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px;}';
+} else {
+  $site_bottom_margin = 'div#wrapper {margin-top: 0px;}';
+}
 if(isset($virtue_premium['site_logo_width'])) {
 $site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;}';
 } else {
@@ -573,7 +578,7 @@ if (!empty($virtue_premium['custom_js'])) {
 } else {
   $custom_js = '';
 }
-$kad_custom_css = '<style type="text/css">'.$site_width_below_992px.$site_width_above_992px.$site_top_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$color_primary.$color_smenu_hover.$color_smenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$smenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.'</style>
+$kad_custom_css = '<style type="text/css">'.$site_width_below_992px.$site_width_above_992px.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$color_primary.$color_smenu_hover.$color_smenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$smenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.'</style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 '.$custom_js.'

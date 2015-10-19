@@ -523,6 +523,16 @@ Redux::setSection( $opt_name, array(
             'default' => 'fourc',
             ),
             array(
+            'id'=>'site_bottom_margin',
+            'type' => 'slider', 
+            'title' => __('Site Bottom Margin Space', 'virtue'),
+            'subtitle' => __('', 'virtue'),
+            "default"       => "0",
+            "min"       => "0",
+            "step"      => "5",
+            "max"       => "300",
+            ), 
+            array(
             'id'=>'info_calltoaction_sitewide',
             'type' => 'info',
             'desc' => __('Sitewide Footer Call To Action', 'virtue'),
