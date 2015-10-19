@@ -73,7 +73,7 @@ if(!empty($virtue_premium['font_h1'])) {
 }
 //Copyrights Settings
     if(!empty($virtue_premium['copyrights_box_bg_color'])) {
-  $bgcolor_copyrt_div = '.footercredits {background-color:'.$virtue_premium['copyrights_box_bg_color'].';}';
+  $bgcolor_copyrt_div = 'footer#containerfooter {background-color:'.$virtue_premium['copyrights_box_bg_color'].';}';
   } else {
   $bgcolor_copyrt_div = '';
   }
