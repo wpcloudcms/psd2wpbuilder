@@ -628,14 +628,64 @@ Redux::setSection( $opt_name, array(
             'title' => __('Add shortcode here for output just above footer.', 'virtue'),
             ),
             array(
+            'id'=>'info_copyrights_sitewide',
+            'type' => 'info',
+            'desc' => __('Footer Copyrights box Settings', 'virtue'),
+            ),
+            array(
             'id'=>'footer_text',
             'type' => 'textarea',
-            'title' => __('Footer Copyright Text', 'virtue'), 
+            'title' => __('Footer Copyrights Text', 'virtue'), 
             'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'virtue'),
             'default' => '<div class="credit">
                         <span class="pow-by">Powered by:</span>
                         <span  class="company"><a href="#">Company.com</a></span>
                         </div>',
+            ),
+              array(
+            'id'=>'font_copyrt_text',
+            'type' => 'typography', 
+            'title' => __('Copyrights Font', 'virtue'),
+            //'compiler'=>true, // Use if you want to hook in your own CSS compiler
+            'font-family'=>true, 
+            'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
+            'font-backup'=>true, // Select a backup non-google font in addition to a google font
+            'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
+            'subsets'=>true, // Only appears if google is true and subsets not set to false
+            'font-size'=>true,
+            'text-align' => false,
+            'customizer' => true,
+            'line-height'=>true,
+            //'word-spacing'=>false, // Defaults to false
+            //'all_styles' => true,
+            'color'=>true,
+            'preview'=>true, // Disable the previewer
+            'output' => array('.footercredits p, .footercredits p a'),
+            'subtitle'=> __("Choose Size and Style for copyrights Font", 'virtue'),
+            'default'=> array(
+                'font-family'=>'Lato',
+                'color'=>"", 
+                'font-style'=>'400',
+                'font-size'=>'12px', 
+                'line-height'=>'18px', ),
+            ),
+    array(
+            'id'=>'copyrt_text_color',
+            'type' => 'color',
+            'title' => __('Coprights Font Color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
+            ),
+    array(
+            'id'=>'copyrt_box_bg_color',
+            'type' => 'color',
+            'title' => __('Copyrights Box Background Color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
             ),
         ),
 ) );
@@ -2302,15 +2352,7 @@ Redux::setSection( $opt_name, array(
             'validate' => 'color',
             'customizer' => true,
             ),
-        array(
-            'id'=>'footerfont_color',
-            'type' => 'color',
-            'title' => __('Footer Font Color', 'virtue'), 
-            'default' => '',
-            'transparent'=>false,
-            'validate' => 'color',
-            'customizer' => true,
-            ),
+        
       ),
 ) );
 Redux::setSection( $opt_name, array(
