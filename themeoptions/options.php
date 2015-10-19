@@ -2976,7 +2976,16 @@ Redux::setSection( $opt_name, array(
             "step"      => "1",
             "max"       => "100",
             ),
-
+    array(
+            'id'=>'secondary_menu_height',
+            'type' => 'slider',
+            'title' => __('Secondary Menu Item Height', 'virtue'), 
+            'subtitle' => __("Choose how many px for line height.", 'virtue'),
+            "default"       => "5",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "100",
+            ),
     array(
             'id'=>'info_dropdown_menu_settings',
             'type' => 'info',
