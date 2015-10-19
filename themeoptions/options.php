@@ -506,7 +506,7 @@ Redux::setSection( $opt_name, array(
     'id' => 'footer',
     'icon' => 'icon-page-break',
     'icon_class' => 'icon-large',
-    'title' => __('Footer', 'virtue'),
+    'title' => __('Footer Settings', 'virtue'),
     'desc' => "<div class='redux-info-field'><h3>".__('Footer Layout', 'virtue')."</h3></div>",
     'fields' => array(
             array(
@@ -632,7 +632,10 @@ Redux::setSection( $opt_name, array(
             'type' => 'textarea',
             'title' => __('Footer Copyright Text', 'virtue'), 
             'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'virtue'),
-            'default' => '[copyright] [the-year] [site-name] [theme-credit]',
+            'default' => '<div class="credit">
+                        <span class="pow-by">Powered by:</span>
+                        <span  class="company"><a href="#">Company.com</a></span>
+                        </div>',
             ),
         ),
 ) );
