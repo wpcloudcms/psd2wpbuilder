@@ -3555,7 +3555,7 @@ Redux::setSection( $opt_name, array(
                     //'validate' => 'js',
                     ),
                 ),
-            );
+            ));
 Redux::setSection( $opt_name, array(
                     'id' => 'import_export',
                     'title'  => __( 'Import / Export', 'virtue' ),
