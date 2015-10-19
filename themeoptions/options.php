@@ -3526,11 +3526,9 @@ Redux::setSection( $opt_name, array(
             ),
              array(
             'id'=>'custom_css',
-            'type' => 'ace_editor',
+            'type' => 'textarea',
             'title' => __('Custom CSS', 'virtue'), 
             'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'virtue'),
-            'mode'     => 'css',
-            'theme'    => 'chrome',
             //'validate' => 'css',
             ),
              array(
@@ -3550,10 +3548,10 @@ Redux::setSection( $opt_name, array(
     'desc' => "<div class='redux-info-field'><h3>".__('Hints for Non Developers', 'virtue')."</h3></div>",
     'fields' => array( 
                  array(
-                    'id'=>'',
+                    'id'=>'iframe',
                     'type' => 'textarea',
-                    'title' => __('Custom JS', 'virtue'), 
-                    'subtitle' => __('Quickly add some JS to your theme by adding it to this block.', 'virtue'),
+                    'title' => __('', 'virtue'), 
+                    'subtitle' => __('', 'virtue'),
                     //'validate' => 'js',
                     ),
                 ),
