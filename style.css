@@ -32,6 +32,13 @@ GitHub Branch:      master
 
 }
 
+/* ::before ::after styles */
+
+li:after, li:before {
+    content: "";
+    display: table;
+}
+
 /* columns of same height styles */
 
 .row-height {
@@ -75,3 +82,4 @@ GitHub Branch:      master
     vertical-align: bottom;
   }
 }
+
