@@ -2845,6 +2845,15 @@ Redux::setSection( $opt_name, array(
                 'font-size'=>'14px', 
                 'line-height'=>'20px', ),
             ),
+        array(
+            'id'=>'link_text_color',
+            'type' => 'color',
+            'title' => __('Link Text Color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
+            ),
   ),
 ) );
 Redux::setSection( $opt_name, array(
