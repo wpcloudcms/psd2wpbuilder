@@ -626,7 +626,7 @@ Redux::setSection( $opt_name, array(
             'output'    => array('.kt-call-sitewide-to-action'),
             'title'     => __('Call to action background', 'virtue'),
             'required' => array('sitewide_calltoaction','=','1'),
-            ),
+            ), 
             array(
             'id'=>'info_shortcode_sitewide',
             'type' => 'info',

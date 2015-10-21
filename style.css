@@ -2,7 +2,7 @@
  Theme Name:        WPCloudCMS
  Theme URI:         http://bigcloudcms.com/wpcloudcms/
  Version:           1.0.0
- Description:  
+ Description:
  Author:            Webtimiser Team
  Author URI:        http://www.webtimiser.dk/
  Template:          virtue_premium
@@ -12,7 +12,7 @@ GitHub Theme URI:   https://github.com/bigcloudcms/wpcloudcms
 GitHub Branch:      master
 */
 
-@import url("../virtue_premium/style.css");
+@import url("../virtue_premium/style.css"); 
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
@@ -82,4 +82,3 @@ li:after, li:before {
     vertical-align: bottom;
   }
 }
-
