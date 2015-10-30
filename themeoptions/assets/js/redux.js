@@ -35,20 +35,7 @@
             $.redux.tabCheck();
             $.redux.notices();
             $.redux.tabControl();
-            
-            setTimeout(function(){
-   window.location.reload(1);
-}, 5000);
-            
-//             if(window.location.href.indexOf("wp-admin") > -1) {
-//            setTimeout(function(){
-//               window.location.reload(1);
-//            }, 10000);
-//            setInterval(function(){
-//              $('input#redux_save').('click');
-//             // $('#ElementId').click();
-//            }, 5000);
-//            }
+
         }
     );
 
