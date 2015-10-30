@@ -1,28 +1,18 @@
-/*
-div#logo {
-    width: 100% !important;
+#topcontrol>div {
+    background: rgba(0,0,0,0.3) !important;
 }
-*/
-
-/*
-header#kad-banner .container {
-    padding: 0px 0px;
+header#kad-banner .container, header#kad-banner .container .row, .kad-header-left, .kad-header-widget, .wrap.clearfix.contentbox.contentclass.hfeed, footer#containerfooter {
     margin: 0px 0px;
+    padding: 0px 0px;
 }
 .sliderclass {
     padding: 0px 0px 0px 0px !important;
 }
-header#kad-banner .container .row, .kad-header-left, .kad-header-widget {
-    margin: -1px 0px 0px 0px;
-    padding: 0px;
-    height: 0px;
+header#kad-banner .container .row {
+    margin: -21px 0px 0px 0px;
 }
-*/
 /*
 .wrap.clearfix.row.contentbox {
     display: none;
 }
 */
-#topcontrol>div {
-    background: rgba(0,0,0,0.3) !important;
-}
