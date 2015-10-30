@@ -16,3 +16,8 @@ header#kad-banner .container .row {
     display: none;
 }
 */
+@media (max-width: 767px) {
+a.flex-prev, a.flex-next {
+    display: none;
+}
+}
