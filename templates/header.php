@@ -3,9 +3,9 @@
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
  <?php if($header_layout == 'shm') {
-           get_template_part('templates/header/shm');
+           get_template_part('templates/header/header-shm');
            else {
-            get_template_part('templates/header/hms');  } 
+            get_template_part('templates/header/header-hms');  } 
         }  ?>
     <?php do_action('kt_after_header_content'); ?>
 </header>
