@@ -13,7 +13,7 @@ function custom_scripts() {
     wp_enqueue_script('jquery');
     
     wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
-    wp_register_style('wpcloudcms-css');
+    wp_enqueue_style('wpcloudcms-css');
 
     wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js', array('jquery') );
     wp_enqueue_script('custom-js');
