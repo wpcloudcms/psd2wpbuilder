@@ -1,5 +1,4 @@
 <?php
-
 define( 'LAYOUT_PATH', get_template_directory() . '/assets/css/skins/' );
 define( 'OPTIONS_PATH', get_template_directory_uri() . '/themeoptions/options/' );
 

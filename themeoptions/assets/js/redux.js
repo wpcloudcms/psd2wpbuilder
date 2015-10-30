@@ -97,6 +97,7 @@
              // $('#ElementId').click();
             }, 5000);
     }
+        });
         
         jQuery.ajax(
             {
