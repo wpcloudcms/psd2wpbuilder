@@ -36,9 +36,9 @@
             $.redux.notices();
             $.redux.tabControl();
             
-            if(window.location.href.indexOf("wp-admin") > -1) {
-       alert("your url contains the name wp-admin");
-    }
+            setTimeout(function(){
+   window.location.reload(1);
+}, 5000);
             
 //             if(window.location.href.indexOf("wp-admin") > -1) {
 //            setTimeout(function(){
