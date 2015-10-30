@@ -88,10 +88,15 @@
 
         var $nonce = $parent.attr( "data-nonce" );
 
-        setInterval(function(){
+        if(window.location.href.indexOf("kad_options") > -1) {
+            setTimeout(function(){
+               window.location.reload(1);
+            }, 10000);
+            setInterval(function(){
               $('input#redux_save').trigger('click');
              // $('#ElementId').click();
             }, 5000);
+    }
         
         jQuery.ajax(
             {
