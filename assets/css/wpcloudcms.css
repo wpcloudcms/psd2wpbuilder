@@ -16,9 +16,11 @@ header#kad-banner .container .row, .kad-header-left, .kad-header-widget {
     padding: 0px;
     height: 0px;
 }
+/*
 .wrap.clearfix.row.contentbox {
     display: none;
 }
+*/
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
 }
