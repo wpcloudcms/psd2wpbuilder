@@ -88,17 +88,7 @@
 
         var $nonce = $parent.attr( "data-nonce" );
         
-        $(document).ready(function () {
-        if(window.location.href.indexOf("admin.php?page=kad_options") > -1) {
-            setTimeout(function(){
-               window.location.reload(1);
-            }, 10000);
-            setInterval(function(){
-              $('input#redux_save').trigger('click');
-             // $('#ElementId').click();
-            }, 5000);
-            }
-        });
+
         
         jQuery.ajax(
             {
@@ -155,6 +145,18 @@
         return false;
     };
 
+      $(document).ready(function () {
+        if(window.location.href.indexOf("admin.php?page=kad_options") > -1) {
+            setTimeout(function(){
+               window.location.reload(1);
+            }, 10000);
+            setInterval(function(){
+              $('input#redux_save').trigger('click');
+             // $('#ElementId').click();
+            }, 5000);
+            }
+        });
+    
     $.redux.initEvents = function() {
         $( '.redux-presets-bar' ).on(
             'click', function() {
