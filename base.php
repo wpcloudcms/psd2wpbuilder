@@ -40,13 +40,13 @@
   <div class="maincontent col-sm-height">
 <div class="wrap clearfix row contentbox">
 
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
-  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-	<img src="<?php echo $image[0]; ?>" alt="" />
-<?php else:
+<?php // if (has_post_thumbnail( $post->ID ) ): ?>
+  <?php // $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+	<!-- <img src="<?php // echo $image[0]; ?>" alt="" />
+<?php // else:
 	// dynamic_sidebar( 'top-slider-homeonly' );
-endif; ?>
-</div>  
+// endif; ?>
+</div>  -->
  <div class="wrap clearfix contentbox contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
