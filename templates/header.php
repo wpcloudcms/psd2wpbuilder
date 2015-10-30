@@ -2,7 +2,10 @@
 <?php if (kadence_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
- <?php if($header_layout == 'shm') {
+    
+    <?php
+    do_action('get_header');
+    if($header_layout == 'shm') {
            get_template_part('templates/header/header-shm');
            else {
             get_template_part('templates/header/header-hms');  } 
