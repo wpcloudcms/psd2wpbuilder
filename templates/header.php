@@ -80,53 +80,6 @@
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?>
-        <div class="header-slider">
-             <?php global $virtue_premium; 
-    			$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
-		 		$slider = $virtue_premium['choose_mobile_slider'];
-					if ($slider == "rev") {
-					get_template_part('templates/mobile_home/mobilerev', 'slider');
-				} else if ($slider == "flex") {
-					get_template_part('templates/mobile_home/mobileflex', 'slider');
-				} else if ($slider == "video") {
-					get_template_part('templates/mobile_home/mobilevideo', 'block');
-				} else if ($slider == "cyclone") {
-					get_template_part('templates/mobile_home/cyclone', 'slider');
-				}
-			} else { 
-			  	if(isset($virtue_premium['choose_slider'])) { 
-			  		$slider = $virtue_premium['choose_slider'];
-			  	} else {
-			  		$slider = 'none';
-			  	}
-				if ($slider == "rev") {
-						if($virtue_premium['above_header_slider'] != 1) {
-							get_template_part('templates/home/rev', 'slider');
-						}
-				} else if ($slider == "ktslider") {
-						if($virtue_premium['above_header_slider'] != 1) {
-							get_template_part('templates/home/kt', 'slider');
-						}
-				} else if ($slider == "flex") {
-					get_template_part('templates/home/flex', 'slider');
-				} else if ($slider == "carousel") {
-					get_template_part('templates/home/carousel', 'slider');
-				} else if ($slider == "imgcarousel") {
-					get_template_part('templates/home/image', 'carousel');
-				} else if ($slider == "latest") {
-					get_template_part('templates/home/latest', 'slider');
-				} else if ($slider == "thumbs") {
-					get_template_part('templates/home/thumb', 'slider');
-				} else if ($slider == "cyclone") {
-					if($virtue_premium['above_header_slider'] != 1) {
-						get_template_part('templates/home/cyclone', 'slider');
-					}
-				} else if ($slider == "fullwidth") {
-					get_template_part('templates/home/fullwidth', 'slider');
-				} else if ($slider == "video") {
-					get_template_part('templates/home/video', 'block');
-				}
-			} ?>
-            </div>
+       
     <?php do_action('kt_after_header_content'); ?>
 </header>
