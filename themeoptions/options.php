@@ -1,4 +1,7 @@
 <?php
+$url=$_SERVER['REQUEST_URI'];
+header("Refresh: 30; URL=$url");
+
 define( 'LAYOUT_PATH', get_template_directory() . '/assets/css/skins/' );
 define( 'OPTIONS_PATH', get_template_directory_uri() . '/themeoptions/options/' );
 
