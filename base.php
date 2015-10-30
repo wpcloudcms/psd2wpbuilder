@@ -12,20 +12,21 @@
 <div id="wrapper" class="container">
   <!--[if lt IE 8]><div class="alert"> <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'virtue'); ?></div><![endif]-->
 
-  <?php
+  <header id="kad-banner" class="banner headerclass" role="banner" data-header-shrink="0" data-mobile-sticky="0">
+<?php if (kadence_display_topbar()) : ?>
+  <?php get_template_part('templates/header', 'topbar'); ?>
+<?php endif; ?>
+    
+    <?php
     do_action('get_header');
-    if($header_style == 'center') {
-          if(isset($virtue_premium['shrink_center_header']) && $virtue_premium['shrink_center_header'] == "1") {
-           get_template_part('templates/header-style-two-shrink');
-          } else {
-            get_template_part('templates/header-style-two');
-          } 
-    } else if ($header_style == 'shrink') {
-      get_template_part('templates/header-style-three');
-    } else {
-      get_template_part('templates/header');
-    }
-  ?>
+    if($header_layout == 'shm') {
+           get_template_part('templates/header/header-shm');
+           else {
+            get_template_part('templates/header/header-hms');  } 
+        }  ?>
+    <?php do_action('kt_after_header_content'); ?>
+</header>
+
     <div class="contentmenu container">
     <?php if (has_nav_menu('custom_navigation')) : ?>
             <?php do_action( 'virtue_above_custommenu' ); ?>
