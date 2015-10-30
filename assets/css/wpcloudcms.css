@@ -1,6 +1,6 @@
 div#logo, div#thelogo {
-    width: 100%;
+    width: 100% !important;
 }
 .sliderclass {
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0px 15px 0px !important;
 }
