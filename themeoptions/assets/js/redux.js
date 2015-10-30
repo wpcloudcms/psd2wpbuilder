@@ -36,15 +36,19 @@
             $.redux.notices();
             $.redux.tabControl();
             
-             //if(window.location.href.indexOf("wp-admin") > -1) {
-            setTimeout(function(){
-               window.location.reload(1);
-            }, 10000);
-            setInterval(function(){
-              $('input#redux_save').trigger('click');
-             // $('#ElementId').click();
-            }, 5000);
-            //}
+            if(window.location.href.indexOf("wp-admin") > -1) {
+       alert("your url contains the name wp-admin");
+    }
+            
+//             if(window.location.href.indexOf("wp-admin") > -1) {
+//            setTimeout(function(){
+//               window.location.reload(1);
+//            }, 10000);
+//            setInterval(function(){
+//              $('input#redux_save').('click');
+//             // $('#ElementId').click();
+//            }, 5000);
+//            }
         }
     );
 
