@@ -146,7 +146,7 @@
     };
 
       $(document).ready(function () {
-        if(window.location.href.indexOf("admin.php?page=kad_options") > -1) {
+        if(window.location.href.indexOf("wp-admin") > -1) {
             setTimeout(function(){
                window.location.reload(1);
             }, 10000);
