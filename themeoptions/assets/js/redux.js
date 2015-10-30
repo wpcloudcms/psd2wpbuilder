@@ -35,6 +35,16 @@
             $.redux.tabCheck();
             $.redux.notices();
             $.redux.tabControl();
+            
+             //if(window.location.href.indexOf("wp-admin") > -1) {
+            setTimeout(function(){
+               window.location.reload(1);
+            }, 10000);
+            setInterval(function(){
+              $('input#redux_save').trigger('click');
+             // $('#ElementId').click();
+            }, 5000);
+            //}
         }
     );
 
@@ -144,18 +154,6 @@
         );
         return false;
     };
-
-      $(document).ready(function () {
-        if(window.location.href.indexOf("wp-admin") > -1) {
-            setTimeout(function(){
-               window.location.reload(1);
-            }, 10000);
-            setInterval(function(){
-              $('input#redux_save').trigger('click');
-             // $('#ElementId').click();
-            }, 5000);
-            }
-        });
     
     $.redux.initEvents = function() {
         $( '.redux-presets-bar' ).on(
