@@ -187,6 +187,27 @@ Redux::setSection( $opt_name, array(
             "step"      => "5",
             "max"       => "300",
             ), 
+         array(
+            'id'=>'info_header_options',
+            'type' => 'info',
+            'desc' => __('Header Options', 'virtue'),
+            ),
+                 array(
+            'id'=>'header_layout',
+            'type' => 'image_select',
+            //'compiler' => false,
+            'title' => __('Header Layout', 'virtue'), 
+            'subtitle' => __('Choose how you want your header above or below Menu', 'virtue'),
+            'options' => array(
+                    'stm' => array('alt' => 'Slider Topbar Menu', 'img' => OPTIONS_PATH.'img/stm.png'),
+                    'mts' => array('alt' => 'Menu Topbar Slider', 'img' => OPTIONS_PATH.'img/mts.png'),
+                    'mst' => array('alt' => 'Menu Slider Topbar', 'img' => OPTIONS_PATH.'img/mst.png'),
+                    'smt' => array('alt' => 'Slider Menu Topbar', 'img' => OPTIONS_PATH.'img/smt.png'),
+                    'tms' => array('alt' => 'Topbar Menu Slider', 'img' => OPTIONS_PATH.'img/tms.png'),
+                    'tsm' => array('alt' => 'Topbar Slider Menu', 'img' => OPTIONS_PATH.'img/tsm.png'),
+                ),
+            'default' => 'tms',
+            ),
         array(
             'id'=>'info_header_style',
             'type' => 'info',

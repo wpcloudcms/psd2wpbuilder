@@ -80,8 +80,8 @@
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?>
-        <?php do_action('kt_after_header_content'); ?>
-    <?php global $virtue_premium; 
+        <div class="header-slider">
+             <?php global $virtue_premium; 
     			$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
 					if ($slider == "rev") {
@@ -127,4 +127,6 @@
 					get_template_part('templates/home/video', 'block');
 				}
 			} ?>
+            </div>
+    <?php do_action('kt_after_header_content'); ?>
 </header>
