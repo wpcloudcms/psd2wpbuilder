@@ -98,6 +98,16 @@ if(!empty($virtue_premium['font_h1'])) {
     } else {
     $color_smenu_bg_hover = '';
   }
+    if(!empty($virtue_premium['thirdmenu_hover_color'])) {
+  $color_tmenu_hover = '#nav-third ul.sf-menu > li:hover > a, #nav-third ul.sf-menu a:hover, #nav-third ul.sf-menu li.current-menu-item > a, #nav-third ul.sf-menu ul li a:hover {color:'.$virtue_premium['thirdmenu_hover_color'].';}';
+  } else {
+  $color_tmenu_hover = '';
+  }
+  if(!empty($virtue_premium['thirdmenu_hover_bg_color'])) {
+    $color_tmenu_bg_hover = '#nav-third ul.sf-menu > li:hover, #nav-third ul.sf-menu > li.current-menu-item, #nav-third ul.sf-menu ul > li.current-menu-item, #nav-third ul.sf-menu ul li a:hover {background:'.$virtue_premium['thirdmenu_hover_bg_color'].';}';
+    } else {
+    $color_tmenu_bg_hover = '';
+  }
    if(!empty($virtue_premium['mobilemenu_hover_color'])) {
   $color_mmenu_hover = '.kad-mobile-nav .kad-nav-inner li.current-menu-item>a, .kad-mobile-nav .kad-nav-inner li a:hover, #kad-banner #mobile-nav-trigger a.nav-trigger-case:hover .kad-menu-name, #kad-banner #mobile-nav-trigger a.nav-trigger-case:hover .kad-navbtn {color:'.$virtue_premium['mobilemenu_hover_color'].';}';
   } else {

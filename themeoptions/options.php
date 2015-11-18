@@ -3071,6 +3071,78 @@ Redux::setSection( $opt_name, array(
             "max"       => "80",
             ), 
     array(
+            'id'=>'info_menu_third_font',
+            'type' => 'info',
+            'customizer' => true,
+            'desc' => __('Third Menu Options', 'virtue'),
+            ),
+    array(
+            'id'=>'font_third_menu',
+            'type' => 'typography', 
+            'title' => __('Third Menu Font', 'virtue'),
+            //'compiler'=>true, // Use if you want to hook in your own CSS compiler
+            'font-family'=>true, 
+            'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
+            'font-backup'=>false, // Select a backup non-google font in addition to a google font
+            'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
+            'subsets'=>true, // Only appears if google is true and subsets not set to false
+            'font-size'=>true,
+            'text-align' => false,
+            'customizer' => true,
+            'line-height'=>true,
+            //'word-spacing'=>false, // Defaults to false
+            //'all_styles' => true,
+            'color'=>true,
+            'preview'=>true, // Disable the previewer
+            'output' => array('#nav-second ul.sf-menu a'),
+            'subtitle'=> __("Choose Size and Style for third menu", 'virtue'),
+            'default'=> array(
+                'font-family'=>'Lato',
+                'color'=>"", 
+                'font-style'=>'400',
+                'font-size'=>'18px', 
+                'line-height'=>'22px', ),
+            ),
+    array(
+            'id'=>'thirdmenu_hover_color',
+            'type' => 'color',
+            'title' => __('Third menu Hover and Active Font Color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
+            ),
+        
+    array(
+            'id'=>'thirdymenu_hover_bg_color',
+            'type' => 'color',
+            'title' => __('Third menu Hover and Active Background Color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
+            ),
+         array(
+            'id'=>'third_menu_width',
+            'type' => 'slider', 
+            'title' => __('Third Menu Item Width', 'virtue'),
+            'subtitle' => __('Choose px for left and right padding', 'virtue'),
+            "default"       => "10",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "80",
+            ), 
+            array(
+            'id'=>'third_menu_height',
+            'type' => 'slider', 
+            'title' => __('Third Menu Item Height', 'virtue'),
+            'subtitle' => __('Choose px for height', 'virtue'),
+            "default"       => "5",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "80",
+            ), 
+    array(
             'id'=>'info_dropdown_menu_settings',
             'type' => 'info',
             'customizer' => true,
