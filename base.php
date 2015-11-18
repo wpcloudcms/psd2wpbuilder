@@ -27,15 +27,15 @@
     }
   ?>
 
-
-    <div class="contentmenu container">
-    <?php if (has_nav_menu('custom_navigation')) : ?>
-            <?php do_action( 'virtue_above_custommenu' ); ?>
-            <nav class="clearfix" role="navigation">
-                <?php wp_nav_menu(array('theme_location' => 'custom_navigation', 'menu_class' => 'sf-menu'));  ?>
-            </nav>
-           <?php endif; ?>
-      </div>
+    <?php if (has_nav_menu('third_navigation')) : ?>
+  <section id="cat_nav" class="navclass"><!-- Start Menu Section -->
+    <div class="container">
+     <nav id="nav-third" class="clearfix" role="navigation">
+     <?php wp_nav_menu(array('theme_location' => 'third_navigation', 'menu_class' => 'sf-menu')); ?>
+   </nav>
+    </div><!--close container-->
+    </section><!-- Close Menu Section -->
+    <?php endif; ?> 
   <div class="row-height">
   <div class="maincontent col-sm-height">
 <div class="wrap clearfix row contentbox">
