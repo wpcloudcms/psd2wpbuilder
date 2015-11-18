@@ -2527,6 +2527,20 @@ Redux::setSection( $opt_name, array(
             'customizer' => true,
             'validate' => 'color',
             ),
+       array(
+            'id'=>'info_thirdmenu_background',
+            'type' => 'info',
+            'customizer' => true,
+            'desc' => __('Third Menu Background', 'virtue'),
+            ),
+      array(
+            'id'=>'thirdmenu_bg_color',
+            'type' => 'color',
+            'title' => __('Third Menu Background Color', 'virtue'), 
+            'default' => '',
+            'customizer' => true,
+            'validate' => 'color',
+            ),
       array(
             'id'=>'bg_menu_bg_img',
             'type' => 'media', 
