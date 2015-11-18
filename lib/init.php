@@ -10,7 +10,7 @@ function kadence_setup() {
     'secondary_navigation' => __('Secondary Navigation', 'virtue'),
     'mobile_navigation' => __('Mobile Navigation', 'virtue'),
     'topbar_navigation' => __('Topbar Navigation', 'virtue'),
-    'custom_navigation' => __('Custom Navigation', 'virtue'),
+    'third_navigation' => __('Third Navigation', 'virtue'),
     'footer_navigation' => __('Footer Navigation', 'virtue'),
   ));
   
