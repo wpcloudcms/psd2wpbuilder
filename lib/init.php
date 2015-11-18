@@ -6,11 +6,11 @@ function kadence_setup() {
 
   // Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
   register_nav_menus(array(
-    'primary_navigation' => __('Primary Navigation', 'virtue'),
-    'secondary_navigation' => __('Secondary Navigation', 'virtue'),
+    'primary_navigation' => __('Primary Navigation (Near Logo Side)', 'virtue'),
+    'secondary_navigation' => __('Secondary Navigation (Above Header)', 'virtue'),
     'mobile_navigation' => __('Mobile Navigation', 'virtue'),
     'topbar_navigation' => __('Topbar Navigation', 'virtue'),
-    'third_navigation' => __('Third Navigation', 'virtue'),
+    'third_navigation' => __('Third Navigation (Below Header)', 'virtue'),
     'footer_navigation' => __('Footer Navigation', 'virtue'),
   ));
   
