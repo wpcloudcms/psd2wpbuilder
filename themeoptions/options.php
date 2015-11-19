@@ -3159,7 +3159,7 @@ Redux::setSection( $opt_name, array(
             ),
         
     array(
-            'id'=>'thirdymenu_hover_bg_color',
+            'id'=>'thirdmenu_hover_bg_color',
             'type' => 'color',
             'title' => __('Third menu Hover and Active Background Color', 'virtue'), 
             'default' => '',
