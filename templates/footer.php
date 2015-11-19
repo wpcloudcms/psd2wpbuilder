@@ -74,5 +74,5 @@
     	</div><!-- credits -->
     </div><!-- container -->
 </footer>
-<p><?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?></p>
 <?php wp_footer(); ?>
+<p><?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?></p>
