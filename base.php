@@ -61,9 +61,8 @@
       </div><!-- /.row-->
     </div><!-- /.content -->
   </div><!-- /.wrap -->
-
-  <?php do_action('get_footer');
-  get_template_part('templates/footer'); ?>
 </div><!--Wrapper-->
+    <?php do_action('get_footer');
+  get_template_part('templates/footer'); ?>
 </body>
 </html>
