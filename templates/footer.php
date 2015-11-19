@@ -75,4 +75,3 @@
     </div><!-- container -->
 </footer>
 <?php wp_footer(); ?>
-<p><?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?></p>

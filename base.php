@@ -65,4 +65,5 @@
     <?php do_action('get_footer');
   get_template_part('templates/footer'); ?>
 </body> 
+    <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
 </html>
