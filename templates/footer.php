@@ -70,9 +70,9 @@
               wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'footermenu'));
             ?></div><?php
         	endif;?>
-        	<p><?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?></p>
+        	
     	</div><!-- credits -->
     </div><!-- container -->
 </footer>
-
+<p><?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?></p>
 <?php wp_footer(); ?>
