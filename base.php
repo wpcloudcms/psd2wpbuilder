@@ -64,9 +64,12 @@
   </div><!-- /.wrap -->
     <?php do_action('get_footer');
   get_template_part('templates/footer'); ?>
+      </div>
+    </div>
     </div><!--main-->
+    </div><!--Wrapper-->
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
-      </div><!--Wrapper-->
+      
 </body> 
     
 </html>
