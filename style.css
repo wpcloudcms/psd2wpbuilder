@@ -82,3 +82,5 @@ li:after, li:before {
     vertical-align: bottom;
   }
 }
+/* Topbar */
+section#topbar .container .row {height: auto; margin: auto 20px;}
