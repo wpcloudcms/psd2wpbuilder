@@ -691,7 +691,7 @@ Redux::setSection( $opt_name, array(
             //'all_styles' => true,
             'color'=>true,
             'preview'=>true, // Disable the previewer
-            'output' => array('.credit p, .credit span, .credit a, .credit span a'), 
+            'output' => array('.credit p, .credit span'), 
             'subtitle'=> __("Choose Size and Style for copyrights Font", 'virtue'),
             'default'=> array(
                 'font-family'=>'Lato',
@@ -705,6 +705,15 @@ Redux::setSection( $opt_name, array(
             'type' => 'text',
             'title' => __('Other Font Family', 'virtue'),
             'default' => 'BebasNeueRegular',
+            ),
+    array(
+            'id'=>'credit_link_color',
+            'type' => 'color',
+            'title' => __('Credit link color', 'virtue'), 
+            'default' => '',
+            'transparent'=>false,
+            'customizer' => true,
+            'validate' => 'color',
             ),
     array(
             'id'=>'copyrights_box_bg_color',
