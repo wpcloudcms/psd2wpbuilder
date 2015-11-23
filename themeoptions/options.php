@@ -1,5 +1,5 @@
 <?php
-define( 'LAYOUT_PATH', get_stylesheet_directory_uri() . '/assets/css/skins/' );
+define( 'LAYOUT_PATH', get_stylesheet_directory() . '/assets/css/skins/' );
 define( 'OPTIONS_PATH', get_template_directory_uri() . '/themeoptions/options/' );
 
 function virtue_all_rev_sliders_in_array(){
