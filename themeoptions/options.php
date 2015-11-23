@@ -691,7 +691,7 @@ Redux::setSection( $opt_name, array(
             //'all_styles' => true,
             'color'=>true,
             'preview'=>true, // Disable the previewer
-            'output' => array('.footercredits p'), 
+            'output' => array('.credit p, .credit span, .credit a, .credit span a'), 
             'subtitle'=> __("Choose Size and Style for copyrights Font", 'virtue'),
             'default'=> array(
                 'font-family'=>'Lato',
