@@ -43,6 +43,9 @@ body, .color_body, .sidebar a, .author-name a, .author-latestposts h5 a, .author
 a:hover {text-decoration: none;}
 .hometitle {text-align: center;}
 
+/* Topbar */
+section#topbar .container .row {height: auto; margin: auto 20px;}
+
 /* Footer */
 #containerfooter h3, #containerfooter {color:#555;}
 .footercredits p {color: #aaa;}
