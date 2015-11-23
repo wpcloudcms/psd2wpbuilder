@@ -701,6 +701,12 @@ Redux::setSection( $opt_name, array(
                 'line-height'=>'18px', ),
             ),
     array(
+            'id'=>'fontfamily_copyrt_text',
+            'type' => 'text',
+            'title' => __('Other Font Family', 'virtue'),
+            'default' => 'BebasNeueRegular',
+            ),
+    array(
             'id'=>'copyrights_box_bg_color',
             'type' => 'color',
             'title' => __('Copyrights Div Box Background Color', 'virtue'), 
