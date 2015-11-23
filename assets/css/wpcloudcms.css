@@ -6,12 +6,8 @@ header#kad-banner {
     margin-right: -15px;
 }
 section#topbar .container .row {height: auto; margin: auto;}
-.sliderclass {
-    padding: 0px 0px 0px 0px !important;
-}
-header#kad-banner .container .row {
-    margin: -21px 0px 0px 0px;
-}
+
+.sliderclass {padding: 0px 0px 0px 0px !important;}
 /*
 .wrap.clearfix.row.contentbox {
     display: none;
