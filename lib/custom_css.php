@@ -171,7 +171,7 @@ if(!empty($virtue_premium['footerfont_color'])) {
   $color_footerfont = '';
 }
 if(!empty($virtue_premium['fontfamily_copyrt_text'])) {
-  $fontfamily_copyrt_text = '.credit p, .credit span, .credit a, .credit span a {font-family:''.$virtue_premium['fontfamily_copyrt_text'].'', Arial, sans-serif !important;}';
+  $fontfamily_copyrt_text = '.credit p, .credit span, .credit a, .credit span a {font-family:'.$virtue_premium['fontfamily_copyrt_text'].', Arial, sans-serif !important;}';
 } else {
   $fontfamily_copyrt_text = '';
 }
