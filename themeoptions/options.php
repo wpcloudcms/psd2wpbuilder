@@ -709,6 +709,19 @@ Redux::setSection( $opt_name, array(
             'customizer' => true,
             'validate' => 'color',
             ),
+    array(
+            'id'=>'copyright_layout',
+            'type' => 'image_select',
+            //'compiler' => false,
+            'title' => __('Copyright Layout', 'virtue'), 
+            'subtitle' => __('', 'virtue'),
+            'options' => array(
+                    'copyright_lt' => array('alt' => 'Copyright align Left', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/copyright_lt.png'),
+                    'copyright_cr' => array('alt' => 'Copyright align Center', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/copyright_cr.png'),
+                    'copyright_rt' => array('alt' => 'Copyright align Right', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/copyright_rt.png'),
+                ),
+            'default' => 'copyright_cr',
+            ),
         ),
 ) );
 Redux::setSection( $opt_name, array(
