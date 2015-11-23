@@ -219,6 +219,11 @@ if(!empty($virtue_premium['content_bg_color']) || !empty($virtue_premium['bg_con
   } else {
     $contentclass = '';
   }
+if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
+  $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1;}';
+} else {
+  $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1; max-width: 103.25%;margin: 0% -1.625%;}';
+}
 if(!empty($virtue_premium['header_bg_color'])) {
   $header_bg_color = $virtue_premium['header_bg_color'];
   } else {

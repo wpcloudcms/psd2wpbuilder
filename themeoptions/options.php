@@ -209,6 +209,13 @@ Redux::setSection( $opt_name, array(
             'default' => 'hms',
             ),
         array(
+            'id'=>'header_border',
+            'type' => 'switch', 
+            'title' => __('Header without Border', 'virtue'),
+            'subtitle'=> __('Choose to enable fullwidth header, without any border', 'virtue'),
+            "default"       => 0,
+            ),
+        array(
             'id'=>'info_header_style',
             'type' => 'info',
             'desc' => __('Header Style', 'virtue'),
