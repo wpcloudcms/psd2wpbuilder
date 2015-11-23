@@ -63,7 +63,7 @@
 		            <?php }; ?>
 		        <?php } ?>
         </div> <!-- Row -->
-        <div class="footercredits clearfix">
+        <div class="footermenu clearfix">
     		
     		<?php if (has_nav_menu('footer_navigation')) :
         	?><div class="footernav clearfix"><?php 
@@ -71,7 +71,7 @@
             ?></div><?php
         	endif;?>
         	
-    	</div><!-- credits -->
+    	</div><!-- footermenu -->
     </div><!-- container -->
 </footer>
 <?php wp_footer(); ?>

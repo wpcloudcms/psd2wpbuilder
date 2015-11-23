@@ -68,8 +68,9 @@
     </div>
     </div><!--main-->
     </div><!--Wrapper-->
+<div class="container footertext clearfix">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
-      
+</div>
 </body> 
     
 </html>
