@@ -211,7 +211,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'header_border',
             'type' => 'switch', 
-            'title' => __('Header without Border', 'virtue'),
+            'title' => __('Header Banner without Border', 'virtue'),
             'subtitle'=> __('Choose to enable fullwidth header, without any border', 'virtue'),
             "default"       => 0,
             ),
