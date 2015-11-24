@@ -593,6 +593,21 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
 } else {
   $color_iconmenubg = '';
 }
+if(isset($virtue_premium['primarymenu_width'])) {
+  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;}';
+  } else {
+  $pmenu_padding = '';
+  } 
+if(isset($virtue_premium['primarymenu_height'])) {
+  $pmenu_height = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {line-height:'.$virtue_premium['primarymenu_height'].'px;}';
+  } else {
+  $pmenu_height = '';
+  }
+if(isset($virtue_premium['primarymenu_sep']) and $virtue_premium['primarymenu_sep'] == 'yes') {
+  $primarymenu_sep = '#nav-second ul li:after {width:'.$virtue_premium['primarymenu_sep_width'].'px;left:-'.$virtue_premium['primarymenusep_width'].'px; background-color:'.$virtue_premium['primarymenu_sep_color'].';}';
+  } else {
+  $primarymenu_sep = '';
+  } 
 if(isset($virtue_premium['secondary_menu_width'])) {
   $smenu_padding = '#nav-second ul.sf-menu>li a, #nav-second ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;}';
   } else {
@@ -730,7 +745,7 @@ if (!empty($virtue_premium['custom_js'])) {
 } else {
   $custom_js = '';
 }
-$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$copyrightsclass.$pmenuclass.'</style>
+$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$pmenu_padding.$pmenu_height.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$copyrightsclass.$pmenuclass.$primarymenu_sep.'</style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 '.$custom_js.'
