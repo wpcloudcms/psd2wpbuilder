@@ -77,6 +77,31 @@ if(!empty($virtue_premium['font_h1'])) {
   $font_family = '';
 }
 //Copyrights Settings
+if(!empty($virtue_premium['copyrights_bg_color'])) {
+$copyrights_bg_color = $virtue_premium['copyrights_bg_color'];
+} else {
+  $copyrights_bg_color = '';
+}
+if(!empty($virtue_premium['copyrights_bg_img']['url'])) { 
+  $copyrights_bg_img = 'url('.$virtue_premium['copyrights_bg_img']['url'].')'; 
+} else {
+  $copyrights_bg_img = '';
+}
+if(!empty($virtue_premium['copyrights_bg_repeat'])) {
+$copyrights_bg_repeat = $virtue_premium['copyrights_bg_repeat'];
+} else {
+  $copyrightsr_bg_repeat = '';
+}
+if(!empty($virtue_premium['copyrights_bg_placementx'])) {
+$copyrights_bg_x = $virtue_premium['copyrights_bg_placementx'];
+} else {
+  $copyrights_bg_x = '';
+}
+if(!empty($virtue_premium['copyrights_bg_placementy'])) {
+$copyrights_bg_y = $virtue_premium['copyrights_bg_placementy'];
+} else {
+  $copyrights_bg_y = '';
+}
 if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['copyrights_bg_img']['url'])) {
     $copyrightsclass = '.footertext {background:'.$copyrights_bg_color.' '.$copyrights_bg_img.' '.$copyrights_bg_repeat.' '.$copyrights_bg_x.' '.$copyrights_bg_y.';}';
   } else {
@@ -460,11 +485,6 @@ if(!empty($virtue_premium['bg_boxed_bg_img']['url'])) {
 } else {
   $boxedbg_img = '';
 }
-//if(!empty($virtue_premium['copyrights_box_bg_img']['url'])) { 
-//  $copyrights_box_bg_img = 'url('.$virtue_premium['copyrights_box_bg_img']['url'].')'; 
-//} else {
-//  $copyrights_box_bg_img = '';
-//}
 if(!empty($virtue_premium['boxed_bg_repeat'])) {
 $boxedbg_repeat = 'background-repeat:'. $virtue_premium['boxed_bg_repeat'].';';
 } else {

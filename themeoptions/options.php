@@ -763,7 +763,7 @@ array(
             'width' => 'width:60%',
             ),
       array(
-            'id'=>'copyrights_bg_x',
+            'id'=>'copyrights_bg_placementx',
             'type' => 'select',
             'customizer' => true,
             'title' => __('X image placement options', 'virtue'), 
@@ -771,7 +771,7 @@ array(
             'width' => 'width:60%',
             ),
       array(
-            'id'=>'copyrights_bg_y',
+            'id'=>'copyrights_bg_placementy',
             'type' => 'select',
             'customizer' => true,
             'title' => __('Y image placement options', 'virtue'), 
