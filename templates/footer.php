@@ -9,7 +9,7 @@
 	*/
 	do_action('kt_before_footer');
 ?>
-<footer id="containerfooter" class="footerclass" role="contentinfo">
+<footer id="containerfooter" class="container box footerclass" role="contentinfo">
   <div class="container">
   	<div class="row">
   		<?php if(isset($virtue_premium['footer_layout'])) { $footer_layout = $virtue_premium['footer_layout']; } else { $footer_layout = 'fourc'; }

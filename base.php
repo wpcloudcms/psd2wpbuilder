@@ -10,7 +10,7 @@
   ?>
 <body <?php body_class(); ?> data-smooth-scrolling="<?php echo esc_attr($scrolling);?>" data-smooth-scrolling-hide="<?php echo esc_attr($scrolling_hide);?>" data-jsselect="<?php echo esc_attr($select2_select);?>" data-product-tab-scroll="<?php echo esc_attr($pscroll); ?>" data-animate="<?php echo esc_attr($animate);?>" data-sticky="<?php echo esc_attr($sticky);?>">
 <div id="wrapper">
-    <div id="main" class="container">
+    <div id="main" class="container box">
   <!--[if lt IE 8]><div class="alert"> <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'virtue'); ?></div><![endif]-->
 
  <?php
@@ -37,7 +37,7 @@
     </div><!--close container-->
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
-  <div class="row-height">
+  <div class="row-height container">
   <div class="maincontent col-sm-height">
 <div class="wrap clearfix row contentbox">
 
@@ -62,13 +62,13 @@
       </div><!-- /.row-->
     </div><!-- /.content -->
   </div><!-- /.wrap -->
-    <?php do_action('get_footer');
-  get_template_part('templates/footer'); ?>
-      </div>
+     </div>
     </div>
     </div><!--main-->
     </div><!--Wrapper-->
-<div class="container footertext clearfix">
+<?php do_action('get_footer');
+  get_template_part('templates/footer'); ?>
+<div class="container box footertext clearfix">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
 </div>
 </body> 
