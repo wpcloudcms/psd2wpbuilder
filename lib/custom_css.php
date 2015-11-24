@@ -350,7 +350,7 @@ $pmenu_bg_y = $virtue_premium['pmenu_bg_placementy'];
   $pmenu_bg_y = '';
 }
 if(!empty($virtue_premium['pmenu_bg_color']) || !empty($virtue_premium['bg_pmenu_bg_img']['url'])) {
-    $pmenuclass = '.navclass {background:'.$pmenu_bg_color.' '.$pmenu_bg_img.' '.$pmenu_bg_repeat.' '.$pmenu_bg_x.' '.$pmenu_bg_y.';}';
+    $pmenuclass = 'nav#nav-main {background:'.$pmenu_bg_color.' '.$pmenu_bg_img.' '.$pmenu_bg_repeat.' '.$pmenu_bg_x.' '.$pmenu_bg_y.';}';
   } else {
     $pmenuclass = '';
   }
