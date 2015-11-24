@@ -1,7 +1,7 @@
 <section class="pagefeat carousel_outerrim">
   <?php global $post; $height = get_post_meta( $post->ID, '_kad_posthead_height', true ); if (!empty($height)) $slideheight = $height; else $slideheight = 400; 
   $swidth = get_post_meta( $post->ID, '_kad_posthead_width', true ); if (!empty($swidth)) $slidewidth = $swidth; else $slidewidth = 1140; ?>
-    <div id="imageslider" class="loading">
+    <div id="imageslider" class="loading container box">
     <div class="carousel_slider_outer fredcarousel fadein-carousel" style="overflow:hidden; max-width:<?php echo $slidewidth;?>px; height: <?php echo $slideheight;?>px; margin-left: auto; margin-right:auto;">
         <div class="carousel_slider">
             <?php $image_gallery = get_post_meta( $post->ID, '_kad_image_gallery', true );

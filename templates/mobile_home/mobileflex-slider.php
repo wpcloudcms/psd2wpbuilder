@@ -5,7 +5,7 @@
         if(isset($virtue_premium['mobile_slider_captions'])) { $captions = $virtue_premium['mobile_slider_captions']; } else {$captions = '';}
         if(isset($virtue_premium['home_mobile_slider'])) {$slides = $virtue_premium['home_mobile_slider']; } else {$slides = '';}
                 ?>
-<div id="imageslider" class="container">
+<div id="imageslider" class="container box">
                    <div class="flexslider loading" style="max-width:<?php echo $slidewidth;?>px; margin-left: auto; margin-right:auto;">
                        <ul class="slides">
                         <?php foreach ($slides as $slide) : 

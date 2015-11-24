@@ -5,7 +5,7 @@
                 $captions = $virtue_premium['shop_slider_captions'];
                 $slides = $virtue_premium['shop_slider_images'];
                 ?>
-    <div id="imageslider" class="container">
+    <div id="imageslider" class="container box">
     <div class="flexslider loading" style="max-width:<?php echo $slidewidth;?>px;">
         <ul class="slides">
             <?php foreach ($slides as $slide) : 

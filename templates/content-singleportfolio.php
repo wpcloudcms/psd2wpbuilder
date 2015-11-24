@@ -141,7 +141,7 @@
 				echo do_shortcode('[gallery ids="'.$image_gallery.'" columns="4"]');
 			} else if ($ppost_type == 'carousel') { ?>
 					
-					 <div id="imageslider" class="loading carousel_outerrim">
+					 <div id="imageslider" class="loading container box carousel_outerrim">
 					    <div class="carousel_slider_outer fredcarousel fadein-carousel" style="overflow:hidden; max-width:<?php echo esc_attr($slidewidth);?>px; height: <?php echo esc_attr($slideheight);?>px; margin-left: auto; margin-right:auto;">
 					        <div class="carousel_slider kad-light-gallery initcarouselslider" data-carousel-container=".carousel_slider_outer" data-carousel-transition="600" data-carousel-height="<?php echo esc_attr($slideheight); ?>" data-carousel-auto="<?php echo esc_attr($slideauto);?>" data-carousel-speed="9000" data-carousel-id="carouselslider">
 					            <?php global $post;

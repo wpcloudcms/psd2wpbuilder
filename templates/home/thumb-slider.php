@@ -9,7 +9,7 @@
       $pausetime = $virtue_premium['slider_pausetime']; if ($pausetime == '') $pausetime = '7000';
       ?>
     <div class="sliderclass">
-      <div id="imageslider" class="container">
+      <div id="imageslider" class="container box">
         <div id="flex" class="flexslider loading" style="max-width:<?php echo esc_attr($slidewidth);?>px; margin-left: auto; margin-right:auto;">
             <ul class="slides">
               <?php foreach ($slides as $slide) : 
