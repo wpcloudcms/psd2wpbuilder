@@ -749,6 +749,13 @@ Redux::setSection( $opt_name, array(
             'validate' => 'color',
             ),
     array(
+            'id'=>'copyrights_box_bg_img',
+            'type' => 'media', 
+            'url'=> true,
+            'customizer' => true,
+            'title' => __('Upload background image or texture', 'virtue'),
+            ),
+    array(
             'id'=>'copyright_layout',
             'type' => 'image_select',
             //'compiler' => false,
