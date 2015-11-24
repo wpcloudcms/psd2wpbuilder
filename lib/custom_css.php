@@ -225,9 +225,9 @@ if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] 
   $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1; max-width: 103.25%;margin: 0% -1.625%;}';
 }
 if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') {
-  $boxed_layout = '.container.box {width: 100% !important;}';
+  $boxed_layout = '.container.box {width: 100% !important;margin-left: auto;margin-right: auto;}';
 } else {
-  $boxed_layout = '';
+  $boxed_layout = '.container.box {margin-left: auto;margin-right: auto;}';
 }
 if(!empty($virtue_premium['header_bg_color'])) {
   $header_bg_color = $virtue_premium['header_bg_color'];
