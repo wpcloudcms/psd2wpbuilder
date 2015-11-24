@@ -7,6 +7,10 @@ header#kad-banner {
 }
 section#topbar .container .row {height: auto; margin: auto;}
 
+.boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer {
+    margin-left: -15px !important;
+    margin-right: 15px !important;
+}
 
 .sliderclass {padding: 0px 0px 0px 0px !important;}
 /*
