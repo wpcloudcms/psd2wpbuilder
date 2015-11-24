@@ -9,8 +9,8 @@ section#topbar .container .row {height: auto; margin: auto;}
 
 @media (min-width: 992px) {
     .boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer {
-    margin-left: -15px !important;
-    margin-right: 15px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 }
 
