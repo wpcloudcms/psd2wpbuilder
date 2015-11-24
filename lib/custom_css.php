@@ -94,7 +94,7 @@ if(!empty($virtue_premium['font_h1'])) {
   $color_smenu_hover = '';
   }
   if(!empty($virtue_premium['secondarymenu_hover_bg_color'])) {
-    $color_smenu_bg_hover = '#nav-second ul.sf-menu > li:hover, #nav-second ul.sf-menu > li.current-menu-item, #nav-second ul.sf-menu ul > li.current-menu-item, #nav-second ul.sf-menu ul li a:hover {background:'.$virtue_premium['secondarymenu_hover_bg_color'].';}';
+    $color_smenu_bg_hover = '#nav-second ul.sf-menu > li:hover > a, #nav-second ul.sf-menu a:hover, #nav-second ul.sf-menu li.current-menu-item > a, #nav-second ul.sf-menu ul li a:hover {background:'.$virtue_premium['secondarymenu_hover_bg_color'].';}';
     } else {
     $color_smenu_bg_hover = '';
   }
