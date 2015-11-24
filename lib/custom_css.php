@@ -83,7 +83,7 @@ if(!empty($virtue_premium['font_h1'])) {
 //  $bgcolor_copyrt_div = '';
 //  }
 if(!empty($virtue_premium['copyrights_box_bg_img']) || !empty($virtue_premium['copyrights_box_bg_img']['url'])) {
-    $copyrights_box_bg_img = '.footertext {background:'.$copyrights_box_bg_color.' '.$copyrights_box_bg_img.' '.$copyrights_img_repeat.';}';
+    $copyrights_box_bg_img = '.footertext {background:'.$virtue_premium['copyrights_box_bg_color'].';'.$virtue_premium['copyrights_box_bg_img'].';'.$virtue_premium['copyrights_img_repeat'].';}';
   } else {
     $copyrights_box_bg_img = '';
   }
