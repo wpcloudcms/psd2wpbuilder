@@ -224,6 +224,11 @@ if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] 
 } else {
   $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1; max-width: 103.25%;margin: 0% -1.625%;}';
 }
+if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == wide) {
+  $boxed_layout = '.container.box {width: 100% !important;}';
+} else {
+  $boxed_layout = '';
+}
 if(!empty($virtue_premium['header_bg_color'])) {
   $header_bg_color = $virtue_premium['header_bg_color'];
   } else {
