@@ -86,3 +86,15 @@ li:after, li:before {
     vertical-align: bottom;
   }
 }
+
+/* custom styles */
+
+li:after {
+    width: 0px;
+    height: 30px;
+    background-color: #F1488E;
+    position: absolute;
+    top: 25%;
+    right: 0px;
+    left: -1px;
+}
