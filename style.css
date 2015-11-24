@@ -90,11 +90,11 @@ li:after, li:before {
 /* custom styles */
 
 li:after {
-    width: 0px;
     height: 30px;
-    background-color: #F1488E;
     position: absolute;
     top: 25%;
     right: 0px;
-    left: -1px;
+}
+#nav-second ul li:nth-child(1):after, #nav-third ul li:nth-child(1):after {
+    width: 0px;
 }
