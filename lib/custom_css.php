@@ -185,6 +185,11 @@ if(!empty($virtue_premium['fontfamily_copyrt_text'])) {
 } else {
   $fontfamily_copyrt_text = '';
 }
+if(!empty($virtue_premium['copyrights_img_repeat'])) {
+  $copyrights_img_repeat = '.container.box.footertext {'.$virtue_premium['copyrights_img_repeat'].';}';
+} else {
+  $copyrights_img_repeat = '';
+}
 if(!empty($virtue_premium['credit_link_color'])) {
 $credit_link_color = '.credit a, .credit span a {color:'.$virtue_premium['credit_link_color'].';}';
 } else {

@@ -756,6 +756,12 @@ Redux::setSection( $opt_name, array(
             'title' => __('Upload background image or texture', 'virtue'),
             ),
     array(
+            'id'=>'copyrights_img_repeat',
+            'type' => 'text',
+            'title' => __('Copyrights background Options', 'virtue'),
+            'default' => 'background-position: left top; background-repeat: repeat-x',
+            ),
+    array(
             'id'=>'copyright_layout',
             'type' => 'image_select',
             //'compiler' => false,
