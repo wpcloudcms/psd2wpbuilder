@@ -151,7 +151,7 @@ Redux::setSection( $opt_name, array(
             'id'=>'site_box_shadow',
             'type' => 'switch', 
             'title' => __('Disable Box Shadow?', 'virtue'),
-            'subtitle'=> __('Choose to disable Box Shadow', 'virtue'),
+            'subtitle'=> __('Choose "On" to disable Box Shadow', 'virtue'),
             "default"       => 0,
             ),
         array(
