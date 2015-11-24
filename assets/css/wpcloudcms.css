@@ -17,7 +17,9 @@ section#cat_nav.third {
     margin-left: -15px;
     margin-right: -15px;
 }
-
+ul.sf-dropdown-menu li a {
+    line-height: 20px !important;
+}
 .sliderclass {padding: 0px 0px 0px 0px !important;}
 /*
 .wrap.clearfix.row.contentbox {
