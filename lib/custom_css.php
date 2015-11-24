@@ -77,15 +77,10 @@ if(!empty($virtue_premium['font_h1'])) {
   $font_family = '';
 }
 //Copyrights Settings
-//    if(!empty($virtue_premium['copyrights_box_bg_color'])) {
-//  $bgcolor_copyrt_div = '.footertext {background-color:'.$virtue_premium['copyrights_box_bg_color'].' !important;}';
-//  } else {
-//  $bgcolor_copyrt_div = '';
-//  }
-if(!empty($virtue_premium['copyrights_box_bg_color']) || !empty($virtue_premium['copyrights_box_bg_img']['url'])) {
-    $copyrights_box_bg = '.footertext {background:'.$copyrights_box_bg_color.' '.$copyrights_box_bg_img.';'.$virtue_premium['copyrights_img_repeat'].';}';
+if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['copyrights_bg_img']['url'])) {
+    $copyrightsclass = '.footertext {background:'.$copyrights_bg_color.' '.$copyrights_bg_img.' '.$copyrights_bg_repeat.' '.$copyrights_bg_x.' '.$copyrights_bg_y.';}';
   } else {
-    $copyrights_box_bg = '';
+    $copyrightsclass = '';
   }
   //Menus Styling
   if(!empty($virtue_premium['primarymenu_hover_color'])) {
@@ -185,11 +180,6 @@ if(!empty($virtue_premium['fontfamily_copyrt_text'])) {
 } else {
   $fontfamily_copyrt_text = '';
 }
-//if(!empty($virtue_premium['copyrights_img_repeat'])) {
-//  $copyrights_img_repeat = '.container.box.footertext {'.$virtue_premium['copyrights_img_repeat'].';}';
-//} else {
-//  $copyrights_img_repeat = '';
-//}
 if(!empty($virtue_premium['credit_link_color'])) {
 $credit_link_color = '.credit a, .credit span a {color:'.$virtue_premium['credit_link_color'].';}';
 } else {
@@ -470,11 +460,11 @@ if(!empty($virtue_premium['bg_boxed_bg_img']['url'])) {
 } else {
   $boxedbg_img = '';
 }
-if(!empty($virtue_premium['copyrights_box_bg_img']['url'])) { 
-  $copyrights_box_bg_img = 'url('.$virtue_premium['copyrights_box_bg_img']['url'].')'; 
-} else {
-  $copyrights_box_bg_img = '';
-}
+//if(!empty($virtue_premium['copyrights_box_bg_img']['url'])) { 
+//  $copyrights_box_bg_img = 'url('.$virtue_premium['copyrights_box_bg_img']['url'].')'; 
+//} else {
+//  $copyrights_box_bg_img = '';
+//}
 if(!empty($virtue_premium['boxed_bg_repeat'])) {
 $boxedbg_repeat = 'background-repeat:'. $virtue_premium['boxed_bg_repeat'].';';
 } else {
@@ -690,7 +680,7 @@ if (!empty($virtue_premium['custom_js'])) {
 } else {
   $custom_js = '';
 }
-$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$copyrights_box_bg.'</style>
+$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$copyrightsclass.'</style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 '.$custom_js.'
