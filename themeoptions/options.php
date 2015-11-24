@@ -148,6 +148,13 @@ Redux::setSection( $opt_name, array(
             'default' => 'wide',
             ),
         array(
+            'id'=>'site_box_shadow',
+            'type' => 'switch', 
+            'title' => __('Disable Box Shadow?', 'virtue'),
+            'subtitle'=> __('Choose to disable Box Shadow', 'virtue'),
+            "default"       => 0,
+            ),
+        array(
             'id'=>'set_site_width',
             'type' => 'select',
             'title' => __('Choose your Site Width', 'virtue'), 

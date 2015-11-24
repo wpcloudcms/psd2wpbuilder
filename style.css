@@ -89,12 +89,6 @@ li:after, li:before {
 
 /* custom styles */
 
-li:after {
-    height: 30px;
-    position: absolute;
-    top: 25%;
-    right: 0px;
-}
-#nav-second ul li:nth-child(1):after, #nav-third ul li:nth-child(1):after {
-    width: 0px;
-}
+li:after {height: 30px;position: absolute;top: 25%;right: 0px;}
+.navclass {margin-top: -1px;}
+#nav-second ul li:nth-child(1):after, #nav-third ul li:nth-child(1):after {width: 0px;}
