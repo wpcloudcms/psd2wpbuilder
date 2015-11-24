@@ -13,6 +13,10 @@ section#topbar .container .row {height: auto; margin: auto;}
     margin-right: 15px !important;
 }
 }
+section#cat_nav.third {
+    margin-left: -15px;
+    margin-right: -15px;
+}
 
 .sliderclass {padding: 0px 0px 0px 0px !important;}
 /*
