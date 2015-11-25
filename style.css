@@ -105,6 +105,9 @@ figure img {
     padding: 40px 40px !important;
     background: rgba(0, 0, 0, 0.5);
 }
+.mfp-title {
+    text-align: center;
+}
 a:hover > img.border-light {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
