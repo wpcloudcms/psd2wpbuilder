@@ -3264,10 +3264,10 @@ Redux::setSection( $opt_name, array(
             "max"       => "80",
             ), 
          array(
-            'id'=>'menu_margin_bottom',
+            'id'=>'menu_margin_left',
             'type' => 'slider', 
             'title' => __('Primary Menu Spacing', 'virtue'),
-            'subtitle' => __('Bottom Spacing', 'virtue'),
+            'subtitle' => __('Left Spacing', 'virtue'),
             "default"       => "10",
             "min"       => "0",
             "step"      => "1",
