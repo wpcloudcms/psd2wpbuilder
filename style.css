@@ -1,7 +1,7 @@
 /*
  Theme Name:        WPCloudCMS
  Theme URI:         http://bigcloudcms.com/wpcloudcms/
- Version:           1.0.2
+ Version:           1.0.3
  Description:
  Author:            Webtimiser Team
  Author URI:        http://www.webtimiser.dk/
@@ -86,7 +86,17 @@ li:after, li:before {
     vertical-align: bottom;
   }
 }
+.float-left {float:left; }
+.float-left {float:right; }
 
+.border-light {
+    border: 5px rgba(255, 255, 255, 0.5) solid;
+    border-radius: 3px;
+}
+.border-dark {
+    border: 5px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 3px;
+}
 /* custom styles */
 
 footer#containerfooter, .container.box.footertext {
