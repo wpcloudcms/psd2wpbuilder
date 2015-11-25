@@ -89,13 +89,23 @@ li:after, li:before {
 .float-left {float:left; }
 .float-left {float:right; }
 
-.border-light {
+img.border-light {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
 }
-.border-dark {
+img.border-dark {
     border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
+}
+a:hover img.border-light {
+    border: 5px rgba(255, 255, 255, 0.5) solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+a:hover img.border-dark {
+    border: 5px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 3px;
+    padding: 5px;
 }
 /* custom styles */
 
