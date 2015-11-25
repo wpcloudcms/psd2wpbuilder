@@ -10,8 +10,7 @@
   ?>
 <body <?php body_class(); ?> data-smooth-scrolling="<?php echo esc_attr($scrolling);?>" data-smooth-scrolling-hide="<?php echo esc_attr($scrolling_hide);?>" data-jsselect="<?php echo esc_attr($select2_select);?>" data-product-tab-scroll="<?php echo esc_attr($pscroll); ?>" data-animate="<?php echo esc_attr($animate);?>" data-sticky="<?php echo esc_attr($sticky);?>">
 <div id="wrapper">
-    <div id="main">
-    <div class="container box">
+    <div id="main" class="container box">
   <!--[if lt IE 8]><div class="alert"> <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'virtue'); ?></div><![endif]-->
 
  <?php
@@ -70,7 +69,6 @@
 <div class="container box footertext clearfix">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
 </div>
-    </div><!--main-->
     </div><!--Wrapper-->
 </body> 
     
