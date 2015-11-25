@@ -100,9 +100,8 @@ img.border-dark {
     padding: 1px;
 }
 img.mfp-img {
-    border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
-    padding: 20px 20px !important;
+    padding: 25px !important;
     background: rgba(0, 0, 0, 0.5);
 }
 .mfp-title {
