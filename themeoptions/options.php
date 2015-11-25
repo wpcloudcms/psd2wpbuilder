@@ -3274,6 +3274,16 @@ Redux::setSection( $opt_name, array(
             "max"       => "100",
             ),
     array(
+            'id'=>'pmenu_width',
+            'type' => 'slider', 
+            'title' => __('Primary Menu Width', 'virtue'),
+            'subtitle' => __(' ', 'virtue'),
+            "default"       => "0",
+            "min"       => "-100",
+            "step"      => "1",
+            "max"       => "100",
+            ),
+    array(
             'id'=>'primarymenu_width',
             'type' => 'slider', 
             'title' => __('Primary Menu Item Width', 'virtue'),
