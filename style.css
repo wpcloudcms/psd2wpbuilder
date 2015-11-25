@@ -99,12 +99,12 @@ img.border-dark, figure img {
     border-radius: 3px;
     padding: 1px;
 }
-img.border-light > a:hover {
+a:hover > img.border-light {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
     padding: 5px;
 }
-img.border-dark > a:hover {
+a:hover > img.border-dark {
     border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
     padding: 5px;
