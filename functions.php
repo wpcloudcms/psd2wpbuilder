@@ -22,4 +22,18 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
+
+// Remove the version number of WP
+// Warning - this info is also available in the readme.html file in your root directory - delete this file!
+remove_action('wp_head', 'wp_generator');
+
+
+// Obscure login screen error messages
+function wpfme_login_obscure(){ return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';}
+add_filter( 'login_errors', 'wpfme_login_obscure' );
+
+
+// Disable the theme / plugin text editor in Admin
+define('DISALLOW_FILE_EDIT', true);
+
 ?>
