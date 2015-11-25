@@ -58,8 +58,8 @@ $logo_padding_left = '#logo {margin-left:0px;}';
 } else {
   $logo_padding_right = '#logo {margin-right:0px;}';
 }
-if(isset($virtue_premium['menu_margin_top']) || !empty($virtue_premium['menu_margin_left']) || !empty($virtue_premium['menu_margin_width'])) {
- $pmenuclass = '#nav-main, .nav-main {top:'.$virtue_premium['menu_margin_top'].'px;left:'.$virtue_premium['menu_margin_left'].'px;}width:'.$virtue_premium['menu_margin_width'].'%;';
+if(isset($virtue_premium['menu_margin_top']) || !empty($virtue_premium['menu_margin_left']) || !empty($virtue_premium['pmenu_width'])) {
+ $pmenuclass = '#nav-main, .nav-main {top:'.$virtue_premium['menu_margin_top'].'px;left:'.$virtue_premium['menu_margin_left'].'px;}width:'.$virtue_premium['pmenu_width'].'%;';
  } else {
   $pmenuclass = '#nav-main, .nav-main {top:30px;}';
  } 
