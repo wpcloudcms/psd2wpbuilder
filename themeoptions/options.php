@@ -284,7 +284,7 @@ Redux::setSection( $opt_name, array(
     'icon' => 'icon-page-break',
     'icon_class' => 'icon-large',
     'title' => __('Header Settings', 'virtue'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Header Layout', 'virtue')."</h3></div>",
+    'desc' => "",
     'fields' => array(
         array(
             'id'=>'info_header_options',
