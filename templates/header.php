@@ -73,6 +73,9 @@
     </div><!--close container-->
     </section>
     <?php endif; ?> 
+    <div class="container headertext clearfix">
+    <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
+</div>
     <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
