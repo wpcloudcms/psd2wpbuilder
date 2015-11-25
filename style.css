@@ -89,15 +89,21 @@ li:after, li:before {
 .float-left {float:left; }
 .float-left {float:right; }
 
-img.border-light, figure img {
+img.border-light {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
     padding: 1px;
 }
-img.border-dark, figure img {
+img.border-dark {
     border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
     padding: 1px;
+}
+figure img {
+    border: 5px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 3px;
+    padding: 40px 40px !important;
+    background: rgba(0, 0, 0, 0.5);
 }
 a:hover > img.border-light {
     border: 5px rgba(255, 255, 255, 0.5) solid;
