@@ -89,22 +89,22 @@ li:after, li:before {
 .float-left {float:left; }
 .float-left {float:right; }
 
-img.border-light {
+img.border-light, figure img {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
     padding: 1px;
 }
-img.border-dark {
+img.border-dark, figure img {
     border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
     padding: 1px;
 }
-a:hover img.border-light {
+img.border-light > a:hover {
     border: 5px rgba(255, 255, 255, 0.5) solid;
     border-radius: 3px;
     padding: 5px;
 }
-a:hover img.border-dark {
+img.border-dark > a:hover {
     border: 5px rgba(0, 0, 0, 0.5) solid;
     border-radius: 3px;
     padding: 5px;
