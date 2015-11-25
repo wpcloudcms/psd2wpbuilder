@@ -3279,9 +3279,9 @@ Redux::setSection( $opt_name, array(
             'title' => __('Primary Menu Width', 'virtue'),
             'subtitle' => __(' ', 'virtue'),
             "default"       => "0",
-            "min"       => "-100",
+            "min"       => "0",
             "step"      => "1",
-            "max"       => "100",
+            "max"       => "300",
             ),
     array(
             'id'=>'primarymenu_width',
