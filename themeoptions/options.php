@@ -286,11 +286,6 @@ Redux::setSection( $opt_name, array(
     'title' => __('Header Settings', 'virtue'),
     'desc' => "",
     'fields' => array(
-        array(
-            'id'=>'info_header_options',
-            'type' => 'info',
-            'desc' => __('Header Options', 'virtue'),
-            ),
                  array(
             'id'=>'header_layout',
             'type' => 'image_select',
