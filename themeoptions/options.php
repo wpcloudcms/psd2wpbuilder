@@ -286,22 +286,22 @@ Redux::setSection( $opt_name, array(
     'title' => __('Header Settings', 'virtue'),
     'desc' => '',
     'fields' => array(
-                 array(
-            'id'=>'header_layout',
-            'type' => 'image_select',
-            //'compiler' => false,
-            'title' => __('Header Layout', 'virtue'), 
-            'subtitle' => __('Choose how you want your header above or below Menu', 'virtue'),
-            'options' => array(
-                    'shm' => array('alt' => 'Slider Header Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/stm.png'),
-                    'mhs' => array('alt' => 'Menu Header Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mts.png'),
-                    'msh' => array('alt' => 'Menu Slider Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mst.png'),
-                    'smh' => array('alt' => 'Slider Menu Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/smt.png'),
-                    'hms' => array('alt' => 'Header Menu Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tms.png'),
-                    'hsm' => array('alt' => 'Header Slider Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tsm.png'),
-                ),
-            'default' => 'hms',
-            ),
+//                 array(
+//            'id'=>'header_layout',
+//            'type' => 'image_select',
+//            //'compiler' => false,
+//            'title' => __('Header Layout', 'virtue'), 
+//            'subtitle' => __('Choose how you want your header above or below Menu', 'virtue'),
+//            'options' => array(
+//                    'shm' => array('alt' => 'Slider Header Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/stm.png'),
+//                    'mhs' => array('alt' => 'Menu Header Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mts.png'),
+//                    'msh' => array('alt' => 'Menu Slider Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mst.png'),
+//                    'smh' => array('alt' => 'Slider Menu Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/smt.png'),
+//                    'hms' => array('alt' => 'Header Menu Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tms.png'),
+//                    'hsm' => array('alt' => 'Header Slider Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tsm.png'),
+//                ),
+//            'default' => 'hms',
+//            ),
         array(
             'id'=>'header_border',
             'type' => 'switch', 
@@ -544,95 +544,95 @@ Redux::setSection( $opt_name, array(
             'type' => 'info',
             'desc' => __('Header box Settings', 'virtue'),
             ),
-            array(
-            'id'=>'header_text',
-            'type' => 'textarea',
-            'title' => __('Header Text Box', 'virtue'), 
-            'subtitle' => __('Write your own text /code here. You can use this area to display above header and below secondary menu', 'virtue'),
-            'default' => '<div class="container headertext">
-                        </div>',
-            ),
-              array(
-            'id'=>'font_headertext',
-            'type' => 'typography', 
-            'title' => __('Header text Font', 'virtue'),
-            'compiler'=>true, // Use if you want to hook in your own CSS compiler
-            'font-family'=>true, 
-            'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
-            'font-backup'=>false, // Select a backup non-google font in addition to a google font
-            'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
-            'subsets'=>true, // Only appears if google is true and subsets not set to false
-            'font-size'=>true,
-            'text-align' => false,
-            'customizer' => true,
-            'line-height'=>true,
-            //'word-spacing'=>false, // Defaults to false
-            //'all_styles' => true,
-            'color'=>true,
-            'preview'=>true, // Disable the previewer
-            'output' => array('.headertext p, .headertext span'), 
-            'subtitle'=> __("Choose Size and Style for headertext Font", 'virtue'),
-            'default'=> array(
-                'font-family'=>'Lato',
-                'color'=>"", 
-                'font-style'=>'400',
-                'font-size'=>'12px', 
-                'line-height'=>'18px', ),
-            ),
-    array(
-            'id'=>'fontfamily_headertext',
-            'type' => 'text',
-            'title' => __('Other Font Family', 'virtue'),
-            'default' => ' ',
-            ),
-    array(
-            'id'=>'headertext_link_color',
-            'type' => 'color',
-            'title' => __('headertext link color', 'virtue'), 
-            'default' => '',
-            'transparent'=>false,
-            'customizer' => true,
-            'validate' => 'color',
-            ),
-array(
-            'id'=>'headertext_bg_color',
-            'type' => 'color',
-            'title' => __('headertext Background Color', 'virtue'), 
-            'default' => '',
-            'customizer' => true,
-            'validate' => 'color',
-            ),
-      array(
-            'id'=>'headertext_bg_img',
-            'type' => 'media', 
-            'url'=> true,
-            'customizer' => true,
-            'title' => __('Upload background image or texture', 'virtue'),
-            ), 
-      array(
-            'id'=>'headertext_bg_repeat',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('Image repeat options', 'virtue'), 
-            'options' => array('no-repeat' => __('no-repeat', 'virtue'), 'repeat' => __('repeat', 'virtue'), 'repeat-x' => __('repeat-x', 'virtue'), 'repeat-y' => __('repeat-y', 'virtue')),
-            'width' => 'width:60%',
-            ),
-      array(
-            'id'=>'headertext_bg_placementx',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('X image placement options', 'virtue'), 
-            'options' => array('left' => __('left', 'virtue'), 'center' => __('center', 'virtue'), 'right' => __('right', 'virtue')),
-            'width' => 'width:60%',
-            ),
-      array(
-            'id'=>'headertext_bg_placementy',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('Y image placement options', 'virtue'), 
-            'options' => array('top' => __('top', 'virtue'), 'center' => __('center', 'virtue'), 'bottom' => __('bottom', 'virtue')),
-            'width' => 'width:60%',
-            ),
+//            array(
+//            'id'=>'header_text',
+//            'type' => 'textarea',
+//            'title' => __('Header Text Box', 'virtue'), 
+//            'subtitle' => __('Write your own text /code here. You can use this area to display above header and below secondary menu', 'virtue'),
+//            'default' => '<div class="container headertext">
+//                        </div>',
+//            ),
+//              array(
+//            'id'=>'font_headertext',
+//            'type' => 'typography', 
+//            'title' => __('Header text Font', 'virtue'),
+//            'compiler'=>true, // Use if you want to hook in your own CSS compiler
+//            'font-family'=>true, 
+//            'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
+//            'font-backup'=>false, // Select a backup non-google font in addition to a google font
+//            'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
+//            'subsets'=>true, // Only appears if google is true and subsets not set to false
+//            'font-size'=>true,
+//            'text-align' => false,
+//            'customizer' => true,
+//            'line-height'=>true,
+//            //'word-spacing'=>false, // Defaults to false
+//            //'all_styles' => true,
+//            'color'=>true,
+//            'preview'=>true, // Disable the previewer
+//            'output' => array('.headertext p, .headertext span'), 
+//            'subtitle'=> __("Choose Size and Style for headertext Font", 'virtue'),
+//            'default'=> array(
+//                'font-family'=>'Lato',
+//                'color'=>"", 
+//                'font-style'=>'400',
+//                'font-size'=>'12px', 
+//                'line-height'=>'18px', ),
+//            ),
+//    array(
+//            'id'=>'fontfamily_headertext',
+//            'type' => 'text',
+//            'title' => __('Other Font Family', 'virtue'),
+//            'default' => ' ',
+//            ),
+//    array(
+//            'id'=>'headertext_link_color',
+//            'type' => 'color',
+//            'title' => __('headertext link color', 'virtue'), 
+//            'default' => '',
+//            'transparent'=>false,
+//            'customizer' => true,
+//            'validate' => 'color',
+//            ),
+//array(
+//            'id'=>'headertext_bg_color',
+//            'type' => 'color',
+//            'title' => __('headertext Background Color', 'virtue'), 
+//            'default' => '',
+//            'customizer' => true,
+//            'validate' => 'color',
+//            ),
+//      array(
+//            'id'=>'headertext_bg_img',
+//            'type' => 'media', 
+//            'url'=> true,
+//            'customizer' => true,
+//            'title' => __('Upload background image or texture', 'virtue'),
+//            ), 
+//      array(
+//            'id'=>'headertext_bg_repeat',
+//            'type' => 'select',
+//            'customizer' => true,
+//            'title' => __('Image repeat options', 'virtue'), 
+//            'options' => array('no-repeat' => __('no-repeat', 'virtue'), 'repeat' => __('repeat', 'virtue'), 'repeat-x' => __('repeat-x', 'virtue'), 'repeat-y' => __('repeat-y', 'virtue')),
+//            'width' => 'width:60%',
+//            ),
+//      array(
+//            'id'=>'headertext_bg_placementx',
+//            'type' => 'select',
+//            'customizer' => true,
+//            'title' => __('X image placement options', 'virtue'), 
+//            'options' => array('left' => __('left', 'virtue'), 'center' => __('center', 'virtue'), 'right' => __('right', 'virtue')),
+//            'width' => 'width:60%',
+//            ),
+//      array(
+//            'id'=>'headertext_bg_placementy',
+//            'type' => 'select',
+//            'customizer' => true,
+//            'title' => __('Y image placement options', 'virtue'), 
+//            'options' => array('top' => __('top', 'virtue'), 'center' => __('center', 'virtue'), 'bottom' => __('bottom', 'virtue')),
+//            'width' => 'width:60%',
+//            ),
         ),
 ) );
 Redux::setSection( $opt_name, array(
