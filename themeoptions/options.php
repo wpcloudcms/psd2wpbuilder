@@ -284,7 +284,7 @@ Redux::setSection( $opt_name, array(
     'icon' => 'icon-page-break',
     'icon_class' => 'icon-large',
     'title' => __('Header Settings', 'virtue'),
-    'desc' => "",
+    'desc' => '',
     'fields' => array(
                  array(
             'id'=>'header_layout',
