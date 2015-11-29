@@ -214,79 +214,7 @@ Redux::setSection( $opt_name, array(
             "step"      => "5",
             "max"       => "300",
             ), 
-        )
-) );
-Redux::setSection( $opt_name, array(
-    'id' => 'topbar_settings',
-    'icon' => 'icon-cogs',
-    'icon_class' => 'icon-large',
-    'title' => __('Topbar Settings', 'virtue'),
-    'fields' => array(
-        array(
-            'id'=>'topbar',
-            'type' => 'switch', 
-            'title' => __('Use Topbar?', 'virtue'),
-            'subtitle'=> __('Choose to show or hide topbar', 'virtue'),
-            "default"       => 1,
-            ), 
-        array(
-            'id'=>'topbar_mobile',
-            'type' => 'switch', 
-            'title' => __('Enable topbar mobile menu layout.', 'virtue'),
-            'subtitle'=> __('This will convert your menu to a mobile friendly layout and move the search box into the menu.', 'virtue'),
-            "default" => 0,
-            ), 
-        array(
-            'id'=>'topbar_icons',
-            'type' => 'switch', 
-            'title' => __('Use Topbar Icon Menu?', 'virtue'),
-            'subtitle'=> __('Choose to show or hide topbar icon Menu', 'virtue'),
-            "default"       => 0,
-            ),
-        array(
-            'id'=>'topbar_icon_menu',
-            'type' => 'kad_icons',
-            'title' => __('Topbar Icon Menu', 'virtue'),
-            'subtitle'=> __('Choose your icons for the topbar icon menu.', 'virtue'),
-        ), 
-        array(
-            'id'=>'show_cartcount',
-            'type' => 'switch', 
-            'title' => __('Show Cart total in topbar?', 'virtue'),
-            'subtitle'=> __('This only works if using woocommerce', 'virtue'),
-            "default"       => 1,
-            ), 
-        array(
-            'id'=>'topbar_search',
-            'type' => 'switch', 
-            'title' => __('Display Search in Topbar?', 'virtue'),
-            'subtitle'=> __('Choose to show or hide search in topbar', 'virtue'),
-            "default"       => 1,
-            ),
-        array(
-            'id'=>'topbar_widget',
-            'type' => 'switch', 
-            'title' => __('Enable widget area in right of Topbar?', 'virtue'),
-            'subtitle'=> __('Note this will hide remove search (you can re-enable it my adding it to the widget area)', 'virtue'),
-            "default"       => 0,
-            ),
-        array(
-            'id'=>'topbar_layout',
-            'type' => 'switch', 
-            'title' => __('Topbar Layout Switch', 'virtue'),
-            'subtitle'=> __('This moves the left items to the right and right items to the left.', 'virtue'),
-            "default"       => 0,
-            ),
-        ),
-) );
-Redux::setSection( $opt_name, array(
-    'id' => 'header',
-    'icon' => 'icon-page-break',
-    'icon_class' => 'icon-large',
-    'title' => __('Header Settings', 'virtue'),
-    'desc' => "",
-    'fields' => array(
-        array(
+         array(
             'id'=>'info_header_options',
             'type' => 'info',
             'desc' => __('Header Options', 'virtue'),
@@ -530,7 +458,26 @@ Redux::setSection( $opt_name, array(
                 'font-size'=>'14px', 
                 'line-height'=>'20px', ),
             ),
-        
+        array(
+            'id'=>'menu_margin_top',
+            'type' => 'slider', 
+            'title' => __('Primary Menu Spacing', 'virtue'),
+            'subtitle' => __('Top Spacing', 'virtue'),
+            "default"       => "40",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "80",
+            ), 
+         array(
+            'id'=>'menu_margin_bottom',
+            'type' => 'slider', 
+            'title' => __('Primary Menu Spacing', 'virtue'),
+            'subtitle' => __('Bottom Spacing', 'virtue'),
+            "default"       => "10",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "80",
+            ),
          array(
             'id'=>'virtue_banner_upload',
             'type' => 'media', 
@@ -544,99 +491,69 @@ Redux::setSection( $opt_name, array(
             'type' => 'text',
             'title' => __('Banner Link', 'virtue'),
             ),
-            array(
-            'id'=>'header_box_sitewide',
-            'type' => 'info',
-            'desc' => __('Header box Settings', 'virtue'),
-            ),
-            array(
-            'id'=>'header_text',
-            'type' => 'textarea',
-            'title' => __('Header Text Box', 'virtue'), 
-            'subtitle' => __('Write your own text /code here. You can use this area to display above header and below secondary menu', 'virtue'),
-            'default' => '<div class="container headertext">
-                        </div>',
-            ),
-              array(
-            'id'=>'font_headertext',
-            'type' => 'typography', 
-            'title' => __('Header text Font', 'virtue'),
-            'compiler'=>true, // Use if you want to hook in your own CSS compiler
-            'font-family'=>true, 
-            'google'=>true, // Disable google fonts. Won't work if you haven't defined your google api key
-            'font-backup'=>false, // Select a backup non-google font in addition to a google font
-            'font-style'=>true, // Includes font-style and weight. Can use font-style or font-weight to declare
-            'subsets'=>true, // Only appears if google is true and subsets not set to false
-            'font-size'=>true,
-            'text-align' => false,
-            'customizer' => true,
-            'line-height'=>true,
-            //'word-spacing'=>false, // Defaults to false
-            //'all_styles' => true,
-            'color'=>true,
-            'preview'=>true, // Disable the previewer
-            'output' => array('.headertext p, .headertext span'), 
-            'subtitle'=> __("Choose Size and Style for headertext Font", 'virtue'),
-            'default'=> array(
-                'font-family'=>'Lato',
-                'color'=>"", 
-                'font-style'=>'400',
-                'font-size'=>'12px', 
-                'line-height'=>'18px', ),
-            ),
-    array(
-            'id'=>'fontfamily_headertext',
-            'type' => 'text',
-            'title' => __('Other Font Family', 'virtue'),
-            'default' => ' ',
-            ),
-    array(
-            'id'=>'headertext_link_color',
-            'type' => 'color',
-            'title' => __('headertext link color', 'virtue'), 
-            'default' => '',
-            'transparent'=>false,
-            'customizer' => true,
-            'validate' => 'color',
-            ),
-array(
-            'id'=>'headertext_bg_color',
-            'type' => 'color',
-            'title' => __('headertext Background Color', 'virtue'), 
-            'default' => '',
-            'customizer' => true,
-            'validate' => 'color',
-            ),
-      array(
-            'id'=>'headertext_bg_img',
-            'type' => 'media', 
-            'url'=> true,
-            'customizer' => true,
-            'title' => __('Upload background image or texture', 'virtue'),
+        ),
+
+) );
+Redux::setSection( $opt_name, array(
+    'id' => 'topbar_settings',
+    'icon' => 'icon-cogs',
+    'icon_class' => 'icon-large',
+    'title' => __('Topbar Settings', 'virtue'),
+    'fields' => array(
+        array(
+            'id'=>'topbar',
+            'type' => 'switch', 
+            'title' => __('Use Topbar?', 'virtue'),
+            'subtitle'=> __('Choose to show or hide topbar', 'virtue'),
+            "default"       => 1,
             ), 
-      array(
-            'id'=>'headertext_bg_repeat',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('Image repeat options', 'virtue'), 
-            'options' => array('no-repeat' => __('no-repeat', 'virtue'), 'repeat' => __('repeat', 'virtue'), 'repeat-x' => __('repeat-x', 'virtue'), 'repeat-y' => __('repeat-y', 'virtue')),
-            'width' => 'width:60%',
+        array(
+            'id'=>'topbar_mobile',
+            'type' => 'switch', 
+            'title' => __('Enable topbar mobile menu layout.', 'virtue'),
+            'subtitle'=> __('This will convert your menu to a mobile friendly layout and move the search box into the menu.', 'virtue'),
+            "default" => 0,
+            ), 
+        array(
+            'id'=>'topbar_icons',
+            'type' => 'switch', 
+            'title' => __('Use Topbar Icon Menu?', 'virtue'),
+            'subtitle'=> __('Choose to show or hide topbar icon Menu', 'virtue'),
+            "default"       => 0,
             ),
-      array(
-            'id'=>'headertext_bg_placementx',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('X image placement options', 'virtue'), 
-            'options' => array('left' => __('left', 'virtue'), 'center' => __('center', 'virtue'), 'right' => __('right', 'virtue')),
-            'width' => 'width:60%',
+        array(
+            'id'=>'topbar_icon_menu',
+            'type' => 'kad_icons',
+            'title' => __('Topbar Icon Menu', 'virtue'),
+            'subtitle'=> __('Choose your icons for the topbar icon menu.', 'virtue'),
+        ), 
+        array(
+            'id'=>'show_cartcount',
+            'type' => 'switch', 
+            'title' => __('Show Cart total in topbar?', 'virtue'),
+            'subtitle'=> __('This only works if using woocommerce', 'virtue'),
+            "default"       => 1,
+            ), 
+        array(
+            'id'=>'topbar_search',
+            'type' => 'switch', 
+            'title' => __('Display Search in Topbar?', 'virtue'),
+            'subtitle'=> __('Choose to show or hide search in topbar', 'virtue'),
+            "default"       => 1,
             ),
-      array(
-            'id'=>'headertext_bg_placementy',
-            'type' => 'select',
-            'customizer' => true,
-            'title' => __('Y image placement options', 'virtue'), 
-            'options' => array('top' => __('top', 'virtue'), 'center' => __('center', 'virtue'), 'bottom' => __('bottom', 'virtue')),
-            'width' => 'width:60%',
+        array(
+            'id'=>'topbar_widget',
+            'type' => 'switch', 
+            'title' => __('Enable widget area in right of Topbar?', 'virtue'),
+            'subtitle'=> __('Note this will hide remove search (you can re-enable it my adding it to the widget area)', 'virtue'),
+            "default"       => 0,
+            ),
+        array(
+            'id'=>'topbar_layout',
+            'type' => 'switch', 
+            'title' => __('Topbar Layout Switch', 'virtue'),
+            'subtitle'=> __('This moves the left items to the right and right items to the left.', 'virtue'),
+            "default"       => 0,
             ),
         ),
 ) );
@@ -3252,36 +3169,6 @@ Redux::setSection( $opt_name, array(
             'transparent'=>false,
             'customizer' => true,
             'validate' => 'color',
-            ),
-    array(
-            'id'=>'menu_margin_top',
-            'type' => 'slider', 
-            'title' => __('Primary Menu Spacing', 'virtue'),
-            'subtitle' => __('Top Spacing', 'virtue'),
-            "default"       => "20",
-            "min"       => "-100",
-            "step"      => "1",
-            "max"       => "100",
-            ), 
-         array(
-            'id'=>'menu_margin_left',
-            'type' => 'slider', 
-            'title' => __('Primary Menu Spacing', 'virtue'),
-            'subtitle' => __('Left Spacing', 'virtue'),
-            "default"       => "0",
-            "min"       => "-100",
-            "step"      => "1",
-            "max"       => "100",
-            ),
-    array(
-            'id'=>'pmenu_width',
-            'type' => 'slider', 
-            'title' => __('Primary Menu Width', 'virtue'),
-            'subtitle' => __(' ', 'virtue'),
-            "default"       => "0",
-            "min"       => "0",
-            "step"      => "1",
-            "max"       => "300",
             ),
     array(
             'id'=>'primarymenu_width',
