@@ -12,7 +12,7 @@
 <footer id="containerfooter" class="container box footerclass" role="contentinfo">
   <div class="container">
   	<div class="row">
-  		<?php if(isset($virtue_premium['footer_layout'])) { $footer_layout = $virtue_premium['footer_layout']; } else { $footer_layout = 'fourc'; }
+  		<?php if(isset($virtue_premium['footer_layout'])) { $footer_layout = $virtue_premium['footer_layout']; } else { $footer_layout = 'onec'; }
   			if ($footer_layout == "fourc") {
   				if (is_active_sidebar('footer_1') ) { ?> 
 					<div class="col-md-3 col-sm-6 footercol1">
@@ -50,7 +50,7 @@
 					<?php dynamic_sidebar('footer_third_3'); ?>
 					</div> 
 	            <?php }; ?>
-			<?php } else {
+            <?php } else if($footer_layout == "twoc") {
 					if (is_active_sidebar('footer_double_1') ) { ?>
 					<div class="col-md-6 col-sm-6 footercol1">
 					<?php dynamic_sidebar('footer_double_1'); ?> 
@@ -59,6 +59,12 @@
 		        <?php if (is_active_sidebar('footer_double_2') ) { ?>
 					<div class="col-md-6 col-sm-6 footercol2">
 					<?php dynamic_sidebar('footer_double_2'); ?> 
+					</div> 
+		            <?php }; ?>
+        <?php } else {
+					if (is_active_sidebar('footer_single_1') ) { ?>
+					<div class="col-md-12 footercol1">
+					<?php dynamic_sidebar('footer_single_1'); ?> 
 					</div> 
 		            <?php }; ?>
 		        <?php } ?>

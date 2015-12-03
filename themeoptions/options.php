@@ -571,11 +571,12 @@ Redux::setSection( $opt_name, array(
             'title' => __('Footer Widget Layout', 'virtue'), 
             'subtitle' => __('Select how many columns for footer widgets', 'virtue'),
             'options' => array(
-                    'fourc' => array('alt' => 'Four Column Layout', 'img' => OPTIONS_PATH.'img/footer-widgets-4.png'),
-                    'threec' => array('alt' => 'Three Column Layout', 'img' => OPTIONS_PATH.'img/footer-widgets-3.png'),
-                    'twoc' => array('alt' => 'Two Column Layout', 'img' => OPTIONS_PATH.'img/footer-widgets-2.png'),
+                    'fourc' => array('alt' => 'Four Column Layout', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/footer-widgets-4.png'),
+                    'threec' => array('alt' => 'Three Column Layout', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/footer-widgets-3.png'),
+                    'twoc' => array('alt' => 'Two Column Layout', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/footer-widgets-2.png'),
+                    'onec' => array('alt' => 'One Column Layout', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/footer-widgets-1.png'),
                 ),
-            'default' => 'fourc',
+            'default' => 'onec',
             ), 
             array(
             'id'=>'info_calltoaction_sitewide',
