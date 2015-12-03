@@ -64,12 +64,12 @@
   </div><!-- /.maincontent -->
      </div><!-- /.row-height -->
     </div><!-- /.container .box -->
+</div><!--Wrapper-->
 <?php do_action('get_footer');
   get_template_part('templates/footer'); ?>
 <div class="container box footertext clearfix">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
-</div>
-    </div><!--Wrapper-->
+      </div>
 </body> 
     
 </html>
