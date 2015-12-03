@@ -73,9 +73,13 @@
     </div><!--close container-->
     </section>
     <?php endif; ?> 
+    
     <div class="container headertext clearfix">
+    
     <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
 </div>
+    <div class="container">
+    <div class="slider-left col-md-7">
     <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
@@ -128,6 +132,8 @@
           <?php $alt_text = get_post_meta($virtue_premium['virtue_banner_upload']['id'], '_wp_attachment_image_alt', true); ?>
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
-        </div> <?php } ?>
+        </div> <?php } ?></div></div>
+    <div class="slider-left col-md-5"></div>
+    </div>
         <?php do_action('kt_after_header_content'); ?>
 </header>
