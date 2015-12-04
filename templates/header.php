@@ -134,7 +134,7 @@
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?></div>
      <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slidernwidget') { ?>
-              <div class="slider-right"> <?php 
+              <div class="slider-right col-md-4"> <?php 
                 if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
           <?php } ?>
