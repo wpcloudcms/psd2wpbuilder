@@ -132,6 +132,10 @@ footer#containerfooter, .container.box.footertext {
     margin-right: -30px !important;
 }
 */
+img.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 li:after {height: 30px;position: absolute;top: 25%;right: 0px;}
 .navclass {margin-top: -1px;}
