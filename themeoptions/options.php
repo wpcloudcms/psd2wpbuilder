@@ -802,6 +802,18 @@ Redux::setSection( $opt_name, array(
     'desc' => "<div class='redux-info-field'><h3>".__('Home Page Slider Options', 'virtue')."</h3></div>",
     'fields' => array(
         array(
+            'id'=>'slider_layout',
+            'type' => 'image_select',
+            //'compiler'=> false,
+            'title' => __('Slider Layout Style', 'virtue'), 
+            'subtitle' => __('Select slider only or Slider with widget', 'virtue'),
+            'options' => array(
+                    'slideronly' => array('alt' => 'slider only', 'img' => OPTIONS_PATH.'img/1c.png'),
+                    'slidernwidget' => array('alt' => 'slider and widget', 'img' => OPTIONS_PATH.'img/3cm.png'),
+                ),
+            'default' => 'slideronly',
+            ),
+        array(
             'id'=>'choose_slider',
             'type' => 'select',
             'title' => __('Choose a Home Image Slider', 'virtue'), 

@@ -133,7 +133,11 @@
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?></div>
-    <div class="slider-left col-md-5"></div>
+     <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slidernwidget') { ?>
+              <div class="slider-right col-md-5"> <?php 
+                if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
+</div>
+          <?php } ?>
     </div></div>
         <?php do_action('kt_after_header_content'); ?>
 </header>
