@@ -79,7 +79,7 @@
     <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
 </div>
     <div class="slider container">
-    <div class="slider-left col-md-7">
+    <div class="slider-left col-md-8">
     <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
@@ -134,7 +134,7 @@
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?></div>
      <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slidernwidget') { ?>
-              <div class="slider-right col-md-5"> <?php 
+              <div class="slider-right"> <?php 
                 if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
           <?php } ?>
