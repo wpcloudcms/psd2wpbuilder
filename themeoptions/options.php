@@ -3974,7 +3974,7 @@ Redux::setSection( $opt_name, array(
             'width' => 'width:35%', 
             ),
             array(
-            'id'=>'min-width-1200px_css',
+            'id'=>'min_width_1200px_css',
             'type' => 'textarea',
             'title' => __('min-width-1200px (col-lg) (Above 1200px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS.', 'virtue'),
