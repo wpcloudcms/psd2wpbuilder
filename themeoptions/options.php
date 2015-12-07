@@ -3959,7 +3959,7 @@ Redux::setSection( $opt_name, array(
             'id'=>'bootstrap_custom_css',
             'type' => 'select',
             'title' => __('Choose your Bootstrap Custom css', 'virtue'), 
-            'options' => array('col-lg-md-above-992px-1200px'            => '(col-lg) (Above 1200px)',
+            'options' => array('col-lg-md-above-992px-1200px'            => 'col-lg-md-above-992px-1200px',
                                #'min-width-992px-and-max-width-1199px'   => '(col-md) (Between 992px to 1199px)',
                                #'min-width-992px'                        => '(col-md) (Above 992px)',
                                'max-width-991px'                        => '(col-md) (Below 991px)',                               
