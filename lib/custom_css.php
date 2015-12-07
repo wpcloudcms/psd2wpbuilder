@@ -735,15 +735,9 @@ if (isset($virtue_premium['logo_layout']) && $virtue_premium['logo_layout'] == '
 } else {
   $logolayoutwidget = '';
 }
-if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-lg-md-above-992px-1200px') {
-  $bootstrap_custom_css = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'}';
-} 
-elseif ($virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
-  $bootstrap_custom_css = '@media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'}';
-} 
-elseif ($virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
-  $bootstrap_custom_css = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
-} else {
+if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-lg-md-above-992px-1200px') && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') && $virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
+  $bootstrap_custom_css = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'} @media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'} @media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
+}  else {
   $bootstrap_custom_css = '';
 } 
 //if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
