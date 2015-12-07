@@ -736,20 +736,26 @@ if (isset($virtue_premium['logo_layout']) && $virtue_premium['logo_layout'] == '
   $logolayoutwidget = '';
 }
 if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-lg-md-above-992px-1200px') {
-  $col_md_sm_above_992px_1200px = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'}';
-} else {
-  $col_lg_md_above_992px_1200px = '';
-}
-if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
-  $col_md_sm_above_768px_991px = '@media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'}';
-} else {
-  $col_md_sm_above_768px_991px = '';
+  $bootstrap_custom_css = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'}';
 } 
-if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
-  $col_sm_xs_below_767px_479px = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
-} else {
-  $col_sm_xs_below_767px_479px = '';
+elseif (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
+  $bootstrap_custom_css = '@media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'}';
 } 
+elseif (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
+  $bootstrap_custom_css = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
+} else {
+  $bootstrap_custom_css = '';
+} 
+//if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
+//  $col_md_sm_above_768px_991px = '@media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'}';
+//} else {
+//  $col_md_sm_above_768px_991px = '';
+//} 
+//if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
+//  $col_sm_xs_below_767px_479px = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
+//} else {
+//  $col_sm_xs_below_767px_479px = '';
+//} 
 if (!empty($virtue_premium['custom_css'])) {
   $custom_css = $virtue_premium['custom_css'];
 } else {
@@ -760,7 +766,7 @@ if (!empty($virtue_premium['custom_js'])) {
 } else {
   $custom_js = '';
 }
-$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$pmenu_padding.$pmenu_height.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$col_sm_xs_below_767px_479px.$custom_css.$copyrightsclass.$pmenuclass.$primarymenu_sep.'</style>
+$kad_custom_css = '<style type="text/css">'.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$pmenu_padding.$pmenu_height.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$bootstrap_custom_css.$custom_css.$copyrightsclass.$pmenuclass.$primarymenu_sep.'</style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 '.$custom_js.'
