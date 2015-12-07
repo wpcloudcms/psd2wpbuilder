@@ -746,7 +746,7 @@ if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap
   $col_md_sm_above_768px_991px = '';
 } 
 if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-sm-xs-below-767px-479px') {
-  $col_sm_xs_below_767px_479px = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].';}; @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].';}; @media (max-width:479px){'.$virtue_premium['max_width_479px'].';};';
+  $col_sm_xs_below_767px_479px = '@media (max-width:767px){'.$virtue_premium['max_width_767px'].'} @media (max-width:767px and min-width:480px){'.$virtue_premium['max_width_767px_and_min_width_480px'].'} @media (max-width:479px){'.$virtue_premium['max_width_479px'].'}';
 } else {
   $col_sm_xs_below_767px_479px = '';
 } 
