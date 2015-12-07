@@ -736,7 +736,7 @@ if (isset($virtue_premium['logo_layout']) && $virtue_premium['logo_layout'] == '
   $logolayoutwidget = '';
 }
 if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-lg-md-above-992px-1200px') {
-  $col_md_sm_above_768px_991px = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'}';
+  $col_md_sm_above_992px_1200px = '@media (min-width:1200px){'.$virtue_premium['min_width_1200px'].'} @media (min-width:992px and max-width:1199px){'.$virtue_premium['min_width_992px_and_max_width_1199px'].'} @media (min-width:992px){'.$virtue_premium['min_width_992px'].'}';
 } else {
   $col_lg_md_above_992px_1200px = '';
 }
