@@ -4000,7 +4000,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'max_width_991px',
             'type' => 'textarea',
-            'title' => __('(col-md) (Below 991px)', 'virtue'), 
+            'title' => __('(col-sm) (Below 991px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS to max_width_991px.', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','col-md-sm-above-768px-991px'),
@@ -4008,7 +4008,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'max_width_991px_and_min_width_768px',
             'type' => 'textarea',
-            'title' => __('(col-md) (Between 768px to 991px)', 'virtue'), 
+            'title' => __('(col-sm) (Between 768px to 991px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS to max_width_991px_and_min_width_768px.', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','col-md-sm-above-768px-991px'),
@@ -4016,7 +4016,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'min_width_768px',
             'type' => 'textarea',
-            'title' => __('(col-md) (Above 768px)', 'virtue'), 
+            'title' => __('(col-sm) (Above 768px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS to min_width_768px.', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','col-md-sm-above-768px-991px'),
@@ -4024,7 +4024,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'max_width_767px',
             'type' => 'textarea',
-            'title' => __('(col-sm) (Below 767px)', 'virtue'), 
+            'title' => __('(col-xs) (Below 767px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS to max_width_767px.', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','col-sm-xs-below-767px-480px'),
@@ -4032,7 +4032,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'max_width_767px_and_min_width_480px',
             'type' => 'textarea',
-            'title' => __('(col-sm) (Between 480px to 767px)', 'virtue'), 
+            'title' => __('(col-xs) (Between 480px to 767px)', 'virtue'), 
             'subtitle' => __('Quickly add some Bootstrap CSS to max_width_767px_and_min_width_480px.', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','col-sm-xs-below-767px-480px'),
