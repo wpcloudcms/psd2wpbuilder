@@ -9,7 +9,7 @@ function custom_scripts() {
     
     wp_enqueue_style( 'custom-font', get_stylesheet_directory_uri().'/fonts/BebasNeue.woff' ); 
     
-     wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
+  //   wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
     
     wp_register_script( 'jquery', 'https://code.jquery.com/jquery-1.10.2.js', array('jquery') );
     wp_enqueue_script('jquery');
