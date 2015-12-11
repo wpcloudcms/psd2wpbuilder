@@ -40,11 +40,6 @@
   <div class="row-height container">
   <div class="maincontent col-sm-height">
 <div class="wrap clearfix row contentbox">
-<header>
-      <?php if(kadence_display_post_breadcrumbs()) { kadence_breadcrumbs(); } ?>
-      <h1 class="entry-title" itemprop="name headline"><?php the_title(); ?></h1>
-        <?php// get_template_part('templates/entry', 'meta-subhead'); ?>
-    </header>
 <?php // if (has_post_thumbnail( $post->ID ) ): ?>
   <?php // $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 	<!-- <img src="<?php // echo $image[0]; ?>" alt="" />
@@ -55,7 +50,11 @@
  <div class="wrap clearfix contentbox contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
-        
+        <header>
+      <?php if(kadence_display_post_breadcrumbs()) { kadence_breadcrumbs(); } ?>
+      <h1 class="entry-title" itemprop="name headline"><?php the_title(); ?></h1>
+        <?php// get_template_part('templates/entry', 'meta-subhead'); ?>
+    </header>
       <?php if (kadence_display_sidebar()) : ?>
       <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
