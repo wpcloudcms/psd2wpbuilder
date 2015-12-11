@@ -1,4 +1,10 @@
-    
+         <div class="container">
+				<div class="page-header">
+      <?php if(kadence_display_post_breadcrumbs()) { kadence_breadcrumbs(); } ?>
+      <h1 class="entry-title" itemprop="name headline"><?php the_title(); ?></h1>
+        <?php// get_template_part('templates/entry', 'meta-subhead'); ?>
+                </div>
+         </div>
     <div id="content" class="col-sm-12">
    		<div class="row">
 	      	<div class="main <?php echo esc_attr(kadence_main_class()); ?>" id="ktmain" role="main">
