@@ -30,6 +30,7 @@
   <?php if(isset($virtue_premium['virtue_custom_favicon']['url']) && !empty($virtue_premium['virtue_custom_favicon']['url']) ) {?>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo esc_url($virtue_premium['virtue_custom_favicon']['url']); ?>" />
   <?php } ?>
+    <link href="http://allfont.net/allfont.css?fonts=arial-narrow" rel="stylesheet" type="text/css" />
   <?php wp_head(); ?>
   <!--[if lt IE 9]>
       <script src="<?php echo get_template_directory_uri() . '/assets/js/vendor/respond.min.js';?>"></script>
