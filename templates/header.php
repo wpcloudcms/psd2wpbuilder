@@ -1,4 +1,4 @@
-<header id="kad-banner" class="banner headerclass" role="banner" data-header-shrink="0" data-mobile-sticky="0">
+<header id="kad-banner" class="banner headerclass" data-header-shrink="0" data-mobile-sticky="0">
 <?php if (kadence_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
@@ -67,7 +67,7 @@
   <?php if (has_nav_menu('secondary_navigation')) : ?>
   <section id="cat_nav" class="navclass">
     <div class="container">
-     <nav id="nav-second" class="clearfix" role="navigation">
+     <nav id="nav-second" class="clearfix">
      <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'sf-menu')); ?>
    </nav>
     </div><!--close container-->

@@ -70,9 +70,9 @@
 
   <?php do_action('kt_before_secondary_navigation'); ?>
   <?php if (has_nav_menu('secondary_navigation')) : ?>
-  <section id="cat_nav" class="navclass"><!-- Start Menu Section -->
+  <section id="cat_nav" class="navclass"> <!-- Start Menu Section -->
     <div class="container">
-     <nav id="nav-second" class="clearfix" role="navigation">
+     <nav id="nav-second" class="clearfix">
      <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'sf-menu')); ?>
    </nav>
     </div><!--close container-->
