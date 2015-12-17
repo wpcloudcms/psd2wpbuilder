@@ -78,7 +78,16 @@
     
     <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
 </div>
-    <div class="slider container">
+    <div class="featured container">
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+	<img src="<?php echo $image[0]; ?>" alt="" />
+<?php else:
+	// dynamic_sidebar( 'top-slider-homeonly' );
+endif; ?>
+</div> 
+   <?php if ( is_front_page() ) {	
+	echo'<div class="slider container">
     <div class="slider-left col-md-8">
     <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
@@ -138,14 +147,7 @@
                 if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
           <?php } ?>
-    </div></div>
-    <div class="featured container">
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
-  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-	<img src="<?php echo $image[0]; ?>" alt="" />
-<?php else:
-	// dynamic_sidebar( 'top-slider-homeonly' );
-endif; ?>
-</div> 
-        <?php do_action('kt_after_header_content'); ?>
+    </div></div><h2>';
+    } ?>
+    <?php do_action('kt_after_header_content'); ?>
 </header>
