@@ -86,8 +86,7 @@
 	// dynamic_sidebar( 'top-slider-homeonly' );
 endif; ?>
 </div> 
-   <?php if ( is_front_page() ) {	
-	echo'<div class="slider container">
+   <div class="slider container">
     <div class="slider-left col-md-8">
     <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
@@ -147,7 +146,6 @@ endif; ?>
                 if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
           <?php } ?>
-    </div></div><h2>';
-    } ?>
+    </div></div>
     <?php do_action('kt_after_header_content'); ?>
 </header>
