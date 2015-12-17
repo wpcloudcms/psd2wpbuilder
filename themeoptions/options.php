@@ -814,6 +814,13 @@ Redux::setSection( $opt_name, array(
             'default' => 'slideronly',
             ),
         array(
+            'id'=>'featured_slider',
+            'type' => 'switch', 
+            'title' => __('Slider On / Featured Off', 'virtue'),
+            'subtitle'=> __('Switch Off to Slider off and activate Featured images on all pages except Home page', 'virtue'),
+            "default"       => 1,
+            ),
+        array(
             'id'=>'choose_slider',
             'type' => 'select',
             'title' => __('Choose a Home Image Slider', 'virtue'), 
