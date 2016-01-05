@@ -609,7 +609,7 @@ if(isset($virtue_premium['primarymenu_height'])) {
   $pmenu_height = '';
   }
 if(isset($virtue_premium['primarymenu_sep']) and $virtue_premium['primarymenu_sep'] == 'yes') {
-  $primarymenu_sep = 'nav#nav-main ul li:after {width:'.$virtue_premium['primarymenu_sep_width'].'px;left:-'.$virtue_premium['primarymenusep_width'].'px; background-color:'.$virtue_premium['primarymenu_sep_color'].'; top:'.$virtue_premium['primarymenu_sep_position'].'%;}';
+  $primarymenu_sep = 'ul#menu-main-menu li:after {width:'.$virtue_premium['primarymenu_sep_width'].'px;left:-'.$virtue_premium['primarymenusep_width'].'px; background-color:'.$virtue_premium['primarymenu_sep_color'].'; top:'.$virtue_premium['primarymenu_sep_position'].'%;}';
   } else {
   $primarymenu_sep = '';
   } 
