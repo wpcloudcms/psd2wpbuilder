@@ -609,7 +609,7 @@ if(isset($virtue_premium['primarymenu_height'])) {
   $pmenu_height = '';
   }
 if(isset($virtue_premium['primarymenu_sep']) and $virtue_premium['primarymenu_sep'] == 'yes') {
-  $primarymenu_sep = 'ul#menu-main-menu li:after {width:'.$virtue_premium['primarymenu_sep_width'].'px;left:-'.$virtue_premium['primarymenusep_width'].'px; background-color:'.$virtue_premium['primarymenu_sep_color'].'; top:'.$virtue_premium['primarymenu_sep_position'].'%;}';
+  $primarymenu_sep = 'ul#menu-main-menu li:after {width:'.$virtue_premium['primarymenu_sep_width'].'px;left:-'.$virtue_premium['primarymenusep_width'].'px; background-color:'.$virtue_premium['primarymenu_sep_color'].'; top:'.$virtue_premium['primarymenu_sep_position'].'%;} li.sf-dropdown li:after {background-color: rgba(0,0,0,0) !important;}';
   } else {
   $primarymenu_sep = '';
   } 
@@ -624,7 +624,7 @@ if(isset($virtue_premium['secondary_menu_height'])) {
   $smenu_height = '';
   } 
 if(isset($virtue_premium['second_menu_sep']) and $virtue_premium['second_menu_sep'] == 'yes') {
-  $second_menu_sep = '#nav-second ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].'; top:'.$virtue_premium['second_sep_position'].'%;}';
+  $second_menu_sep = '#nav-second ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].'; top:'.$virtue_premium['second_sep_position'].'%;} li.sf-dropdown li:after {background-color: rgba(0,0,0,0) !important;}';
   } else {
   $second_menu_sep = '';
   } 
@@ -639,7 +639,7 @@ if(isset($virtue_premium['third_menu_height'])) {
   $tmenu_height = '';
   } 
 if(isset($virtue_premium['third_menu_sep']) and $virtue_premium['third_menu_sep'] == 'yes') {
-  $third_menu_sep = '#nav-third ul li:after {width:'.$virtue_premium['third_sep_width'].'px;left:-'.$virtue_premium['third_sep_width'].'px; background-color:'.$virtue_premium['third_sep_color'].'; top:'.$virtue_premium['third_sep_position'].'%;}';
+  $third_menu_sep = '#nav-third ul li:after {width:'.$virtue_premium['third_sep_width'].'px;left:-'.$virtue_premium['third_sep_width'].'px; background-color:'.$virtue_premium['third_sep_color'].'; top:'.$virtue_premium['third_sep_position'].'%;} li.sf-dropdown li:after {background-color: rgba(0,0,0,0) !important;}';
   } else {
   $third_menu_sep = '';
   }
