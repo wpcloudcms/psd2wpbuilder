@@ -624,7 +624,7 @@ if(isset($virtue_premium['secondary_menu_height'])) {
   $smenu_height = '';
   } 
 if(isset($virtue_premium['second_menu_sep']) and $virtue_premium['second_menu_sep'] == 'yes') {
-  $second_menu_sep = '#nav-second ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].';}';
+  $second_menu_sep = '#nav-second ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].'; top:'.$virtue_premium['second_sep_position'].'%;}';
   } else {
   $second_menu_sep = '';
   } 
@@ -639,7 +639,7 @@ if(isset($virtue_premium['third_menu_height'])) {
   $tmenu_height = '';
   } 
 if(isset($virtue_premium['third_menu_sep']) and $virtue_premium['third_menu_sep'] == 'yes') {
-  $third_menu_sep = '#nav-third ul li:after {width:'.$virtue_premium['third_sep_width'].'px;left:-'.$virtue_premium['third_sep_width'].'px; background-color:'.$virtue_premium['third_sep_color'].';}';
+  $third_menu_sep = '#nav-third ul li:after {width:'.$virtue_premium['third_sep_width'].'px;left:-'.$virtue_premium['third_sep_width'].'px; background-color:'.$virtue_premium['third_sep_color'].'; top:'.$virtue_premium['third_sep_position'].'%;}';
   } else {
   $third_menu_sep = '';
   }
