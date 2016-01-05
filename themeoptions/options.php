@@ -3213,7 +3213,7 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'primarymenu_sep',
             'type' => 'select',
-            'title' => __('Second menu Separator', 'virtue'), 
+            'title' => __('Primary menu Separator', 'virtue'), 
             'options' => array('no' => 'None','yes' => 'Separator'),
             'default' => 'no',
             'width' => 'width:35%', 
