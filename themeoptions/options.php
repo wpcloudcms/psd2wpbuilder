@@ -3230,6 +3230,17 @@ Redux::setSection( $opt_name, array(
             'required' => array('primarymenu_sep','=','yes'),
             ),
         array(
+            'id'=>'primarymenu_sep_position',
+            'type' => 'slider', 
+            'title' => __('Seperator position', 'virtue'),
+            'subtitle' => __('', 'virtue'),
+            "default"       => "0",
+            "min"       => "-50",
+            "step"      => "1",
+            "max"       => "50",
+            'required' => array('primarymenu_sep','=','yes'),
+            ),
+        array(
             'id'=>'primarymenu_sep_color',
             'type' => 'color',
             'title' => __('Primary menu seperator Color', 'virtue'), 
