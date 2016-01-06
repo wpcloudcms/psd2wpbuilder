@@ -29,7 +29,7 @@ $site_bottom_margin = 'div#wrapper {margin-bottom:'.$virtue_premium['site_bottom
   $site_bottom_margin = 'div#wrapper {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_logo_width'])) {
-$site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;}';
+$site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;} @media (max-width: 767px) {div#logo, div#thelogo {width: 100%;}}';
 } else {
   $site_logo_width = 'div#logo, div#thelogo {width: 320px;}';
 }
