@@ -38,6 +38,10 @@ li:after, li:before {
     content: "";
     display: table;
 }
+.entry-content li:after, .entry-content li:before {
+    content: "";
+    display: none;
+}
 
 li:last-child:after {
     background-color: rgba(0, 0, 0, 0) !important;
