@@ -24,9 +24,9 @@ $content_top_margin = '.row-height.container {margin-top:'.$virtue_premium['cont
   $content_top_margin = '.row-height.container {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_bottom_margin'])) {
-$site_bottom_margin = 'div#wrapper {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px;}';
+$site_bottom_margin = '.container.credit {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px;}';
 } else {
-  $site_bottom_margin = 'div#wrapper {margin-top: 0px;}';
+  $site_bottom_margin = '.container.credit {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_logo_width'])) {
 $site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;} @media (max-width: 767px) {div#logo, div#thelogo {width: 100%;}}';
