@@ -1,7 +1,7 @@
 <?php 
 	global $virtue_premium; 
 
-	if(isset($virtue_premium['slider_size_width'])) {$slidewidth = $virtue_premium['slider_size_width'];} else { $slidewidth = 1140; }
+	if(isset($virtue_premium['slider_size_width'])) {$slidewidth = $virtue_premium['slider_size_width'];} else { $slidewidth = 100%; }
 ?>
 <div class="sliderclass">
 	<div id="imageslider" class="container box">
