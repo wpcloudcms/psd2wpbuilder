@@ -1,7 +1,7 @@
 <div class="sliderclass">
   <?php global $virtue_premium; 
                 if( isset( $virtue_premium['shop_slider_size']))  { $slideheight =  $virtue_premium['shop_slider_size']; } else { $slideheight = 400; }
-                if( isset( $virtue_premium['shop_slider_size_width']))  {$slidewidth = $virtue_premium['shop_slider_size_width']; } else { $slidewidth = 100%; }
+                if( isset( $virtue_premium['shop_slider_size_width']))  {$slidewidth = $virtue_premium['shop_slider_size_width']; } else { $slidewidth = 1600; }
                 $captions = $virtue_premium['shop_slider_captions'];
                 $slides = $virtue_premium['shop_slider_images'];
                 ?>
