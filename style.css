@@ -43,9 +43,11 @@ li:after, li:before {
     display: none;
 }
 
+/*
 li:last-child:after {
     background-color: rgba(0, 0, 0, 0) !important;
 }
+*/
 /* columns of same height styles */
 
 .row-height {
