@@ -3274,7 +3274,7 @@ Redux::setSection( $opt_name, array(
             //'all_styles' => true,
             'color'=>true,
             'preview'=>true, // Disable the previewer
-            'output' => array('#nav-second ul.sf-menu a'),
+            'output' => array('#nav-secnd ul.sf-menu a'),
             'subtitle'=> __("Choose Size and Style for secondary menu", 'virtue'),
             'default'=> array(
                 'font-family'=>'Lato',

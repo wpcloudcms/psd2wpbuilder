@@ -119,12 +119,12 @@ if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['cop
     $color_pmenu_bg_hover = '';
   }
    if(!empty($virtue_premium['secondarymenu_hover_color'])) {
-  $color_smenu_hover = '#nav-second ul.sf-menu > li:hover > a, #nav-second ul.sf-menu a:hover, #nav-second ul.sf-menu li.current-menu-item > a, #nav-second ul.sf-menu ul li a:hover {color:'.$virtue_premium['secondarymenu_hover_color'].';}';
+  $color_smenu_hover = '#nav-secnd ul.sf-menu > li:hover > a, #nav-secnd ul.sf-menu a:hover, #nav-secnd ul.sf-menu li.current-menu-item > a, #nav-secnd ul.sf-menu ul li a:hover {color:'.$virtue_premium['secondarymenu_hover_color'].';}';
   } else {
   $color_smenu_hover = '';
   }
   if(!empty($virtue_premium['secondarymenu_hover_bg_color'])) {
-    $color_smenu_bg_hover = '#nav-second ul.sf-menu > li:hover > a, #nav-second ul.sf-menu a:hover, #nav-second ul.sf-menu li.current-menu-item > a, #nav-second ul.sf-menu ul li a:hover {background:'.$virtue_premium['secondarymenu_hover_bg_color'].';}';
+    $color_smenu_bg_hover = '#nav-secnd ul.sf-menu > li:hover > a, #nav-secnd ul.sf-menu a:hover, #nav-secnd ul.sf-menu li.current-menu-item > a, #nav-secnd ul.sf-menu ul li a:hover {background:'.$virtue_premium['secondarymenu_hover_bg_color'].';}';
     } else {
     $color_smenu_bg_hover = '';
   }
@@ -169,7 +169,7 @@ if(!empty($virtue_premium['primary_color'])) {
   $color_primary = '.home-message:hover {background-color:'.$virtue_premium['primary_color'].'; background-color: rgba('.$primaryrgb[0].', '.$primaryrgb[1].', '.$primaryrgb[2].', 0.6);}
   nav.woocommerce-pagination ul li a:hover, .wp-pagenavi a:hover, .panel-heading .accordion-toggle, .variations .kad_radio_variations label:hover, .variations .kad_radio_variations label.selectedValue {border-color: '.$virtue_premium['primary_color'].';}
   a, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover,
-  .woocommerce-message:before, .woocommerce-info:before, #nav-second ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, 
+  .woocommerce-message:before, .woocommerce-info:before, #nav-secnd ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, 
   .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color: '.$virtue_premium['primary_color'].';}
 .widget_price_filter .ui-slider .ui-slider-handle, .product_item .kad_add_to_cart:hover, .product_item.hidetheaction:hover .kad_add_to_cart:hover, .kad-btn-primary, html .woocommerce-page .widget_layered_nav ul.yith-wcan-label li a:hover, html .woocommerce-page .widget_layered_nav ul.yith-wcan-label li.chosen a,
 .product-category.grid_item a:hover h5, .woocommerce-message .button, .widget_layered_nav_filters ul li a, .widget_layered_nav ul li.chosen a, .track_order .button, .wpcf7 input.wpcf7-submit, .yith-wcan .yith-wcan-reset-navigation,
@@ -186,7 +186,7 @@ if(!empty($virtue_premium['primary20_color'])) {
   $color_primary30 = '';
 }
 if(!empty($virtue_premium['link_text_color'])) {
-  $link_text_color = 'a, a:active, a:hover, a:link, a:visited, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover, .woocommerce-message:before, .woocommerce-info:before, #nav-second ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color:'.$virtue_premium['link_text_color'].';}';
+  $link_text_color = 'a, a:active, a:hover, a:link, a:visited, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover, .woocommerce-message:before, .woocommerce-info:before, #nav-secnd ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color:'.$virtue_premium['link_text_color'].';}';
   } else {
   $link_text_color = '';
   }
@@ -614,17 +614,17 @@ if(isset($virtue_premium['primarymenu_sep']) and $virtue_premium['primarymenu_se
   $primarymenu_sep = '';
   } 
 if(isset($virtue_premium['secondary_menu_width'])) {
-  $smenu_padding = '#nav-second ul.sf-menu>li a, #nav-second ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;}';
+  $smenu_padding = '#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;}';
   } else {
   $smenu_padding = '';
   } 
 if(isset($virtue_premium['secondary_menu_height'])) {
-  $smenu_height = '#nav-second ul.sf-menu>li a, #nav-second ul.sf-menu>li>a {line-height:'.$virtue_premium['secondary_menu_height'].'px;}';
+  $smenu_height = '#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {line-height:'.$virtue_premium['secondary_menu_height'].'px;}';
   } else {
   $smenu_height = '';
   } 
 if(isset($virtue_premium['second_menu_sep']) and $virtue_premium['second_menu_sep'] == 'yes') {
-  $second_menu_sep = '#nav-second ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].'; top:'.$virtue_premium['second_sep_position'].'%;} li.sf-dropdown li:after {background-color: rgba(0,0,0,0) !important;}';
+  $second_menu_sep = '#nav-secnd ul li:after {width:'.$virtue_premium['second_sep_width'].'px;left:-'.$virtue_premium['second_sep_width'].'px; background-color:'.$virtue_premium['second_sep_color'].'; top:'.$virtue_premium['second_sep_position'].'%;} li.sf-dropdown li:after {background-color: rgba(0,0,0,0) !important;}';
   } else {
   $second_menu_sep = '';
   } 
@@ -694,17 +694,17 @@ if (isset($virtue_premium['smooth_scrolling_background']) && $virtue_premium['sm
   $scrolling_background = '';
 }
 if (isset($virtue_premium['dropdown_background_color']) && !empty($virtue_premium['dropdown_background_color']) ) {
-  $mdropdown_background = '#nav-main .sf-menu ul, .nav-main .sf-menu ul, #nav-second .sf-menu ul, .topbarmenu .sf-menu ul{background: '.$virtue_premium['dropdown_background_color'].';}';
+  $mdropdown_background = '#nav-main .sf-menu ul, .nav-main .sf-menu ul, #nav-secnd .sf-menu ul, .topbarmenu .sf-menu ul{background: '.$virtue_premium['dropdown_background_color'].';}';
 } else {
   $mdropdown_background = '';
 }
 if (isset($virtue_premium['dropdown_font_color']) && !empty($virtue_premium['dropdown_font_color']) ) {
-  $mdropdown_font = '#nav-main ul.sf-menu ul li a, .nav-main ul.sf-menu ul li a, #nav-second ul.sf-menu ul li a, .topbarmenu ul.sf-menu ul li a, #kad-head-cart-popup ul.cart_list li, #nav-main ul.sf-menu ul#kad-head-cart-popup li .quantity, #nav-main ul.sf-menu ul#kad-head-cart-popup .total{color: '.$virtue_premium['dropdown_font_color'].';}';
+  $mdropdown_font = '#nav-main ul.sf-menu ul li a, .nav-main ul.sf-menu ul li a, #nav-secnd ul.sf-menu ul li a, .topbarmenu ul.sf-menu ul li a, #kad-head-cart-popup ul.cart_list li, #nav-main ul.sf-menu ul#kad-head-cart-popup li .quantity, #nav-main ul.sf-menu ul#kad-head-cart-popup .total{color: '.$virtue_premium['dropdown_font_color'].';}';
 } else {
   $mdropdown_font = '';
 }
 if (isset($virtue_premium['dropdown_border_color']) && !empty($virtue_premium['dropdown_border_color']) ) {
-  $mdropdown_border = '#nav-main .sf-menu ul li, .nav-main .sf-menu ul li, #nav-second .sf-menu ul li, .topbarmenu .sf-menu ul li,#nav-main .sf-menu ul, .nav-main .sf-menu ul, #nav-second .sf-menu ul, .topbarmenu .sf-menu ul {border-color: '.$virtue_premium['dropdown_border_color'].';}';
+  $mdropdown_border = '#nav-main .sf-menu ul li, .nav-main .sf-menu ul li, #nav-secnd .sf-menu ul li, .topbarmenu .sf-menu ul li,#nav-main .sf-menu ul, .nav-main .sf-menu ul, #nav-secnd .sf-menu ul, .topbarmenu .sf-menu ul {border-color: '.$virtue_premium['dropdown_border_color'].';}';
 } else {
   $mdropdown_border = '';
 }

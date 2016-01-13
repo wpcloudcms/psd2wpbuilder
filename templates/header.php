@@ -67,7 +67,7 @@
   <?php if (has_nav_menu('secondary_navigation')) : ?>
   <section id="cat_nav" class="navclass">
     <div class="container">
-     <nav id="nav-second" class="clearfix">
+     <nav id="nav-secnd" class="clearfix">
      <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'sf-menu')); ?>
    </nav>
     </div><!--close container-->
