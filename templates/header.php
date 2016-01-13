@@ -86,7 +86,11 @@
 	// dynamic_sidebar( 'top-slider-homeonly' );
 endif; ?>
 </div> 
-   <div class="slider container">
+   <?php if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') { ?>
+  <div class="slider container-fluid">
+<?php } else { ?>
+ <div class="slider container">
+<?php } ?>
        <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slideronly') { ?>
     <div class="col-md-12">
         <?php
