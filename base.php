@@ -37,6 +37,7 @@
     </div><!--close container-->
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
+        <div class="main container-fluid">
   <div class="row-height container">
   <div class="maincontent col-sm-height">
  <div class="wrap clearfix contentbox contentclass hfeed" role="document">
@@ -54,6 +55,7 @@
     </div><!-- /.wrap -->
   </div><!-- /.maincontent -->
      </div><!-- /.row-height -->
+    </div>
     </div><!-- /.container .box -->
 </div><!--Wrapper-->
 <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
