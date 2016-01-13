@@ -887,7 +887,7 @@ Redux::setSection( $opt_name, array(
             "default"       => "400",
             "min"       => "100",
             "step"      => "5",
-            "max"       => "600",
+            "max"       => "1200",
             ), 
         array(
             'id'=>'slider_size_width',
