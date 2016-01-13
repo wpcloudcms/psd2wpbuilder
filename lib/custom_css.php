@@ -257,7 +257,7 @@ if(isset($virtue_premium['site_box_shadow']) and $virtue_premium['site_box_shado
 if(isset($virtue_premium['featured_slider']) and $virtue_premium['featured_slider'] == 1) {
   $featured_slider = '.featured.container {display: none;}';
 } else {
-  $featured_slider = 'body.home.page .slider.container{display: block;}.slider.container {display: none;}';
+  $featured_slider = 'body.home.page .slider.container-fluid{display: block;}body.home.page .slider.container{display: block;}.slider.container-fluid {display: none;}.slider.container {display: none;}';
 }
 if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
   $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1;}';
