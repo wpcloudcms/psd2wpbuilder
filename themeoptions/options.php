@@ -3172,6 +3172,14 @@ Redux::setSection( $opt_name, array(
                 'font-size'=>'12px', 
                 'line-height'=>'18px', ),
             ),
+        array(
+            'id'=>'primarymenu_txt_transform',
+            'type' => 'select',
+            'title' => __('Text Transform', 'virtue'), 
+            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'uppercase','capitalize' => 'capitalize'),
+            'default' => 'none',
+            'width' => 'width:35%', 
+            ),
     array(
             'id'=>'primarymenu_hover_color',
             'type' => 'color',

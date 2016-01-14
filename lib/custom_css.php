@@ -109,7 +109,7 @@ if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['cop
   }
   //Menus Styling
   if(!empty($virtue_premium['primarymenu_hover_color'])) {
-  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';}';
+  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';} {color:'.$virtue_premium['primarymenu_txt_transform'].';}';
   } else {
   $color_pmenu_hover = '';
   }
