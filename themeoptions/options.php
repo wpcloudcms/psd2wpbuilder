@@ -3176,7 +3176,7 @@ Redux::setSection( $opt_name, array(
             'id'=>'primarymenu_txt_transform',
             'type' => 'select',
             'title' => __('Text Transform', 'virtue'), 
-            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'uppercase','capitalize' => 'capitalize'),
+            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'UPPERCASE','capitalize' => 'Capitalize'),
             'default' => 'none',
             'width' => 'width:35%', 
             ),
@@ -3291,6 +3291,14 @@ Redux::setSection( $opt_name, array(
                 'font-size'=>'18px', 
                 'line-height'=>'22px', ),
             ),
+array(
+            'id'=>'secondarymenu_txt_transform',
+            'type' => 'select',
+            'title' => __('Text Transform', 'virtue'), 
+            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'UPPERCASE','capitalize' => 'Capitalize'),
+            'default' => 'none',
+            'width' => 'width:35%', 
+            ),        
     array(
             'id'=>'secondarymenu_hover_color',
             'type' => 'color',
@@ -3402,6 +3410,14 @@ Redux::setSection( $opt_name, array(
                 'font-style'=>'400',
                 'font-size'=>'18px', 
                 'line-height'=>'22px', ),
+            ),
+        array(
+            'id'=>'third_menu_txt_transform',
+            'type' => 'select',
+            'title' => __('Text Transform', 'virtue'), 
+            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'UPPERCASE','capitalize' => 'Capitalize'),
+            'default' => 'none',
+            'width' => 'width:35%', 
             ),
     array(
             'id'=>'thirdmenu_hover_color',
