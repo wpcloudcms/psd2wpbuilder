@@ -599,7 +599,7 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['primarymenu_width'])) {
-  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;} {text-transform:'.$virtue_premium['primarymenu_txt_transform'].';}';
+  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;} nav#nav-main ul li span {text-transform:'.$virtue_premium['primarymenu_txt_transform'].';}';
   } else {
   $pmenu_padding = '';
   } 
@@ -614,7 +614,7 @@ if(isset($virtue_premium['primarymenu_sep']) and $virtue_premium['primarymenu_se
   $primarymenu_sep = '';
   } 
 if(isset($virtue_premium['secondary_menu_width'])) {
-  $smenu_padding = '#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;} {text-transform:'.$virtue_premium['secondarymenu_txt_transform'].';}';
+  $smenu_padding = '#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {padding-left:'.$virtue_premium['secondary_menu_width'].'px; padding-right:'.$virtue_premium['secondary_menu_width'].'px; width: auto;} nav#nav-secnd ul li span {text-transform:'.$virtue_premium['secondarymenu_txt_transform'].';}';
   } else {
   $smenu_padding = '';
   } 
@@ -629,7 +629,7 @@ if(isset($virtue_premium['second_menu_sep']) and $virtue_premium['second_menu_se
   $second_menu_sep = '';
   } 
 if(isset($virtue_premium['third_menu_width'])) {
-  $tmenu_padding = '#nav-third ul.sf-menu>li, #nav-third ul.sf-menu>li>a {padding-left:'.$virtue_premium['third_menu_width'].'px; padding-right:'.$virtue_premium['third_menu_width'].'px; width: auto;} {text-transform:'.$virtue_premium['third_menu_txt_transform'].';}';
+  $tmenu_padding = '#nav-third ul.sf-menu>li, #nav-third ul.sf-menu>li>a {padding-left:'.$virtue_premium['third_menu_width'].'px; padding-right:'.$virtue_premium['third_menu_width'].'px; width: auto;} nav#nav-third ul li span {text-transform:'.$virtue_premium['third_menu_txt_transform'].';}';
   } else {
   $tmenu_padding = '';
   } 
