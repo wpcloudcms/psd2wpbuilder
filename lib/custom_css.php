@@ -599,7 +599,7 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['primarymenu_width'])) {
-  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;} {text-tranform:'.$virtue_premium['primarymenu_txt_transform'].';}';
+  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;} nav#nav-main ul li span {text-tranform:'.$virtue_premium['primarymenu_txt_transform'].';}';
   } else {
   $pmenu_padding = '';
   } 
