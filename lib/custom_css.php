@@ -108,8 +108,8 @@ if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['cop
     $copyrightsclass = '';
   }
   //Menus Styling
-  if(!empty($virtue_premium['font_primary_menu'])) {
-  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';} {text-tranform:'.$virtue_premium['primarymenu_txt_transform'].';}';
+  if(!empty($virtue_premium['primarymenu_hover_color'])) {
+  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';}';
   } else {
   $color_pmenu_hover = '';
   }
@@ -599,7 +599,7 @@ if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width']
   $color_iconmenubg = '';
 }
 if(isset($virtue_premium['primarymenu_width'])) {
-  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;}';
+  $pmenu_padding = 'nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:'.$virtue_premium['primarymenu_width'].'px; padding-right:'.$virtue_premium['primarymenu_width'].'px; width: auto;} {text-tranform:'.$virtue_premium['primarymenu_txt_transform'].';}';
   } else {
   $pmenu_padding = '';
   } 
