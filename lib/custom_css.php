@@ -71,7 +71,7 @@ if(isset($virtue_premium['menu_margin_top'])) {
 //Typography
 if(!empty($virtue_premium['font_h1'])) {
   $font_family = '.headerfont, .tp-caption, .yith-wcan-list li, .yith-wcan .yith-wcan-reset-navigation, ul.yith-wcan-label li a {font-family:'.$virtue_premium['font_h1']['font-family'].';} 
-  .topbarmenu ul li {font-family:'.$virtue_premium['font_primary_menu']['font-family'].';}
+  .topbarmenu ul li {font-family:'.$virtue_premium['font_primary_menu']['font-family'].';} 
   #kadbreadcrumbs {font-family:'.$virtue_premium['font_p']['font-family'].';}';
 } else {
   $font_family = '';
@@ -109,7 +109,7 @@ if(!empty($virtue_premium['copyrights_bg_color']) || !empty($virtue_premium['cop
   }
   //Menus Styling
   if(!empty($virtue_premium['font_primary_menu'])) {
-  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';} {color:'.$virtue_premium['primarymenu_txt_transform'].';}';
+  $color_pmenu_hover = '#nav-main ul.sf-menu a:hover, .nav-main ul.sf-menu a:hover, #nav-main ul.sf-menu li.current-menu-item > a, .nav-main ul.sf-menu li.current-menu-item > a, #nav-main ul.sf-menu ul li a:hover, .nav-main ul.sf-menu ul li a:hover {color:'.$virtue_premium['primarymenu_hover_color'].';} {text-tranform:'.$virtue_premium['primarymenu_txt_transform'].';}';
   } else {
   $color_pmenu_hover = '';
   }
