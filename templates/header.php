@@ -212,9 +212,12 @@ endif; ?>
         </div> <?php } ?></div>
             
     
-     <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slidernwidget') { ?>
-              <div class="slider-right"> <?php 
-                if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
+     <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+  <div class="slider-right-merged">
+<?php } else { ?>
+ <div class="slider-right">
+<?php } ?>
+ <?php if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
           <?php } ?>
     </div></div>
