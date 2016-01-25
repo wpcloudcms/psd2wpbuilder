@@ -834,8 +834,9 @@ Redux::setSection( $opt_name, array(
                     'slidernwidget' => array('alt' => 'slider and widget', 'img' => OPTIONS_PATH.'img/3cm.png'),
                 ),
             'default' => 'slideronly',
+            'required' => array('slider_box_layout','=','sliderboxed'),
             ),
-        'required' => array('slider_box_layout','=','sliderboxed'),
+        
         array(
             'id'=>'slidernwidget_cols',
             'type' => 'select',
