@@ -212,11 +212,19 @@ endif; ?>
         </div> <?php } ?></div>
             
     
-     <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slidernwidget') { ?>
-              <div class="slider-right"> <?php 
-                if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
+     <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-10') { ?> 
+        <div class="slider-right col-md-2"> 
+        <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-9') { ?> 
+        <div class="slider-right col-md-3">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-8') { ?> 
+        <div class="slider-right col-md-4">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-7') { ?> 
+        <div class="slider-right col-md-5">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-6') { ?> 
+        <div class="slider-right col-md-6">
+            <?php } ?>
+            <?php if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
-          <?php } ?>
     </div></div>
     <?php do_action('kt_after_header_content'); ?>
 </header>
