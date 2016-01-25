@@ -146,8 +146,16 @@ endif; ?>
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
         </div> <?php } ?></div>
-        <?php } else { ?>
-        <div class="slider-left">
+        <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-10') { ?> 
+        <div class="slider-left col-md-10">
+        <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-9') { ?> 
+        <div class="slider-left col-md-9">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-8') { ?> 
+        <div class="slider-left col-md-8">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-7') { ?> 
+        <div class="slider-left col-md-7">
+            <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-6') { ?> 
+        <div class="slider-left col-md-6">
             <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
