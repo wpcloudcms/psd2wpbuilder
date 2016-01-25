@@ -842,7 +842,7 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'title' => __('Slider Bootstrap Col size', 'virtue'), 
             'options' => array('col-md-10' => 'col-md-10','col-md-9' => 'col-md-9','col-md-8' => 'col-md-8','col-md-7' => 'col-md-7','col-md-6' => 'col-md-6'),
-            'default' => 'col-md-12',
+            'default' => 'col-md-8',
             'width' => 'width:35%', 
             'required' => array('slider_widget_layout','=','slidernwidget'),
             ),
