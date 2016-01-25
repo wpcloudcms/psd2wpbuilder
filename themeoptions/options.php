@@ -732,6 +732,16 @@ Redux::setSection( $opt_name, array(
             'default' => 'BebasNeueRegular',
             ),
     array(
+            'id'=>'primarymenu_mgn_top',
+            'type' => 'slider',
+            'title' => __('Margin-top', 'virtue'), 
+            'subtitle' => __('Choose px menu space from top', 'virtue'),
+            "default"       => "20",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "200",
+            ),
+    array(
             'id'=>'credit_link_color',
             'type' => 'color',
             'title' => __('Credit link color', 'virtue'), 
@@ -802,16 +812,37 @@ Redux::setSection( $opt_name, array(
     'desc' => "<div class='redux-info-field'><h3>".__('Home Page Slider Options', 'virtue')."</h3></div>",
     'fields' => array(
         array(
-            'id'=>'slider_layout',
+            'id'=>'slider_box_layout',
             'type' => 'image_select',
             //'compiler'=> false,
-            'title' => __('Slider Layout Style', 'virtue'), 
+            'title' => __('Slider Box Layout', 'virtue'), 
+            'subtitle' => __('Select Wide slider or Boxed slider', 'virtue'),
+            'options' => array(
+                    'sliderwide' => array('alt' => 'slider Wide', 'img' => OPTIONS_PATH.'img/1c.png'),
+                    'sliderboxed' => array('alt' => 'slider Boxed', 'img' => OPTIONS_PATH.'img/3cm.png'),
+                ),
+            'default' => 'sliderwide',
+            ),
+        array(
+            'id'=>'slider_widget_layout',
+            'type' => 'image_select',
+            //'compiler'=> false,
+            'title' => __('Slider Widget Layout', 'virtue'), 
             'subtitle' => __('Select slider only or Slider with widget', 'virtue'),
             'options' => array(
                     'slideronly' => array('alt' => 'slider only', 'img' => OPTIONS_PATH.'img/1c.png'),
                     'slidernwidget' => array('alt' => 'slider and widget', 'img' => OPTIONS_PATH.'img/3cm.png'),
                 ),
             'default' => 'slideronly',
+            ),
+        array(
+            'id'=>'slidernwidget_cols',
+            'type' => 'select',
+            'title' => __('Slider Bootstrap Col size', 'virtue'), 
+            'options' => array('col-md-12' => 'col-md-12','col-md-9' => 'col-md-9','col-md-8' => 'col-md-8','col-md-7' => 'col-md-7','col-md-6' => 'col-md-6'),
+            'default' => 'col-md-12',
+            'width' => 'width:35%', 
+            'required' => array('slider_widget_layout','=','slidernwidget'),
             ),
         array(
             'id'=>'featured_slider',

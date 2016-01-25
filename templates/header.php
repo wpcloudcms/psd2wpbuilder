@@ -86,12 +86,12 @@
 	// dynamic_sidebar( 'top-slider-homeonly' );
 endif; ?>
 </div> 
-   <?php if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') { ?>
+   <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
   <div class="slider container-fluid">
 <?php } else { ?>
  <div class="slider container">
 <?php } ?>
-       <?php if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slideronly') { ?>
+       <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slideronly') { ?>
     <div class="col-md-12">
         <?php
     	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {

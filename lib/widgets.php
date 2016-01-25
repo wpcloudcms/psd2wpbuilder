@@ -65,7 +65,7 @@ function kadence_widgets_init() {
   ));
 }
   //Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_layout']) && $virtue_premium['slider_layout'] == 'slidernwidget') {
+  global $virtue_premium; if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slidernwidget') {
   register_sidebar(array(
     'name'          => __('Slider Widget', 'virtue'),
     'id'            => 'slider-widget',
