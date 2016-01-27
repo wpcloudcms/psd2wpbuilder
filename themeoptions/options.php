@@ -726,6 +726,14 @@ Redux::setSection( $opt_name, array(
                 'line-height'=>'18px', ),
             ),
     array(
+            'id'=>'copyrt_txt_transform',
+            'type' => 'select',
+            'title' => __('Text Transform', 'virtue'), 
+            'options' => array('none' => 'None','lowercase' => 'lowercase','uppercase' => 'UPPERCASE','capitalize' => 'Capitalize'),
+            'default' => 'none',
+            'width' => 'width:35%', 
+            ),
+    array(
             'id'=>'fontfamily_copyrt_text',
             'type' => 'text',
             'title' => __('Other Font Family', 'virtue'),
