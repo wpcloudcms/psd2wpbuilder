@@ -38,7 +38,7 @@
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
       <?php  if($virtue_premium['boxed_layout'] == 'wide') {$boxedcclass = 'container-fluid';} 
-            else if($virtue_premium['logo_layout'] == 'boxed') {$boxedcclass = 'container';} ?>
+            else if($virtue_premium['boxed_layout'] == 'boxed') {$boxedcclass = 'container';} ?>
         <div class="main <?php echo $boxedcclass; ?>">
   <div class="row-height container">
   <div class="maincontent col-sm-height">
