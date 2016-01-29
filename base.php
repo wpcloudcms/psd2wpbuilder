@@ -37,9 +37,7 @@
     </div><!--close container-->
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
-      <?php  if($virtue_premium['boxed_layout'] == 'wide') {$boxedcclass = 'container-fluid';} 
-            else if($virtue_premium['boxed_layout'] == 'boxed') {$boxedcclass = 'container box';} ?>
-<div class="main <?php echo $boxedcclass; ?>">
+<div class="main container">
     <div class="wrap clearfix contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
