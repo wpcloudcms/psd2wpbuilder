@@ -39,10 +39,8 @@
     <?php endif; ?> 
       <?php  if($virtue_premium['boxed_layout'] == 'wide') {$boxedcclass = 'container-fluid';} 
             else if($virtue_premium['boxed_layout'] == 'boxed') {$boxedcclass = 'container box';} ?>
-        <div class="main <?php echo $boxedcclass; ?>">
-  <div class="row-height container">
-  <div class="maincontent col-sm-height">
- <div class="wrap clearfix contentbox contentclass hfeed" role="document">
+<div class="main <?php echo $boxedcclass; ?>">
+    <div class="wrap clearfix contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
         
@@ -53,11 +51,8 @@
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
       <?php endif; ?>
-      </div><!-- /.contentbox-->
     </div><!-- /.wrap -->
-  </div><!-- /.maincontent -->
-     </div><!-- /.row-height -->
-    </div>
+    </div><!-- /.main -->
     </div><!-- /.container .box -->
 </div><!--Wrapper-->
 <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
@@ -65,5 +60,4 @@
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
       </div>
 </body> 
-    
 </html>
