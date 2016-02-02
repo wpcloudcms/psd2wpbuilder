@@ -95,6 +95,9 @@ li:last-child:after {
     vertical-align: bottom;
   }
 }
+@media (max-width: 991px) {
+section#cat_nav {display: none;}    
+}
 .float-left {float:left; }
 .float-left {float:right; }
 
