@@ -98,10 +98,8 @@ li:last-child:after {
 @media (max-width: 991px) {
 section#cat_nav {display: none;}   
     div.m-off, span.m-off {display:none;}
-    div.m-on, span.m-on {display:block;}
 }
 @media (min-width:992px){
-    div.m-off, span.m-off {display:block;}
     div.m-on, span.m-on {display:none;}
 }
 .float-left {float:left; }
