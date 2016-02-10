@@ -5,7 +5,11 @@
                 $captions = $virtue_premium['shop_slider_captions'];
                 $slides = $virtue_premium['shop_slider_images'];
                 ?>
+    	                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="container box">
+<?php } else { ?>
+   <div id="imageslider">
+<?php } ?>
     <div class="flexslider loading" style="max-width:<?php echo $slidewidth;?>px;">
         <ul class="slides">
             <?php foreach ($slides as $slide) : 

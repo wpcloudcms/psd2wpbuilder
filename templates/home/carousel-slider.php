@@ -7,7 +7,11 @@
         if(isset($virtue_premium['slider_autoplay']) && $virtue_premium['slider_autoplay'] == 0) {$autoplay = 'false';} else {$autoplay = 'true';}
         if(isset($virtue_premium['slider_pausetime'])) {$pausetime = $virtue_premium['slider_pausetime'];} else {$pausetime = '7000';}
                 ?>
-  <div id="imageslider" class="loading container box">
+                      <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+    <div id="imageslider" class="loading container box">
+<?php } else { ?>
+   <div id="imageslider" class="loading">
+<?php } ?>
     <div class="carousel_slider_outer fredcarousel fadein-carousel" style="overflow:hidden; max-width:<?php echo esc_attr($slidewidth);?>px; height: <?php echo esc_attr($slideheight);?>px; margin-left: auto; margin-right:auto;">
         <div class="carousel_slider initcarouselslider" data-carousel-container=".carousel_slider_outer" data-carousel-transition="600" data-carousel-height="<?php echo esc_attr($slideheight); ?>" data-carousel-auto="<?php echo esc_attr($autoplay); ?>" data-carousel-speed="<?php echo esc_attr($pausetime); ?>" data-carousel-id="hcarouselslider">
             <?php foreach ($slides as $slide) : 

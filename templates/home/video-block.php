@@ -4,7 +4,11 @@
 	if(isset($virtue_premium['slider_size_width'])) {$slidewidth = $virtue_premium['slider_size_width'];} else { $slidewidth = 1600; }
 ?>
 <div class="sliderclass">
-	<div id="imageslider" class="container box">
+	                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+    <div id="imageslider" class="container box">
+<?php } else { ?>
+   <div id="imageslider">
+<?php } ?>
 			<div class="videofit" style="max-width:<?php echo esc_attr($slidewidth);?>px; margin-left: auto; margin-right:auto;">
                 <?php if(!empty($virtue_premium['video_embed'])) echo $virtue_premium['video_embed'];?>
             </div>

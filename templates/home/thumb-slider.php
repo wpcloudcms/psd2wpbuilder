@@ -9,7 +9,11 @@
       $pausetime = $virtue_premium['slider_pausetime']; if ($pausetime == '') $pausetime = '7000';
       ?>
     <div class="sliderclass">
-      <div id="imageslider" class="container box">
+                          <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+    <div id="imageslider" class="container box">
+<?php } else { ?>
+   <div id="imageslider">
+<?php } ?>
         <div id="flex" class="flexslider loading" style="max-width:<?php echo esc_attr($slidewidth);?>px; margin-left: auto; margin-right:auto;">
             <ul class="slides">
               <?php foreach ($slides as $slide) : 
