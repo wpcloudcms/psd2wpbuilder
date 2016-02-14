@@ -148,6 +148,20 @@ Redux::setSection( $opt_name, array(
             'default' => 'wide',
             ),
         array(
+            'id'=>'slider_abovebelow_widget',
+            'type' => 'image_select',
+            //'compiler'=> false,
+            'title' => __('Header widgets Layout', 'virtue'), 
+            'subtitle' => __('Select slider with Widget above / below', 'virtue'),
+            'options' => array(
+                    'slidernoabovebelow' => array('alt' => 'slider Without above below Widgets', 'img' => OPTIONS_PATH.'img/ab/1c.png'),
+                    'sliderabovewidget' => array('alt' => 'slider with above widget', 'img' => OPTIONS_PATH.'img/ab/2cm.png'),
+                    'sliderbelowwidget' => array('alt' => 'slider with below widget', 'img' => OPTIONS_PATH.'img/ab/3cm.png'),
+                    'sliderbothwidgets' => array('alt' => 'slider with above and below widgets', 'img' => OPTIONS_PATH.'img/ab/4cm.png'),
+                ),
+            'default' => 'slidernoabovebelow',
+            ),
+        array(
             'id'=>'site_box_shadow',
             'type' => 'switch', 
             'title' => __('Disable Box Shadow?', 'virtue'),

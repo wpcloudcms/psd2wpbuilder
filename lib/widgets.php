@@ -64,11 +64,33 @@ function kadence_widgets_init() {
     'after_title'   => '',
   ));
 }
+//Above Slider Widget
+  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  register_sidebar(array(
+    'name'          => __('Slider Above Widget', 'virtue'),
+    'id'            => 'slider-above-widget',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+}
   //Slider Widget
   global $virtue_premium; if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slidernwidget') {
   register_sidebar(array(
     'name'          => __('Slider Widget', 'virtue'),
     'id'            => 'slider-widget',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+}
+//Below Slider Widget
+  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  register_sidebar(array(
+    'name'          => __('Slider Below Widget', 'virtue'),
+    'id'            => 'slider-below-widget',
     'before_widget' => '',
     'after_widget'  => '',
     'before_title'  => '',
