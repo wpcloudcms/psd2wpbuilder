@@ -184,12 +184,12 @@ endif; ?>
 </div>
     </div></div>
      <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') { ?>
-              <div class="belowheader col-md-12"> <?php 
+              <div class="belowheader container"> <?php 
                 if(is_active_sidebar('slider-below-widget')) { dynamic_sidebar('slider-below-widget'); } ?>
               </div>
             <?php } ?>
          <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
-              <div class="belowheader col-md-12"> <?php 
+              <div class="belowheader container"> <?php 
                 if(is_active_sidebar('slider-below-widget')) { dynamic_sidebar('slider-below-widget'); } ?>
               </div>
             <?php } ?>
