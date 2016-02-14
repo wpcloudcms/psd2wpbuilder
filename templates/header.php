@@ -83,6 +83,11 @@
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
               </div>
                <?php } ?>
+      <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
+              <div class="aboveheader col-md-12"> <?php 
+                if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
+              </div>
+               <?php } ?>
     <div class="featured container">
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -179,6 +184,11 @@ endif; ?>
 </div>
     </div></div>
      <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') { ?>
+              <div class="belowheader col-md-12"> <?php 
+                if(is_active_sidebar('slider-below-widget')) { dynamic_sidebar('slider-below-widget'); } ?>
+              </div>
+            <?php } ?>
+         <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
               <div class="belowheader col-md-12"> <?php 
                 if(is_active_sidebar('slider-below-widget')) { dynamic_sidebar('slider-below-widget'); } ?>
               </div>
