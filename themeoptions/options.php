@@ -155,9 +155,9 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('Select slider with Widget above / below', 'virtue'),
             'options' => array(
                     'slidernoabovebelow' => array('alt' => 'slider Without above below Widgets', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/1c.png'),
-                    'sliderabovewidget' => array('alt' => 'slider with above widget', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/2cm.png'),
-                    'sliderbelowwidget' => array('alt' => 'slider with below widget', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/3cm.png'),
-                    'sliderbothwidgets' => array('alt' => 'slider with above and below widgets', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/4cm.png'),
+                    'sliderabovewidget' => array('alt' => 'slider with above widget', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/2c.png'),
+                    'sliderbelowwidget' => array('alt' => 'slider with below widget', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/3c.png'),
+                    'sliderbothwidgets' => array('alt' => 'slider with above and below widgets', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/4c.png'),
                 ),
             'default' => 'slidernoabovebelow',
             ),
