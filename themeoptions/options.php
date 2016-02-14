@@ -151,8 +151,8 @@ Redux::setSection( $opt_name, array(
             'id'=>'slider_abovebelow_widget',
             'type' => 'image_select',
             //'compiler'=> false,
-            'title' => __('Header widgets Layout', 'virtue'), 
-            'subtitle' => __('Select slider with Widget above / below', 'virtue'),
+            'title' => __('Header Above / Below widgets', 'virtue'), 
+            'subtitle' => __('Select slider with Widget above or below or above and below', 'virtue'),
             'options' => array(
                     'slidernoabovebelow' => array('alt' => 'slider Without above below Widgets', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/1c.png'),
                     'sliderabovewidget' => array('alt' => 'slider with above widget', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/ab/2c.png'),
