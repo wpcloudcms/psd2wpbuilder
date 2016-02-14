@@ -78,7 +78,7 @@
     
     <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
 </div>
-     <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
+     <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget') { ?>
               <div class="aboveheader col-md-12"> <?php 
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
               </div>
@@ -178,7 +178,7 @@ endif; ?>
             <?php if(is_active_sidebar('slider-widget')) { dynamic_sidebar('slider-widget'); } ?>
 </div>
     </div></div>
-     <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
+     <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') { ?>
               <div class="belowheader col-md-12"> <?php 
                 if(is_active_sidebar('slider-below-widget')) { dynamic_sidebar('slider-below-widget'); } ?>
               </div>

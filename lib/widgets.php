@@ -65,7 +65,7 @@ function kadence_widgets_init() {
   ));
 }
 //Above Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget') {
   register_sidebar(array(
     'name'          => __('Slider Above Widget', 'virtue'),
     'id'            => 'slider-above-widget',
@@ -87,7 +87,7 @@ function kadence_widgets_init() {
   ));
 }
 //Below Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget' && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') {
   register_sidebar(array(
     'name'          => __('Slider Below Widget', 'virtue'),
     'id'            => 'slider-below-widget',
