@@ -107,7 +107,7 @@ function kadence_widgets_init() {
     'after_widget'  => '',
     'before_title'  => '',
     'after_title'   => '',
-  )
+  ),
     array(
     'name'          => __('Slider Below Widget', 'virtue'),
     'id'            => 'slider-below-widget',
