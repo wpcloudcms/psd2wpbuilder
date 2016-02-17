@@ -118,6 +118,17 @@ function kadence_widgets_init() {
     'after_title'   => '',
   ));
 }
+  // Left Sidebars
+ global $virtue_premium; if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') {
+  register_sidebar(array(
+    'name'          => __('Left Sidebar', 'virtue'),
+    'id'            => 'left-sidebar',
+    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+}
   // Sidebars
   register_sidebar(array(
     'name'          => __('Primary Sidebar', 'virtue'),

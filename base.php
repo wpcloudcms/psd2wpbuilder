@@ -38,6 +38,11 @@
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
 <div class="main container">
+   <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') { ?>
+              <aside id="leftsidebar"> <?php 
+                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+              </aside>
+               <?php } ?>
     <div class="wrap clearfix contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>

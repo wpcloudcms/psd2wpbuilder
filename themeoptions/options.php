@@ -148,6 +148,18 @@ Redux::setSection( $opt_name, array(
             'default' => 'wide',
             ),
         array(
+            'id'=>'sidebar_layout',
+            'type' => 'image_select',
+            //'compiler'=> false,
+            'title' => __('Sidebar Layout Style', 'virtue'), 
+            'subtitle' => __('Select Sidebar Layout Style', 'virtue'),
+            'options' => array(
+                    'noleftsidebar' => array('alt' => 'No Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/no-left.png'),
+                    'withleftsidebar' => array('alt' => 'With Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/with-left.png'),
+                ),
+            'default' => 'noleftsidebar',
+            ),
+        array(
             'id'=>'slider_abovebelow_widget',
             'type' => 'image_select',
             //'compiler'=> false,
