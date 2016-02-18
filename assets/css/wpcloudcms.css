@@ -39,3 +39,27 @@ a.flex-prev, a.flex-next {
     display: none;
 }
 }
+@media (max-width: 600px) {
+header#kad-banner {
+    top: 0% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+}
+}
+@media (max-width: 600px) {
+header#kad-banner {
+    top: 0% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+}
+}
+@media (min-width: 480px) {
+header#kad-banner {
+    top: 32px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+}
+}
