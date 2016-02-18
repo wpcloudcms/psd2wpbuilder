@@ -1,4 +1,4 @@
-<header id="kad-banner" class="banner headerclass">
+<header id="kad-banner" class="banner headerclass" data-header-shrink="0" data-mobile-sticky="0">
 <?php if (kadence_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
@@ -9,7 +9,7 @@
             else {$logocclass = 'col-md-4'; $menulclass = 'col-md-8';}
           }
           else {$logocclass = 'col-md-4'; $menulclass = 'col-md-8';} ?>
-  <div class="container" data-header-shrink="0" data-mobile-sticky="0">
+  <div class="container">
     <div class="row">
           <div class="<?php echo esc_attr($logocclass); ?> clearfix kad-header-left">
             <div id="logo" class="logocase">
@@ -73,7 +73,7 @@
     </div><!--close container-->
     </section>
     <?php endif; ?> 
-    
+    </header>
     <div class="container headertext clearfix">
     
     <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
@@ -194,4 +194,3 @@ endif; ?>
               </div>
             <?php } ?>
     <?php do_action('kt_after_header_content'); ?>
-</header>
