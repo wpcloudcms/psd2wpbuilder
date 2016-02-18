@@ -1,7 +1,8 @@
-<header id="kad-banner" class="banner headerclass" data-header-shrink="0" data-mobile-sticky="0">
+
 <?php if (kadence_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
+<header id="kad-banner" class="banner headerclass" data-header-shrink="0" data-mobile-sticky="0">
 <?php global $virtue_premium; if(isset($virtue_premium['logo_layout'])) {
             if($virtue_premium['logo_layout'] == 'logocenter') {$logocclass = 'col-md-12'; $menulclass = 'col-md-12';} 
             else if($virtue_premium['logo_layout'] == 'logohalf') {$logocclass = 'col-md-6'; $menulclass = 'col-md-6';}
