@@ -58,6 +58,6 @@ header#kad-banner {
 div#mobile-nav-trigger {
     margin-top: -32px;
 }
-.contentclass {
+.contentclass, .slider.container-fluid {
     margin-top: 5px;
 }
