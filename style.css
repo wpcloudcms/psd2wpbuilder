@@ -31,7 +31,8 @@ GitHub Branch:      master
     font-style: normal;
 
 }
-
+.space, .space1 {padding: 0px 5px;}
+.space2 {padding: 0px 10px;}
 /* ::before ::after styles */
 
 li:after, li:before {
