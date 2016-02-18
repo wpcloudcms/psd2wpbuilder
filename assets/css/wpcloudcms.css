@@ -55,6 +55,11 @@ header#kad-banner {
     padding: 0px !important;
 }
 }
+.space, .space1 {padding: 0px 5px;}
+.space2 {padding: 0px 10px;}
+.space3 {padding: 0px 15px;}
+.space4 {padding: 0px 20px;}
+
 div#mobile-nav-trigger {
     margin-top: -32px;
 }
