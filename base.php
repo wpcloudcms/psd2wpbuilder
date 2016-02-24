@@ -59,8 +59,10 @@
     </div><!-- /.container .box -->
 </div><!--Wrapper-->
 <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
-<div class="container box footertext clearfix">
+<div class="footertext clearfix">
+    <div class="container">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
-      </div>
+     </div>
+</div>
 </body> 
 </html>
