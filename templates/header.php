@@ -11,7 +11,6 @@
           }
           else {$logocclass = 'col-md-4'; $menulclass = 'col-md-8';} ?>
   <div class="container box logo-header">  
-  <div class="container">
     <div class="row">
           <div class="<?php echo esc_attr($logocclass); ?> clearfix kad-header-left">
             <div id="logo" class="logocase">
@@ -64,7 +63,6 @@
             </div>
           </div>   
           <?php  endif; ?> 
-  </div> 
     </div><!-- Close logo-header -->
   <?php do_action('kt_before_secondary_navigation'); ?>
   <?php if (has_nav_menu('secondary_navigation')) : ?>
