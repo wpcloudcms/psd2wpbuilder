@@ -87,7 +87,6 @@
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
               </div>
                <?php } ?>
-  <div class="container box">
     <div class="featured row">
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -96,11 +95,10 @@
 	// dynamic_sidebar( 'top-slider-homeonly' );
 endif; ?>
 </div> 
- </div>
    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-  <div class="container-fluid">
+  <div>
 <?php } else { ?>
- <div class="container">
+ <div class="col-md-12">
 <?php } ?>
        <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slideronly') { ?>
     <div class="col-md-12">
