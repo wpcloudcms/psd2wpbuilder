@@ -72,7 +72,7 @@
           </div>   
           <?php  endif; ?> 
           <?php if (!empty($virtue_premium['virtue_banner_upload']['url'])) {  ?> 
-        <div class="container virtue_sitewide_banner"><div class="virtue_banner">
+        <div class="virtue_sitewide_banner"><div class="virtue_banner">
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> <a href="<?php echo esc_url($virtue_premium['virtue_banner_link']);?>"> <?php }?>
           <?php $alt_text = get_post_meta($virtue_premium['virtue_banner_upload']['id'], '_wp_attachment_image_alt', true); ?>
           <img src="<?php echo esc_url($virtue_premium['virtue_banner_upload']['url']); ?>" width="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['width']); ?>" height="<?php echo esc_attr($virtue_premium['virtue_banner_upload']['height']); ?>" alt="<?php echo esc_attr($alt_text);?>" /></div>

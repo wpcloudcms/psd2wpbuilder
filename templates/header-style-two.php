@@ -69,7 +69,7 @@
           <?php  endif; ?> 
   </div> <!-- Close Container -->
      <?php global $virtue_premium; if (!empty($virtue_premium['virtue_banner_upload']['url'])) {  ?> 
-        <div class="container virtue_sitewide_banner"><div class="virtue_banner">
+        <div class="virtue_sitewide_banner"><div class="virtue_banner">
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> <a href="<?php echo $virtue_premium['virtue_banner_link'];?>"> <?php }?>
           <img src="<?php echo $virtue_premium['virtue_banner_upload']['url']; ?>" /></div>
           <?php if (!empty($virtue_premium['virtue_banner_link'])) { ?> </a> <?php }?>
