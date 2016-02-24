@@ -141,7 +141,7 @@
 				echo do_shortcode('[gallery ids="'.$image_gallery.'" columns="4"]');
 			} else if ($ppost_type == 'carousel') { ?>
 					          <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-    <div id="imageslider" class="loading container box carousel_outerrim">
+    <div id="imageslider" class="loading full-slider carousel_outerrim">
 <?php } else { ?>
    <div id="imageslider" class="loading carousel_outerrim">
 <?php } ?>

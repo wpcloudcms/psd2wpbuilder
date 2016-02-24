@@ -99,7 +99,7 @@
         <?php } else if ($headcontent == 'carouselslider') { ?>
         <section class="postfeat">
                     <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-    <div id="imageslider" class="loading container box">
+    <div id="imageslider" class="loading full-slider">
 <?php } else { ?>
    <div id="imageslider" class="loading">
 <?php } ?>

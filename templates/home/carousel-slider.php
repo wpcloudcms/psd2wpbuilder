@@ -8,7 +8,7 @@
         if(isset($virtue_premium['slider_pausetime'])) {$pausetime = $virtue_premium['slider_pausetime'];} else {$pausetime = '7000';}
                 ?>
                       <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-    <div id="imageslider" class="loading container box">
+    <div id="imageslider" class="loading full-slider">
 <?php } else { ?>
    <div id="imageslider" class="loading">
 <?php } ?>

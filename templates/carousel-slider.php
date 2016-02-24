@@ -2,7 +2,7 @@
   <?php global $post; $height = get_post_meta( $post->ID, '_kad_posthead_height', true ); if (!empty($height)) $slideheight = $height; else $slideheight = 400; 
   $swidth = get_post_meta( $post->ID, '_kad_posthead_width', true ); if (!empty($swidth)) $slidewidth = $swidth; else $slidewidth = 1140; ?>
     	                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-    <div id="imageslider" class="container box">
+    <div id="imageslider" class="full-slider">
 <?php } else { ?>
    <div id="imageslider">
 <?php } ?>

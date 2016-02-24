@@ -6,7 +6,7 @@
                 $slides = $virtue_premium['shop_slider_images'];
                 ?>
     	                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
-    <div id="imageslider" class="container box">
+    <div id="imageslider" class="full-slider">
 <?php } else { ?>
    <div id="imageslider">
 <?php } ?>
