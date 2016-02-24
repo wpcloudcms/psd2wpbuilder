@@ -260,7 +260,7 @@ if(isset($virtue_premium['site_box_shadow']) and $virtue_premium['site_box_shado
   $site_box_shadow = '';
 }
 if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { 
-$slider_box_layout = '.slider img {width: 100%;}';
+$slider_box_layout = '.full-slider img {width: 100%;}';
 } else { 
 $slider_box_layout = '';
  }
