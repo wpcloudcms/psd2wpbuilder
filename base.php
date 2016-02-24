@@ -60,9 +60,11 @@
 </div><!--Wrapper-->
 <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
 <div class="footertext clearfix">
+    <div class="row credit">
     <div class="container">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
      </div>
+    </div>
 </div>
 </body> 
 </html>
