@@ -77,10 +77,6 @@
     </section>
     <?php endif; ?> 
     </header>
-    <div class="container headertext clearfix">
-    
-    <?php $headertext = $virtue_premium['header_text']; echo do_shortcode($headertext); ?>
-</div>
      <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget') { ?>
               <div class="aboveheader col-md-12"> <?php 
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>

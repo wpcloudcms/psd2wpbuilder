@@ -265,9 +265,9 @@ if(isset($virtue_premium['featured_slider']) and $virtue_premium['featured_slide
   $featured_slider = 'body.home.page .slider.container-fluid{display: block;}body.home.page .slider.container{display: block;}.slider.container-fluid {display: none;}.slider.container {display: none;}';
 }
 if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
-  $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1;}';
+  $header_border = '.flexslider .slides {zoom: 1;}';
 } else {
-  $header_border = '.flexslider .slides, .virtue_banner img {zoom: 1; max-width: 103.25%;margin: 0% -1.625%;}';
+  $header_border = '.flexslider .slides {zoom: 1; max-width: 103.25%;margin: 0% -1.625%;}';
 }
 if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') {
   $boxed_layout = '.container.box {width: 100% !important;margin-left: auto !important;margin-right: auto !important; padding-left: 0px; padding-right: 0px;} .slider.container, .featured.container, .row-height.container { padding-left: 0px; padding-right: 0px;} .slider-left, .slider-right {padding: 0px 10px; margin-left: 0px; margin-right: 0px;}';
