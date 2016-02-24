@@ -18,7 +18,7 @@
 			</div>
 		</div><!--titleclass-->
 	<?php } ?>
-    <div id="content" class="col-sm-12 homepagecontent">
+    <div id="content" class="homepagecontent">
    		<div class="row">
           <div class="main <?php echo esc_attr(kadence_main_class()); ?>" role="main">
           <div class="entry-content" itemprop="mainContentOfPage">

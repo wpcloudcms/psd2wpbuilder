@@ -39,7 +39,7 @@ a.flex-prev, a.flex-next {
     display: none;
 }
 }
-header#kad-banner {
+header#kad-banner, .logo-header {
     margin-left: -15px;
     margin-right: -15px;
 }
