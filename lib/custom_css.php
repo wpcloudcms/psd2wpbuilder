@@ -19,9 +19,9 @@ $site_top_margin = 'div#wrapper {margin-top:'.$virtue_premium['site_top_margin']
   $site_top_margin = 'div#wrapper {margin-top: 0px;}';
 }
 if(isset($virtue_premium['content_top_margin'])) {
-$content_top_margin = '.row-height.container {margin-top:'.$virtue_premium['content_top_margin'].'px;}';
+$content_top_margin = '.main.container {margin-top:'.$virtue_premium['content_top_margin'].'px;}';
 } else {
-  $content_top_margin = '.row-height.container {margin-top: 0px;}';
+  $content_top_margin = '.main.container {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_bottom_margin'])) {
 $site_bottom_margin = '.container.credit {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px;}';
