@@ -2,13 +2,13 @@
 /**
  * Register sidebars and widgets
  */
-function virtue_sidebar_list() {
-  $all_sidebars=array(array('name'=>__('Primary Sidebar', 'virtue'), 'id'=>'sidebar-primary'));
-  global $virtue_premium; 
-  if(isset($virtue_premium['cust_sidebars'])) {
-  if (is_array($virtue_premium['cust_sidebars'])) {
+function bigcloudcms_sidebar_list() {
+  $all_sidebars=array(array('name'=>__('Primary Sidebar', 'bigcloudcms'), 'id'=>'sidebar-primary'));
+  global $bigcloudcms_premium; 
+  if(isset($bigcloudcms_premium['cust_sidebars'])) {
+  if (is_array($bigcloudcms_premium['cust_sidebars'])) {
     $i = 1;
-  foreach($virtue_premium['cust_sidebars'] as $sidebar){
+  foreach($bigcloudcms_premium['cust_sidebars'] as $sidebar){
     if(empty($sidebar)) {$sidebar = 'sidebar'.$i;}
     $all_sidebars[]=array('name'=>$sidebar, 'id'=>'sidebar'.$i);
     $i++;
@@ -19,18 +19,18 @@ function virtue_sidebar_list() {
   $vir_sidebars = $all_sidebars;
   return $all_sidebars;
 }
-add_action('init', 'virtue_sidebar_list');
+add_action('init', 'bigcloudcms_sidebar_list');
 
-function virtue_register_sidebars(){
-  $the_sidebars = virtue_sidebar_list();
+function bigcloudcms_register_sidebars(){
+  $the_sidebars = bigcloudcms_sidebar_list();
   if (function_exists('register_sidebar')){
     foreach($the_sidebars as $side){
-      virtue_register_sidebar($side['name'], $side['id']);    
+      bigcloudcms_register_sidebar($side['name'], $side['id']);    
     }
 
   }
 }
-function virtue_register_sidebar($name, $id){
+function bigcloudcms_register_sidebar($name, $id){
   register_sidebar(array('name'=>$name,
     'id' => $id,
          'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
@@ -39,13 +39,13 @@ function virtue_register_sidebar($name, $id){
     'after_title' => '</h3>',
   ));
 }
-add_action('widgets_init', 'virtue_register_sidebars');
+add_action('widgets_init', 'bigcloudcms_register_sidebars');
 
 function kadence_widgets_init() {
     //Topbar 
   if(kadence_display_topbar_widget()) {
   register_sidebar(array(
-    'name'          => __('Topbar Widget', 'virtue'),
+    'name'          => __('Topbar Widget', 'bigcloudcms'),
     'id'            => 'topbarright',
     'before_widget' => '<span class="topbar-widgetcontent">',
     'after_widget'  => '</span>',
@@ -54,9 +54,9 @@ function kadence_widgets_init() {
   ));
 }
     //header
-  global $virtue_premium; if(isset($virtue_premium['logo_layout']) && $virtue_premium['logo_layout'] == 'logowidget') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['logo_layout']) && $bigcloudcms_premium['logo_layout'] == 'logowidget') {
   register_sidebar(array(
-    'name'          => __('Header Widget Area', 'virtue'),
+    'name'          => __('Header Widget Area', 'bigcloudcms'),
     'id'            => 'headerwidget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -65,9 +65,9 @@ function kadence_widgets_init() {
   ));
 }
 //Above Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['slider_abovebelow_widget']) && $bigcloudcms_premium['slider_abovebelow_widget'] == 'sliderabovewidget') {
   register_sidebar(array(
-    'name'          => __('Slider Above Widget', 'virtue'),
+    'name'          => __('Slider Above Widget', 'bigcloudcms'),
     'id'            => 'slider-above-widget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -76,9 +76,9 @@ function kadence_widgets_init() {
   ));
 }
   //Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slidernwidget') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['slider_widget_layout']) && $bigcloudcms_premium['slider_widget_layout'] == 'slidernwidget') {
   register_sidebar(array(
-    'name'          => __('Slider Widget', 'virtue'),
+    'name'          => __('Slider Widget', 'bigcloudcms'),
     'id'            => 'slider-widget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -87,9 +87,9 @@ function kadence_widgets_init() {
   ));
 }
 //Below Slider Widget
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['slider_abovebelow_widget']) && $bigcloudcms_premium['slider_abovebelow_widget'] == 'sliderbelowwidget') {
   register_sidebar(array(
-    'name'          => __('Slider Below Widget', 'virtue'),
+    'name'          => __('Slider Below Widget', 'bigcloudcms'),
     'id'            => 'slider-below-widget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -98,9 +98,9 @@ function kadence_widgets_init() {
   ));
 }
     //Slider Both Widgets
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['slider_abovebelow_widget']) && $bigcloudcms_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
   register_sidebar(array(
-    'name'          => __('Slider Above Widget', 'virtue'),
+    'name'          => __('Slider Above Widget', 'bigcloudcms'),
     'id'            => 'slider-above-widget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -108,9 +108,9 @@ function kadence_widgets_init() {
     'after_title'   => '',
   ));
 }
-  global $virtue_premium; if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['slider_abovebelow_widget']) && $bigcloudcms_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') {
   register_sidebar(array(
-    'name'          => __('Slider Below Widget', 'virtue'),
+    'name'          => __('Slider Below Widget', 'bigcloudcms'),
     'id'            => 'slider-below-widget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -119,9 +119,9 @@ function kadence_widgets_init() {
   ));
 }
   // Left Sidebars
- global $virtue_premium; if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') {
+ global $bigcloudcms_premium; if(isset($bigcloudcms_premium['sidebar_layout']) && $bigcloudcms_premium['sidebar_layout'] == 'withleftsidebar') {
   register_sidebar(array(
-    'name'          => __('Left Sidebar', 'virtue'),
+    'name'          => __('Left Sidebar', 'bigcloudcms'),
     'id'            => 'left-sidebar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
@@ -131,7 +131,7 @@ function kadence_widgets_init() {
 }
   // Sidebars
   register_sidebar(array(
-    'name'          => __('Primary Sidebar', 'virtue'),
+    'name'          => __('Primary Sidebar', 'bigcloudcms'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
@@ -139,7 +139,7 @@ function kadence_widgets_init() {
     'after_title'   => '</h3>',
   ));
   register_sidebar(array(
-    'name'          => __('Home Widget Area', 'virtue'),
+    'name'          => __('Home Widget Area', 'bigcloudcms'),
     'id'            => 'homewidget',
     'before_widget' => '',
     'after_widget'  => '',
@@ -148,11 +148,11 @@ function kadence_widgets_init() {
   ));
 
   // Footer
-  global $virtue_premium; if(isset($virtue_premium['footer_layout'])) { $footer_layout = $virtue_premium['footer_layout'];} else {$footer_layout = "fourc";}
+  global $bigcloudcms_premium; if(isset($bigcloudcms_premium['footer_layout'])) { $footer_layout = $bigcloudcms_premium['footer_layout'];} else {$footer_layout = "fourc";}
   if ($footer_layout == "fourc") {
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 1', 'virtue'),
+        'name' => __('Footer Column 1', 'bigcloudcms'),
         'id' => 'footer_1',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -162,7 +162,7 @@ function kadence_widgets_init() {
     );
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 2', 'virtue'),
+        'name' => __('Footer Column 2', 'bigcloudcms'),
         'id' => 'footer_2',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -172,7 +172,7 @@ function kadence_widgets_init() {
     );
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 3', 'virtue'),
+        'name' => __('Footer Column 3', 'bigcloudcms'),
         'id' => 'footer_3',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -182,7 +182,7 @@ function kadence_widgets_init() {
     );
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 4', 'virtue'),
+        'name' => __('Footer Column 4', 'bigcloudcms'),
         'id' => 'footer_4',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -193,7 +193,7 @@ function kadence_widgets_init() {
   } else if ($footer_layout == "threec") {
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 1', 'virtue'),
+        'name' => __('Footer Column 1', 'bigcloudcms'),
         'id' => 'footer_third_1',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -203,7 +203,7 @@ function kadence_widgets_init() {
     );
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 2', 'virtue'),
+        'name' => __('Footer Column 2', 'bigcloudcms'),
         'id' => 'footer_third_2',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -213,7 +213,7 @@ function kadence_widgets_init() {
     );
     if ( function_exists('register_sidebar') )
       register_sidebar(array(
-        'name' => __('Footer Column 3', 'virtue'),
+        'name' => __('Footer Column 3', 'bigcloudcms'),
         'id' => 'footer_third_3',
         'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside></div>',
@@ -224,7 +224,7 @@ function kadence_widgets_init() {
  } else if ($footer_layout == "twoc") {
       if ( function_exists('register_sidebar') )
         register_sidebar(array(
-          'name' => __('Footer Column 1', 'virtue'),
+          'name' => __('Footer Column 1', 'bigcloudcms'),
           'id' => 'footer_double_1',
           'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
           'after_widget' => '</aside></div>',
@@ -234,7 +234,7 @@ function kadence_widgets_init() {
       );
       if ( function_exists('register_sidebar') )
         register_sidebar(array(
-          'name' => __('Footer Column 2', 'virtue'),
+          'name' => __('Footer Column 2', 'bigcloudcms'),
           'id' => 'footer_double_2',
           'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
           'after_widget' => '</aside></div>',
@@ -245,7 +245,7 @@ function kadence_widgets_init() {
         } else {
       if ( function_exists('register_sidebar') )
         register_sidebar(array(
-          'name' => __('Footer Column 1', 'virtue'),
+          'name' => __('Footer Column 1', 'bigcloudcms'),
           'id' => 'footer_single_1',
           'before_widget' => '<div class="footer-widget"><aside id="%1$s" class="widget %2$s">',
           'after_widget' => '</aside></div>',
@@ -276,8 +276,8 @@ add_action('widgets_init', 'kadence_widgets_init');
  */
 class Kadence_Contact_Widget extends WP_Widget {
   function Kadence_Contact_Widget() {
-    $widget_ops = array('classname' => 'widget_kadence_contact', 'description' => __('Use this widget to add a Vcard to your site', 'virtue'));
-    $this->__construct('widget_kadence_contact', __('Virtue: Contact/Vcard', 'virtue'), $widget_ops);
+    $widget_ops = array('classname' => 'widget_kadence_contact', 'description' => __('Use this widget to add a Vcard to your site', 'bigcloudcms'));
+    $this->__construct('widget_kadence_contact', __('BigCloudCMS: Contact/Vcard', 'bigcloudcms'), $widget_ops);
     $this->alt_option_name = 'widget_kadence_contact';
 
     add_action('save_post', array(&$this, 'flush_widget_cache'));
@@ -380,43 +380,43 @@ class Kadence_Contact_Widget extends WP_Widget {
     $email = isset($instance['email']) ? esc_attr($instance['email']) : '';
   ?>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('company')); ?>"><?php _e('Company Name:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('company')); ?>"><?php _e('Company Name:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('company')); ?>" name="<?php echo esc_attr($this->get_field_name('company')); ?>" type="text" value="<?php echo esc_attr($company); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('name')); ?>"><?php _e('Name:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('name')); ?>"><?php _e('Name:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('name')); ?>" name="<?php echo esc_attr($this->get_field_name('name')); ?>" type="text" value="<?php echo esc_attr($name); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('street_address')); ?>"><?php _e('Street Address:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('street_address')); ?>"><?php _e('Street Address:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('street_address')); ?>" name="<?php echo esc_attr($this->get_field_name('street_address')); ?>" type="text" value="<?php echo esc_attr($street_address); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('locality')); ?>"><?php _e('City/Locality:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('locality')); ?>"><?php _e('City/Locality:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('locality')); ?>" name="<?php echo esc_attr($this->get_field_name('locality')); ?>" type="text" value="<?php echo esc_attr($locality); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('region')); ?>"><?php _e('State/Region:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('region')); ?>"><?php _e('State/Region:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('region')); ?>" name="<?php echo esc_attr($this->get_field_name('region')); ?>" type="text" value="<?php echo esc_attr($region); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('postal_code')); ?>"><?php _e('Zipcode/Postal Code:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('postal_code')); ?>"><?php _e('Zipcode/Postal Code:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('postal_code')); ?>" name="<?php echo esc_attr($this->get_field_name('postal_code')); ?>" type="text" value="<?php echo esc_attr($postal_code); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('tel')); ?>"><?php _e('Mobile Telephone:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('tel')); ?>"><?php _e('Mobile Telephone:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('tel')); ?>" name="<?php echo esc_attr($this->get_field_name('tel')); ?>" type="text" value="<?php echo esc_attr($tel); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>"><?php _e('Fixed Telephone:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>"><?php _e('Fixed Telephone:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>" name="<?php echo esc_attr($this->get_field_name('fixedtel')); ?>" type="text" value="<?php echo esc_attr($fixedtel); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e('Email:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e('Email:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('email')); ?>" name="<?php echo esc_attr($this->get_field_name('email')); ?>" type="text" value="<?php echo esc_attr($email); ?>" />
     </p>
   <?php
@@ -427,8 +427,8 @@ class Kadence_Contact_Widget extends WP_Widget {
  */
 class Kadence_Social_Widget extends WP_Widget {
   function Kadence_Social_Widget() {
-    $widget_ops = array('classname' => 'widget_kadence_social', 'description' => __('Simple way to add Social Icons', 'virtue'));
-    $this->__construct('widget_kadence_social', __('Virtue: Social Links', 'virtue'), $widget_ops);
+    $widget_ops = array('classname' => 'widget_kadence_social', 'description' => __('Simple way to add Social Icons', 'bigcloudcms'));
+    $this->__construct('widget_kadence_social', __('BigCloudCMS: Social Links', 'bigcloudcms'), $widget_ops);
     $this->alt_option_name = 'widget_kadence_social';
 
     add_action('save_post', array(&$this, 'flush_widget_cache'));
@@ -481,7 +481,7 @@ class Kadence_Social_Widget extends WP_Widget {
       echo $after_title;
     }
   ?>
-    <div class="virtue_social_widget clearfix">
+    <div class="bigcloudcms_social_widget clearfix">
       
 <?php if(!empty($instance['facebook'])):?><a href="<?php echo esc_url($instance['facebook']); ?>" class="facebook_link" title="Facebook" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="icon-facebook"></i></a><?php endif;?>
 <?php if(!empty($instance['twitter'])):?><a href="<?php echo esc_url($instance['twitter']); ?>" class="twitter_link" title="Twitter" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="icon-twitter"></i></a><?php endif;?>
@@ -566,79 +566,79 @@ class Kadence_Social_Widget extends WP_Widget {
     $rss = isset($instance['rss']) ? esc_attr($instance['rss']) : '';
   ?>
   <p>
-      <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('facebook')); ?>"><?php _e('Facebook:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('facebook')); ?>"><?php _e('Facebook:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('facebook')); ?>" name="<?php echo esc_attr($this->get_field_name('facebook')); ?>" type="text" value="<?php echo esc_attr($facebook); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('twitter')); ?>"><?php _e('Twitter:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('twitter')); ?>"><?php _e('Twitter:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('twitter')); ?>" name="<?php echo esc_attr($this->get_field_name('twitter')); ?>" type="text" value="<?php echo esc_attr($twitter); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('instagram')); ?>"><?php _e('Instagram:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('instagram')); ?>"><?php _e('Instagram:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('instagram')); ?>" name="<?php echo esc_attr($this->get_field_name('instagram')); ?>" type="text" value="<?php echo esc_attr($instagram); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('googleplus')); ?>"><?php _e('GooglePlus:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('googleplus')); ?>"><?php _e('GooglePlus:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('googleplus')); ?>" name="<?php echo esc_attr($this->get_field_name('googleplus')); ?>" type="text" value="<?php echo esc_attr($googleplus); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('flickr')); ?>"><?php _e('Flickr:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('flickr')); ?>"><?php _e('Flickr:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('flickr')); ?>" name="<?php echo esc_attr($this->get_field_name('flickr')); ?>" type="text" value="<?php echo esc_attr($flickr); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('vimeo')); ?>"><?php _e('Vimeo:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('vimeo')); ?>"><?php _e('Vimeo:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('vimeo')); ?>" name="<?php echo esc_attr($this->get_field_name('vimeo')); ?>" type="text" value="<?php echo esc_attr($vimeo); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('youtube')); ?>"><?php _e('Youtube:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('youtube')); ?>"><?php _e('Youtube:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('youtube')); ?>" name="<?php echo esc_attr($this->get_field_name('youtube')); ?>" type="text" value="<?php echo esc_attr($youtube); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('pinterest')); ?>"><?php _e('Pinterest:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('pinterest')); ?>"><?php _e('Pinterest:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('pinterest')); ?>" name="<?php echo esc_attr($this->get_field_name('pinterest')); ?>" type="text" value="<?php echo esc_attr($pinterest); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('dribbble')); ?>"><?php _e('Dribbble:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('dribbble')); ?>"><?php _e('Dribbble:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('dribbble')); ?>" name="<?php echo esc_attr($this->get_field_name('dribbble')); ?>" type="text" value="<?php echo esc_attr($dribbble); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('linkedin')); ?>"><?php _e('Linkedin:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('linkedin')); ?>"><?php _e('Linkedin:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkedin')); ?>" name="<?php echo esc_attr($this->get_field_name('linkedin')); ?>" type="text" value="<?php echo esc_attr($linkedin); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('tumblr')); ?>"><?php _e('Tumblr:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('tumblr')); ?>"><?php _e('Tumblr:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('tumblr')); ?>" name="<?php echo esc_attr($this->get_field_name('tumblr')); ?>" type="text" value="<?php echo esc_attr($tumblr); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>"><?php _e('Stumbleupon:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>"><?php _e('Stumbleupon:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>" name="<?php echo esc_attr($this->get_field_name('stumbleupon')); ?>" type="text" value="<?php echo esc_attr($stumbleupon); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('vk')); ?>"><?php _e('VK:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('vk')); ?>"><?php _e('VK:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('vk')); ?>" name="<?php echo esc_attr($this->get_field_name('vk')); ?>" type="text" value="<?php echo esc_attr($vk); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('viadeo')); ?>"><?php _e('Viadeo:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('viadeo')); ?>"><?php _e('Viadeo:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('viadeo')); ?>" name="<?php echo esc_attr($this->get_field_name('viadeo')); ?>" type="text" value="<?php echo esc_attr($viadeo); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('xing')); ?>"><?php _e('xing:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('xing')); ?>"><?php _e('xing:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('xing')); ?>" name="<?php echo esc_attr($this->get_field_name('xing')); ?>" type="text" value="<?php echo esc_attr($xing); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('yelp')); ?>"><?php _e('Yelp:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('yelp')); ?>"><?php _e('Yelp:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('yelp')); ?>" name="<?php echo esc_attr($this->get_field_name('yelp')); ?>" type="text" value="<?php echo esc_attr($yelp); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>"><?php _e('Soundcloud:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>"><?php _e('Soundcloud:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>" name="<?php echo esc_attr($this->get_field_name('soundcloud')); ?>" type="text" value="<?php echo esc_attr($soundcloud); ?>" />
     </p>
     <p>
-      <label for="<?php echo esc_attr($this->get_field_id('rss')); ?>"><?php _e('RSS:', 'virtue'); ?></label>
+      <label for="<?php echo esc_attr($this->get_field_id('rss')); ?>"><?php _e('RSS:', 'bigcloudcms'); ?></label>
       <input class="widefat" id="<?php echo esc_attr($this->get_field_id('rss')); ?>" name="<?php echo esc_attr($this->get_field_name('rss')); ?>" type="text" value="<?php echo esc_attr($rss); ?>" />
     </p>
   <?php
@@ -652,8 +652,8 @@ class Kadence_Social_Widget extends WP_Widget {
 class Kadence_Recent_Posts_Widget extends WP_Widget {
 
   function Kadence_Recent_Posts_Widget() {
-      $widget_ops = array('classname' => 'kadence_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'virtue'));
-      $this->__construct('kadence_recent_posts', __('Virtue: Recent Posts', 'virtue'), $widget_ops);
+      $widget_ops = array('classname' => 'kadence_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'bigcloudcms'));
+      $this->__construct('kadence_recent_posts', __('BigCloudCMS: Recent Posts', 'bigcloudcms'), $widget_ops);
       $this->alt_option_name = 'kadence_recent_entries';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
@@ -678,7 +678,7 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
     ob_start();
     extract($args);
 
-    $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts', 'virtue') : $instance['title'], $instance, $this->id_base);
+    $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts', 'bigcloudcms') : $instance['title'], $instance, $this->id_base);
     if ( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) ) {$number = 10; }
     if(isset($instance['orderby'])) {$order = $instance['orderby'];} else {$order = 'date';}
     $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'category_name' => $instance['thecate'], 'no_found_rows' => true, 'post_status' => 'publish', 'orderby' => $order, 'ignore_sticky_posts' => true ) ) );
@@ -693,7 +693,7 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
           <?php global $post; if(has_post_thumbnail( $post->ID ) ) { 
             the_post_thumbnail( 'widget-thumb' ); 
           } else { 
-             $image_url = virtue_img_placeholder_small();
+             $image_url = bigcloudcms_img_placeholder_small();
             $image = aq_resize($image_url, 80, 50, true);
             if(empty($image)) { $image = $image_url; }
             echo '<img width="80" height="50" src="'.esc_attr($image).'" class="attachment-widget-thumb wp-post-image" alt="">'; } ?></a>
@@ -753,17 +753,17 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
     }
 
 ?>
-    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'bigcloudcms'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-    <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'bigcloudcms'); ?></label>
     <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
      <p>
-    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>"><?php echo implode('', $order_options); ?></select>
     </p>
         <p>
-    <label for="<?php echo $this->get_field_id('thecate'); ?>"><?php _e('Limit to Catagory (Optional):', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('thecate'); ?>"><?php _e('Limit to Catagory (Optional):', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('thecate'); ?>" name="<?php echo $this->get_field_name('thecate'); ?>"><?php echo implode('', $cate_options); ?></select>
   </p>
 <?php
@@ -778,8 +778,8 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
 class Kadence_Testimonial_Slider_Widget extends WP_Widget {
 
   function Kadence_Testimonial_Slider_Widget() {
-      $widget_ops = array('classname' => 'kadence_testimonials_slider', 'description' => __('This shows a slider with your testimonials', 'virtue'));
-      $this->__construct('kadence_testimonials_slider', __('Virtue: Testimonial Carousel', 'virtue'), $widget_ops);
+      $widget_ops = array('classname' => 'kadence_testimonials_slider', 'description' => __('This shows a slider with your testimonials', 'bigcloudcms'));
+      $this->__construct('kadence_testimonials_slider', __('BigCloudCMS: Testimonial Carousel', 'bigcloudcms'), $widget_ops);
       $this->alt_option_name = 'kadence_testimonials_slider';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
@@ -804,7 +804,7 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
     ob_start();
     extract($args);
     $carousel_rn = (rand(10,100));
-    $title = apply_filters('widget_title', empty($instance['title']) ? __('Testimonials', 'virtue') : $instance['title'], $instance, $this->id_base);
+    $title = apply_filters('widget_title', empty($instance['title']) ? __('Testimonials', 'bigcloudcms') : $instance['title'], $instance, $this->id_base);
     if ( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
       $number = 10;
     if ( empty( $instance['wordcount'] ) || ! $wordcount = absint( $instance['wordcount'] ) )
@@ -865,19 +865,19 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
                                  if($full_content == "full_content"){
                                     the_content();
                                   } else {
-                                    echo esc_attr(strip_tags(virtue_content($wordcount))); 
+                                    echo esc_attr(strip_tags(bigcloudcms_content($wordcount))); 
                                   }
 
                                   if(isset($link) && $link == 'page') {
                                     if(!empty($pagelink)) {$thepagelink = $pagelink;} else {$thepagelink = get_the_permalink();}
                                     echo '<a href="'.$thepagelink.'" class="kadtestimoniallink testpagelink">';
-                                    if(!empty($linktext)) $thelinktext = $linktext; else {$thelinktext = __('Read More', 'virtue');}
+                                    if(!empty($linktext)) $thelinktext = $linktext; else {$thelinktext = __('Read More', 'bigcloudcms');}
                                     echo $thelinktext;
                                     echo '</a>';
                                   
                                   } else if(isset($link) && $link == 'post'){ 
                                     echo '<a href="'.get_the_permalink().'" class="kadtestimoniallink">';
-                                    if(!empty($linktext)) $thelinktext = $linktext; else {$thelinktext = __('Read More', 'virtue');}
+                                    if(!empty($linktext)) $thelinktext = $linktext; else {$thelinktext = __('Read More', 'bigcloudcms');}
                                     echo $thelinktext;
                                     echo '</a>';
 
@@ -951,8 +951,8 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
     if (isset($instance['pagelink'])) { $pagelink = esc_attr($instance['pagelink']); } else {$pagelink = '';}
     $orderoptions = array(array('name' => 'Random', 'slug' => 'rand'), array('name' => 'Menu Order', 'slug' => 'menu_order'), array('name' => 'Date', 'slug' => 'date'));
     $full_coptions = array(array('name' => 'Excerpt', 'slug' => 'excerpt'), array('name' => 'Full Content', 'slug' => 'full_content'));
-    $linkoptions = array(array('name' => __('none', 'virtue'), 'slug' => 'false'), array('name' => __('Page Link', 'virtue'), 'slug' => 'page'), array('name' => __('Post Link', 'virtue'), 'slug' => 'post'));
-    $testimonial_columns_options = array(array("slug" => "1", "name" => __('1 Column', 'virtue')), array("slug" => "2", "name" => __('2 Columns', 'virtue')), array("slug" => "3", "name" => __('3 Columns', 'virtue')), array("slug" => "4", "name" => __('4 Columns', 'virtue')), array("slug" => "5", "name" => __('5 Columns', 'virtue')), array("slug" => "6", "name" => __('6 Columns', 'virtue')));
+    $linkoptions = array(array('name' => __('none', 'bigcloudcms'), 'slug' => 'false'), array('name' => __('Page Link', 'bigcloudcms'), 'slug' => 'page'), array('name' => __('Post Link', 'bigcloudcms'), 'slug' => 'post'));
+    $testimonial_columns_options = array(array("slug" => "1", "name" => __('1 Column', 'bigcloudcms')), array("slug" => "2", "name" => __('2 Columns', 'bigcloudcms')), array("slug" => "3", "name" => __('3 Columns', 'bigcloudcms')), array("slug" => "4", "name" => __('4 Columns', 'bigcloudcms')), array("slug" => "5", "name" => __('5 Columns', 'bigcloudcms')), array("slug" => "6", "name" => __('6 Columns', 'bigcloudcms')));
      foreach ($testimonial_columns_options as $testimonial_column_option) {
       if ($columns == $testimonial_column_option['slug']) { $selected=' selected="selected"';} else { $selected=""; }
       $testimonial_columns_array[] = '<option value="' . $testimonial_column_option['slug'] .'"' . $selected . '>' . $testimonial_column_option['name'] . '</option>';
@@ -990,44 +990,44 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
     }
 
 ?>
-    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'bigcloudcms'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'bigcloudcms'); ?></label>
     <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('wordcount'); ?>"><?php _e('Number of words to show:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('wordcount'); ?>"><?php _e('Number of words to show:', 'bigcloudcms'); ?></label>
     <input id="<?php echo $this->get_field_id('wordcount'); ?>" name="<?php echo $this->get_field_name('wordcount'); ?>" type="text" value="<?php echo $wordcount; ?>" size="3" /></p>
     <p>
-    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>"><?php echo implode('', $order_options); ?></select>
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('Limit to Group (Optional):', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('Limit to Group (Optional):', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('thecat'); ?>" name="<?php echo $this->get_field_name('thecat'); ?>"><?php echo implode('', $cat_options); ?></select>
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('columns'); ?>"><?php _e('Carousel Columns', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('columns'); ?>"><?php _e('Carousel Columns', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('columns'); ?>" name="<?php echo $this->get_field_name('columns'); ?>"><?php echo implode('', $testimonial_columns_array); ?></select>
     </p>
-    <p><label for="<?php echo $this->get_field_id('speed'); ?>"><?php _e('Carousel Speed (e.g. = 7000)', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('speed'); ?>"><?php _e('Carousel Speed (e.g. = 7000)', 'bigcloudcms'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('speed'); ?>" name="<?php echo $this->get_field_name('speed'); ?>" type="text" value="<?php echo $speed; ?>" />
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link Options:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link Options:', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>"><?php echo implode('', $link_options); ?></select>
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('pagelink'); ?>"><?php _e('If link to page, choose page:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('pagelink'); ?>"><?php _e('If link to page, choose page:', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('pagelink'); ?>" name="<?php echo $this->get_field_name('pagelink'); ?>"><?php echo implode('', $pagelink_options); ?></select>
     </p>
-     <p><label for="<?php echo $this->get_field_id('linktext'); ?>"><?php _e('Link text (e.g. = Read More)', 'virtue'); ?></label>
+     <p><label for="<?php echo $this->get_field_id('linktext'); ?>"><?php _e('Link text (e.g. = Read More)', 'bigcloudcms'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('linktext'); ?>" name="<?php echo $this->get_field_name('linktext'); ?>" type="text" value="<?php echo $linktext; ?>" />
     </p>
     <p>
-    <label for="<?php echo $this->get_field_id('full_content'); ?>"><?php _e('Content:', 'virtue'); ?></label>
+    <label for="<?php echo $this->get_field_id('full_content'); ?>"><?php _e('Content:', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('full_content'); ?>" name="<?php echo $this->get_field_name('full_content'); ?>"><?php echo implode('', $full_content_options); ?></select>
     </p>
   
@@ -1041,8 +1041,8 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
 class Kadence_Image_Grid_Widget extends WP_Widget {
 
   function Kadence_Image_Grid_Widget() {
-      $widget_ops = array('classname' => 'kadence_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'virtue'));
-      $this->__construct('kadence_image_grid', __('Virtue: Post Grid', 'virtue'), $widget_ops);
+      $widget_ops = array('classname' => 'kadence_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'bigcloudcms'));
+      $this->__construct('kadence_image_grid', __('BigCloudCMS: Post Grid', 'bigcloudcms'), $widget_ops);
       $this->alt_option_name = 'kadence_image_grid';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
@@ -1164,22 +1164,22 @@ class Kadence_Image_Grid_Widget extends WP_Widget {
 
 
 ?>
-    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'bigcloudcms'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-    <p><label for="<?php echo $this->get_field_id('gridchoice'); ?>"><?php _e('Grid Choice:','virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('gridchoice'); ?>"><?php _e('Grid Choice:','bigcloudcms'); ?></label>
         <select id="<?php echo $this->get_field_id('gridchoice'); ?>" name="<?php echo $this->get_field_name('gridchoice'); ?>">
-            <option value="post"<?php echo ($gridchoice === 'post' ? ' selected="selected"' : ''); ?>><?php _e('Blog Posts', 'virtue'); ?></option>
-            <option value="portfolio"<?php echo ($gridchoice === 'portfolio' ? ' selected="selected"' : ''); ?>><?php _e('Portfolio', 'virtue'); ?></option>
+            <option value="post"<?php echo ($gridchoice === 'post' ? ' selected="selected"' : ''); ?>><?php _e('Blog Posts', 'bigcloudcms'); ?></option>
+            <option value="portfolio"<?php echo ($gridchoice === 'portfolio' ? ' selected="selected"' : ''); ?>><?php _e('Portfolio', 'bigcloudcms'); ?></option>
         </select></p>
         
-        <p><label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('If Post - Choose Category (Optional):', 'virtue'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('If Post - Choose Category (Optional):', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('thecat'); ?>" name="<?php echo $this->get_field_name('thecat'); ?>"><?php echo implode('', $cat_options); ?></select></p>
         
-    <p><label for="<?php echo $this->get_field_id('thetype'); ?>"><?php _e('If Portfolio - Choose Type (Optional):', 'virtue'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('thetype'); ?>"><?php _e('If Portfolio - Choose Type (Optional):', 'bigcloudcms'); ?></label>
     <select id="<?php echo $this->get_field_id('thetype'); ?>" name="<?php echo $this->get_field_name('thetype'); ?>"><?php echo implode('', $type_options); ?></select></p>
         
-        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of images to show:', 'virtue'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of images to show:', 'bigcloudcms'); ?></label>
     <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
   
 <?php
@@ -1190,9 +1190,9 @@ class Kadence_Image_Grid_Widget extends WP_Widget {
 class Simple_About_With_Image extends WP_Widget{
 
     function Simple_About_With_Image() {
-        $widget_ops = array('classname' => 'virtue_about_with_image', 'description' => __('This allows for an image and a simple about text.', 'virtue'));
-        $this->__construct('virtue_about_with_image', __('Virtue: Image', 'virtue'), $widget_ops);
-        $this->alt_option_name = 'virtue_about_with_image';
+        $widget_ops = array('classname' => 'bigcloudcms_about_with_image', 'description' => __('This allows for an image and a simple about text.', 'bigcloudcms'));
+        $this->__construct('bigcloudcms_about_with_image', __('BigCloudCMS: Image', 'bigcloudcms'), $widget_ops);
+        $this->alt_option_name = 'bigcloudcms_about_with_image';
     }
 
     public function widget($args, $instance){ 
@@ -1227,7 +1227,7 @@ class Simple_About_With_Image extends WP_Widget{
         <?php if($uselink == true) {echo '<a href="'.$link.'" '.$linktype.'>';} ?>
         <img src="<?php echo esc_url($instance['image_uri']); ?>" alt="<?php echo esc_attr($alt); ?>" />
         <?php if($uselink == true) {echo '</a>'; }?>
-        <?php if(!empty($instance['text'])) { ?> <div class="virtue_image_widget_caption"><?php echo $instance['text']; ?></div><?php }?>
+        <?php if(!empty($instance['text'])) { ?> <div class="bigcloudcms_image_widget_caption"><?php echo $instance['text']; ?></div><?php }?>
     </div>
 
     <?php echo $after_widget; ?>
@@ -1245,7 +1245,7 @@ class Simple_About_With_Image extends WP_Widget{
         return $instance;
     }
      function flush_widget_cache() {
-    wp_cache_delete('virtue_about_with_image', 'widget');
+    wp_cache_delete('bigcloudcms_about_with_image', 'widget');
   }
 
   public function form($instance){ 
@@ -1255,10 +1255,10 @@ class Simple_About_With_Image extends WP_Widget{
     if (isset($instance['image_link_open'])) { $image_link_open = esc_attr($instance['image_link_open']); } else {$image_link_open = 'lightbox';}
     $link_options = array();
     $link_options_array = array();
-    $link_options[] = array("slug" => "lightbox", "name" => __('Lightbox', 'virtue'));
-    $link_options[] = array("slug" => "_blank", "name" => __('New Window', 'virtue'));
-    $link_options[] = array("slug" => "_self", "name" => __('Same Window', 'virtue'));
-    $link_options[] = array("slug" => "none", "name" => __('No Link', 'virtue'));
+    $link_options[] = array("slug" => "lightbox", "name" => __('Lightbox', 'bigcloudcms'));
+    $link_options[] = array("slug" => "_blank", "name" => __('New Window', 'bigcloudcms'));
+    $link_options[] = array("slug" => "_self", "name" => __('Same Window', 'bigcloudcms'));
+    $link_options[] = array("slug" => "none", "name" => __('No Link', 'bigcloudcms'));
 
     foreach ($link_options as $link_option) {
       if ($image_link_open == $link_option['slug']) { $selected=' selected="selected"';} else { $selected=""; }
@@ -1270,25 +1270,25 @@ class Simple_About_With_Image extends WP_Widget{
         <img class="kad_custom_media_image" src="<?php if(!empty($instance['image_uri'])){echo $instance['image_uri'];} ?>" style="margin:0;padding:0;max-width:100px;display:block" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image URL', 'virtue'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image URL', 'bigcloudcms'); ?></label><br />
         <input type="text" class="widefat kad_custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php echo $image_uri; ?>">
         <input type="hidden" value="<?php echo $image_id; ?>" class="kad_custom_media_id" name="<?php echo $this->get_field_name('image_id'); ?>" id="<?php echo $this->get_field_id('image_id'); ?>" />
-        <input type="button" value="<?php _e('Upload', 'virtue'); ?>" class="button kad_custom_media_upload" id="kad_custom_image_uploader" />
+        <input type="button" value="<?php _e('Upload', 'bigcloudcms'); ?>" class="button kad_custom_media_upload" id="kad_custom_image_uploader" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_link_open'); ?>"><?php _e('Image opens in', 'virtue'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_link_open'); ?>"><?php _e('Image opens in', 'bigcloudcms'); ?></label><br />
         <select id="<?php echo $this->get_field_id('image_link_open'); ?>" name="<?php echo $this->get_field_name('image_link_open'); ?>"><?php echo implode('', $link_options_array);?></select>
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_link'); ?>"><?php _e('Image Link (optional)', 'virtue'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_link'); ?>"><?php _e('Image Link (optional)', 'bigcloudcms'); ?></label><br />
         <input type="text" class="widefat kad_img_widget_link" name="<?php echo $this->get_field_name('image_link'); ?>" id="<?php echo $this->get_field_id('image_link'); ?>" value="<?php echo $image_link; ?>">
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('alttext'); ?>"><?php _e('Image Alt Text (optional)', 'virtue'); ?></label><br />
+      <label for="<?php echo $this->get_field_id('alttext'); ?>"><?php _e('Image Alt Text (optional)', 'bigcloudcms'); ?></label><br />
       <textarea name="<?php echo $this->get_field_name('alttext'); ?>" id="<?php echo $this->get_field_id('alttext'); ?>" class="widefat" ><?php if(!empty($instance['alttext'])) echo $instance['alttext']; ?></textarea>
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text/Caption (optional)', 'virtue'); ?></label><br />
+      <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text/Caption (optional)', 'bigcloudcms'); ?></label><br />
       <textarea name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>" class="widefat" ><?php if(!empty($instance['text'])) echo $instance['text']; ?></textarea>
     </p>
   </div>

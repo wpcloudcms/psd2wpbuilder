@@ -20,10 +20,10 @@ if ( 0 == $current_user->ID ) {
 	   			<a href="<?php echo get_permalink( $myaccountid ); ?>" class="kad_accountlink"> <?php echo get_the_title($myaccountid);?></a> 
 	   		</li>
 	   		<li>
-	   			<a href="<?php echo wc_customer_edit_account_url(); ?>" class="kad_editlink"> <?php echo __('Edit Account', 'virtue');?></a> 
+	   			<a href="<?php echo wc_customer_edit_account_url(); ?>" class="kad_editlink"> <?php echo __('Edit Account', 'bigcloudcms');?></a> 
 	   		</li>
 	   		<li>
-	   			<a href="<?php echo wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) );?>" class="kad_logoutlink"><?php echo __('Logout', 'virtue');?></a>
+	   			<a href="<?php echo wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) );?>" class="kad_logoutlink"><?php echo __('Logout', 'bigcloudcms');?></a>
 	   		</li>
 	   	</ul>
    </div>

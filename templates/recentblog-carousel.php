@@ -1,17 +1,17 @@
 <div id="blog_carousel_container" class="carousel_outerrim">
-	<?php global $post, $virtue_premium;
+	<?php global $post, $bigcloudcms_premium;
 		$text = get_post_meta( $post->ID, '_kad_blog_carousel_title', true ); 
         if(!empty($text)) {
         	echo '<h3 class="title">'.$text.'</h3>'; 
         } else {
         	echo '<h3 class="title">';
-        	echo apply_filters( 'recentposts_title', __('Recent Posts', 'virtue') );
+        	echo apply_filters( 'recentposts_title', __('Recent Posts', 'bigcloudcms') );
         	echo ' </h3>';
         } ?>
     <div class="blog-carouselcase fredcarousel">
     	<?php 
-    	if(isset($virtue_premium['post_carousel_columns']) ) {
-      			$columns = $virtue_premium['post_carousel_columns'];
+    	if(isset($bigcloudcms_premium['post_carousel_columns']) ) {
+      			$columns = $bigcloudcms_premium['post_carousel_columns'];
       		} else {
       			$columns = '3';
       		}
@@ -88,7 +88,7 @@
 							$image = aq_resize($thumbnailURL, $catimgwidth, $catimgheight, true); 
 							if(empty($image)) {$image = $thumbnailURL;}
 						} else {
-                            $thumbnailURL = virtue_post_default_placeholder();
+                            $thumbnailURL = bigcloudcms_post_default_placeholder();
                             $image = aq_resize($thumbnailURL, $catimgwidth, $catimgheight, true); 
                             if(empty($image)) { $image = $thumbnailURL; }
                         } ?>
@@ -107,13 +107,13 @@
 			                        </div>	
 			                    </header>
 		                        <div class="entry-content color_body">
-		                          	<p><?php echo strip_tags(virtue_excerpt(16)); ?></p>
+		                          	<p><?php echo strip_tags(bigcloudcms_excerpt(16)); ?></p>
 		                        </div>
                            	</a>
                		</div>
 				</div>
 				<?php endwhile; else: ?>
-				<div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'virtue');?></div>
+				<div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'bigcloudcms');?></div>
 				<?php endif; 
 				$wp_query = null; 
 			  	$wp_query = $temp;  // Reset

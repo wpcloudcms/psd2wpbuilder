@@ -1,17 +1,17 @@
 <div id="blog_carousel_container" class="carousel_outerrim">
-    <?php global $post, $virtue_premium; 
+    <?php global $post, $bigcloudcms_premium; 
     $text = get_post_meta( $post->ID, '_kad_blog_carousel_title', true );
     if( !empty($text)) {
     	echo '<h3 class="title">'.$text.'</h3>';
     } else {
     	echo '<h3 class="title">';
-        echo apply_filters( 'similarposts_title', __('Similar Posts', 'virtue') );
+        echo apply_filters( 'similarposts_title', __('Similar Posts', 'bigcloudcms') );
         echo ' </h3>';
     } ?>
     <div class="blog-carouselcase fredcarousel">
     	<?php 
-    	if(isset($virtue_premium['post_carousel_columns']) ) {
-      			$columns = $virtue_premium['post_carousel_columns'];
+    	if(isset($bigcloudcms_premium['post_carousel_columns']) ) {
+      			$columns = $bigcloudcms_premium['post_carousel_columns'];
       		} else {
       			$columns = '3';
       		}
@@ -70,7 +70,7 @@
     	} ?>
 		<div id="carouselcontainer-blog" class="rowtight fadein-carousel">
     		<div id="blog_carousel" class="blog_carousel initcaroufedsel clearfix" data-carousel-container="#carouselcontainer-blog" data-carousel-transition="400" data-carousel-scroll="1" data-carousel-auto="true" data-carousel-speed="9000" data-carousel-id="blog" data-carousel-md="<?php echo esc_attr($md);?>" data-carousel-sm="<?php echo esc_attr($sm);?>" data-carousel-xs="<?php echo esc_attr($xs);?>" data-carousel-ss="<?php echo esc_attr($ss);?>">
-      		<?php if(isset($virtue_premium['blog_similar_random_order']) && $virtue_premium['blog_similar_random_order'] == 1) {
+      		<?php if(isset($bigcloudcms_premium['blog_similar_random_order']) && $bigcloudcms_premium['blog_similar_random_order'] == 1) {
       			$oderby = 'rand';
       		} else {
       			$oderby = 'date';
@@ -102,7 +102,7 @@
 								$image = aq_resize($thumbnailURL, $catimgwidth, $catimgheight, true);
 								if(empty($image)) {$image = $thumbnailURL;} 
 							} else {
-                               	$thumbnailURL = virtue_post_default_placeholder();
+                               	$thumbnailURL = bigcloudcms_post_default_placeholder();
                                 $image = aq_resize($thumbnailURL, $catimgwidth, $catimgheight, true); 
                                 if(empty($image)) { $image = $thumbnailURL; }
                             } ?>
@@ -121,14 +121,14 @@
 			                        </div>	
 			                        </header>
 		                        	<div class="entry-content color_body">
-		                          		<p><?php echo strip_tags(virtue_excerpt(16)); ?></p>
+		                          		<p><?php echo strip_tags(bigcloudcms_excerpt(16)); ?></p>
 		                        	</div>
                            		</a>
                 </div>
             </div>
 					<?php endwhile; else: ?>
 					 
-					<li class="error-not-found"><?php _e('Sorry, no blog entries found.', 'virtue');?></li>
+					<li class="error-not-found"><?php _e('Sorry, no blog entries found.', 'bigcloudcms');?></li>
 						
 				<?php endif; ?>	
                 <?php 

@@ -1,9 +1,9 @@
-<?php global $virtue_premium; 
+<?php global $bigcloudcms_premium; 
 		
 	$show_pagetitle = false;
-	if(isset($virtue_premium['homepage_layout']['enabled'])){
+	if(isset($bigcloudcms_premium['homepage_layout']['enabled'])){
 		$i = 0;
-		foreach ($virtue_premium['homepage_layout']['enabled'] as $key=>$value) {
+		foreach ($bigcloudcms_premium['homepage_layout']['enabled'] as $key=>$value) {
 			if($key == "block_one") {
 				$show_pagetitle = true;
 			}
@@ -23,7 +23,7 @@
           <div class="main <?php echo esc_attr(kadence_main_class()); ?>" role="main">
           <div class="entry-content" itemprop="mainContentOfPage">
 
-      	<?php if(isset($virtue_premium['homepage_layout']['enabled'])) { $layout = $virtue_premium['homepage_layout']['enabled']; } else {$layout = array("block_one" => "block_one", "block_four" => "block_four");}
+      	<?php if(isset($bigcloudcms_premium['homepage_layout']['enabled'])) { $layout = $bigcloudcms_premium['homepage_layout']['enabled']; } else {$layout = array("block_one" => "block_one", "block_four" => "block_four");}
 
 				if ($layout):
 
@@ -56,14 +56,14 @@
 									$display_sidebar = false;
 									$fullclass = 'fullwidth';
 								} 
-								if(isset($virtue_premium['home_post_summery']) and ($virtue_premium['home_post_summery'] == 'full')) {
+								if(isset($bigcloudcms_premium['home_post_summery']) and ($bigcloudcms_premium['home_post_summery'] == 'full')) {
 									$summery = "full";
 									$postclass = "single-article fullpost";
 								} else {
 									$summery = "summery";
 									$postclass = "postlist";
 								} 
-								if(isset($virtue_premium['home_post_grid']) && $virtue_premium['home_post_grid'] == '1') {
+								if(isset($bigcloudcms_premium['home_post_grid']) && $bigcloudcms_premium['home_post_grid'] == '1') {
 									$grid = true;
 									$contentid = 'kad-blog-grid';
 									$postclass = "postlist rowtight";
@@ -71,13 +71,13 @@
 									$grid = false;
 									$contentid = 'homelatestposts';
 								}
-								if(isset($virtue_premium['virtue_animate_in']) && $virtue_premium['virtue_animate_in'] == 1) {
+								if(isset($bigcloudcms_premium['bigcloudcms_animate_in']) && $bigcloudcms_premium['bigcloudcms_animate_in'] == 1) {
 									$animate = 1;
 								} else {
 									$animate = 0;
 								}  
 								if($grid == true) {
-									$blog_grid_column = $virtue_premium['home_post_grid_columns'];
+									$blog_grid_column = $bigcloudcms_premium['home_post_grid_columns'];
 									if ($blog_grid_column == 'twocolumn') {
 										$itemsize = 'tcol-md-6 tcol-sm-6 tcol-xs-12 tcol-ss-12';
 									} else if ($blog_grid_column == 'threecolumn'){
@@ -86,7 +86,7 @@
 										$itemsize = 'tcol-md-3 tcol-sm-4 tcol-xs-6 tcol-ss-12';
 									}
 								}
-								if(isset($virtue_premium['blog_infinitescroll']) && $virtue_premium['blog_infinitescroll'] == 1) {
+								if(isset($bigcloudcms_premium['blog_infinitescroll']) && $bigcloudcms_premium['blog_infinitescroll'] == 1) {
 									$infinitescroll = true;
 								} else {
 									$infinitescroll = false;
@@ -194,7 +194,7 @@
 						<?php 	}
 						break;
 						case 'block_five':
-							if(isset($virtue_premium['home_post_column']) and ($virtue_premium['home_post_column'] == '1')) {
+							if(isset($bigcloudcms_premium['home_post_column']) and ($bigcloudcms_premium['home_post_column'] == '1')) {
 							 	get_template_part('templates/home/blog', 'home-onecolumn');
 							} else {
 							 	get_template_part('templates/home/blog', 'home');
