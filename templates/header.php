@@ -112,7 +112,7 @@ endif; ?>
         <div class="slider-left col-md-6">
             <?php } ?>
             <?php
-    	$detect = new Mobile_Detect_Virtue; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
+    	$detect = new Mobile_Detect_BigCloudCMS; if($detect->isMobile() && !$detect->isTablet() && $virtue_premium['mobile_switch'] == '1') {
 		 		$slider = $virtue_premium['choose_mobile_slider'];
 					if ($slider == "rev") {
 					get_template_part('templates/mobile_home/mobilerev', 'slider');
