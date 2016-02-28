@@ -5,14 +5,14 @@
  Description:
  Author:            Webtimiser Team
  Author URI:        http://www.webtimiser.dk/
- Template:          virtue_premium
- Template Version:  3.3.1
+ Template:          bigcloudcms
+ Template Version:  3.5.0
  Tags:              light, dark, two-columns, responsive-layout
 GitHub Theme URI:   https://github.com/bigcloudcms/wpcloudcms
-GitHub Branch:      master
+GitHub Branch:      webtimiser
 */
 
-@import url("../virtue_premium/style.css"); 
+@import url("../bigcloudcms/style.css"); 
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
