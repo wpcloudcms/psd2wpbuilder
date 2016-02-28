@@ -3,13 +3,18 @@
  Theme URI:         http://bigcloudcms.com/wpcloudcms/
  Version:           1.3.5.0
  Description:
+<<<<<<< HEAD
  Author:            BigCloudCMS
  Author URI:        http://www.bigcloudcms.com/
+=======
+ Author:            Webtimiser Team
+ Author URI:        http://www.webtimiser.dk/
+>>>>>>> origin/webtimiser
  Template:          bigcloudcms
  Template Version:  3.5.0
  Tags:              light, dark, two-columns, responsive-layout
 GitHub Theme URI:   https://github.com/bigcloudcms/wpcloudcms
-GitHub Branch:      master
+GitHub Branch:      webtimiser
 */
 
 @import url("../bigcloudcms/style.css"); 
