@@ -1,24 +1,24 @@
 <?php 
-  global $virtue_premium; 
+  global $bigcloudcms_premium; 
 
-$cc_items = $virtue_premium['home_custom_carousel_items'];
-if(!empty($virtue_premium['custom_carousel_title'])) {
-  $cctitle = $virtue_premium['custom_carousel_title']; 
+$cc_items = $bigcloudcms_premium['home_custom_carousel_items'];
+if(!empty($bigcloudcms_premium['custom_carousel_title'])) {
+  $cctitle = $bigcloudcms_premium['custom_carousel_title']; 
 } else { 
-  $cctitle = __('Featured News', 'virtue'); 
+  $cctitle = __('Featured News', 'bigcloudcms'); 
 }
-if(!empty($virtue_premium['home_custom_speed'])) {
-  $hc_speed = $virtue_premium['home_custom_speed'].'000';
+if(!empty($bigcloudcms_premium['home_custom_speed'])) {
+  $hc_speed = $bigcloudcms_premium['home_custom_speed'].'000';
 } else {
   $hc_speed = '9000';
 }
-if(isset($virtue_premium['home_custom_carousel_scroll']) && $virtue_premium['home_custom_carousel_scroll'] == 'all' ) {
+if(isset($bigcloudcms_premium['home_custom_carousel_scroll']) && $bigcloudcms_premium['home_custom_carousel_scroll'] == 'all' ) {
   $hc_scroll = '';
 } else {
   $hc_scroll = '1';
 }
-if(!empty($virtue_premium['home_custom_carousel_column'])) {
-  $custom_column = $virtue_premium['home_custom_carousel_column'];
+if(!empty($bigcloudcms_premium['home_custom_carousel_column'])) {
+  $custom_column = $bigcloudcms_premium['home_custom_carousel_column'];
 } else {
   $custom_column = 4;
 } 
@@ -81,7 +81,7 @@ $slideheight = $slidewidth;
             } else {
               $target = '_self';
             }
-            if(isset($virtue_premium['home_custom_carousel_imageratio']) && $virtue_premium['home_custom_carousel_imageratio'] == '1' ) {
+            if(isset($bigcloudcms_premium['home_custom_carousel_imageratio']) && $bigcloudcms_premium['home_custom_carousel_imageratio'] == '1' ) {
                   $image = aq_resize($c_item['url'], $slidewidth, null, false, false);
             } else {
                     $image = aq_resize($c_item['url'], $slidewidth, $slideheight, true, false);

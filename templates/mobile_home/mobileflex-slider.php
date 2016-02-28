@@ -1,11 +1,11 @@
 <div class="sliderclass">
-   <?php  global $virtue_premium; 
-         if(isset($virtue_premium['mobile_slider_size'])) {$slideheight = $virtue_premium['mobile_slider_size'];} else { $slideheight = 300; }
-        if(isset($virtue_premium['mobile_slider_size_width'])) {$slidewidth = $virtue_premium['mobile_slider_size_width'];} else { $slidewidth = 480; }
-        if(isset($virtue_premium['mobile_slider_captions'])) { $captions = $virtue_premium['mobile_slider_captions']; } else {$captions = '';}
-        if(isset($virtue_premium['home_mobile_slider'])) {$slides = $virtue_premium['home_mobile_slider']; } else {$slides = '';}
+   <?php  global $bigcloudcms_premium; 
+         if(isset($bigcloudcms_premium['mobile_slider_size'])) {$slideheight = $bigcloudcms_premium['mobile_slider_size'];} else { $slideheight = 300; }
+        if(isset($bigcloudcms_premium['mobile_slider_size_width'])) {$slidewidth = $bigcloudcms_premium['mobile_slider_size_width'];} else { $slidewidth = 480; }
+        if(isset($bigcloudcms_premium['mobile_slider_captions'])) { $captions = $bigcloudcms_premium['mobile_slider_captions']; } else {$captions = '';}
+        if(isset($bigcloudcms_premium['home_mobile_slider'])) {$slides = $bigcloudcms_premium['home_mobile_slider']; } else {$slides = '';}
                 ?>
-	                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+	                    <?php if(isset($bigcloudcms_premium['slider_box_layout']) and $bigcloudcms_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="full-slider">
 <?php } else { ?>
    <div id="imageslider">
@@ -31,11 +31,11 @@
               </div> <!--Flex Slides-->
               </div><!--Container-->
               </div><!--feat-->
-               <?php  global $virtue_premium; 
-          $transtype = $virtue_premium['mobile_trans_type']; if ($transtype == '') $transtype = 'slide';
-          $transtime = $virtue_premium['mobile_slider_transtime']; if ($transtime == '') $transtime = '300'; 
-          $autoplay = $virtue_premium['mobile_slider_autoplay']; if ($autoplay == '') $autoplay = 'true'; 
-          $pausetime = $virtue_premium['mobile_slider_pausetime']; if ($pausetime == '') $pausetime = '7000'; 
+               <?php  global $bigcloudcms_premium; 
+          $transtype = $bigcloudcms_premium['mobile_trans_type']; if ($transtype == '') $transtype = 'slide';
+          $transtime = $bigcloudcms_premium['mobile_slider_transtime']; if ($transtime == '') $transtime = '300'; 
+          $autoplay = $bigcloudcms_premium['mobile_slider_autoplay']; if ($autoplay == '') $autoplay = 'true'; 
+          $pausetime = $bigcloudcms_premium['mobile_slider_pausetime']; if ($pausetime == '') $pausetime = '7000'; 
       ?>
       <script type="text/javascript">
             jQuery(window).load(function () {

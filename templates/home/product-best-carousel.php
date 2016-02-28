@@ -1,13 +1,13 @@
 <?php 
-	global $virtue_premium;
+	global $bigcloudcms_premium;
 
-	if(!empty($virtue_premium['product_best_title'])) {
-		$product_best_title = $virtue_premium['product_best_title'];
+	if(!empty($bigcloudcms_premium['product_best_title'])) {
+		$product_best_title = $bigcloudcms_premium['product_best_title'];
 	} else {
 		$product_best_title = 'Best Selling Products';
 	}
-	if(!empty($virtue_premium['home_product_best_column'])) {
-		$product_tcolumn = $virtue_premium['home_product_best_column'];
+	if(!empty($bigcloudcms_premium['home_product_best_column'])) {
+		$product_tcolumn = $bigcloudcms_premium['home_product_best_column'];
 	} else {
 		$product_tcolumn = '4';
 	}
@@ -22,17 +22,17 @@
 	} else {
 		$md = 4; $sm = 3; $xs = 2; $ss = 1;
 	} 
-	if(!empty($virtue_premium['home_product_best_count'])) {
-		$hp_probcount = $virtue_premium['home_product_best_count'];
+	if(!empty($bigcloudcms_premium['home_product_best_count'])) {
+		$hp_probcount = $bigcloudcms_premium['home_product_best_count'];
 	} else {
 		$hp_probcount = '6';
 	}
-	if(!empty($virtue_premium['home_product_best_speed'])) {
-		$hp_bestspeed = $virtue_premium['home_product_best_speed'].'000';
+	if(!empty($bigcloudcms_premium['home_product_best_speed'])) {
+		$hp_bestspeed = $bigcloudcms_premium['home_product_best_speed'].'000';
 	} else {
 		$hp_bestspeed = '9000';
 	}
-	if(isset($virtue_premium['home_product_best_scroll']) && $virtue_premium['home_product_best_scroll'] == 'all' ) {
+	if(isset($bigcloudcms_premium['home_product_best_scroll']) && $bigcloudcms_premium['home_product_best_scroll'] == 'all' ) {
 		$hp_bestscroll = '';
 	} else {
 		$hp_bestscroll = '1';

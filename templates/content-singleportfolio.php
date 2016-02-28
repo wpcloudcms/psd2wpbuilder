@@ -9,8 +9,8 @@
 		   			</div>
 		   			<div class="col-md-4 col-sm-4">
 		   				<div class="portfolionav clearfix">
-		   					<?php global $post, $virtue_premium; if(!empty($virtue_premium['portfolio_arrow_nav']) && ($virtue_premium['portfolio_arrow_nav'] == 'cat') ) {$arrownav = true;} else {$arrownav = false;}	
-		   					$parent_link = get_post_meta( $post->ID, '_kad_portfolio_parent', true ); if(!empty($parent_link) && ($parent_link != 'default')) {$parent_id = $parent_link;} else {$parent_id = $virtue_premium['portfolio_link'];}
+		   					<?php global $post, $bigcloudcms_premium; if(!empty($bigcloudcms_premium['portfolio_arrow_nav']) && ($bigcloudcms_premium['portfolio_arrow_nav'] == 'cat') ) {$arrownav = true;} else {$arrownav = false;}	
+		   					$parent_link = get_post_meta( $post->ID, '_kad_portfolio_parent', true ); if(!empty($parent_link) && ($parent_link != 'default')) {$parent_id = $parent_link;} else {$parent_id = $bigcloudcms_premium['portfolio_link'];}
 		   					previous_post_link_plus( array('order_by' => 'menu_order', 'loop' => true, 'in_same_tax' => $arrownav, 'format' => '%link', 'link' => '<i class="icon-arrow-left"></i>') ); ?>
 					   			<?php if( !empty($parent_id)){ ?>
 					   				<a href="<?php echo get_page_link($parent_id); ?>">
@@ -140,7 +140,7 @@
 				$image_gallery = get_post_meta( $post->ID, '_kad_image_gallery', true );
 				echo do_shortcode('[gallery ids="'.$image_gallery.'" columns="4"]');
 			} else if ($ppost_type == 'carousel') { ?>
-					          <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
+					          <?php if(isset($bigcloudcms_premium['slider_box_layout']) and $bigcloudcms_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="loading full-slider carousel_outerrim">
 <?php } else { ?>
    <div id="imageslider" class="loading carousel_outerrim">
@@ -291,10 +291,10 @@
     <div class="clearfix"></div>
     </div><!--postclass-->
     <footer>
-      <?php wp_link_pages(array('before' => '<nav id="page-nav" class="wp-pagenavi"><p>' . __('Pages:', 'virtue'), 'after' => '</p></nav>')); ?>
+      <?php wp_link_pages(array('before' => '<nav id="page-nav" class="wp-pagenavi"><p>' . __('Pages:', 'bigcloudcms'), 'after' => '</p></nav>')); ?>
       <?php global $post; $portfolio_carousel = get_post_meta( $post->ID, '_kad_portfolio_carousel_recent', true ); if ($portfolio_carousel != 'no') { get_template_part('templates/bottomportfolio', 'carousel'); } ?>
     </footer>
-    <?php global $virute_premium; if(isset($virtue_premium['portfolio_comments']) && $virtue_premium['portfolio_comments'] == 1) { 
+    <?php global $virute_premium; if(isset($bigcloudcms_premium['portfolio_comments']) && $bigcloudcms_premium['portfolio_comments'] == 1) { 
     comments_template('/templates/comments.php'); 
 	} ?>
   </article>

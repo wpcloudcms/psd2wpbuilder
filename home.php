@@ -14,7 +14,7 @@
 
 <?php if (!have_posts()) : ?>
   <div class="alert">
-    <?php _e('Sorry, no results were found.', 'virtue'); ?>
+    <?php _e('Sorry, no results were found.', 'bigcloudcms'); ?>
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>

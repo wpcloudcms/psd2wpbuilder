@@ -12,10 +12,10 @@
 				 	  <?php } ?>
 				</div>
 			  	<header>
-			  	<?php global $post, $virtue_premium; if(isset($virtue_premium['testimonial_single_nav']) && $virtue_premium['testimonial_single_nav'] == 1) {?>
+			  	<?php global $post, $bigcloudcms_premium; if(isset($bigcloudcms_premium['testimonial_single_nav']) && $bigcloudcms_premium['testimonial_single_nav'] == 1) {?>
 			  		<div class="portfolionav clearfix">
 		   					<?php $arrownav = false;	
-		   					if(isset($virtue_premium['testimonial_page'])){ $parent_id = $virtue_premium['testimonial_page'];} else {$parent_id = '';}
+		   					if(isset($bigcloudcms_premium['testimonial_page'])){ $parent_id = $bigcloudcms_premium['testimonial_page'];} else {$parent_id = '';}
 		   					previous_post_link_plus( array('order_by' => 'menu_order', 'loop' => true, 'in_same_tax' => $arrownav, 'format' => '%link', 'link' => '<i class="icon-arrow-left"></i>') ); ?>
 					   			<?php if( !empty($parent_id)){ ?>
 					   				<a href="<?php echo get_page_link($parent_id); ?>">

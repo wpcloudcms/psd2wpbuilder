@@ -1,20 +1,20 @@
 <?php 
-	global $virtue_premium; 
+	global $bigcloudcms_premium; 
 
-	if(!empty($virtue_premium['img_menu_height'])) {
-		$img_height = $virtue_premium['img_menu_height'];
+	if(!empty($bigcloudcms_premium['img_menu_height'])) {
+		$img_height = $bigcloudcms_premium['img_menu_height'];
 	} else {
 		$img_height = 110;
 	}
-	if(!empty($virtue_premium['img_menu_height_setting'])) {
-		$height_setting = $virtue_premium['img_menu_height_setting'];
+	if(!empty($bigcloudcms_premium['img_menu_height_setting'])) {
+		$height_setting = $bigcloudcms_premium['img_menu_height_setting'];
 	} else {
 		$height_setting = 'normal';
 	} 
-    $slides = $virtue_premium['home_image_menu'];
+    $slides = $bigcloudcms_premium['home_image_menu'];
 
-    if(!empty($virtue_premium['home_image_menu_column'])) {
-    	$columnsize = $virtue_premium['home_image_menu_column'];
+    if(!empty($bigcloudcms_premium['home_image_menu_column'])) {
+    	$columnsize = $bigcloudcms_premium['home_image_menu_column'];
     } else {
     	$columnsize = 3;
     }
