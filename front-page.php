@@ -1,5 +1,71 @@
-<?php global $virtue_premium; 
-		
+<?php global $virtue_premium;
+			$mobile_detect = false;
+			if(isset($virtue_premium['mobile_switch']) && $virtue_premium['mobile_switch']  == '1') {
+				$mobile_slider = true;
+				$detect = new Mobile_Detect_Virtue; 
+				if(isset($virtue_premium['mobile_tablet_show']) && $virtue_premium['mobile_tablet_show']  == '1') {
+					if($detect->isMobile()) {
+						$mobile_detect = true;
+					} else {
+						$mobile_detect = false;
+					}
+				} else {
+					if($detect->isMobile() && !$detect->isTablet()) {
+						$mobile_detect = true;
+					} else {
+						$mobile_detect = false;
+					}
+				}
+			} else {
+				$mobile_slider = false;
+			}
+			if(($mobile_slider == true) && ($mobile_detect == true)){
+		 		$slider = $virtue_premium['choose_mobile_slider'];
+					if ($slider == "rev") {
+					get_template_part('templates/mobile_home/mobilerev', 'slider');
+				} else if ($slider == "flex") {
+					get_template_part('templates/mobile_home/mobileflex', 'slider');
+				} else if ($slider == "video") {
+					get_template_part('templates/mobile_home/mobilevideo', 'block');
+				} else if ($slider == "cyclone") {
+					get_template_part('templates/mobile_home/cyclone', 'slider');
+				}
+			} else { 
+			  	if(isset($virtue_premium['choose_slider'])) { 
+			  		$slider = $virtue_premium['choose_slider'];
+			  	} else {
+			  		$slider = 'none';
+			  	}
+				if ($slider == "rev") {
+						if($virtue_premium['above_header_slider'] != 1) {
+							get_template_part('templates/home/rev', 'slider');
+						}
+				} else if ($slider == "ktslider") {
+						if($virtue_premium['above_header_slider'] != 1) {
+							get_template_part('templates/home/kt', 'slider');
+						}
+				} else if ($slider == "flex") {
+					get_template_part('templates/home/flex', 'slider');
+				} else if ($slider == "carousel") {
+					get_template_part('templates/home/carousel', 'slider');
+				} else if ($slider == "fullwidth") {
+					get_template_part('templates/home/flex', 'slider-fullwidth');
+				} else if ($slider == "imgcarousel") {
+					get_template_part('templates/home/image', 'carousel');
+				} else if ($slider == "latest") {
+					get_template_part('templates/home/latest', 'slider');
+				} else if ($slider == "thumbs") {
+					get_template_part('templates/home/thumb', 'slider');
+				} else if ($slider == "cyclone") {
+					if($virtue_premium['above_header_slider'] != 1) {
+						get_template_part('templates/home/cyclone', 'slider');
+					}
+				} else if ($slider == "fullwidth") {
+					get_template_part('templates/home/fullwidth', 'slider');
+				} else if ($slider == "video") {
+					get_template_part('templates/home/video', 'block');
+				}
+			}
 	$show_pagetitle = false;
 	if(isset($virtue_premium['homepage_layout']['enabled'])){
 		$i = 0;
@@ -10,7 +76,7 @@
 			$i++;
 			if($i==2) break;
 		}
-	}  
+	} 
 	if($show_pagetitle == true) { ?>
 		<div id="homeheader" class="welcomeclass">
 			<div class="container">
@@ -19,6 +85,7 @@
 		</div><!--titleclass-->
 	<?php } ?>
     <div id="content" class="container homepagecontent">
+   		<div class="row">
           <div class="main <?php echo esc_attr(kadence_main_class()); ?>" role="main">
           <div class="entry-content" itemprop="mainContentOfPage">
 
