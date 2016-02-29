@@ -119,7 +119,17 @@ function kadence_widgets_init() {
   ));
 }
   // Left Sidebars
- global $virtue_premium; if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') {
+ global $virtue_premium; if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') {
+  register_sidebar(array(
+    'name'          => __('Left Sidebar', 'virtue'),
+    'id'            => 'left-sidebar',
+    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+}
+ global $virtue_premium; if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {
   register_sidebar(array(
     'name'          => __('Left Sidebar', 'virtue'),
     'id'            => 'left-sidebar',
@@ -131,7 +141,7 @@ function kadence_widgets_init() {
 }
   // Sidebars
   register_sidebar(array(
-    'name'          => __('Primary Sidebar', 'virtue'),
+    'name'          => __('Primary Right Sidebar', 'virtue'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
