@@ -1,6 +1,20 @@
  
     <div id="content" class="col-sm-12">
       <div class="row">
+           <div class="wrap clearfix contentclass hfeed" role="document"> 
+        
+             <?php if (kadence_display_sidebar()) : ?>   
+   <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
+              <aside id="leftsidebar" class="leftside col-md-3"> <?php 
+                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+              </aside>
+               <?php } ?> 
+     <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
+              <aside id="leftsidebar" class="leftside col-md-3"> <?php 
+                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+              </aside>
+               <?php } ?>
+            <?php endif; ?>   
       <div class="main <?php echo kadence_main_class(); ?>  postlist" role="main">
       <div class="entry-content col-lg-9 col-md-8" itemprop="mainContentOfPage">
 

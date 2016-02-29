@@ -37,7 +37,7 @@ function kadence_main_class() {
  * .sidebar classes
  */
 function kadence_sidebar_class() {
-  return 'col-md-4';
+  return 'col-md-3';
 }
 
 /**

@@ -42,34 +42,28 @@
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
 
-        
-   <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
-              <aside id="leftsidebar"> <?php 
-                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
-              </aside>
+    
+<!--      <aside id="ktsidebar" class="<?php //echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">-->
+<!--        <div class="sidebar">-->
+<!--          <?php //include kadence_sidebar_path(); ?>-->
+<!--        </div> /.sidebar -->
+<!--      </aside> /aside -->
+           <?php if (kadence_display_sidebar()) : ?>            
+      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyrightsidebar') { ?>
+             <aside id="rightsidebar ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+        <div class="sidebar">
+          <?php include kadence_sidebar_path(); ?>
+        </div><!-- /.sidebar -->
+      </aside><!-- /aside -->
                <?php } ?> 
      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
-              <aside id="leftsidebar"> <?php 
-                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
-              </aside>
-        <?php if (kadence_display_sidebar()) : ?>
-      <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+      <aside id="rightsidebar ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
           <?php include kadence_sidebar_path(); ?>
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
-        <?php endif; ?>
-               <?php } ?>     
-      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyrightsidebar') { ?>
-        <?php if (kadence_display_sidebar()) : ?>
-      <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
-        <div class="sidebar">
-          <?php include kadence_sidebar_path(); ?>
-        </div><!-- /.sidebar -->
-      </aside><!-- /aside -->
-        <?php endif; ?>
         <?php } ?>  
-        
+    <?php endif; ?>
       </div><!-- /.row-->
     </div><!-- /.content -->
   </div><!-- /.wrap -->
