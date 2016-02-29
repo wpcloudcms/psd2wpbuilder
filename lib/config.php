@@ -29,15 +29,18 @@ function kadence_main_class() {
     // Classes on full width pages
     $class = 'col-md-12';
    }
+  return $class;
+}
+
+function kadence_main_class() {
 if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {  
     // Classes on pages with the sidebar
     $class = 'col-md-6';
    } else { 
     $class = 'col-md-8';
-}
+   }
   return $class;
 }
-
 /**
  * .sidebar classes
  */
