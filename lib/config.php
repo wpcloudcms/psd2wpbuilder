@@ -25,7 +25,7 @@ function kadence_main_class() {
 global $virtue_premium;
   if(kadence_display_sidebar()) {
           if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {
-            $class = "bothsidebars"; 
+            $class = "col-md-6"; 
           } else {$class = "col-md-8"; }
       } else {
        // Classes on full width pages
