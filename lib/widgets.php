@@ -41,9 +41,9 @@ function bigcloudcms_register_sidebar($name, $id){
 }
 add_action('widgets_init', 'bigcloudcms_register_sidebars');
 
-function kadence_widgets_init() {
+function bigcloudcms_widgets_init() {
     //Topbar 
-  if(kadence_display_topbar_widget()) {
+  if(bigcloudcms_display_topbar_widget()) {
   register_sidebar(array(
     'name'          => __('Topbar Widget', 'bigcloudcms'),
     'id'            => 'topbarright',
@@ -269,16 +269,16 @@ function kadence_widgets_init() {
   register_widget('kad_calltoaction_widget');
   register_widget('kad_imgmenu_widget');
 }
-add_action('widgets_init', 'kadence_widgets_init');
+add_action('widgets_init', 'bigcloudcms_widgets_init');
 
 /**
  * Contact widget
  */
 class Kadence_Contact_Widget extends WP_Widget {
   function Kadence_Contact_Widget() {
-    $widget_ops = array('classname' => 'widget_kadence_contact', 'description' => __('Use this widget to add a Vcard to your site', 'bigcloudcms'));
-    $this->__construct('widget_kadence_contact', __('BigCloudCMS: Contact/Vcard', 'bigcloudcms'), $widget_ops);
-    $this->alt_option_name = 'widget_kadence_contact';
+    $widget_ops = array('classname' => 'widget_bigcloudcms_contact', 'description' => __('Use this widget to add a Vcard to your site', 'bigcloudcms'));
+    $this->__construct('widget_bigcloudcms_contact', __('BigCloudCMS: Contact/Vcard', 'bigcloudcms'), $widget_ops);
+    $this->alt_option_name = 'widget_bigcloudcms_contact';
 
     add_action('save_post', array(&$this, 'flush_widget_cache'));
     add_action('deleted_post', array(&$this, 'flush_widget_cache'));
@@ -286,7 +286,7 @@ class Kadence_Contact_Widget extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    $cache = wp_cache_get('widget_kadence_contact', 'widget');
+    $cache = wp_cache_get('widget_bigcloudcms_contact', 'widget');
 
     if (!is_array($cache)) {
       $cache = array();
@@ -338,7 +338,7 @@ class Kadence_Contact_Widget extends WP_Widget {
     echo $after_widget;
 
     $cache[$args['widget_id']] = ob_get_flush();
-    wp_cache_set('widget_kadence_contact', $cache, 'widget');
+    wp_cache_set('widget_bigcloudcms_contact', $cache, 'widget');
   }
 
   function update($new_instance, $old_instance) {
@@ -356,15 +356,15 @@ class Kadence_Contact_Widget extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get('alloptions', 'options');
-    if (isset($alloptions['widget_kadence_contact'])) {
-      delete_option('widget_kadence_contact');
+    if (isset($alloptions['widget_bigcloudcms_contact'])) {
+      delete_option('widget_bigcloudcms_contact');
     }
 
     return $instance;
   }
 
   function flush_widget_cache() {
-    wp_cache_delete('widget_kadence_contact', 'widget');
+    wp_cache_delete('widget_bigcloudcms_contact', 'widget');
   }
 
   function form($instance) {
@@ -427,9 +427,9 @@ class Kadence_Contact_Widget extends WP_Widget {
  */
 class Kadence_Social_Widget extends WP_Widget {
   function Kadence_Social_Widget() {
-    $widget_ops = array('classname' => 'widget_kadence_social', 'description' => __('Simple way to add Social Icons', 'bigcloudcms'));
-    $this->__construct('widget_kadence_social', __('BigCloudCMS: Social Links', 'bigcloudcms'), $widget_ops);
-    $this->alt_option_name = 'widget_kadence_social';
+    $widget_ops = array('classname' => 'widget_bigcloudcms_social', 'description' => __('Simple way to add Social Icons', 'bigcloudcms'));
+    $this->__construct('widget_bigcloudcms_social', __('BigCloudCMS: Social Links', 'bigcloudcms'), $widget_ops);
+    $this->alt_option_name = 'widget_bigcloudcms_social';
 
     add_action('save_post', array(&$this, 'flush_widget_cache'));
     add_action('deleted_post', array(&$this, 'flush_widget_cache'));
@@ -437,7 +437,7 @@ class Kadence_Social_Widget extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    $cache = wp_cache_get('widget_kadence_social', 'widget');
+    $cache = wp_cache_get('widget_bigcloudcms_social', 'widget');
 
     if (!is_array($cache)) {
       $cache = array();
@@ -506,7 +506,7 @@ class Kadence_Social_Widget extends WP_Widget {
     echo $after_widget;
 
     $cache[$args['widget_id']] = ob_get_flush();
-    wp_cache_set('widget_kadence_social', $cache, 'widget');
+    wp_cache_set('widget_bigcloudcms_social', $cache, 'widget');
   }
 
   function update($new_instance, $old_instance) {
@@ -533,15 +533,15 @@ class Kadence_Social_Widget extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get('alloptions', 'options');
-    if (isset($alloptions['widget_kadence_social'])) {
-      delete_option('widget_kadence_social');
+    if (isset($alloptions['widget_bigcloudcms_social'])) {
+      delete_option('widget_bigcloudcms_social');
     }
 
     return $instance;
   }
 
   function flush_widget_cache() {
-    wp_cache_delete('widget_kadence_social', 'widget');
+    wp_cache_delete('widget_bigcloudcms_social', 'widget');
   }
 
   function form($instance) {
@@ -652,9 +652,9 @@ class Kadence_Social_Widget extends WP_Widget {
 class Kadence_Recent_Posts_Widget extends WP_Widget {
 
   function Kadence_Recent_Posts_Widget() {
-      $widget_ops = array('classname' => 'kadence_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'bigcloudcms'));
-      $this->__construct('kadence_recent_posts', __('BigCloudCMS: Recent Posts', 'bigcloudcms'), $widget_ops);
-      $this->alt_option_name = 'kadence_recent_entries';
+      $widget_ops = array('classname' => 'bigcloudcms_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'bigcloudcms'));
+      $this->__construct('bigcloudcms_recent_posts', __('BigCloudCMS: Recent Posts', 'bigcloudcms'), $widget_ops);
+      $this->alt_option_name = 'bigcloudcms_recent_entries';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
     add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
@@ -662,7 +662,7 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    $cache = wp_cache_get('kadence_recent_posts', 'widget');
+    $cache = wp_cache_get('bigcloudcms_recent_posts', 'widget');
 
     if ( !is_array($cache) )
       $cache = array();
@@ -710,7 +710,7 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
     endif;
 
     $cache[$args['widget_id']] = ob_get_flush();
-    wp_cache_set('kadence_recent_posts', $cache, 'widget');
+    wp_cache_set('bigcloudcms_recent_posts', $cache, 'widget');
   }
 
   function update( $new_instance, $old_instance ) {
@@ -722,14 +722,14 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get( 'alloptions', 'options' );
-    if ( isset($alloptions['kadence_recent_entries']) )
-      delete_option('kadence_recent_entries');
+    if ( isset($alloptions['bigcloudcms_recent_entries']) )
+      delete_option('bigcloudcms_recent_entries');
 
     return $instance;
   }
 
   function flush_widget_cache() {
-    wp_cache_delete('kadence_recent_posts', 'widget');
+    wp_cache_delete('bigcloudcms_recent_posts', 'widget');
   }
 
   function form( $instance ) {
@@ -778,9 +778,9 @@ class Kadence_Recent_Posts_Widget extends WP_Widget {
 class Kadence_Testimonial_Slider_Widget extends WP_Widget {
 
   function Kadence_Testimonial_Slider_Widget() {
-      $widget_ops = array('classname' => 'kadence_testimonials_slider', 'description' => __('This shows a slider with your testimonials', 'bigcloudcms'));
-      $this->__construct('kadence_testimonials_slider', __('BigCloudCMS: Testimonial Carousel', 'bigcloudcms'), $widget_ops);
-      $this->alt_option_name = 'kadence_testimonials_slider';
+      $widget_ops = array('classname' => 'bigcloudcms_testimonials_slider', 'description' => __('This shows a slider with your testimonials', 'bigcloudcms'));
+      $this->__construct('bigcloudcms_testimonials_slider', __('BigCloudCMS: Testimonial Carousel', 'bigcloudcms'), $widget_ops);
+      $this->alt_option_name = 'bigcloudcms_testimonials_slider';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
     add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
@@ -788,7 +788,7 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    $cache = wp_cache_get('kadence_testimonials_slider', 'widget');
+    $cache = wp_cache_get('bigcloudcms_testimonials_slider', 'widget');
 
     if ( !is_array($cache) )
       $cache = array();
@@ -908,7 +908,7 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
     endif;
 
     $cache[$args['widget_id']] = ob_get_flush();
-    wp_cache_set('kadence_testimonials_slider', $cache, 'widget');
+    wp_cache_set('bigcloudcms_testimonials_slider', $cache, 'widget');
   }
 
   function update( $new_instance, $old_instance ) {
@@ -927,14 +927,14 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get( 'alloptions', 'options' );
-    if ( isset($alloptions['kadence_testimonials_slider']) )
-      delete_option('kadence_testimonials_slider');
+    if ( isset($alloptions['bigcloudcms_testimonials_slider']) )
+      delete_option('bigcloudcms_testimonials_slider');
 
     return $instance;
   }
 
   function flush_widget_cache() {
-    wp_cache_delete('kadence_testimonials_slider', 'widget');
+    wp_cache_delete('bigcloudcms_testimonials_slider', 'widget');
   }
 
   function form( $instance ) {
@@ -1041,9 +1041,9 @@ class Kadence_Testimonial_Slider_Widget extends WP_Widget {
 class Kadence_Image_Grid_Widget extends WP_Widget {
 
   function Kadence_Image_Grid_Widget() {
-      $widget_ops = array('classname' => 'kadence_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'bigcloudcms'));
-      $this->__construct('kadence_image_grid', __('BigCloudCMS: Post Grid', 'bigcloudcms'), $widget_ops);
-      $this->alt_option_name = 'kadence_image_grid';
+      $widget_ops = array('classname' => 'bigcloudcms_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'bigcloudcms'));
+      $this->__construct('bigcloudcms_image_grid', __('BigCloudCMS: Post Grid', 'bigcloudcms'), $widget_ops);
+      $this->alt_option_name = 'bigcloudcms_image_grid';
 
     add_action( 'save_post', array(&$this, 'flush_widget_cache') );
     add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
@@ -1051,7 +1051,7 @@ class Kadence_Image_Grid_Widget extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    $cache = wp_cache_get('kadence_image_grid', 'widget');
+    $cache = wp_cache_get('bigcloudcms_image_grid', 'widget');
 
     if ( !is_array($cache) )
       $cache = array();
@@ -1113,7 +1113,7 @@ class Kadence_Image_Grid_Widget extends WP_Widget {
         
 <?php
         $cache[$args['widget_id']] = ob_get_flush();
-        wp_cache_set('kadence_image_grid', $cache, 'widget');
+        wp_cache_set('bigcloudcms_image_grid', $cache, 'widget');
   }
 
   function update( $new_instance, $old_instance ) {
@@ -1126,14 +1126,14 @@ class Kadence_Image_Grid_Widget extends WP_Widget {
     $this->flush_widget_cache();
 
     $alloptions = wp_cache_get( 'alloptions', 'options' );
-    if ( isset($alloptions['kadence_image_grid']) )
-      delete_option('kadence_image_grid');
+    if ( isset($alloptions['bigcloudcms_image_grid']) )
+      delete_option('bigcloudcms_image_grid');
 
     return $instance;
   }
 
   function flush_widget_cache() {
-    wp_cache_delete('kadence_image_grid', 'widget');
+    wp_cache_delete('bigcloudcms_image_grid', 'widget');
   }
 
   function form( $instance ) {

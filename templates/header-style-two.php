@@ -6,7 +6,7 @@
     $datashrink = 0;
   } ?>
 <header id="kad-banner" class="banner headerclass kad-header-style-two" role="banner" data-header-shrink="<?php echo esc_attr($datashrink);?>" data-mobile-sticky="0">
-<?php if (kadence_display_topbar()) : ?>
+<?php if (bigcloudcms_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
 <?php if(isset($bigcloudcms_premium['logo_layout'])) {
@@ -59,7 +59,7 @@
               <div class="kad-nav-inner mobileclass">
                 <div id="mobile_menu_collapse" class="kad-nav-collapse collapse mobile_menu_collapse">
                  <?php if(isset($bigcloudcms_premium['mobile_submenu_collapse']) && $bigcloudcms_premium['mobile_submenu_collapse'] == '1') {
-                    wp_nav_menu( array('theme_location' => 'mobile_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-mnav', 'walker' => new kadence_mobile_walker()));
+                    wp_nav_menu( array('theme_location' => 'mobile_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-mnav', 'walker' => new bigcloudcms_mobile_walker()));
                   } else {
                     wp_nav_menu( array('theme_location' => 'mobile_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-mnav'));
                   } ?>

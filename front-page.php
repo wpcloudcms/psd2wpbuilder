@@ -20,7 +20,7 @@
 	<?php } ?>
     <div id="content" class="homepagecontent">
    		<div class="row">
-          <div class="main <?php echo esc_attr(kadence_main_class()); ?>" role="main">
+          <div class="main <?php echo esc_attr(bigcloudcms_main_class()); ?>" role="main">
           <div class="entry-content" itemprop="mainContentOfPage">
 
       	<?php if(isset($bigcloudcms_premium['homepage_layout']['enabled'])) { $layout = $bigcloudcms_premium['homepage_layout']['enabled']; } else {$layout = array("block_one" => "block_one", "block_four" => "block_four");}
@@ -49,7 +49,7 @@
 						break;
 						case 'block_four': ?>
 							<?php if(is_home()) {
-								if(kadence_display_sidebar()) {
+								if(bigcloudcms_display_sidebar()) {
 									$display_sidebar = true;
 									$fullclass = '';
 								} else {

@@ -191,7 +191,7 @@ if(!empty($bigcloudcms_premium['link_text_color'])) {
   $link_text_color = '';
   }
 if(!empty($bigcloudcms_premium['gray_font_color'])) {
-  $color_grayfont = '.color_gray, #kadbreadcrumbs a, .subhead, .subhead a, .posttags, .posttags a, .product_meta a, .kadence_recent_posts .postclass a {color:'.$bigcloudcms_premium['gray_font_color'].';}';
+  $color_grayfont = '.color_gray, #kadbreadcrumbs a, .subhead, .subhead a, .posttags, .posttags a, .product_meta a, .bigcloudcms_recent_posts .postclass a {color:'.$bigcloudcms_premium['gray_font_color'].';}';
 } else {
   $color_grayfont = '';
 }

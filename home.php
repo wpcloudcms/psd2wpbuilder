@@ -10,7 +10,7 @@
 
     <div id="content">
       <div class="row">
-      <div class="main <?php echo kadence_main_class(); ?>  <?php echo esc_attr($postclass) .' '. esc_attr($fullclass); ?>" role="main">
+      <div class="main <?php echo bigcloudcms_main_class(); ?>  <?php echo esc_attr($postclass) .' '. esc_attr($fullclass); ?>" role="main">
 
 <?php if (!have_posts()) : ?>
   <div class="alert">

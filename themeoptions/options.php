@@ -35,7 +35,7 @@ if ( ! class_exists( 'Redux' ) ) {
     $opt_name = "bigcloudcms_premium";
 
     // If Redux is running as a plugin, this will remove the demo notice and links
-    add_action( 'redux/loaded', 'kadence_remove_demo' );
+    add_action( 'redux/loaded', 'bigcloudcms_remove_demo' );
 
 /**
      * ---> SET ARGUMENTS
@@ -71,7 +71,7 @@ if ( ! class_exists( 'Redux' ) ) {
         'ajax_save'            => true,
         'default_show'         => false,
         'default_mark'         => '',
-        'footer_credit' => __('Thank you for using the BigCloudCMS Theme by <a href="http://kadencethemes.com/" target="_blank">Kadence Themes</a>.', 'bigcloudcms'),
+        'footer_credit' => __('Thank you for using the BigCloudCMS Theme by <a href="http://bigcloudcmsthemes.com/" target="_blank">Kadence Themes</a>.', 'bigcloudcms'),
         'hints'                => array(
             'icon'          => 'kt-icon-question',
             'icon_position' => 'right',
@@ -128,10 +128,10 @@ Redux::setSection( $opt_name, array(
     'id' => 'main_settings',
     'header' => '',
 //    'desc' => "<div class='redux-info-field'><h3>".__('Welcome to BigCloudCMS Theme Options', 'bigcloudcms')."</h3>
-//        <p>".__('This theme was developed by', 'bigcloudcms')." <a href=\"http://kadencethemes.com/\" target=\"_blank\">Kadence Themes</a></p>
-//        <p>".__('For theme documentation visit', 'bigcloudcms').": <a href=\"http://docs.kadencethemes.com/bigcloudcms/\" target=\"_blank\">docs.kadencethemes.com/bigcloudcms/</a>
+//        <p>".__('This theme was developed by', 'bigcloudcms')." <a href=\"http://bigcloudcmsthemes.com/\" target=\"_blank\">Kadence Themes</a></p>
+//        <p>".__('For theme documentation visit', 'bigcloudcms').": <a href=\"http://docs.bigcloudcmsthemes.com/bigcloudcms/\" target=\"_blank\">docs.bigcloudcmsthemes.com/bigcloudcms/</a>
 //        <br />
-//        ".__('For support please visit', 'bigcloudcms').": <a href=\"http://kadencethemes.com/support/\" target=\"_blank\">kadencethemes.com/support/</a></p></div>",
+//        ".__('For support please visit', 'bigcloudcms').": <a href=\"http://bigcloudcmsthemes.com/support/\" target=\"_blank\">bigcloudcmsthemes.com/support/</a></p></div>",
     'icon_class' => 'icon-large',
     'icon' => 'icon-equalizer2',
     'fields' => array(
@@ -4081,7 +4081,7 @@ Redux::setSection( $opt_name, array(
             'desc' => __('Theme Lightbox', 'bigcloudcms'),
             ),
         array(
-            'id'=>'kadence_lightbox',
+            'id'=>'bigcloudcms_lightbox',
             'type' => 'switch', 
             'title' => __('Turn Off Theme Lightbox?', 'bigcloudcms'),
             "default" => 0,
@@ -4267,7 +4267,7 @@ Redux::setSection( $opt_name, array(
                 ) );
 
 
-function kadence_override_redux_icons_css() {
+function bigcloudcms_override_redux_icons_css() {
   wp_dequeue_style( 'redux-admin-css' );
   wp_register_style('kt-redux-custom-css', get_template_directory_uri() . '/themeoptions/options/css/style.css', false, 307);    
   wp_enqueue_style('kt-redux-custom-css');
@@ -4275,9 +4275,9 @@ function kadence_override_redux_icons_css() {
     wp_dequeue_style( 'redux-elusive-icon' );
   wp_dequeue_style( 'redux-elusive-icon-ie7' );
 }
-add_action('redux-enqueue-bigcloudcms_premium', 'kadence_override_redux_icons_css');
+add_action('redux-enqueue-bigcloudcms_premium', 'bigcloudcms_override_redux_icons_css');
 
-function kadence_remove_demo() {
+function bigcloudcms_remove_demo() {
 
         // Used to hide the demo mode link from the plugin page. Only used when Redux is a plugin.
         if ( class_exists( 'ReduxFrameworkPlugin' ) ) {

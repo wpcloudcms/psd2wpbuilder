@@ -31,7 +31,7 @@ BigCloudCMS Premium is Translation ready! This theme comes with Italian, French 
 
 for more info click my affiliate link below
 
-http://www.kadencethemes.com/product/bigcloudcms-premium-theme/?ref=5
+http://www.bigcloudcmsthemes.com/product/bigcloudcms-premium-theme/?ref=5
 
 #Requirements#
 
@@ -62,4 +62,4 @@ BigCloudCMS Premium comes with premium content like the Kadence Slider, Cyclone 
 
 #Documentation#
 
-http://docs.kadencethemes.com/bigcloudcms/?ref=5
+http://docs.bigcloudcmsthemes.com/bigcloudcms/?ref=5

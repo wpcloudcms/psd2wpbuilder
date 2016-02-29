@@ -45,12 +45,12 @@
                <?php } ?>
     <div class="wrap clearfix contentclass hfeed" role="document">
         <?php do_action('kt_afterheader');
-        include kadence_template_path(); ?>
+        include bigcloudcms_template_path(); ?>
         
-      <?php if (kadence_display_sidebar()) : ?>
-      <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+      <?php if (bigcloudcms_display_sidebar()) : ?>
+      <aside id="ktsidebar" class="<?php echo esc_attr(bigcloudcms_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
-          <?php include kadence_sidebar_path(); ?>
+          <?php include bigcloudcms_sidebar_path(); ?>
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
       <?php endif; ?>

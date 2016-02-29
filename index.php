@@ -1,7 +1,7 @@
  
     <div id="content" class="col-sm-12">
       <div class="row">
-      <div class="main <?php echo kadence_main_class(); ?>  postlist" role="main">
+      <div class="main <?php echo bigcloudcms_main_class(); ?>  postlist" role="main">
       <div class="entry-content col-lg-9 col-md-8" itemprop="mainContentOfPage">
 
 <?php if (!have_posts()) : ?>

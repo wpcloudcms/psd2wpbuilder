@@ -14,7 +14,7 @@
                 </div>
                 <?php }
             endif;?>
-            <?php if(kadence_display_topbar_icons()) : ?>
+            <?php if(bigcloudcms_display_topbar_icons()) : ?>
             <div class="topbar_social">
               <ul>
                 <?php $top_icons = $bigcloudcms_premium['topbar_icon_menu'];
@@ -46,8 +46,8 @@
         </div><!-- close col-md-6 -->
         <div class="col-md-6 col-sm-6 kad-topbar-right">
           <div id="topbar-search" class="topbar-widget">
-            <?php if(kadence_display_topbar_widget()) { if(is_active_sidebar('topbarright')) { dynamic_sidebar('topbarright'); } 
-              } else { if(kadence_display_top_search()) {get_search_form();} 
+            <?php if(bigcloudcms_display_topbar_widget()) { if(is_active_sidebar('topbarright')) { dynamic_sidebar('topbarright'); } 
+              } else { if(bigcloudcms_display_top_search()) {get_search_form();} 
           } ?>
         </div>
         </div> <!-- close col-md-6-->
@@ -58,7 +58,7 @@
                 <div id="mobile_menu_collapse_top" class="kad-nav-collapse collapse top_mobile_menu_collapse">
                  <?php get_search_form(); ?>
                  <?php if(isset($bigcloudcms_premium['mobile_submenu_collapse']) && $bigcloudcms_premium['mobile_submenu_collapse'] == '1') {
-                    wp_nav_menu( array('theme_location' => 'topbar_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-top-mnav', 'walker' => new kadence_mobile_walker()));
+                    wp_nav_menu( array('theme_location' => 'topbar_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-top-mnav', 'walker' => new bigcloudcms_mobile_walker()));
                   } else {
                     wp_nav_menu(array('theme_location' => 'topbar_navigation','items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'menu_class' => 'kad-top-mnav'));
                   } ?>

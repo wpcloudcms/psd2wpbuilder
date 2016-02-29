@@ -17,7 +17,7 @@
       		}
     	if ($columns == '4') {
     		$itemsize = 'tcol-md-3 tcol-sm-3 tcol-xs-4 tcol-ss-12';
-    		if (kadence_display_sidebar()) {
+    		if (bigcloudcms_display_sidebar()) {
 	    		$catimgwidth = 240;
     			$catimgheight = 240;
 	    	} else {
@@ -30,7 +30,7 @@
     		$ss = 1; 
     	} else if($columns == '5') {
     		$itemsize = 'tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6';
-    		if (kadence_display_sidebar()) {
+    		if (bigcloudcms_display_sidebar()) {
     			$catimgwidth = 240;
     			$catimgheight = 240;
     		} else {
@@ -43,7 +43,7 @@
     		$ss = 2;
     	} else if($columns == '6') {
     		$itemsize = 'tcol-md-2 tcol-sm-3 tcol-xs-4 tcol-ss-6';
-    		if (kadence_display_sidebar()) {
+    		if (bigcloudcms_display_sidebar()) {
     			$catimgwidth = 240;
     			$catimgheight = 240;
     		} else {
@@ -56,7 +56,7 @@
     		$ss = 2;
     	} else {
     		$itemsize = 'tcol-md-4 tcol-sm-4 tcol-xs-6 tcol-ss-12';
-    		if (kadence_display_sidebar()) {
+    		if (bigcloudcms_display_sidebar()) {
     			$catimgwidth = 266;
     			$catimgheight = 266;
     		} else {
