@@ -1,7 +1,7 @@
 
 <div id="content" class="container">
     <div class="row single-article">
-      <div class="main <?php echo bigcloudcms_main_class(); ?>" id="ktmain" role="main">
+      <div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
 		<?php while (have_posts()) : the_post(); ?>
 		    <article <?php post_class(); ?>>
 		    	<div class="clearfix">
@@ -12,10 +12,10 @@
 				 	  <?php } ?>
 				</div>
 			  	<header>
-			  	<?php global $post, $bigcloudcms_premium; if(isset($bigcloudcms_premium['testimonial_single_nav']) && $bigcloudcms_premium['testimonial_single_nav'] == 1) {?>
+			  	<?php global $post, $virtue_premium; if(isset($virtue_premium['testimonial_single_nav']) && $virtue_premium['testimonial_single_nav'] == 1) {?>
 			  		<div class="portfolionav clearfix">
 		   					<?php $arrownav = false;	
-		   					if(isset($bigcloudcms_premium['testimonial_page'])){ $parent_id = $bigcloudcms_premium['testimonial_page'];} else {$parent_id = '';}
+		   					if(isset($virtue_premium['testimonial_page'])){ $parent_id = $virtue_premium['testimonial_page'];} else {$parent_id = '';}
 		   					previous_post_link_plus( array('order_by' => 'menu_order', 'loop' => true, 'in_same_tax' => $arrownav, 'format' => '%link', 'link' => '<i class="icon-arrow-left"></i>') ); ?>
 					   			<?php if( !empty($parent_id)){ ?>
 					   				<a href="<?php echo get_page_link($parent_id); ?>">

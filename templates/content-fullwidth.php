@@ -4,9 +4,9 @@
                           $height = get_post_meta( $post->ID, '_kad_posthead_height', true ); if (!empty($height)) $slideheight = $height; else $slideheight = 400; 
                           $swidth = get_post_meta( $post->ID, '_kad_posthead_width', true ); if (!empty($swidth)) $slidewidth = $swidth; else $slidewidth = 1140;
                           if(empty($postsummery) || $postsummery == 'default') {
-                            global $bigcloudcms_premium;
-                            if(!empty($bigcloudcms_premium['post_summery_default'])) {
-                            $postsummery = $bigcloudcms_premium['post_summery_default'];
+                            global $virtue_premium;
+                            if(!empty($virtue_premium['post_summery_default'])) {
+                            $postsummery = $virtue_premium['post_summery_default'];
                             } else {
                               $postsummery = 'img_portrait';
                             }
@@ -28,7 +28,7 @@
                           </div>
                           <?php $image = null; $thumbnailURL = null; 
                           } else {
-                                  $thumbnailURL = bigcloudcms_post_default_placeholder();
+                                  $thumbnailURL = virtue_post_default_placeholder();
                                   $image = aq_resize($thumbnailURL, $slidewidth, $slideheight, true);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                   <div class="col-md-12">
@@ -58,7 +58,7 @@
                                 </div>
                               <?php $image = null; $thumbnailURL = null; 
                               } else {
-                                  $thumbnailURL = bigcloudcms_post_default_placeholder();
+                                  $thumbnailURL = virtue_post_default_placeholder();
                                   $image = aq_resize($thumbnailURL, 360, 360, true);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                   <div class="col-md-4">

@@ -1,9 +1,9 @@
 <?php 
-global $bigcloudcms_premium;
+global $virtue_premium;
 
 ?>
 <div class="home-portfolio home-margin carousel_outerrim home-padding kad-animation" data-animation="fade-in" data-delay="0">
-		<?php if(!empty($bigcloudcms_premium['portfolio_title'])) {$porttitle = $bigcloudcms_premium['portfolio_title']; } else { $porttitle = __('Featured Projects', 'bigcloudcms'); } ?>
+		<?php if(!empty($virtue_premium['portfolio_title'])) {$porttitle = $virtue_premium['portfolio_title']; } else { $porttitle = __('Featured Projects', 'virtue'); } ?>
 			<div class="clearfix">
 				<h3 class="hometitle">
 					<?php echo $porttitle; ?>
@@ -11,20 +11,20 @@ global $bigcloudcms_premium;
 			</div>
 		
 		<?php 
-		if(!empty($bigcloudcms_premium['home_portfolio_order'])) {$hp_orderby = $bigcloudcms_premium['home_portfolio_order'];} else {$hp_orderby = 'menu_order';}
+		if(!empty($virtue_premium['home_portfolio_order'])) {$hp_orderby = $virtue_premium['home_portfolio_order'];} else {$hp_orderby = 'menu_order';}
 		if($hp_orderby == 'menu_order') {$p_order = 'ASC';} else {$p_order = 'DESC';}
-		if(!empty($bigcloudcms_premium['home_portfolio_carousel_count'])) {$hp_pcount = $bigcloudcms_premium['home_portfolio_carousel_count'];} else {$hp_pcount = '8';}
-		if(!empty($bigcloudcms_premium['home_portfolio_carousel_speed'])) {$hport_speed = $bigcloudcms_premium['home_portfolio_carousel_speed'].'000';} else {$hport_speed = '9000';}
-		if(isset($bigcloudcms_premium['home_portfolio_carousel_scroll']) && $bigcloudcms_premium['home_portfolio_carousel_scroll'] == 'all' ) {$hport_scroll = '';} else {$hport_scroll = '1';}
-					if(!empty($bigcloudcms_premium['portfolio_type'])) {
-							$port_cat = get_term_by ('id',$bigcloudcms_premium['portfolio_type'],'portfolio-type');
+		if(!empty($virtue_premium['home_portfolio_carousel_count'])) {$hp_pcount = $virtue_premium['home_portfolio_carousel_count'];} else {$hp_pcount = '8';}
+		if(!empty($virtue_premium['home_portfolio_carousel_speed'])) {$hport_speed = $virtue_premium['home_portfolio_carousel_speed'].'000';} else {$hport_speed = '9000';}
+		if(isset($virtue_premium['home_portfolio_carousel_scroll']) && $virtue_premium['home_portfolio_carousel_scroll'] == 'all' ) {$hport_scroll = '';} else {$hport_scroll = '1';}
+					if(!empty($virtue_premium['portfolio_type'])) {
+							$port_cat = get_term_by ('id',$virtue_premium['portfolio_type'],'portfolio-type');
 							$portfolio_category = $port_cat -> slug;
 						} else {
 							$portfolio_category = '';
 						}
-					if(isset($bigcloudcms_premium['portfolio_show_type'])) {$portfolio_item_types = $bigcloudcms_premium['portfolio_show_type'];} else {$portfolio_item_types = 0;}
-					if(isset($bigcloudcms_premium['portfolio_show_excerpt']) && $bigcloudcms_premium['portfolio_show_excerpt'] == 1) {$portfolio_item_excerpt = true;} else {$portfolio_item_excerpt = false;}
-					if(!empty($bigcloudcms_premium['home_portfolio_carousel_column'])) {$portfolio_column = $bigcloudcms_premium['home_portfolio_carousel_column'];} else {$portfolio_column = 3;}
+					if(isset($virtue_premium['portfolio_show_type'])) {$portfolio_item_types = $virtue_premium['portfolio_show_type'];} else {$portfolio_item_types = 0;}
+					if(isset($virtue_premium['portfolio_show_excerpt']) && $virtue_premium['portfolio_show_excerpt'] == 1) {$portfolio_item_excerpt = true;} else {$portfolio_item_excerpt = false;}
+					if(!empty($virtue_premium['home_portfolio_carousel_column'])) {$portfolio_column = $virtue_premium['home_portfolio_carousel_column'];} else {$portfolio_column = 3;}
 					
 					if ($portfolio_column == '2') {
 						$itemsize = 'tcol-lg-6 tcol-md-6 tcol-sm-6 tcol-xs-12 tcol-ss-12'; 
@@ -42,7 +42,7 @@ global $bigcloudcms_premium;
 						$itemsize = 'tcol-lg-3 tcol-md-3 tcol-sm-4 tcol-xs-6 tcol-ss-12'; 
 						$slidewidth = 269; $slideheight = 269; $md = 4; $sm = 3; $xs = 2; $ss = 1;
 					} 
-		            if(!empty($bigcloudcms_premium['home_portfolio_carousel_height'])) {$slideheight = $bigcloudcms_premium['home_portfolio_carousel_height'];}
+		            if(!empty($virtue_premium['home_portfolio_carousel_height'])) {$slideheight = $virtue_premium['home_portfolio_carousel_height'];}
 		                ?>
 
 	<div class="home-margin fredcarousel">
@@ -130,14 +130,14 @@ global $bigcloudcms_premium;
               		<div class="piteminfo">   
                           	<h5><?php the_title();?></h5>
                            	<?php if($portfolio_item_types == 1) { $terms = get_the_terms( $post->ID, 'portfolio-type' ); if ($terms) {?> <p class="cportfoliotag"><?php $output = array(); foreach($terms as $term){ $output[] = $term->name;} echo implode(', ', $output); ?></p> <?php } } ?>
-                    		<?php if($portfolio_item_excerpt == true) {?> <p><?php echo bigcloudcms_excerpt(16); ?></p> <?php } ?>
+                    		<?php if($portfolio_item_excerpt == true) {?> <p><?php echo virtue_excerpt(16); ?></p> <?php } ?>
                     </div>
                 </a>
                 </div>
             </div>
                     
 					<?php endwhile; else: ?>
-					<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'bigcloudcms');?></li>
+					<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'virtue');?></li>
 						
 				<?php endif; ?>
                                     

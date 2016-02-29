@@ -1,8 +1,8 @@
 <?php 
-	global $bigcloudcms_premium;
+	global $virtue_premium;
 
- if(!empty($bigcloudcms_premium['portfolio_full_title'])) {
- 	$port_full_title = $bigcloudcms_premium['portfolio_full_title']; 
+ if(!empty($virtue_premium['portfolio_full_title'])) {
+ 	$port_full_title = $virtue_premium['portfolio_full_title']; 
  } else { 
  	$port_full_title = '';
  } ?>
@@ -14,8 +14,8 @@
 			</h3>
 		</div>
 
-		<?php if(!empty($bigcloudcms_premium['home_portfolio_full_order'])) {
-				$hp_orderby = $bigcloudcms_premium['home_portfolio_full_order'];
+		<?php if(!empty($virtue_premium['home_portfolio_full_order'])) {
+				$hp_orderby = $virtue_premium['home_portfolio_full_order'];
 			} else {
 				$hp_orderby = 'menu_order';
 			}
@@ -24,24 +24,24 @@
 			} else {
 				$p_order = 'DESC';
 			}
-			$portfolio_item_full_types = $bigcloudcms_premium['portfolio_full_show_type'];
-			if(isset($bigcloudcms_premium['portfolio_full_show_excerpt']) && $bigcloudcms_premium['portfolio_full_show_excerpt'] == 1) {
+			$portfolio_item_full_types = $virtue_premium['portfolio_full_show_type'];
+			if(isset($virtue_premium['portfolio_full_show_excerpt']) && $virtue_premium['portfolio_full_show_excerpt'] == 1) {
 				$portfolio_item_excerpt = true;
 			} else {
 				$portfolio_item_excerpt = false;
 			}
-			if(isset($bigcloudcms_premium['home_port_count'])) {
-				$portfolio_item_count = $bigcloudcms_premium['home_port_count'];
+			if(isset($virtue_premium['home_port_count'])) {
+				$portfolio_item_count = $virtue_premium['home_port_count'];
 			} else {
 				$portfolio_item_count = '8';
 			}
-			if(isset($bigcloudcms_premium['home_port_columns'])) {
-				$portfolio_column = $bigcloudcms_premium['home_port_columns'];
+			if(isset($virtue_premium['home_port_columns'])) {
+				$portfolio_column = $virtue_premium['home_port_columns'];
 			} else {
 				$portfolio_column = '4';
 			}
-			if(!empty($bigcloudcms_premium['portfolio_full_type'])) {
-				$port_cat = get_term_by ('id',$bigcloudcms_premium['portfolio_full_type'],'portfolio-type');
+			if(!empty($virtue_premium['portfolio_full_type'])) {
+				$port_cat = get_term_by ('id',$virtue_premium['portfolio_full_type'],'portfolio-type');
 				$portfolio_cat_slug = $port_cat -> slug;
 			} else {
 				$portfolio_cat_slug = '';
@@ -62,16 +62,16 @@
 				$itemsize = 'tcol-md-3 tcol-sm-4 tcol-xs-6 tcol-ss-12'; 
 				$slidewidth = 269; $slideheight = 269; 
 			}
-		    if(!empty($bigcloudcms_premium['home_portfolio_full_height'])) {$slideheight = $bigcloudcms_premium['home_portfolio_full_height'];}
-		    if(isset($bigcloudcms_premium['portfolio_full_masonry']) && $bigcloudcms_premium['portfolio_full_masonry'] == 1) {$slideheight = null;}
-		    if(!empty($bigcloudcms_premium['home_portfolio_lightbox']) && $bigcloudcms_premium['home_portfolio_lightbox'] == 1) {$plb = true;} else {$plb = false;}
-		    if(isset($bigcloudcms_premium['bigcloudcms_animate_in']) && $bigcloudcms_premium['bigcloudcms_animate_in'] == 1) {$animate = 1;} else {$animate = 0;}
+		    if(!empty($virtue_premium['home_portfolio_full_height'])) {$slideheight = $virtue_premium['home_portfolio_full_height'];}
+		    if(isset($virtue_premium['portfolio_full_masonry']) && $virtue_premium['portfolio_full_masonry'] == 1) {$slideheight = null;}
+		    if(!empty($virtue_premium['home_portfolio_lightbox']) && $virtue_premium['home_portfolio_lightbox'] == 1) {$plb = true;} else {$plb = false;}
+		    if(isset($virtue_premium['virtue_animate_in']) && $virtue_premium['virtue_animate_in'] == 1) {$animate = 1;} else {$animate = 0;}
 
-			if(isset($bigcloudcms_premium['portfolio_full_show_filter']) && $bigcloudcms_premium['portfolio_full_show_filter'] == 1) { ?>
+			if(isset($virtue_premium['portfolio_full_show_filter']) && $virtue_premium['portfolio_full_show_filter'] == 1) { ?>
       			<section id="options" class="clearfix">
-				<?php if(!empty($bigcloudcms_premium['filter_all_text'])) {$alltext = $bigcloudcms_premium['filter_all_text'];} else {$alltext = __('All', 'bigcloudcms');}
-					if(!empty($bigcloudcms_premium['portfolio_filter_text'])) {$portfoliofiltertext = $bigcloudcms_premium['portfolio_filter_text'];} else {$portfoliofiltertext = __('Filter Projects', 'bigcloudcms');}
-					$termtypes = array( 'child_of' => $bigcloudcms_premium['portfolio_full_type'],);
+				<?php if(!empty($virtue_premium['filter_all_text'])) {$alltext = $virtue_premium['filter_all_text'];} else {$alltext = __('All', 'virtue');}
+					if(!empty($virtue_premium['portfolio_filter_text'])) {$portfoliofiltertext = $virtue_premium['portfolio_filter_text'];} else {$portfoliofiltertext = __('Filter Projects', 'virtue');}
+					$termtypes = array( 'child_of' => $virtue_premium['portfolio_full_type'],);
 					$categories= get_terms('portfolio-type', $termtypes);
 					$count = count($categories);
 						echo '<a class="filter-trigger headerfont" data-toggle="collapse" data-target=".filter-collapse"><i class="icon-tags"></i> '.$portfoliofiltertext.'</a>';
@@ -193,7 +193,7 @@
 			              		<div class="piteminfo">   
 			                          	<h5><?php the_title();?></h5>
 			                           	<?php if($portfolio_item_full_types == 1) { $terms = get_the_terms( $post->ID, 'portfolio-type' ); if ($terms) {?> <p class="cportfoliotag"><?php $output = array(); foreach($terms as $term){ $output[] = $term->name;} echo implode(', ', $output); ?></p> <?php } } ?>
-			                    		<?php if($portfolio_item_excerpt == true) {?> <p><?php echo bigcloudcms_excerpt(16); ?></p> <?php } ?>
+			                    		<?php if($portfolio_item_excerpt == true) {?> <p><?php echo virtue_excerpt(16); ?></p> <?php } ?>
 			                    </div>
 			                </a>
                 		</div>
@@ -201,7 +201,7 @@
                     
 						<?php endwhile; else: ?>
 					 
-							<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'bigcloudcms');?></li>
+							<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'virtue');?></li>
 						
 				<?php endif; ?>
                 </div> <!--portfoliowrapper-->

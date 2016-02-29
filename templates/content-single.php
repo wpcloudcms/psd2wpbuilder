@@ -1,8 +1,8 @@
-  <?php if(bigcloudcms_display_sidebar()) {$slide_sidebar = 848;} else {$slide_sidebar = 1140;}
-  global $post, $bigcloudcms_premium; $headcontent = get_post_meta( $post->ID, '_kad_blog_head', true );
+  <?php if(kadence_display_sidebar()) {$slide_sidebar = 848;} else {$slide_sidebar = 1140;}
+  global $post, $virtue_premium; $headcontent = get_post_meta( $post->ID, '_kad_blog_head', true );
     if(empty($headcontent) || $headcontent == 'default') {
-        if(!empty($bigcloudcms_premium['post_head_default'])) {
-            $headcontent = $bigcloudcms_premium['post_head_default'];
+        if(!empty($virtue_premium['post_head_default'])) {
+            $headcontent = $virtue_premium['post_head_default'];
         } else {
             $headcontent = 'none';
         }
@@ -62,7 +62,7 @@
       <?php } ?>
 <div id="content" class="container">
     <div class="row single-article" itemscope="" itemtype="http://schema.org/BlogPosting">
-      <div class="main <?php echo bigcloudcms_main_class(); ?>" id="ktmain" role="main">
+      <div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
         <?php while (have_posts()) : the_post(); ?>
           <article <?php post_class(); ?>>
           <?php if ($headcontent == 'flex') { ?>
@@ -98,7 +98,7 @@
               </section>
         <?php } else if ($headcontent == 'carouselslider') { ?>
         <section class="postfeat">
-                    <?php if(isset($bigcloudcms_premium['slider_box_layout']) and $bigcloudcms_premium['slider_box_layout'] == 'sliderwide') { ?>
+                    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="loading full-slider">
 <?php } else { ?>
    <div id="imageslider" class="loading">
@@ -146,7 +146,7 @@
         <?php } ?>
     <?php get_template_part('templates/entry', 'meta-date'); ?>
     <header>
-      <?php if(bigcloudcms_display_post_breadcrumbs()) { bigcloudcms_breadcrumbs(); } ?>
+      <?php if(kadence_display_post_breadcrumbs()) { kadence_breadcrumbs(); } ?>
       <h1 class="entry-title" itemprop="name headline"><?php the_title(); ?></h1>
         <?php get_template_part('templates/entry', 'meta-subhead'); ?>
     </header>
@@ -157,15 +157,15 @@
       <?php $tags = get_the_tags(); if ($tags) { ?> <span class="posttags"><i class="icon-tag"></i> <?php the_tags('', ', ', ''); ?> </span><?php } ?>
       
       <?php $authorbox = get_post_meta( $post->ID, '_kad_blog_author', true );
-      if(empty($authorbox) || $authorbox == 'default') { if(isset($bigcloudcms_premium['post_author_default']) && ($bigcloudcms_premium['post_author_default'] == 'yes')) { bigcloudcms_author_box(); }}
-        else if($authorbox == 'yes'){ bigcloudcms_author_box(); } ?>
+      if(empty($authorbox) || $authorbox == 'default') { if(isset($virtue_premium['post_author_default']) && ($virtue_premium['post_author_default'] == 'yes')) { virtue_author_box(); }}
+        else if($authorbox == 'yes'){ virtue_author_box(); } ?>
       <?php $blog_carousel_recent = get_post_meta( $post->ID, '_kad_blog_carousel_similar', true ); 
-      if(empty($blog_carousel_recent) || $blog_carousel_recent == 'default' ) { if(isset($bigcloudcms_premium['post_carousel_default'])) {$blog_carousel_recent = $bigcloudcms_premium['post_carousel_default']; } }
+      if(empty($blog_carousel_recent) || $blog_carousel_recent == 'default' ) { if(isset($virtue_premium['post_carousel_default'])) {$blog_carousel_recent = $virtue_premium['post_carousel_default']; } }
       if ($blog_carousel_recent == 'similar') { get_template_part('templates/similarblog', 'carousel'); } 
       else if($blog_carousel_recent == 'recent') {get_template_part('templates/recentblog', 'carousel');} ?>
 
       <?php wp_link_pages(array('before' => '<nav class="pagination kt-pagination">', 'after' => '</nav>', 'link_before'=> '<span>','link_after'=> '</span>')); ?>
-      <?php if(isset($bigcloudcms_premium['show_postlinks']) &&  $bigcloudcms_premium['show_postlinks'] == 1) {get_template_part('templates/entry', 'post-links'); }?>
+      <?php if(isset($virtue_premium['show_postlinks']) &&  $virtue_premium['show_postlinks'] == 1) {get_template_part('templates/entry', 'post-links'); }?>
     </footer>
     <?php comments_template('/templates/comments.php'); ?>
   </article>

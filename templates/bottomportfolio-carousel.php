@@ -1,5 +1,5 @@
 <div id="portfolio_carousel_container" class="carousel_outerrim">
-        <?php global $post, $bigcloudcms_premium; 
+        <?php global $post, $virtue_premium; 
         $titletext 	= get_post_meta( $post->ID, '_kad_portfolio_carousel_title', true );  
         $bporder 	= get_post_meta( $post->ID, '_kad_portfolio_carousel_order', true );
         $bpgroup 	= get_post_meta( $post->ID, '_kad_portfolio_carousel_group', true );
@@ -23,25 +23,25 @@
 		if(!empty($titletext)) {
 			echo '<h3 class="title">'.esc_html($titletext).'</h3>'; 
 		} else {
-			echo '<h3 class="title">'.__('Recent Projects', 'bigcloudcms').'</h3>';
+			echo '<h3 class="title">'.__('Recent Projects', 'virtue').'</h3>';
 		} ?> 
         <div class="portfolio-carouselcase fredcarousel">
-            <?php 	if(!empty($bigcloudcms_premium['portfolio_recent_car_column'])) {
-            			$portfolio_column = $bigcloudcms_premium['portfolio_recent_car_column'];
+            <?php 	if(!empty($virtue_premium['portfolio_recent_car_column'])) {
+            			$portfolio_column = $virtue_premium['portfolio_recent_car_column'];
             		} else {
             			$portfolio_column = 4;
             		}
-            		if(!empty($bigcloudcms_premium['portfolio_recent_car_items'])) {
-            			$portfolio_items = $bigcloudcms_premium['portfolio_recent_car_items'];
+            		if(!empty($virtue_premium['portfolio_recent_car_items'])) {
+            			$portfolio_items = $virtue_premium['portfolio_recent_car_items'];
             		} else {
             			$portfolio_items = 8;
             		}
-            		if(!empty($bigcloudcms_premium['portfolio_recent_carousel_speed'])) {
-            			$bport_speed = $bigcloudcms_premium['portfolio_recent_carousel_speed'].'000';
+            		if(!empty($virtue_premium['portfolio_recent_carousel_speed'])) {
+            			$bport_speed = $virtue_premium['portfolio_recent_carousel_speed'].'000';
             		} else {
             			$bport_speed = '9000';
             		}
-					if(isset($bigcloudcms_premium['portfolio_recent_carousel_scroll']) && $bigcloudcms_premium['portfolio_recent_carousel_scroll'] == 'all' ) {
+					if(isset($virtue_premium['portfolio_recent_carousel_scroll']) && $virtue_premium['portfolio_recent_carousel_scroll'] == 'all' ) {
 						$bport_scroll = 'null';
 					} else {
 						$bport_scroll = '1';
@@ -158,7 +158,7 @@
             </div>
 					<?php endwhile; else: ?>
 					 
-					<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'bigcloudcms');?></li>
+					<li class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'virtue');?></li>
 						
 				<?php endif; ?>	
                 <?php 

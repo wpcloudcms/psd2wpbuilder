@@ -1,9 +1,9 @@
 <?php 
-    global $bigcloudcms_premium; 
+    global $virtue_premium; 
     
-    $icons = $bigcloudcms_premium['icon_menu']; 
-    if(!empty($bigcloudcms_premium['home_icon_menu_column'])) {
-        $columnsize = $bigcloudcms_premium['home_icon_menu_column'];
+    $icons = $virtue_premium['icon_menu']; 
+    if(!empty($virtue_premium['home_icon_menu_column'])) {
+        $columnsize = $virtue_premium['home_icon_menu_column'];
     } else {
         $columnsize = 3;
     }

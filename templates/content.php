@@ -1,11 +1,11 @@
                 <article id="post-<?php the_ID(); ?>" <?php post_class('kad_blog_item kad-animation'); ?> data-animation="fade-in" data-delay="0" itemscope="" itemtype="http://schema.org/BlogPosting">
                       <div class="row">
-                         <?php global $post, $bigcloudcms_premium; $postsummery = get_post_meta( $post->ID, '_kad_post_summery', true );
+                         <?php global $post, $virtue_premium; $postsummery = get_post_meta( $post->ID, '_kad_post_summery', true );
                           $height = get_post_meta( $post->ID, '_kad_posthead_height', true ); if (!empty($height)) $slideheight = $height; else $slideheight = 400; 
                           $swidth = get_post_meta( $post->ID, '_kad_posthead_width', true ); if (!empty($swidth)) $slidewidth = $swidth; else $slidewidth = 846; 
                           if(empty($postsummery) || $postsummery == 'default') {
-                            if(!empty($bigcloudcms_premium['post_summery_default'])) {
-                            $postsummery = $bigcloudcms_premium['post_summery_default'];
+                            if(!empty($virtue_premium['post_summery_default'])) {
+                            $postsummery = $virtue_premium['post_summery_default'];
                             } else {
                               $postsummery = 'img_portrait';
                             }
@@ -28,7 +28,7 @@
                               </div>
                               <?php $image = null; $thumbnailURL = null; 
                             } else {
-                                  $thumbnailURL = bigcloudcms_post_default_placeholder();
+                                  $thumbnailURL = virtue_post_default_placeholder();
                                   $image = aq_resize($thumbnailURL, $slidewidth, $slideheight, true);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                   <div class="col-md-12">
@@ -58,7 +58,7 @@
                              </div>
                             <?php $image = null; $thumbnailURL = null; 
                           }  else  {
-                             $thumbnailURL = bigcloudcms_post_default_placeholder();
+                             $thumbnailURL = virtue_post_default_placeholder();
                                   $image = aq_resize($thumbnailURL, 365, 365, true);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                   <div class="col-md-5">

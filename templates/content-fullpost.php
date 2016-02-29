@@ -70,7 +70,7 @@
         </section>
         <?php } else if ($headcontent == 'carouselslider') { ?>
         <section class="postfeat">
-          <?php if(isset($bigcloudcms_premium['slider_box_layout']) and $bigcloudcms_premium['slider_box_layout'] == 'sliderwide') { ?>
+          <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="loading full-slider">
 <?php } else { ?>
    <div id="imageslider" class="loading">
@@ -124,22 +124,22 @@
     </header>
     <div class="entry-content clearfix" itemprop="articleBody">
     <?php global $more; $more = 0; ?>
-      <?php   global $bigcloudcms_premium; if(!empty($bigcloudcms_premium['post_readmore_text'])) {$readmore = $bigcloudcms_premium['post_readmore_text'];} else { $readmore =  __('Read More', 'bigcloudcms') ;}
+      <?php   global $virtue_premium; if(!empty($virtue_premium['post_readmore_text'])) {$readmore = $virtue_premium['post_readmore_text'];} else { $readmore =  __('Read More', 'virtue') ;}
       the_content($readmore); ?>
     </div>
     <footer class="single-footer">
       <?php $tags = get_the_tags(); if ($tags) { ?> <span class="posttags color_gray"><i class="icon-tag"></i> <?php the_tags('', ', ', ''); ?> </span><?php } ?>
       
-      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'bigcloudcms'), 'after' => '</p></nav>')); ?>
+      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'virtue'), 'after' => '</p></nav>')); ?>
   <?php
   if ( comments_open() ) :
     echo '<p class="kad_comments_link">';
       comments_popup_link( 
-        __( 'Leave a Reply', 'bigcloudcms' ), 
-        __( '1 Comment', 'bigcloudcms' ), 
-        __( '% Comments', 'bigcloudcms' ),
+        __( 'Leave a Reply', 'virtue' ), 
+        __( '1 Comment', 'virtue' ), 
+        __( '% Comments', 'virtue' ),
         'comments-link',
-        __( 'Comments are Closed', 'bigcloudcms' )
+        __( 'Comments are Closed', 'virtue' )
     );
     echo '</p>';
   endif;

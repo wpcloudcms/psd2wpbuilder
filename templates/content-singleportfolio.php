@@ -4,13 +4,13 @@
 			<div class="page-header single-portfolio-item">
 				<div class="row">
 					<div class="col-md-8 col-sm-8">
-						<?php if(bigcloudcms_display_portfolio_breadcrumbs()) { bigcloudcms_breadcrumbs(); } ?>
+						<?php if(kadence_display_portfolio_breadcrumbs()) { kadence_breadcrumbs(); } ?>
 									<h1 class="entry-title"><?php the_title(); ?></h1>
 		   			</div>
 		   			<div class="col-md-4 col-sm-4">
 		   				<div class="portfolionav clearfix">
-		   					<?php global $post, $bigcloudcms_premium; if(!empty($bigcloudcms_premium['portfolio_arrow_nav']) && ($bigcloudcms_premium['portfolio_arrow_nav'] == 'cat') ) {$arrownav = true;} else {$arrownav = false;}	
-		   					$parent_link = get_post_meta( $post->ID, '_kad_portfolio_parent', true ); if(!empty($parent_link) && ($parent_link != 'default')) {$parent_id = $parent_link;} else {$parent_id = $bigcloudcms_premium['portfolio_link'];}
+		   					<?php global $post, $virtue_premium; if(!empty($virtue_premium['portfolio_arrow_nav']) && ($virtue_premium['portfolio_arrow_nav'] == 'cat') ) {$arrownav = true;} else {$arrownav = false;}	
+		   					$parent_link = get_post_meta( $post->ID, '_kad_portfolio_parent', true ); if(!empty($parent_link) && ($parent_link != 'default')) {$parent_id = $parent_link;} else {$parent_id = $virtue_premium['portfolio_link'];}
 		   					previous_post_link_plus( array('order_by' => 'menu_order', 'loop' => true, 'in_same_tax' => $arrownav, 'format' => '%link', 'link' => '<i class="icon-arrow-left"></i>') ); ?>
 					   			<?php if( !empty($parent_id)){ ?>
 					   				<a href="<?php echo get_page_link($parent_id); ?>">
@@ -89,7 +89,7 @@
       <?php } ?>
 <div id="content" class="container">
     <div class="row">
-      <div class="main <?php echo bigcloudcms_main_class(); ?> portfolio-single" role="main">
+      <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
       <?php while (have_posts()) : the_post(); ?>		
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
       <div class="postclass">
@@ -140,7 +140,7 @@
 				$image_gallery = get_post_meta( $post->ID, '_kad_image_gallery', true );
 				echo do_shortcode('[gallery ids="'.$image_gallery.'" columns="4"]');
 			} else if ($ppost_type == 'carousel') { ?>
-					          <?php if(isset($bigcloudcms_premium['slider_box_layout']) and $bigcloudcms_premium['slider_box_layout'] == 'sliderwide') { ?>
+					          <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
     <div id="imageslider" class="loading full-slider carousel_outerrim">
 <?php } else { ?>
    <div id="imageslider" class="loading carousel_outerrim">
@@ -291,10 +291,10 @@
     <div class="clearfix"></div>
     </div><!--postclass-->
     <footer>
-      <?php wp_link_pages(array('before' => '<nav id="page-nav" class="wp-pagenavi"><p>' . __('Pages:', 'bigcloudcms'), 'after' => '</p></nav>')); ?>
+      <?php wp_link_pages(array('before' => '<nav id="page-nav" class="wp-pagenavi"><p>' . __('Pages:', 'virtue'), 'after' => '</p></nav>')); ?>
       <?php global $post; $portfolio_carousel = get_post_meta( $post->ID, '_kad_portfolio_carousel_recent', true ); if ($portfolio_carousel != 'no') { get_template_part('templates/bottomportfolio', 'carousel'); } ?>
     </footer>
-    <?php global $virute_premium; if(isset($bigcloudcms_premium['portfolio_comments']) && $bigcloudcms_premium['portfolio_comments'] == 1) { 
+    <?php global $virute_premium; if(isset($virtue_premium['portfolio_comments']) && $virtue_premium['portfolio_comments'] == 1) { 
     comments_template('/templates/comments.php'); 
 	} ?>
   </article>
@@ -302,7 +302,7 @@
 <?php } else { ?>
 <div id="content" class="container">
     <div class="row">
-      <div class="main <?php echo bigcloudcms_main_class(); ?> portfolio-single" role="main">
+      <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
       <?php echo get_the_password_form();
     }?>
 </div>

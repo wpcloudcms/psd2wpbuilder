@@ -1,17 +1,17 @@
 <?php
 /**
- * bigcloudcms initial setup and constants
+ * virtue initial setup and constants
  */
-function bigcloudcms_setup() {
+function kadence_setup() {
 
   // Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
   register_nav_menus(array(
-    'topbar_navigation' => __('Topbar Navigation', 'bigcloudcms'),
-    'primary_navigation' => __('Primary Navigation (Near Logo Side)', 'bigcloudcms'),
-    'secondary_navigation' => __('Secondary Navigation (Above Header)', 'bigcloudcms'),
-    'third_navigation' => __('Third Navigation (Below Header)', 'bigcloudcms'),
-    'footer_navigation' => __('Footer Navigation', 'bigcloudcms'),
-    'mobile_navigation' => __('Mobile Navigation', 'bigcloudcms'),
+    'topbar_navigation' => __('Topbar Navigation', 'virtue'),
+    'primary_navigation' => __('Primary Navigation (Near Logo Side)', 'virtue'),
+    'secondary_navigation' => __('Secondary Navigation (Above Header)', 'virtue'),
+    'third_navigation' => __('Third Navigation (Below Header)', 'virtue'),
+    'footer_navigation' => __('Footer Navigation', 'virtue'),
+    'mobile_navigation' => __('Mobile Navigation', 'virtue'),
   ));
   
   // Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
@@ -27,9 +27,9 @@ function bigcloudcms_setup() {
   //add_theme_support('post-formats', array('gallery', 'image', 'video'));
   add_theme_support( 'automatic-feed-links' );
   // Tell the TinyMCE editor to use a custom stylesheet
-  add_editor_style('/assets/css/editor-style-bigcloudcms.css');
+  add_editor_style('/assets/css/editor-style-virtue.css');
 }
-add_action('after_setup_theme', 'bigcloudcms_setup');
+add_action('after_setup_theme', 'kadence_setup');
 
 // Backwards compatibility for older than PHP 5.3.0
 if (!defined('__DIR__')) { define('__DIR__', dirname(__FILE__)); }

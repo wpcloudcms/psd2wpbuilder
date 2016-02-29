@@ -1,6 +1,6 @@
 <div class="sliderclass">
-<?php global $bigcloudcms_premium;
+<?php global $virtue_premium;
 if( function_exists('putRevSlider') ) {
- putRevSlider( $bigcloudcms_premium['shop_rev_slider'] ); 
+ putRevSlider( $virtue_premium['shop_rev_slider'] ); 
 }?>
 </div><!--sliderclass-->

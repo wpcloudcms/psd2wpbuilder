@@ -1,12 +1,12 @@
  
     <div id="content" class="col-sm-12">
       <div class="row">
-      <div class="main <?php echo bigcloudcms_main_class(); ?>  postlist" role="main">
+      <div class="main <?php echo kadence_main_class(); ?>  postlist" role="main">
       <div class="entry-content col-lg-9 col-md-8" itemprop="mainContentOfPage">
 
 <?php if (!have_posts()) : ?>
   <div class="alert">
-    <?php _e('Sorry, no results were found.', 'bigcloudcms'); ?>
+    <?php _e('Sorry, no results were found.', 'virtue'); ?>
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
@@ -21,8 +21,8 @@
             <?php } else { ?>      
               <nav class="post-nav">
                 <ul class="pager">
-                  <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'bigcloudcms')); ?></li>
-                  <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'bigcloudcms')); ?></li>
+                  <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'virtue')); ?></li>
+                  <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'virtue')); ?></li>
                 </ul>
               </nav>
             <?php } ?> 

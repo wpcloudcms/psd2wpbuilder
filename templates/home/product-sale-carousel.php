@@ -1,9 +1,9 @@
 <?php 
-	global $bigcloudcms_premium; 
+	global $virtue_premium; 
 	
 
-	if(!empty($bigcloudcms_premium['product_sale_title'])) {$product_sale_title = $bigcloudcms_premium['product_sale_title'];} else {$product_sale_title = 'Products on Sale';}
-	if(!empty($bigcloudcms_premium['home_product_sale_column'])) {$product_tcolumn = $bigcloudcms_premium['home_product_sale_column'];} else {$product_tcolumn = '4';}
+	if(!empty($virtue_premium['product_sale_title'])) {$product_sale_title = $virtue_premium['product_sale_title'];} else {$product_sale_title = 'Products on Sale';}
+	if(!empty($virtue_premium['home_product_sale_column'])) {$product_tcolumn = $virtue_premium['home_product_sale_column'];} else {$product_tcolumn = '4';}
 	if ($product_tcolumn == '2') {
 		$md = 2; $sm = 2; $xs = 1; $ss = 1;
 	} else if ($product_tcolumn == '3'){ 
@@ -15,9 +15,9 @@
 	} else {
 		$md = 4; $sm = 3; $xs = 2; $ss = 1;
 	} 
-	if(!empty($bigcloudcms_premium['home_product_sale_count'])) {$hp_proscount = $bigcloudcms_premium['home_product_sale_count'];} else {$hp_proscount = '6';}
-	if(!empty($bigcloudcms_premium['home_product_sale_speed'])) {$hp_salespeed = $bigcloudcms_premium['home_product_sale_speed'].'000';} else {$hp_salespeed = '9000';} 
-	if(isset($bigcloudcms_premium['home_product_sale_scroll']) && $bigcloudcms_premium['home_product_sale_scroll'] == 'all' ) {$hp_salescroll = '';} else {$hp_salescroll = '1';}?>
+	if(!empty($virtue_premium['home_product_sale_count'])) {$hp_proscount = $virtue_premium['home_product_sale_count'];} else {$hp_proscount = '6';}
+	if(!empty($virtue_premium['home_product_sale_speed'])) {$hp_salespeed = $virtue_premium['home_product_sale_speed'].'000';} else {$hp_salespeed = '9000';} 
+	if(isset($virtue_premium['home_product_sale_scroll']) && $virtue_premium['home_product_sale_scroll'] == 'all' ) {$hp_salescroll = '';} else {$hp_salescroll = '1';}?>
 	<div class="home-product home-margin carousel_outerrim home-padding kad-animation" data-animation="fade-in" data-delay="0">
 		<div class="clearfix">
 			<h3 class="hometitle">

@@ -1,7 +1,7 @@
-            <?php global $post, $bigcloudcms_premium; $postsummery = get_post_meta( $post->ID, '_kad_post_summery', true );
+            <?php global $post, $virtue_premium; $postsummery = get_post_meta( $post->ID, '_kad_post_summery', true );
             if(empty($postsummery) || $postsummery == 'default') {
-                  if(!empty($bigcloudcms_premium['post_summery_default'])) {
-                            $postsummery = $bigcloudcms_premium['post_summery_default'];
+                  if(!empty($virtue_premium['post_summery_default'])) {
+                            $postsummery = $virtue_premium['post_summery_default'];
                             } else {
                               $postsummery = 'img_portrait';
                             }
@@ -22,7 +22,7 @@
                                   </div>
                               <?php $image = null; $thumbnailURL = null; 
                             } else {
-                               $thumbnailURL = bigcloudcms_post_default_placeholder();
+                               $thumbnailURL = virtue_post_default_placeholder();
                                     $image = aq_resize($thumbnailURL, 562, false);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                 <div class="imghoverclass img-margin-center">
@@ -49,7 +49,7 @@
                                </div>
                             <?php $image = null; $thumbnailURL = null; 
                           } else {
-                               $thumbnailURL = bigcloudcms_post_default_placeholder();
+                               $thumbnailURL = virtue_post_default_placeholder();
                                     $image = aq_resize($thumbnailURL, 364, 364, true);
                                   if(empty($image)) { $image = $thumbnailURL; } ?>
                                   <div class="tcol-md-6 tcol-sm-12">

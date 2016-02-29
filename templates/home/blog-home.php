@@ -1,13 +1,13 @@
 <div class="home_blog home-margin clearfix home-padding kad-animation" data-animation="fade-in" data-delay="0">
-	<?php if(bigcloudcms_display_sidebar()) {$home_sidebar = true; $img_width = 407; $postwidthclass = 'col-md-6 col-sm-6 home-sidebar';} else {$home_sidebar = false; $img_width = 270; $postwidthclass = 'col-md-6 col-sm-6';}
-	global $bigcloudcms_premium; $blog_title = $bigcloudcms_premium['blog_title'];
-		if($blog_title != '') {$btitle = $blog_title; } else { $btitle = __('Latest from the Blog', 'bigcloudcms'); } ?>
+	<?php if(kadence_display_sidebar()) {$home_sidebar = true; $img_width = 407; $postwidthclass = 'col-md-6 col-sm-6 home-sidebar';} else {$home_sidebar = false; $img_width = 270; $postwidthclass = 'col-md-6 col-sm-6';}
+	global $virtue_premium; $blog_title = $virtue_premium['blog_title'];
+		if($blog_title != '') {$btitle = $blog_title; } else { $btitle = __('Latest from the Blog', 'virtue'); } ?>
 		<div class="clearfix"><h3 class="hometitle"><?php echo $btitle; ?></h3></div>
 	<div class="row">
-				<?php global $bigcloudcms_premium; if(isset($bigcloudcms_premium['home_post_count'])) { $blogcount = $bigcloudcms_premium['home_post_count'];} else { $blogcount = '2'; } 
-				if(isset($bigcloudcms_premium['home_post_word_count'])) { $blogwordcount = $bigcloudcms_premium['home_post_word_count'];} else { $blogwordcount = '34'; } 
-				 if(!empty($bigcloudcms_premium['home_post_type'])) { 
-						$blog_cat = get_term_by ('id',$bigcloudcms_premium['home_post_type'],'category');
+				<?php global $virtue_premium; if(isset($virtue_premium['home_post_count'])) { $blogcount = $virtue_premium['home_post_count'];} else { $blogcount = '2'; } 
+				if(isset($virtue_premium['home_post_word_count'])) { $blogwordcount = $virtue_premium['home_post_word_count'];} else { $blogwordcount = '34'; } 
+				 if(!empty($virtue_premium['home_post_type'])) { 
+						$blog_cat = get_term_by ('id',$virtue_premium['home_post_type'],'category');
 						$blog_cat_slug = $blog_cat -> slug;
 					} else {
 						$blog_cat_slug = '';
@@ -24,7 +24,7 @@
 				<div class="<?php echo $postwidthclass; ?> clearclass<?php echo ($xyz++%2); ?>">
 				  	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="" itemtype="http://schema.org/BlogPosting">
 	                    <div class="rowtight">
-	                    <?php if(isset($bigcloudcms_premium['post_summery_default']) && ($bigcloudcms_premium['post_summery_default'] != 'text')) {
+	                    <?php if(isset($virtue_premium['post_summery_default']) && ($virtue_premium['post_summery_default'] != 'text')) {
 	                    				if($home_sidebar == true) {
 	                    					$textsize = 'tcol-md-12 tcol-sm-12 tcol-ss-12';
 	                    					$imagesize = 'tcol-md-12 tcol-sm-12 tcol-ss-12';
@@ -39,7 +39,7 @@
 										$image = aq_resize($thumbnailURL, $img_width, 270, true);
 										if(empty($image)) { $image = $thumbnailURL; }
 									} else {
-								 		$thumbnailURL = bigcloudcms_post_default_placeholder();
+								 		$thumbnailURL = virtue_post_default_placeholder();
 										$image = aq_resize($thumbnailURL, $img_width, 270, true);
 										if(empty($image)) { $image = $thumbnailURL; }
 							 		} ?>
@@ -108,8 +108,8 @@
 			                        </div>
 			                        </header>
 		                        	<div class="entry-content" itemprop="articleBody">
-		                          		<p><?php echo bigcloudcms_excerpt($blogwordcount); ?> <a href="<?php the_permalink() ?>">
-		                          			<?php global $bigcloudcms_premium; if(!empty($bigcloudcms_premium['post_readmore_text'])) {$readmore = $bigcloudcms_premium['post_readmore_text'];} else {$readmore = __('Read More', 'bigcloudcms');} echo $readmore; ?></a></p>
+		                          		<p><?php echo virtue_excerpt($blogwordcount); ?> <a href="<?php the_permalink() ?>">
+		                          			<?php global $virtue_premium; if(!empty($virtue_premium['post_readmore_text'])) {$readmore = $virtue_premium['post_readmore_text'];} else {$readmore = __('Read More', 'virtue');} echo $readmore; ?></a></p>
 		                        	</div>
 		                      		<footer>
                        				</footer>
@@ -119,7 +119,7 @@
                 </div>
 
                     <?php endwhile; else: ?>
-						<li class="error-not-found"><?php _e('Sorry, no blog entries found.', 'bigcloudcms');?></li>
+						<li class="error-not-found"><?php _e('Sorry, no blog entries found.', 'virtue');?></li>
 					<?php endif; ?>
                 
 				

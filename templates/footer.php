@@ -1,5 +1,5 @@
 <?php
-	global $bigcloudcms_premium;
+	global $virtue_premium;
 
 	/**
 	* 
@@ -12,7 +12,7 @@
 <footer id="containerfooter" class="container box footerclass" role="contentinfo">
   <div class="container">
   	<div class="row">
-  		<?php if(isset($bigcloudcms_premium['footer_layout'])) { $footer_layout = $bigcloudcms_premium['footer_layout']; } else { $footer_layout = 'onec'; }
+  		<?php if(isset($virtue_premium['footer_layout'])) { $footer_layout = $virtue_premium['footer_layout']; } else { $footer_layout = 'onec'; }
   			if ($footer_layout == "fourc") {
   				if (is_active_sidebar('footer_1') ) { ?> 
 					<div class="col-md-3 col-sm-6 footercol1">
