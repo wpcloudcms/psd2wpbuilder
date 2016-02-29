@@ -30,11 +30,11 @@ if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout']
     $class = 'col-md-8';
 } else if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {  
     // Classes on pages with the sidebar
-    $class = 'col-md-6';
-  } else {
-    // Classes on full width pages
+    $class = 'col-md-6'; 
+} else if(isset($virtue_premium['home_sidebar_layout']) && $virtue_premium['home_sidebar_layout'] == 'full') {  
+    // Classes on pages with the sidebar
     $class = 'col-md-12';
-   }
+  } 
   return $class;
 }
 
