@@ -154,10 +154,11 @@ Redux::setSection( $opt_name, array(
             'title' => __('Sidebar Layout Style', 'virtue'), 
             'subtitle' => __('Select Sidebar Layout Style', 'virtue'),
             'options' => array(
-                    'noleftsidebar' => array('alt' => 'No Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/no-left.png'),
-                    'withleftsidebar' => array('alt' => 'With Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/with-left.png'),
+                    'onlyleftsidebar' => array('alt' => 'only Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/only-left.png'),
+                    'onlyrightsidebar' => array('alt' => 'only Right Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/only-left.png'),
+                    'bothsidebar' => array('alt' => 'Both Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/both-sides.png'),
                 ),
-            'default' => 'noleftsidebar',
+            'default' => 'onlyrightsidebar',
             ),
         array(
             'id'=>'slider_abovebelow_widget',
