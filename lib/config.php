@@ -22,16 +22,19 @@ function kadence_seo_switch() {
  * .main classes
  */
 function kadence_main_class() {
-if(isset($virtue_premium['home_sidebar_layout']) && $virtue_premium['home_sidebar_layout'] == 'full') { 
-    // Classes on pages with the sidebar
-    $class = 'col-md-12';
-} else if(isset($virtue_premium['home_sidebar_layout']) && $virtue_premium['home_sidebar_layout'] == 'sidebar') {  
+  if (kadence_display_sidebar() && $virtue_premium['sidebar_layout'] == 'leftsidebar';) {
     // Classes on pages with the sidebar
     $class = 'col-md-8';
-} else if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars' && $virtue_premium['home_sidebar_layout'] == 'sidebar') {  
+  } else if (kadence_display_sidebar() && $virtue_premium['sidebar_layout'] == 'rightsidebar';) {
     // Classes on pages with the sidebar
-    $class = 'col-md-6'; 
-}
+    $class = 'col-md-8';   
+  } else if (kadence_display_sidebar() && $virtue_premium['sidebar_layout'] == 'bothsidebars';) {
+    // Classes on pages with the sidebar
+    $class = 'col-md-6';
+  } else {
+    // Classes on full width pages
+    $class = 'col-md-12';
+   }
   return $class;
 }
 
