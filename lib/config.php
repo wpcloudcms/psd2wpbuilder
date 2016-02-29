@@ -39,7 +39,13 @@ global $virtue_premium;
  * .sidebar classes
  */
 function kadence_sidebar_class() {
-  return 'col-md-3';
+ global $virtue_premium;
+  if(kadence_display_sidebar()) {
+          if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {
+            $class = "col-md-3"; 
+          } else {$class = "col-md-4";}
+      } 
+  return $class;
 }
 
 /**
