@@ -22,13 +22,10 @@ function kadence_seo_switch() {
  * .main classes
  */
 function kadence_main_class() {
-  if (kadence_display_sidebar()) && if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'leftsidebar';) {
+  if (kadence_display_sidebar()) {
     // Classes on pages with the sidebar
     $class = 'col-md-8';
-  } else if (kadence_display_sidebar()) && if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'rightsidebar';) {
-    // Classes on pages with the sidebar
-    $class = 'col-md-8';   
-  } else if (kadence_display_sidebar()) && if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars';) {
+  } else if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') && kadence_display_sidebar() {
     // Classes on pages with the sidebar
     $class = 'col-md-6';
   } else {
