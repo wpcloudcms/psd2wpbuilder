@@ -1,8 +1,7 @@
-
 <?php if (kadence_display_topbar()) : ?>
   <?php get_template_part('templates/header', 'topbar'); ?>
 <?php endif; ?>
-<header id="kad-banner" class="banner headerclass" data-header-shrink="0" data-mobile-sticky="0">
+<header id="kad-banner" class="banner headerclass kt-not-mobile-sticky" data-header-shrink="0" data-mobile-sticky="0">
 <?php global $virtue_premium; if(isset($virtue_premium['logo_layout'])) {
             if($virtue_premium['logo_layout'] == 'logocenter') {$logocclass = 'col-md-12'; $menulclass = 'col-md-12';} 
             else if($virtue_premium['logo_layout'] == 'logohalf') {$logocclass = 'col-md-6'; $menulclass = 'col-md-6';}
@@ -76,14 +75,14 @@
     <?php endif; ?> 
     </header>
      <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderabovewidget') { ?>
-              <div class="aboveheader col-md-12"> <?php 
+              <div class="aboveheader"><div class="col-md-12"> <?php 
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
-              </div>
+              </div></div>
                <?php } ?>
       <?php if(isset($virtue_premium['slider_abovebelow_widget']) && $virtue_premium['slider_abovebelow_widget'] == 'sliderbothwidgets') { ?>
-              <div class="aboveheader col-md-12"> <?php 
+              <div class="aboveheader"><div class="col-md-12"> <?php 
                 if(is_active_sidebar('slider-above-widget')) { dynamic_sidebar('slider-above-widget'); } ?>
-              </div>
+                  </div></div>
                <?php } ?>
     <div class="featured row">
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
