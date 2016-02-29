@@ -41,16 +41,14 @@
     </div><!--close container-->
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
-
+    
+    <div class="wrap clearfix contentclass hfeed" role="document">
+        
    <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') { ?>
               <aside id="leftsidebar"> <?php 
                 if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
               </aside>
-               <?php } ?>
-    
-    <div class="wrap clearfix contentclass hfeed" role="document">
-
-        
+               <?php } ?>        
       <?php if (kadence_display_sidebar()) : ?>
       <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
@@ -58,6 +56,7 @@
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
       <?php endif; ?>
+        
       </div><!-- /.row-->
     </div><!-- /.content -->
   </div><!-- /.wrap -->
