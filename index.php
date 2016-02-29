@@ -5,12 +5,12 @@
         
              <?php if (kadence_display_sidebar()) : ?>   
    <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
-              <aside id="leftsidebar" class="leftside col-md-3"> <?php 
+              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>"> <?php 
                 if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
               </aside>
                <?php } ?> 
      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
-              <aside id="leftsidebar" class="leftside col-md-3"> <?php 
+              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>"> <?php 
                 if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
               </aside>
                <?php } ?>
