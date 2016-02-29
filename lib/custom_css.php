@@ -255,7 +255,7 @@ if(!empty($virtue_premium['content_bg_color']) || !empty($virtue_premium['bg_con
     $contentclass = '';
   }
 if(isset($virtue_premium['site_box_shadow']) and $virtue_premium['site_box_shadow'] == 1) {
-  $site_box_shadow = '.boxed #wrapper.container {box-shadow:none !important;}';
+  $site_box_shadow = '.boxed #wrapper.container {-webkit-box-shadow:none !important; box-shadow:none !important;}';
 } else {
   $site_box_shadow = '';
 }
