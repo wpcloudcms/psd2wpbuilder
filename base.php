@@ -31,7 +31,7 @@
         
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
-    
+    <div class="wrap clearfix contentclass hfeed" role="document">    
     <?php if (has_nav_menu('third_navigation')) : ?>
   <section id="cat_nav" class="navclass third"><!-- Start Menu Section -->
     <div class="container menu">
@@ -42,7 +42,7 @@
     </section><!-- Close Menu Section -->
     <?php endif; ?> 
     
-    <div class="wrap clearfix contentclass hfeed" role="document">
+
         
    <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
               <aside id="leftsidebar"> <?php 
