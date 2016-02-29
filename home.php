@@ -14,14 +14,18 @@
         
              <?php if (kadence_display_sidebar()) : ?>   
    <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
-              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>"> <?php 
-                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
-              </aside>
+              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>">
+                  <div class="sidebar"> 
+                      <?php if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+                  </div>
+                </aside>
                <?php } ?> 
      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
-              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>"> <?php 
-                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
-              </aside>
+              <aside id="leftsidebar" class="leftside <?php echo esc_attr(kadence_sidebar_class()); ?>">
+                  <div class="sidebar"> 
+                      <?php if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+                  </div>
+                </aside>
                <?php } ?>
             <?php endif; ?>
       <div class="main <?php echo kadence_main_class(); ?>  <?php echo esc_attr($postclass) .' '. esc_attr($fullclass); ?>" role="main">
