@@ -23,18 +23,17 @@ function kadence_seo_switch() {
  */
 function kadence_main_class() {
   if (kadence_display_sidebar()) {
-          if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {  
+   if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {  
     // Classes on pages with the sidebar
     $class = 'col-md-6';
    } elseif { 
     // Classes on pages with the sidebar
     $class = 'col-md-8';
-  }
   } else {
     // Classes on full width pages
     $class = 'col-md-12';
+   }
   }
-
   return $class;
 }
 
