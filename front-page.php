@@ -18,7 +18,8 @@
 			</div>
 		</div><!--titleclass-->
 	<?php } ?>
-    <div id="content" class="container homepagecontent">
+    <div id="content" class="container homepagecontent">            
+    <div class="wrap clearfix contentclass hfeed" role="document">  
           <div class="main <?php echo esc_attr(kadence_main_class()); ?>" role="main">
           <div class="entry-content" itemprop="mainContentOfPage">
 
