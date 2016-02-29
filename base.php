@@ -44,18 +44,32 @@
     
     <div class="wrap clearfix contentclass hfeed" role="document">
         
-   <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'withleftsidebar') { ?>
+   <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyleftsidebar') { ?>
               <aside id="leftsidebar"> <?php 
                 if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
               </aside>
-               <?php } ?>        
-      <?php if (kadence_display_sidebar()) : ?>
+               <?php } ?> 
+     <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
+              <aside id="leftsidebar"> <?php 
+                if(is_active_sidebar('left-sidebar')) { dynamic_sidebar('left-sidebar'); } ?>
+              </aside>
+        <?php if (kadence_display_sidebar()) : ?>
       <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
           <?php include kadence_sidebar_path(); ?>
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
-      <?php endif; ?>
+        <?php endif; ?>
+               <?php } ?>     
+      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyrightsidebar') { ?>
+        <?php if (kadence_display_sidebar()) : ?>
+      <aside id="ktsidebar" class="<?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+        <div class="sidebar">
+          <?php include kadence_sidebar_path(); ?>
+        </div><!-- /.sidebar -->
+      </aside><!-- /aside -->
+        <?php endif; ?>
+        <?php } ?>  
         
       </div><!-- /.row-->
     </div><!-- /.content -->

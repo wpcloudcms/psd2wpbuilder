@@ -156,7 +156,7 @@ Redux::setSection( $opt_name, array(
             'options' => array(
                     'onlyleftsidebar' => array('alt' => 'only Left Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/only-left.png'),
                     'onlyrightsidebar' => array('alt' => 'only Right Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/only-right.png'),
-                    'bothsidebar' => array('alt' => 'Both Sidebar', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/both-sides.png'),
+                    'bothsidebars' => array('alt' => 'Both Sidebars', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/sidebar/both-sides.png'),
                 ),
             'default' => 'onlyrightsidebar',
             ),
