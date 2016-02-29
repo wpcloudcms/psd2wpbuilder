@@ -1,5 +1,5 @@
 <div class="home_blog home-margin clearfix home-padding kad-animation" data-animation="fade-in" data-delay="0">
-	<?php if(kadence_display_sidebar()) {$home_sidebar = true; $img_width = 407; $postwidthclass = 'col-md-6 col-sm-6 home-sidebar';} else {$home_sidebar = false; $img_width = 270; $postwidthclass = 'col-md-6 col-sm-6';}
+	<?php if(bigcloudcms_display_sidebar()) {$home_sidebar = true; $img_width = 407; $postwidthclass = 'col-md-6 col-sm-6 home-sidebar';} else {$home_sidebar = false; $img_width = 270; $postwidthclass = 'col-md-6 col-sm-6';}
 	global $bigcloudcms_premium; $blog_title = $bigcloudcms_premium['blog_title'];
 		if($blog_title != '') {$btitle = $blog_title; } else { $btitle = __('Latest from the Blog', 'bigcloudcms'); } ?>
 		<div class="clearfix"><h3 class="hometitle"><?php echo $btitle; ?></h3></div>

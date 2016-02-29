@@ -1,4 +1,4 @@
-  <?php if(kadence_display_sidebar()) {$slide_sidebar = 848;} else {$slide_sidebar = 1140;}
+  <?php if(bigcloudcms_display_sidebar()) {$slide_sidebar = 848;} else {$slide_sidebar = 1140;}
   global $post, $bigcloudcms_premium; $headcontent = get_post_meta( $post->ID, '_kad_blog_head', true );
     if(empty($headcontent) || $headcontent == 'default') {
         if(!empty($bigcloudcms_premium['post_head_default'])) {
@@ -62,7 +62,7 @@
       <?php } ?>
 <div id="content" class="container">
     <div class="row single-article" itemscope="" itemtype="http://schema.org/BlogPosting">
-      <div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
+      <div class="main <?php echo bigcloudcms_main_class(); ?>" id="ktmain" role="main">
         <?php while (have_posts()) : the_post(); ?>
           <article <?php post_class(); ?>>
           <?php if ($headcontent == 'flex') { ?>
@@ -146,7 +146,7 @@
         <?php } ?>
     <?php get_template_part('templates/entry', 'meta-date'); ?>
     <header>
-      <?php if(kadence_display_post_breadcrumbs()) { kadence_breadcrumbs(); } ?>
+      <?php if(bigcloudcms_display_post_breadcrumbs()) { bigcloudcms_breadcrumbs(); } ?>
       <h1 class="entry-title" itemprop="name headline"><?php the_title(); ?></h1>
         <?php get_template_part('templates/entry', 'meta-subhead'); ?>
     </header>

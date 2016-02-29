@@ -4,7 +4,7 @@
 			<div class="page-header single-portfolio-item">
 				<div class="row">
 					<div class="col-md-8 col-sm-8">
-						<?php if(kadence_display_portfolio_breadcrumbs()) { kadence_breadcrumbs(); } ?>
+						<?php if(bigcloudcms_display_portfolio_breadcrumbs()) { bigcloudcms_breadcrumbs(); } ?>
 									<h1 class="entry-title"><?php the_title(); ?></h1>
 		   			</div>
 		   			<div class="col-md-4 col-sm-4">
@@ -89,7 +89,7 @@
       <?php } ?>
 <div id="content" class="container">
     <div class="row">
-      <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
+      <div class="main <?php echo bigcloudcms_main_class(); ?> portfolio-single" role="main">
       <?php while (have_posts()) : the_post(); ?>		
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
       <div class="postclass">
@@ -302,7 +302,7 @@
 <?php } else { ?>
 <div id="content" class="container">
     <div class="row">
-      <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
+      <div class="main <?php echo bigcloudcms_main_class(); ?> portfolio-single" role="main">
       <?php echo get_the_password_form();
     }?>
 </div>

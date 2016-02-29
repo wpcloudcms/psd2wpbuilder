@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?> <?php kadence_html_tag_schema();?>> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?> <?php kadence_html_tag_schema();?>> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?> <?php kadence_html_tag_schema();?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?> <?php kadence_html_tag_schema();?> > <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?> <?php bigcloudcms_html_tag_schema();?>> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?> <?php bigcloudcms_html_tag_schema();?>> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?> <?php bigcloudcms_html_tag_schema();?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?> <?php bigcloudcms_html_tag_schema();?> > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <?php global $post, $bigcloudcms_premium; 
-    if(kadence_seo_switch()) {
+    if(bigcloudcms_seo_switch()) {
       if ( get_post_meta( get_the_ID(), '_kad_seo_title', true )) { $title = get_post_meta( get_the_ID(), '_kad_seo_title', true ); }
       if(!empty($title)) { 
         echo ' <title>'.$title.'</title>'; 

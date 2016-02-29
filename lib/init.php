@@ -2,7 +2,7 @@
 /**
  * bigcloudcms initial setup and constants
  */
-function kadence_setup() {
+function bigcloudcms_setup() {
 
   // Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
   register_nav_menus(array(
@@ -29,7 +29,7 @@ function kadence_setup() {
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style-bigcloudcms.css');
 }
-add_action('after_setup_theme', 'kadence_setup');
+add_action('after_setup_theme', 'bigcloudcms_setup');
 
 // Backwards compatibility for older than PHP 5.3.0
 if (!defined('__DIR__')) { define('__DIR__', dirname(__FILE__)); }
