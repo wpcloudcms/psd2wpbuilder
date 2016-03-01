@@ -55,7 +55,7 @@ div#mobile-nav-trigger {
     margin-top: -32px;
 }
 .contentclass, .slider.container-fluid {
-    margin-top: 1px;
+    margin-top: 0px;
 }
 aside#leftsidebar, aside#rightsidebar {
 z-index: 1;
