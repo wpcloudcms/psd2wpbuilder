@@ -25,8 +25,8 @@ function kadence_main_class() {
 global $virtue_premium;
   if(kadence_display_sidebar()) {
           if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {
-            $class = "col-md-6"; 
-          } else {$class = "col-md-8"; }
+            $class = "col-md-6 col-height"; 
+          } else {$class = "col-md-8 col-height"; }
       } else {
        // Classes on full width pages
      $class = 'col-md-12';
@@ -42,8 +42,8 @@ function kadence_sidebar_class() {
  global $virtue_premium;
   if(kadence_display_sidebar()) {
           if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') {
-            $class = "col-md-3"; 
-          } else {$class = "col-md-4";}
+            $class = "col-md-3 col-height"; 
+          } else {$class = "col-md-4 col-height";}
       } 
   return $class;
 }

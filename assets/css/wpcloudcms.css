@@ -71,3 +71,11 @@ z-index: 1;
 .main.col-md-8, .main.col-md-6, .main.col-md-12 {
 z-index: 0; position: relative;
 }
+.row-height, .contentclass {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
