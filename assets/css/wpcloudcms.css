@@ -81,9 +81,9 @@ z-index: 0; position: relative;
     padding-bottom: 0px !important;
 }
 .mfp-counter {
-    position: relative;
     margin-top: 0px;
     left: 20px;
+    top: 40px;
 }
 button.mfp-arrow-left {
     display: block;
