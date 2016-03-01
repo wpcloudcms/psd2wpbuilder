@@ -18,7 +18,8 @@
 			</div>
 		</div><!--titleclass-->
 	<?php } ?>
-    <div id="content" class="container homepagecontent">            
+    <div id="content" class="container homepagecontent">   
+        <div class="row">
     <div class="wrap clearfix contentclass hfeed" role="document"> 
         
              <?php if (kadence_display_sidebar()) : ?>   

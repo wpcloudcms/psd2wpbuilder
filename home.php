@@ -8,8 +8,8 @@
     $postclass  = 'postlist';
   } ?>
 
-    <div id="content">
-      <div class="row">
+    <div id="content" class="container">
+        <div class="row">
               <div class="wrap clearfix contentclass hfeed" role="document"> 
         
              <?php if (kadence_display_sidebar()) : ?>   
