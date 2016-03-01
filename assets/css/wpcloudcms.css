@@ -122,4 +122,15 @@ button.mfp-arrow-right {
     right: 10%;
     display: none;
 }
+div#ktmain {
+    width: 100%;
+}
+.col-height {
+float: left;
+width: 100%;
+}
+}
+.entry-content img {
+    width: auto;
+    margin: 0px 0px;
 }
