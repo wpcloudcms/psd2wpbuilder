@@ -75,9 +75,13 @@ z-index: 0; position: relative;
     margin-right: auto;
     padding-bottom: 0px !important;
 }
-.contentclass {
+.contentclass, .flexslider .slides, .virtue_banner {
     margin-left: auto !important;
     margin-right: auto !important;
+}
+.slider-banner {
+    background-color: #fff;
+    margin-top: -5px;
 }
 .mfp-counter {
     margin-top: 0px;
