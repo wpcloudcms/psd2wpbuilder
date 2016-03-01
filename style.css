@@ -44,10 +44,6 @@ li:after, li:before {
 }
 
 
-li:last-child:after {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
 /* columns of same height styles */
 
 .row-height {
