@@ -105,3 +105,21 @@ button.mfp-arrow-right {
     right: 30%;
     display: none;
 }
+@media (max-width:767px) {
+    button.mfp-arrow-left {
+    display: block;
+}
+button.mfp-arrow-left {
+    position: absolute;
+    left: 10%;
+    display: none;
+}
+button.mfp-arrow-right {
+    display: block;
+}
+button.mfp-arrow-right {
+    position: absolute;
+    right: 10%;
+    display: none;
+}
+}
