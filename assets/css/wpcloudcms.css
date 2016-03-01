@@ -80,3 +80,24 @@ z-index: 0; position: relative;
     margin-right: auto;
     padding-bottom: 0px !important;
 }
+.mfp-counter {
+    position: relative;
+    margin-top: 0px;
+    left: 20px;
+}
+button.mfp-arrow-left {
+    display: block;
+}
+button.mfp-arrow-left {
+    position: absolute;
+    left: 30%;
+    display: none;
+}
+button.mfp-arrow-right {
+    display: block;
+}
+button.mfp-arrow-right {
+    position: absolute;
+    right: 30%;
+    display: none;
+}
