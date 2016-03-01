@@ -37,11 +37,6 @@ a.flex-prev, a.flex-next {
     display: none;
 }
 }
-
-.kad-header-left,  .kad-header-right {
-padding-left: 0px !important;
-    padding-right: 0px !important;
-}
 @media (max-width: 600px) {
 header#kad-banner {
     top: 0% !important;
