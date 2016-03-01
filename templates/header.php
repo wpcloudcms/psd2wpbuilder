@@ -9,7 +9,7 @@
             else {$logocclass = 'col-md-4'; $menulclass = 'col-md-8';}
           }
           else {$logocclass = 'col-md-4'; $menulclass = 'col-md-8';} ?>
-  <div class="container">  
+ 
     <div class="logo-header row">
           <div class="<?php echo esc_attr($logocclass); ?> clearfix kad-header-left">
             <div id="logo" class="logocase">
