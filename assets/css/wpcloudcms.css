@@ -24,6 +24,7 @@ section#cat_nav.third {
 */
 ul.sf-dropdown-menu li a {
     line-height: 20px !important;
+    padding: 5px;
 }
 .sliderclass {padding: 0px 0px 0px 0px !important;}
 /*
