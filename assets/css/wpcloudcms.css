@@ -83,7 +83,7 @@ z-index: 0; position: relative;
 .mfp-counter {
     margin-top: 0px;
     left: 20px;
-    top: 50px;
+    top: 50px !important
 }
 .mfp-title {
     background: #000;
