@@ -65,3 +65,9 @@ div#mobile-nav-trigger {
 .contentclass, .slider.container-fluid {
     margin-top: 1px;
 }
+aside#leftsidebar, aside#rightsidebar {
+z-index: 1;
+}
+.main.col-md-8, .main.col-md-6, .main.col-md-12 {
+z-index: 0; position: relative;
+}
