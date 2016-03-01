@@ -31,16 +31,6 @@
         
         <?php do_action('kt_afterheader');
         include kadence_template_path(); ?>
-      
-    <?php if (has_nav_menu('third_navigation')) : ?>
-  <section id="cat_nav" class="navclass third"><!-- Start Menu Section -->
-    <div class="container menu">
-     <nav id="nav-third" class="clearfix" role="navigation">
-     <?php wp_nav_menu(array('theme_location' => 'third_navigation', 'menu_class' => 'sf-menu')); ?>
-   </nav>
-    </div><!--close container-->
-    </section><!-- Close Menu Section -->
-    <?php endif; ?> 
 
            <?php if (kadence_display_sidebar()) : ?>            
       <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyrightsidebar') { ?>
