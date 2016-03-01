@@ -80,6 +80,10 @@ z-index: 0; position: relative;
     margin-right: auto;
     padding-bottom: 0px !important;
 }
+.contentclass {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
 .mfp-counter {
     margin-top: 0px;
     left: 20px;
