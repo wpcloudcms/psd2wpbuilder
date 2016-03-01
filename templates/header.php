@@ -95,7 +95,7 @@ endif; ?>
    <?php if(isset($virtue_premium['slider_box_layout']) and $virtue_premium['slider_box_layout'] == 'sliderwide') { ?>
   <div class="full-slider">
 <?php } else { ?>
- <div class="container">
+ <div class="container slider-banner">
 <?php } ?>
        <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slideronly') { ?>
     <div class="col-md-12">
