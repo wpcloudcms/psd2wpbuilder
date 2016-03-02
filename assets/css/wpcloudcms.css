@@ -5,7 +5,7 @@
 section#topbar .container .row {height: auto; margin: auto;}
 
 @media (max-width: 991px) {
-div#logo, div#thelogo, .kad-header-widget, col-md-left, col-md-right {
+div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
     width: 100% !important;
     float: none !important;
     text-align: center !important;
@@ -15,8 +15,8 @@ div#logo, div#thelogo, .kad-header-widget, col-md-left, col-md-right {
 }
 }
 @media (min-width: 992px) {
-col-md-left {float: left;}
-col-md-right {float: right;}
+.col-md-left {float: left;}
+.col-md-right {float: right;}
 }
 .boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer, .flexslider .slides, .virtue_banner {
     margin-left: -30px;
