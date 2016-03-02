@@ -34,14 +34,14 @@
 
            <?php if (kadence_display_sidebar()) : ?>            
       <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'onlyrightsidebar') { ?>
-             <aside id="rightsidebar ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+             <aside id="ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
           <?php include kadence_sidebar_path(); ?>
         </div><!-- /.sidebar -->
       </aside><!-- /aside -->
                <?php } ?> 
      <?php if(isset($virtue_premium['sidebar_layout']) && $virtue_premium['sidebar_layout'] == 'bothsidebars') { ?>
-      <aside id="rightsidebar ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
+      <aside id="ktsidebar" class="rightside <?php echo esc_attr(kadence_sidebar_class()); ?> kad-sidebar" role="complementary">
         <div class="sidebar">
           <?php include kadence_sidebar_path(); ?>
         </div><!-- /.sidebar -->
