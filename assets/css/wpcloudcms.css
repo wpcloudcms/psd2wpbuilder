@@ -13,6 +13,8 @@ div#logo, div#thelogo, .kad-header-widget {
     margin-right: auto !important;
     Height:auto !important;
 }
+col-md-left {float: left;}
+col-md-right {float: right;}
 }
 
 .boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer, .flexslider .slides, .virtue_banner {
