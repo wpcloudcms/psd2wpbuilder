@@ -4258,14 +4258,17 @@ Redux::setSection( $opt_name, array(
     'icon' => 'icon-tools',
     'icon_class' => 'icon-large',
     'title' => __('Hints for Non Devs', 'virtue'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Hints for Non Developers', 'virtue')."</h3></div>",
+    'desc' => "<div class='redux-info-field'><h3>".__('Hints for Novice', 'virtue')."</h3></div>",
     'fields' => array( 
                  array(
                     'id'=>'iframe',
                     'type' => 'textarea',
-                    'title' => __('', 'virtue'), 
+                    'title' => __('Set Background Image', 'virtue'), 
                     'subtitle' => __('', 'virtue'),
                     //'validate' => 'js',
+                     'default' => 'background: url(http://yoursite.com/wp-content/uploads/1/div_bg.jpg) #012E83 top left no-repeat;
+                         background-image: url("gradient_bg.png");
+                         background-repeat: repeat-x;',
                     ),
                 ),
             ));
