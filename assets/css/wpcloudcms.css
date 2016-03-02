@@ -8,6 +8,7 @@ section#topbar .container .row {height: auto; margin: auto;}
 div#logo, div#thelogo, .kad-header-widget {
     width: 100% !important;
     float: none !important;
+    position: relative !important;
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
