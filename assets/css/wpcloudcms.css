@@ -4,11 +4,13 @@
 
 section#topbar .container .row {height: auto; margin: auto;}
 
-/*
-@media (min-width: 992px) {
-    .boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer {
-    margin-left: -15px !important;
-    margin-right: 15px !important;
+@media (max-width: 992px) {
+div#logo, div#thelogo, .kad-header-widget {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 }
 */
