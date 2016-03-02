@@ -4264,7 +4264,7 @@ Redux::setSection( $opt_name, array(
                     'id'=>'iframe',
                     'type' => 'textarea',
                     'title' => __('Set Background Image', 'virtue'), 
-                    'subtitle' => __('<a href="http://www.w3schools.com/css/css_background.asp">w3schools.com - css background</a>', 'virtue'),
+                    'subtitle' => __('<a href="http://www.w3schools.com/css/css_background.asp" target="_blank">w3schools.com - css background</a>', 'virtue'),
                     //'validate' => 'js',
                      'default' => 'background: url(http://yoursite.com/wp-content/uploads/1/div_bg.jpg) #012E83 top left no-repeat;
                          background-image: url("gradient_bg.png");
