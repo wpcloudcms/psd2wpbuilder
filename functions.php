@@ -40,10 +40,10 @@ function github_updater($admin_bar){
 		'id'    => 'github-updater-sub',
 		'parent' => 'github-updater',
 		'title' => 'Theme Updater',
-		'href'  => '#',
+		'href'  => '/wp-admin/themes.php?theme=psd2wpbuilder',
 		'meta'  => array(
-			'title' => __('My Sub Menu Item'),
-			'target' => '_blank',
+			'title' => __('Theme Updater'),
+			'target' => '_self',
 			'class' => 'my_submenu_item_class'
 		),
 	));
