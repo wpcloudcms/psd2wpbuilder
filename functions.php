@@ -26,10 +26,8 @@ add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 
 
-add_action( 'admin_bar_menu', 'link_to_github_updater', 999 );
-
 add_action('admin_bar_menu', 'github_updater', 100);
-function add_toolbar_items($admin_bar){
+function github_updater($admin_bar){
 	$admin_bar->add_menu( array(
 		'id'    => 'github-updater',
 		'title' => 'Github Updater',
