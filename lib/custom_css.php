@@ -570,11 +570,11 @@ if(isset($virtue_premium['logo_layout']) and ($virtue_premium['logo_layout'] == 
   $menu_layout_center = '';
   } 
 if(isset($virtue_premium['copyright_layout']) and ($virtue_premium['copyright_layout'] == 'copyright_cr')) {
-      $copyright_layout = '.container.credit { text-align: center; }';
+      $copyright_layout = '.container .credit { text-align: center; }';
       } elseif(isset($virtue_premium['copyright_layout']) and ($virtue_premium['copyright_layout'] == 'copyright_lt')) {
-      $copyright_layout = '.container.credit { text-align: left; }';
+      $copyright_layout = '.container .credit { text-align: left; }';
       } elseif(isset($virtue_premium['copyright_layout']) and ($virtue_premium['copyright_layout'] == 'copyright_rt')) {
-      $copyright_layout = '.container.credit { text-align: right; }';
+      $copyright_layout = '.container .credit { text-align: right; }';
   } 
 if(isset($virtue_premium['page_max_width']) && $virtue_premium['page_max_width'] == '1') {
     $page_max_width = '@media (min-width: 1200px) {.container {width: 970px;} aside.col-lg-3 {width: 33.33333333333333%;} .main.col-lg-9 {width: 66.66666666666666%;} .sf-menu>.kt-lgmenu>ul, .sf-menu>li.kt-lgmenu:hover>ul, .sf-menu>li.kt-lgmenu.sfHover>ul {width:940px;}}';
