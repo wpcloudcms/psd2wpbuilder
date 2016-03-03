@@ -71,7 +71,7 @@ function psd2wp_builder($admin_bar){
 		),
 	));
     	$admin_bar->add_menu( array(
-		'id'    => 'dev-shortcuts-sub',
+		'id'    => 'widgets',
 		'parent' => 'dev-shortcuts',
 		'title' => 'Widgets',
 		'href'  => '/wp-admin/themes.php?theme=psd2wpbuilder',
@@ -82,12 +82,23 @@ function psd2wp_builder($admin_bar){
 		),
 	));
 	$admin_bar->add_menu( array(
-		'id'    => 'dev-shortcutsr-second-sub',
+		'id'    => 'menus',
 		'parent' => 'dev-shortcuts',
 		'title' => 'Menus',
 		'href'  => '/wp-admin/nav-menus.php',
 		'meta'  => array(
 			'title' => __('Menus'),
+			'target' => '_self',
+			'class' => 'my_submenu_item_class'
+		),
+	));
+    	$admin_bar->add_menu( array(
+		'id'    => 'plugins',
+		'parent' => 'dev-shortcuts',
+		'title' => 'Plugins',
+		'href'  => '/wp-admin/plugins.php',
+		'meta'  => array(
+			'title' => __('Plugins'),
 			'target' => '_self',
 			'class' => 'my_submenu_item_class'
 		),
