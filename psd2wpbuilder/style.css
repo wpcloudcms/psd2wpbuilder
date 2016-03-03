@@ -1,12 +1,12 @@
 /*
- Theme Name:        WPCloudCMS
- Theme URI:         http://bigcloudcms.com/wpcloudcms/
- Version:           3.5.0.2
+ Theme Name:        Psd2WP Builder
+ Theme URI:         http://bigcloudcms.com/psd2wpbuilder/
+ Version:           3.5.0.4
  Description:
  Author:            BigCloudCMS
  Author URI:        http://www.bigcloudcms.com/
  Template:          bigcloudcms
- Template Version:  3.5.0.2
+ Template Version:  3.5.0.3
  Tags:              light, dark, two-columns, responsive-layout
 GitHub Theme URI:   https://github.com/bigcloudcms/wpcloudcms
 GitHub Branch:      master
@@ -43,10 +43,6 @@ li:after, li:before {
     display: none;
 }
 
-
-li:last-child:after {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
 
 /* columns of same height styles */
 
@@ -153,7 +149,6 @@ img.aligncenter {
     margin-right: auto;
 }
 
-li:after {height: 30px;position: absolute;top: 25%;right: 0px;}
 .navclass {margin-top: -1px;}
 #nav-secnd ul li:nth-child(1):after, #nav-third ul li:nth-child(1):after {width: 0px;}
 #nav-main ul.sf-menu, .nav-main ul.sf-menu {float: left;}
