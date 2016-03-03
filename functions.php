@@ -24,4 +24,18 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
+
+
+add_action( 'admin_bar_menu', 'link_to_github_updater', 999 );
+
+function toolbar_link_to_mypage( $wp_admin_bar ) {
+	$args = array(
+		'id'    => 'github_updater',
+		'title' => 'GitHub Updater',
+		'href'  => '/wp-admin/options-general.php?page=github-updater&tab=github_updater_install_theme',
+		'meta'  => array( 'class' => 'github-updater' )
+	);
+	$wp_admin_bar->add_node( $args );
+}
+
 ?>
