@@ -1,12 +1,12 @@
 #About Theme#
 
-Theme Name: WPCloudCMS
+Theme Name: Psd 2 WP Builder
 
-Theme URI: http://bigcloudcms.com/wpcloudcms/
+Theme URI: http://bigcloudcms.com/psd2wpbuilder/
 
-Version: 1.0.0
+Version: 3.5.0
 
-Tested up to: WP 4.3.1
+Tested up to: WP 4.5
 
 License: GNU General Public License v3.0
 
