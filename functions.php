@@ -47,17 +47,17 @@ function github_updater($admin_bar){
 			'class' => 'my_submenu_item_class'
 		),
 	));
-	$admin_bar->add_menu( array(
-		'id'    => 'github-updater-second-sub',
-		'parent' => 'github-updater',
-		'title' => 'My Second Sub Menu Item',
-		'href'  => '#',
-		'meta'  => array(
-			'title' => __('My Second Sub Menu Item'),
-			'target' => '_blank',
-			'class' => 'my_submenu_item_class'
-		),
-	));
+//	$admin_bar->add_menu( array(
+//		'id'    => 'github-updater-second-sub',
+//		'parent' => 'github-updater',
+//		'title' => 'My Second Sub Menu Item',
+//		'href'  => '#',
+//		'meta'  => array(
+//			'title' => __('My Second Sub Menu Item'),
+//			'target' => '_blank',
+//			'class' => 'my_submenu_item_class'
+//		),
+//	));
 }
 
 
