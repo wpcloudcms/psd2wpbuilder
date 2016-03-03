@@ -98,7 +98,7 @@ endif; ?>
  <div class="container slider-banner">
 <?php } ?>
        <?php if(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slider_widget_layout'] == 'slideronly') { ?>
-    <div class="col-md-12">
+    <div class="slideronly">
         <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-10') { ?> 
         <div class="slider-left col-md-10">
         <?php } elseif(isset($virtue_premium['slider_widget_layout']) && $virtue_premium['slidernwidget_cols'] == 'col-md-9') { ?> 
