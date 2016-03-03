@@ -272,7 +272,7 @@ if(isset($virtue_premium['featured_slider']) and $virtue_premium['featured_slide
 if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
   $header_border = '.flexslider .slides, .virtue_banner {zoom: 1;}';
 } else {
-  $header_border = '.flexslider .slides, .virtue_banner {margin-left: -15px; margin-right: -15px;} .container.slider-banner {padding: 0px;}';
+  $header_border = '.container.slider-banner {padding: 0px;} .virtue_banner img {width: 100%;}';
 }
 if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') {
   $boxed_layout = '.container.box {width: 100% !important;margin-left: auto !important;margin-right: auto !important; padding-left: 0px; padding-right: 0px;} .slider.container, .featured.container, .row-height.container { padding-left: 0px; padding-right: 0px;} .slider-left, .slider-right {padding: 0px 10px; margin-left: 0px; margin-right: 0px;}';
