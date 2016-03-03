@@ -639,7 +639,7 @@ if(isset($virtue_premium['second_menu_sep']) and $virtue_premium['second_menu_se
   $second_menu_sep = '';
   } 
 if(isset($virtue_premium['third_menu_width'])) {
-  $tmenu_padding = '#nav-third ul.sf-menu>li, #nav-third ul.sf-menu>li>a {padding-left:'.$virtue_premium['third_menu_width'].'px; padding-right:'.$virtue_premium['third_menu_width'].'px; width: auto;} nav#nav-secnd {float:'.$virtue_premium['thirdmenu_float'].'; margin-top:'.$virtue_premium['thirdmenu_mgn_top'].'px;} nav#nav-third ul li span {text-transform:'.$virtue_premium['third_menu_txt_transform'].';}';
+  $tmenu_padding = '#nav-third ul.sf-menu>li, #nav-third ul.sf-menu>li>a {padding-left:'.$virtue_premium['third_menu_width'].'px; padding-right:'.$virtue_premium['third_menu_width'].'px; width: auto;} nav#nav-third {float:'.$virtue_premium['thirdmenu_float'].'; margin-top:'.$virtue_premium['thirdmenu_mgn_top'].'px;} nav#nav-third ul li span {text-transform:'.$virtue_premium['third_menu_txt_transform'].';}';
   } else {
   $tmenu_padding = '';
   } 
