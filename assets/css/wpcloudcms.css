@@ -24,6 +24,11 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
     margin-right: auto;
     padding-bottom: 0px !important;
 }
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
 .col-md-left {float: left;}
 .col-md-right {float: right;}
 }
