@@ -39,7 +39,7 @@ function github_updater($admin_bar){
 	$admin_bar->add_menu( array(
 		'id'    => 'github-updater-sub',
 		'parent' => 'github-updater',
-		'title' => 'My Sub Menu Item',
+		'title' => 'Theme Updater',
 		'href'  => '#',
 		'meta'  => array(
 			'title' => __('My Sub Menu Item'),
