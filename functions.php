@@ -47,17 +47,6 @@ function github_updater($admin_bar){
 			'class' => 'my_submenu_item_class'
 		),
 	));
-//	$admin_bar->add_menu( array(
-//		'id'    => 'github-updater-second-sub',
-//		'parent' => 'github-updater',
-//		'title' => 'Widgets',
-//		'href'  => '/wp-admin/widgets.php',
-//		'meta'  => array(
-//			'title' => __('My Second Sub Menu Item'),
-//			'target' => '_blank',
-//			'class' => 'my_submenu_item_class'
-//		),
-//	));
 }
 
 add_action('admin_bar_menu', 'psd2wp_builder', 105);
