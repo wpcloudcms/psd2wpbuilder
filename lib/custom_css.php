@@ -24,7 +24,7 @@ $content_top_margin = '.main.container {margin-top:'.$virtue_premium['content_to
   $content_top_margin = '.main.container {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_bottom_margin'])) {
-$site_bottom_margin = '.container.credit {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px;}';
+$site_bottom_margin = '.footertext {margin-bottom:'.$virtue_premium['site_bottom_margin'].'px !important;}';
 } else {
   $site_bottom_margin = '.container.credit {margin-top: 0px;}';
 }
