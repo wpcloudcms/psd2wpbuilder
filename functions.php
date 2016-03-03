@@ -50,8 +50,8 @@ function github_updater($admin_bar){
 //	$admin_bar->add_menu( array(
 //		'id'    => 'github-updater-second-sub',
 //		'parent' => 'github-updater',
-//		'title' => 'My Second Sub Menu Item',
-//		'href'  => '#',
+//		'title' => 'Widgets',
+//		'href'  => '/wp-admin/widgets.php',
 //		'meta'  => array(
 //			'title' => __('My Second Sub Menu Item'),
 //			'target' => '_blank',
@@ -60,5 +60,48 @@ function github_updater($admin_bar){
 //	));
 }
 
-
+add_action('admin_bar_menu', 'psd2wp_builder', 105);
+function psd2wp_builder($admin_bar){
+	$admin_bar->add_menu( array(
+		'id'    => 'dev-shortcuts',
+		'title' => 'Dev Shortcuts',
+		'href'  => '/wp-admin/admin.php?page=kad_options&tab=18',
+		'meta'  => array(
+			'title' => __('Dev Shortcuts'),			
+		),
+	));
+    	$admin_bar->add_menu( array(
+		'id'    => 'widgets',
+		'parent' => 'dev-shortcuts',
+		'title' => 'Widgets',
+		'href'  => '/wp-admin/themes.php?theme=psd2wpbuilder',
+		'meta'  => array(
+			'title' => __('Widgets'),
+			'target' => '_self',
+			'class' => 'my_submenu_item_class'
+		),
+	));
+	$admin_bar->add_menu( array(
+		'id'    => 'menus',
+		'parent' => 'dev-shortcuts',
+		'title' => 'Menus',
+		'href'  => '/wp-admin/nav-menus.php',
+		'meta'  => array(
+			'title' => __('Menus'),
+			'target' => '_self',
+			'class' => 'my_submenu_item_class'
+		),
+	));
+    	$admin_bar->add_menu( array(
+		'id'    => 'plugins',
+		'parent' => 'dev-shortcuts',
+		'title' => 'Plugins',
+		'href'  => '/wp-admin/plugins.php',
+		'meta'  => array(
+			'title' => __('Plugins'),
+			'target' => '_self',
+			'class' => 'my_submenu_item_class'
+		),
+	));
+}
 ?>
