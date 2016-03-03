@@ -31,7 +31,7 @@ function github_updater($admin_bar){
 	$admin_bar->add_menu( array(
 		'id'    => 'github-updater',
 		'title' => 'Github Updater',
-		'href'  => '/options-general.php?page=github-updater&tab=github_updater_install_theme',
+		'href'  => '/wp-admin/options-general.php?page=github-updater&tab=github_updater_install_theme',
 		'meta'  => array(
 			'title' => __('Github Updater'),			
 		),
