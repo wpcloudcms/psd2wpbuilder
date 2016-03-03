@@ -246,22 +246,6 @@ Redux::setSection( $opt_name, array(
             'type' => 'info',
             'desc' => __('Header Options', 'virtue'),
             ),
-                 array(
-            'id'=>'header_layout',
-            'type' => 'image_select',
-            //'compiler' => false,
-            'title' => __('Header Layout', 'virtue'), 
-            'subtitle' => __('Choose how you want your header above or below Menu', 'virtue'),
-            'options' => array(
-                    'shm' => array('alt' => 'Slider Header Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/stm.png'),
-                    'mhs' => array('alt' => 'Menu Header Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mts.png'),
-                    'msh' => array('alt' => 'Menu Slider Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/mst.png'),
-                    'smh' => array('alt' => 'Slider Menu Header', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/smt.png'),
-                    'hms' => array('alt' => 'Header Menu Slider', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tms.png'),
-                    'hsm' => array('alt' => 'Header Slider Menu', 'img' => get_stylesheet_directory_uri().'/themeoptions/options/img/tsm.png'),
-                ),
-            'default' => 'hms',
-            ),
         array(
             'id'=>'header_border',
             'type' => 'switch', 
