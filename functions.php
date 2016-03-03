@@ -28,14 +28,39 @@ add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 add_action( 'admin_bar_menu', 'link_to_github_updater', 999 );
 
-function github_updater( $wp_admin_bar ) {
-	$args = array(
-		'id'    => 'github_updater',
-		'title' => 'GitHub Updater',
-		'href'  => '/wp-admin/options-general.php?page=github-updater&tab=github_updater_install_theme',
-		'meta'  => array( 'class' => 'github-updater' )
-	);
-	$wp_admin_bar->add_node( $args );
+add_action('admin_bar_menu', 'github_updater', 100);
+function add_toolbar_items($admin_bar){
+	$admin_bar->add_menu( array(
+		'id'    => 'github-updater',
+		'title' => 'Github Updater',
+		'href'  => '/options-general.php?page=github-updater&tab=github_updater_install_theme',
+		'meta'  => array(
+			'title' => __('Github Updater'),			
+		),
+	));
+	$admin_bar->add_menu( array(
+		'id'    => 'github-updater-sub',
+		'parent' => 'github-updater',
+		'title' => 'My Sub Menu Item',
+		'href'  => '#',
+		'meta'  => array(
+			'title' => __('My Sub Menu Item'),
+			'target' => '_blank',
+			'class' => 'my_submenu_item_class'
+		),
+	));
+	$admin_bar->add_menu( array(
+		'id'    => 'github-updater-second-sub',
+		'parent' => 'github-updater',
+		'title' => 'My Second Sub Menu Item',
+		'href'  => '#',
+		'meta'  => array(
+			'title' => __('My Second Sub Menu Item'),
+			'target' => '_blank',
+			'class' => 'my_submenu_item_class'
+		),
+	));
 }
+
 
 ?>
