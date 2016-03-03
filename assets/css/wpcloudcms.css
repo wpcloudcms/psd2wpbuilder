@@ -15,6 +15,15 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
 }
 }
 @media (min-width: 992px) {
+.contentclass {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px !important;
+}
 .col-md-left {float: left;}
 .col-md-right {float: right;}
 }
@@ -68,15 +77,6 @@ z-index: 1;
 }
 .main.col-md-8, .main.col-md-6, .main.col-md-12 {
 z-index: 0; position: relative;
-}
-.row-height, .contentclass {
-  display: table;
-  table-layout: fixed;
-  height: 100%;
-  width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0px !important;
 }
 .contentclass, .flexslider .slides, .virtue_banner {
     margin-left: auto !important;
