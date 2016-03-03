@@ -561,7 +561,7 @@ Redux::setSection( $opt_name, array(
     'icon' => 'icon-images',
     'icon_class' => 'icon-large',
     'title' => __('Header Settings', 'virtue'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Home Page Slider Options', 'virtue')."</h3></div>",
+    'desc' => "",
     'fields' => array(
         array(
             'id'=>'info_header_options',
@@ -574,6 +574,11 @@ Redux::setSection( $opt_name, array(
             'title' => __('Header Banner without Border', 'virtue'),
             'subtitle'=> __('Choose to enable fullwidth header, without any border', 'virtue'),
             "default"       => 0,
+            ),
+        array(
+            'id'=>'info_header_options',
+            'type' => 'info',
+            'desc' => __('Home Page Slider Options', 'virtue'),
             ),
         array(
             'id'=>'slider_box_layout',
