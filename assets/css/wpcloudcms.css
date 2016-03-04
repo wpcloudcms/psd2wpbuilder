@@ -147,3 +147,8 @@ width: 100%;
 .navclass {
     background: transparent;
 }
+aside#ktsidebar, aside#ktsidebar .sidebar {
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+}
