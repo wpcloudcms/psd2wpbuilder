@@ -152,3 +152,43 @@ aside#ktsidebar, aside#ktsidebar .sidebar {
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: 400px) {
+
+}
+
+@media (min-width: 401px) {
+
+}
+
+@media (max-width: 543px) {
+
+}
+
+@media (min-width: 544px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
