@@ -29,7 +29,7 @@ $site_bottom_margin = '.footertext {margin-bottom:'.$virtue_premium['site_bottom
   $site_bottom_margin = '.container.credit {margin-top: 0px;}';
 }
 if(isset($virtue_premium['site_logo_width'])) {
-$site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;} @media (max-width: 992px) {div#logo, div#thelogo {width: 100%;}}';
+$site_logo_width = 'div#logo, div#thelogo {width:'.$virtue_premium['site_logo_width'].'px;} @media (max-width: 991px) {div#logo, div#thelogo {width: 100%;}}';
 } else {
   $site_logo_width = 'div#logo, div#thelogo {width: 320px;}';
 }
@@ -562,9 +562,9 @@ if(!empty($virtue_premium['boxed_bg_color']) || !empty($virtue_premium['bg_boxed
   }
 if(isset($virtue_premium['logo_layout']) and ($virtue_premium['logo_layout'] == 'logocenter')) {
     if (isset($virtue_premium['show_mobile_btn']) && $virtue_premium['show_mobile_btn'] == 1) { 
-      $menu_layout_center = '@media (max-width: 992px) {.nav-trigger .nav-trigger-case {top: 0;} #kad-mobile-nav {margin-top:50px;}}';
+      $menu_layout_center = '@media (max-width: 991px) {.nav-trigger .nav-trigger-case {top: 0;} #kad-mobile-nav {margin-top:50px;}}';
       } else {
-      $menu_layout_center = '@media (max-width: 992px) {.nav-trigger .nav-trigger-case {position: static; display: block; width: 100%;}}';
+      $menu_layout_center = '@media (max-width: 991px) {.nav-trigger .nav-trigger-case {position: static; display: block; width: 100%;}}';
       }
   } else {
   $menu_layout_center = '';
