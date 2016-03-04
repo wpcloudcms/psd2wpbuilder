@@ -63,7 +63,7 @@ function psd2wp_builder($admin_bar){
 		'id'    => 'widgets',
 		'parent' => 'dev-shortcuts',
 		'title' => 'Widgets',
-		'href'  => '/wp-admin/themes.php?theme=psd2wpbuilder',
+		'href'  => '/wp-admin/widgets.php',
 		'meta'  => array(
 			'title' => __('Widgets'),
 			'target' => '_self',

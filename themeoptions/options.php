@@ -556,6 +556,16 @@ Redux::setSection( $opt_name, array(
             'title' => __('Banner Link', 'virtue'),
             ),
         array(
+            'id'=>'banner_size_width',
+            'type' => 'slider', 
+            'title' => __('Banner Max Width', 'virtue'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'virtue'),
+            "default"       => "1200",
+            "min"       => "400",
+            "step"      => "5",
+            "max"       => "1600",
+            ), 
+        array(
             'id'=>'info_header_options',
             'type' => 'info',
             'desc' => __('Home Page Slider Options', 'virtue'),
