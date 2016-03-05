@@ -265,9 +265,9 @@ $slider_box_layout = '.full-slider img {width: 100%;}';
 $slider_box_layout = '';
  }
 if(isset($virtue_premium['featured_slider']) and $virtue_premium['featured_slider'] == 1) {
-  $featured_slider = '.featured.container {display: none;}';
+  $featured_slider = '.featured.row {display: none;}';
 } else {
-  $featured_slider = 'body.home.page .slider.container-fluid{display: block;}body.home.page .slider.container{display: block;}.slider.container-fluid {display: none;}.slider.container {display: none;}';
+  $featured_slider = 'body.home.page .container.slider-banner{display: block;}body.home.page .full-slider{display: block;}.container.slider-banner {display: none;}.full-slider {display: none;}';
 }
 if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
   $header_border = '.flexslider .slides, .virtue_banner {zoom: 1;}';
