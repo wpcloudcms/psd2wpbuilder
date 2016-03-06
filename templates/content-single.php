@@ -60,7 +60,11 @@
           </div> <!--fredcarousel-->
         </section>
       <?php } ?>
+
 <div id="content" class="container">
+            <div class="row">
+           <div class="wrap clearfix contentclass hfeed" role="document"> 
+               
     <div class="row single-article" itemscope="" itemtype="http://schema.org/BlogPosting">
       <div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
         <?php while (have_posts()) : the_post(); ?>
@@ -171,3 +175,5 @@
   </article>
 <?php endwhile; ?>
 </div>
+</div>
+    </div>
