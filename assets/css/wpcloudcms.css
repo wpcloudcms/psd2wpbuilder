@@ -32,9 +32,15 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
 .col-md-left {float: left;}
 .col-md-right {float: right;}
 }
-.boxed .contentclass, .boxed .featclass, .boxed .footerclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer, .flexslider .slides, .virtue_banner {
-    margin-left: -30px;
-    margin-right: -30px;
+/*
+.boxed .contentclass, .boxed .featclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer, .flexslider .slides, .virtue_banner {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+*/
+.footerclass {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 li:after {height: 30px;position: absolute;top: 25%;right: 0px;}
