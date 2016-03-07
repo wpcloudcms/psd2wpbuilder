@@ -65,8 +65,13 @@
     </div><!-- Close logo-header -->
   <?php do_action('kt_before_secondary_navigation'); ?>
   <?php if (has_nav_menu('secondary_navigation')) : ?>
-  <section id="cat_nav" class="navclass">
+   <?php if(isset($virtue_premium['secondarymenu_width']) and $virtue_premium['secondarymenu_width'] == 'boxed') { ?>
+   <section id="cat_nav" class="container navclass">
+    <div class="row">
+<?php } else { ?>
+   <section id="cat_nav" class="navclass">
     <div class="container">
+<?php } ?>
      <nav id="nav-secnd" class="clearfix">
      <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'sf-menu')); ?>
    </nav>
@@ -194,8 +199,13 @@ endif; ?>
     <?php do_action('kt_after_header_content'); ?>
             
     <?php if (has_nav_menu('third_navigation')) : ?>
-  <section id="cat_nav" class="navclass third"><!-- Start Menu Section -->
-    <div class="container menu">
+    <?php if(isset($virtue_premium['thirdmenu_width']) and $virtue_premium['thirdmenu_width'] == 'boxed') { ?>
+   <section id="cat_nav" class="container navclass third">
+    <div class="row">
+<?php } else { ?>
+   <section id="cat_nav" class="navclass third">
+    <div class="container">
+<?php } ?>
      <nav id="nav-third" class="clearfix" role="navigation">
      <?php wp_nav_menu(array('theme_location' => 'third_navigation', 'menu_class' => 'sf-menu')); ?>
    </nav>
