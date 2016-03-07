@@ -155,6 +155,9 @@ aside#ktsidebar, aside#ktsidebar .sidebar {
 div#wrapper {
     margin-bottom: 0px !important;
 }
+.widget {
+    margin-top: 0px !important;
+}
 @media (max-width: 400px) {
 
 }
