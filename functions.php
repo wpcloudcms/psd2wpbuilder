@@ -26,8 +26,20 @@ function custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 
-function div_shortcode( $atts, $content = null ) {
-	return '<div class="">' . $content . '</div>';
+// Add Shortcode
+function div_shortcode( $atts ) {
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+			'id' => '',
+			'class' => '',
+		), $atts )
+	);
+
+	// Code
+return '<div id="' . $id . '" class="' . $class . '">';
+
 }
 add_shortcode( 'div', 'div_shortcode' );
 
