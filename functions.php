@@ -26,10 +26,10 @@ function custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 
-function caption_shortcode( $atts, $content = null ) {
+function div_shortcode( $atts, $content = null ) {
 	return '<div class="">' . $content . '</div>';
 }
-add_shortcode( 'div', 'caption_shortcode' );
+add_shortcode( 'div', 'div_shortcode' );
 
 
 
