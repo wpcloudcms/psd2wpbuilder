@@ -32,12 +32,10 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
 .col-md-left {float: left;}
 .col-md-right {float: right;}
 }
-/*
 .boxed .contentclass, .boxed .featclass, .boxed .headerclass, .boxed .kad_fullslider, .boxed .navcontainer, .flexslider .slides, .virtue_banner {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-*/
 .footerclass {
     margin-left: auto !important;
     margin-right: auto !important;
