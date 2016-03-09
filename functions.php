@@ -14,8 +14,8 @@ function custom_scripts() {
     wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
     wp_enqueue_style('wpcloudcms-css');
     
-    wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.css' );
-    wp_enqueue_style('animate-css');
+//    wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.css' );
+//    wp_enqueue_style('animate-css');
     
 //    wp_register_style( 'custom-css', get_stylesheet_directory_uri().'/custom.css' );
 //    wp_enqueue_style('custom-css');
