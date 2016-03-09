@@ -17,14 +17,10 @@ function custom_scripts() {
     wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.css' );
     wp_enqueue_style('animate-css');
     
-    wp_register_style( 'jquery-mobile-css', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css' );
-    wp_enqueue_style('jquery-mobile-css');
-
     wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js', array('custom_jquery') );
     wp_enqueue_script('custom-js');
     
-    wp_register_script( 'jquery-mobile', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js' ); 
-    wp_enqueue_script('jquery-mobile');
+
 	}
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
