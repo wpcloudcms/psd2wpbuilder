@@ -160,6 +160,9 @@ div#wrapper {
     margin-bottom: 0px !important;
     padding: 0px;
 }
+.headerclass {
+    background: transparent;
+}
 .widget {
     margin-top: 0px !important;
 }

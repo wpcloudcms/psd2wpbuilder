@@ -305,7 +305,7 @@ if(!empty($virtue_premium['header_bg_color'])) {
     $header_bg_y = '';
   }
   if(!empty($virtue_premium['header_bg_color']) || !empty($virtue_premium['bg_header_bg_img']['url'])) {
-    $headerclass = '.headerclass {background:'.$header_bg_color.' '.$header_bg_img.' '.$header_bg_repeat.' '.$header_bg_x.' '.$header_bg_y.';}';
+    $headerclass = 'div#wrapper {background:'.$header_bg_color.' '.$header_bg_img.' '.$header_bg_repeat.' '.$header_bg_x.' '.$header_bg_y.';}';
   } else {
     $headerclass = '';
   }
