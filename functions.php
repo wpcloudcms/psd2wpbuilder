@@ -11,8 +11,8 @@ function custom_scripts() {
     
      wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
     
-  //  wp_register_script( 'jquery', 'https://code.jquery.com/jquery-1.10.2.js', array('jquery') ); ======= Removed due to overload
- //   wp_enqueue_script('jquery');
+    wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.2.1.min.js', array('jquery') ); 
+    wp_enqueue_script('jquery');
     
     wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
     wp_enqueue_style('wpcloudcms-css');
