@@ -267,7 +267,7 @@ $slider_box_layout = '';
 if(isset($virtue_premium['featured_slider']) and $virtue_premium['featured_slider'] == 1) {
   $featured_slider = '.featured.row {display: none;}';
 } else {
-  $featured_slider = 'body.home.page .container.slider-banner{display: block;}body.home.page .full-slider{display: block;}.container.slider-banner {display: none;}.full-slider {display: none;}';
+  $featured_slider = 'body.home.page .container.slider-banner {display: block;} body.home.page .full-slider {display: block;} .container.slider-banner {display: none;} .full-slider {display: none;}';
 }
 if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] == 0) {
   $header_border = '.flexslider .slides, .virtue_banner {zoom: 1;}';
