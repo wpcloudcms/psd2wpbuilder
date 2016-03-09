@@ -12,7 +12,11 @@
   if(isset($virtue_premium['select2_select'])) {$select2_select = $virtue_premium['select2_select'];} else {$select2_select = '1';}
   ?>
 <body <?php body_class(); ?> data-smooth-scrolling="<?php echo esc_attr($scrolling);?>" data-smooth-scrolling-hide="<?php echo esc_attr($scrolling_hide);?>" data-jsselect="<?php echo esc_attr($select2_select);?>" data-product-tab-scroll="<?php echo esc_attr($pscroll); ?>" data-animate="<?php echo esc_attr($animate);?>" data-sticky="<?php echo esc_attr($sticky);?>">
-<div id="wrapper" class="container">
+       <?php if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') { ?>
+  <div id="wrapper">
+<?php } else { ?>
+ <div id="wrapper" class="container">
+<?php } ?>
   <!--[if lt IE 8]><div class="alert"> <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'virtue'); ?></div><![endif]-->
   <?php
    do_action('kt_beforeheader');
