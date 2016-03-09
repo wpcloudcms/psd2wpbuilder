@@ -25,9 +25,8 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
-
-// Add Shortcode
-function div_shortcode( $atts ) {
+// Add Div with id and class Shortcode
+function div_shortcode( $atts, $content = null ) {
 
 	// Attributes
 	extract( shortcode_atts(
@@ -38,11 +37,10 @@ function div_shortcode( $atts ) {
 	);
 
 	// Code
-return '<div id="' . $id . '" class="' . $class . '">';
+return '<div id="' . $id . '" class="' . $class . '">' . $content . '</div>';
 
 }
 add_shortcode( 'div', 'div_shortcode' );
-
 
 
 add_action('admin_bar_menu', 'github_updater', 100);
