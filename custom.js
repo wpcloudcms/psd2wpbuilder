@@ -1,1 +1,14 @@
-jQuery("page-header").addClass("col-sm-8");
+$(document).ready(function(){
+    $("#toogle1").click(function(){
+        $("div.toggle1").show();
+        $("div.toggle2").hide();
+        $("div.toggle2").addClass("hidden");
+        $("div.toggle1").removeClass("hidden");
+    });
+    $("#toogle2").click(function(){
+        $("div.toggle2").show();
+        $("div.toggle1").hide();
+        $("div.toggle1").addClass("hidden");
+        $("div.toggle2").removeClass("hidden");
+    });
+});
