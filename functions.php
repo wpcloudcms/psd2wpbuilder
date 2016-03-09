@@ -20,9 +20,9 @@ function custom_scripts() {
 //    wp_register_style( 'custom-css', get_stylesheet_directory_uri().'/custom.css' );
 //    wp_enqueue_style('custom-css');
     
-    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');
-    wp_enqueue_script('custom-js');
-    
+//    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');
+//    wp_enqueue_script('custom-js');
+//    
 
 	}
 
