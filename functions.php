@@ -26,6 +26,12 @@ function custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 
+function caption_shortcode( $atts, $content = null ) {
+	return '<div class="">' . $content . '</div>';
+}
+add_shortcode( 'div', 'caption_shortcode' );
+
+
 
 add_action('admin_bar_menu', 'github_updater', 100);
 function github_updater($admin_bar){
