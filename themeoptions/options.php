@@ -4244,7 +4244,7 @@ Redux::setSection( $opt_name, array(
             'options' => array('option_custom_css'      => 'Custom css',
                                'option_additional_css'      => 'Additional css',
                               ),
-            'default' => 'custom_css',
+            'default' => 'option_custom_css',
             'width' => 'width:80%', 
             ),
              array(
@@ -4253,7 +4253,7 @@ Redux::setSection( $opt_name, array(
             'title' => __('Custom CSS', 'virtue'), 
             'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'virtue'),
             //'validate' => 'css',
-            'required' => array('option_custom_css'),
+            'required' => array('select_custom_css','=','option_custom_css'),
             ),
             array(
             'id'=>'additional_css',
@@ -4261,7 +4261,7 @@ Redux::setSection( $opt_name, array(
             'title' => __('Additional Custom CSS', 'virtue'), 
             'subtitle' => __('Additional Custom CSS to your theme.', 'virtue'),
             //'validate' => 'css',
-            'required' => array('option_additional_css'),
+            'required' => array('select_custom_css','=','option_additional_css'),
             ),
              array(
             'id'=>'custom_js',
