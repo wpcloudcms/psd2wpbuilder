@@ -4246,6 +4246,7 @@ Redux::setSection( $opt_name, array(
                               ),
             'default' => 'custom_css',
             'width' => 'width:80%', 
+            ),
              array(
             'id'=>'custom_css',
             'type' => 'textarea',
@@ -4269,7 +4270,6 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('Quickly add some JS to your theme by adding it to this block.', 'virtue'),
             //'validate' => 'js',
             ),
-    ),
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'hints_for_ndevs',
