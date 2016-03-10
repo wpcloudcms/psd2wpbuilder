@@ -4237,13 +4237,30 @@ Redux::setSection( $opt_name, array(
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','max_width_1199px_min_width_1200px'),
             ),
-        
+        array(
+            'id'=>'select_custom_css',
+            'type' => 'select',
+            'title' => __('Add an additional Custom css', 'virtue'), 
+            'options' => array('option_custom_css'      => 'Custom css',
+                               'option_additional_css'      => 'Additional css',
+                              ),
+            'default' => 'custom_css',
+            'width' => 'width:80%', 
              array(
             'id'=>'custom_css',
             'type' => 'textarea',
             'title' => __('Custom CSS', 'virtue'), 
             'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'virtue'),
             //'validate' => 'css',
+            'required' => array('option_custom_css'),
+            ),
+            array(
+            'id'=>'additional_css',
+            'type' => 'textarea',
+            'title' => __('Additional Custom CSS', 'virtue'), 
+            'subtitle' => __('Additional Custom CSS to your theme.', 'virtue'),
+            //'validate' => 'css',
+            'required' => array('option_additional_css'),
             ),
              array(
             'id'=>'custom_js',
