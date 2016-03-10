@@ -1,14 +1,14 @@
-    jQuery(document).ready(function(){
-    jQuery("#toggle1").click(function(){
-        jQuery(".toggle1").show();
-        jQuery(".toggle2").hide();
-        jQuery(".toggle2").addClass("hidden");
-        jQuery(".toggle1").removeClass("hidden");
+    $(document).ready(function(){
+    $("#toggle1").click(function(){
+        $(".toggle1").show();
+        $(".toggle2").hide();
+        $(".toggle2").addClass("hidden");
+        $(".toggle1").removeClass("hidden");
     });
-    jQuery("#toggle2").click(function(){
-        jQuery(".toggle2").show();
-        jQuery(".toggle1").hide();
-        jQuery(".toggle1").addClass("hidden");
-        jQuery(".toggle2").removeClass("hidden");
+    $("#toggle2").click(function(){
+        $(".toggle2").show();
+        $(".toggle1").hide();
+        $(".toggle1").addClass("hidden");
+        $(".toggle2").removeClass("hidden");
     });
 });
