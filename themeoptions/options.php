@@ -4270,6 +4270,7 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('Quickly add some JS to your theme by adding it to this block.', 'virtue'),
             //'validate' => 'js',
             ),
+    ),
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'hints_for_ndevs',
