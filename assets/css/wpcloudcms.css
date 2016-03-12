@@ -163,6 +163,10 @@ div#wrapper {
 .headerclass {
     background: transparent !important;
 }
+.featured.row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
 .widget {
     margin-top: 0px !important;
 }
