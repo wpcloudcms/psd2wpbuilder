@@ -170,7 +170,10 @@ div#wrapper {
 .widget {
     margin-top: 0px !important;
 }
-div#select2-drop {
+.no-container {
+    height: 0px;
+}
+div#select2-drop, div#ui-datepicker-div {
     z-index: 10000000000 !important;
 }
 .pad5 {padding: 0.3125em;} .pad10 {padding: 0.625em;} .pad15 {padding: 0.9375em;} .pad20 {padding: 1.25em;} .pad25 {padding: 1.5625em;} 
