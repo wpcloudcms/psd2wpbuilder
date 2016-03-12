@@ -1,4 +1,5 @@
-<div id="content" class="container">
+    <div id="content">
+     <div class="container">
     <div class="row single-article">
       <div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
 		<?php while (have_posts()) : the_post(); ?>

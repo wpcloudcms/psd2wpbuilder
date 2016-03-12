@@ -87,7 +87,8 @@
           </div> <!--fredcarousel-->
         </section>
       <?php } ?>
-<div id="content" class="container">
+    <div id="content">
+     <div class="container">
     <div class="row">
       <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
       <?php while (have_posts()) : the_post(); ?>		
@@ -300,7 +301,8 @@
   </article>
 <?php endwhile; ?>
 <?php } else { ?>
-<div id="content" class="container">
+    <div id="content">
+     <div class="container">
     <div class="row">
       <div class="main <?php echo kadence_main_class(); ?> portfolio-single" role="main">
       <?php echo get_the_password_form();

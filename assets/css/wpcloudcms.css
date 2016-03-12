@@ -216,7 +216,9 @@ div#select2-drop {
 }
 
 @media (max-width: 767px) {
-
+.credit {
+    text-align: center;
+}
 }
 
 @media (min-width: 768px) {

@@ -61,7 +61,8 @@
         </section>
       <?php } ?>
 
-<div id="content" class="container">
+    <div id="content">
+     <div class="container">
             <div class="row">
            <div class="wrap clearfix contentclass hfeed" role="document"> 
     <div class="row single-article" itemscope="" itemtype="http://schema.org/BlogPosting">

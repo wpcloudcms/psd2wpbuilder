@@ -10,7 +10,8 @@ Template Name: Fullwidth
 		</div><!--container-->
 	</div><!--titleclass-->
 	
-    <div id="content" class="container">
+        <div id="content">
+     <div class="container">
    		<div class="row">    
             <div class="wrap clearfix contentclass hfeed" role="document"> 
      		<div class="main <?php echo kadence_main_class(); ?>" id="ktmain" role="main">
