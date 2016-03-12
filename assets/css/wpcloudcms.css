@@ -161,7 +161,7 @@ div#wrapper {
     padding: 0px;
 }
 .headerclass {
-    background: transparent;
+    background: transparent !important;
 }
 .widget {
     margin-top: 0px !important;
