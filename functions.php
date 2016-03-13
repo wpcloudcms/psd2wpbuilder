@@ -11,11 +11,15 @@ function custom_scripts() {
     
      wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
     
+    wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
+    
     wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
     wp_enqueue_style('wpcloudcms-css');
     
     wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.css' );
     wp_enqueue_style('animate-css');
+    
+    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
     
 //    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  = not working
 //    wp_enqueue_script('custom-js');
