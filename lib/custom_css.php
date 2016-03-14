@@ -751,15 +751,14 @@ if (isset($virtue_premium['logo_layout']) && $virtue_premium['logo_layout'] == '
   $logolayoutwidget = '';
 }
 if (isset($virtue_premium['bootstrap_custom_css'])) {
-  $bootstrap_custom_css = '
-  @media (min-width: 1200px){'.$virtue_premium['min_width_1200px'].'}
-  @media (max-width: 1199px){'.$virtue_premium['max_width_1199px'].'}
-  @media (min-width: 992px){'.$virtue_premium['min_width_992px'].'} 
-  @media (max-width: 991px){'.$virtue_premium['max_width_991px'].'}
-  @media (min-width: 768px){'.$virtue_premium['min_width_768px'].'}
-  @media (max-width: 767px){'.$virtue_premium['max_width_767px'].'} 
-  @media (min-width: 544px){'.$virtue_premium['min_width_544px'].'} 
-  @media (max-width: 543px){'.$virtue_premium['max_width_543px'].'}';
+  $bootstrap_custom_css = '@media (max-width: 543px){'.$virtue_premium['max_width_543px'].'} 
+                           @media (min-width: 544px){'.$virtue_premium['min_width_544px'].'} 
+                           @media (max-width: 767px){'.$virtue_premium['max_width_767px'].'} 
+                           @media (min-width: 768px){'.$virtue_premium['min_width_768px'].'} 
+                           @media (max-width: 991px){'.$virtue_premium['max_width_991px'].'} 
+                           @media (min-width: 992px){'.$virtue_premium['min_width_992px'].'} 
+                           @media (max-width: 1199px){'.$virtue_premium['max_width_1199px'].'} 
+                           @media (min-width: 1200px){'.$virtue_premium['min_width_1200px'].'}';
 }  else {
   $bootstrap_custom_css = '';
 } 
