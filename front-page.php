@@ -19,7 +19,11 @@
 		</div><!--titleclass-->
 	<?php } ?>
         <div id="content">
-     <div class="container homepagecontent">   
+<?php if(isset($virtue_premium['home_sidebar_layout']) and $virtue_premium['home_sidebar_layout'] == 'full') { ?>
+  <div class="container-fluid homepagecontent"> 
+<?php } else { ?>
+ <div class="container homepagecontent"> 
+<?php } ?>
         <div class="row">
     <div class="wrap clearfix contentclass hfeed" role="document"> 
         
