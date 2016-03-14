@@ -4145,7 +4145,7 @@ Redux::setSection( $opt_name, array(
             'id'=>'bootstrap_custom_css',
             'type' => 'select',
             'title' => __('Choose your Bootstrap Custom css', 'virtue'), 
-            'options' => array('max_width_400px_min_width_401px'      => '@media (max-width: 400px) and @media (min-width: 401px)',
+            'options' => array(
                                'max_width_543px_min_width_544px'      => '@media (max-width: 543px) and @media (min-width: 544px)',
                                'max_width_767px_min_width_768px'      => '@media (max-width: 767px) and @media (min-width: 768px)',                               
                                'max_width_991px_min_width_992px'      => '@media (max-width: 991px) and @media (min-width: 992px)',
@@ -4169,25 +4169,23 @@ Redux::setSection( $opt_name, array(
             'subtitle' => __('@media (min-width:992px)', 'virtue'),
             //'validate' => 'css',
             'required' => array('bootstrap_custom_css','=','max_width_991px_min_width_992px'),
-            ),
-        
-        array(
-            'id'=>'max_width_400px',
-            'type' => 'textarea',
-            'title' => __('(col-xs) (Below 401px)', 'virtue'), 
-            'subtitle' => __('@media (max-width:400px)', 'virtue'),
-            //'validate' => 'css',
-            'required' => array('bootstrap_custom_css','=','max_width_400px_min_width_401px'),
-            ),
-        array(
-            'id'=>'min_width_401px',
-            'type' => 'textarea',
-            'title' => __('(col-xs) (Above 400px)', 'virtue'), 
-            'subtitle' => __('@media (min-width:401px)', 'virtue'),
-            //'validate' => 'css',
-            'required' => array('bootstrap_custom_css','=','max_width_400px_min_width_401px'),
-            ),
-        
+            ),     
+//        array(
+//            'id'=>'max_width_400px',
+//            'type' => 'textarea',
+//            'title' => __('(col-xs) (Below 401px)', 'virtue'), 
+//            'subtitle' => __('@media (max-width:400px)', 'virtue'),
+//            //'validate' => 'css',
+//            'required' => array('bootstrap_custom_css','=','max_width_400px_min_width_401px'),
+//            ),
+//        array(
+//            'id'=>'min_width_401px',
+//            'type' => 'textarea',
+//            'title' => __('(col-xs) (Above 400px)', 'virtue'), 
+//            'subtitle' => __('@media (min-width:401px)', 'virtue'),
+//            //'validate' => 'css',
+//            'required' => array('bootstrap_custom_css','=','max_width_400px_min_width_401px'),
+//            ),
         array(
             'id'=>'max_width_543px',
             'type' => 'textarea',
@@ -4202,9 +4200,8 @@ Redux::setSection( $opt_name, array(
             'title' => __('(col-sm) (Above 543px)', 'virtue'), 
             'subtitle' => __('@media (min-width:544px)', 'virtue'),
             //'validate' => 'css',
-            'required' => array('bootstrap_custom_css','=','max_width_543px_min-width-544px'),
-            ),
-        
+            'required' => array('bootstrap_custom_css','=','max_width_543px_min-width_544px'),
+            ),  
         array(
             'id'=>'max_width_767px',
             'type' => 'textarea',
