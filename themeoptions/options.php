@@ -4200,7 +4200,7 @@ Redux::setSection( $opt_name, array(
             'title' => __('(col-sm) (Above 543px)', 'virtue'), 
             'subtitle' => __('@media (min-width:544px)', 'virtue'),
             //'validate' => 'css',
-            'required' => array('bootstrap_custom_css','=','max_width_543px_min-width_544px'),
+            'required' => array('bootstrap_custom_css','=','max_width_543px_min_width_544px'),
             ),  
         array(
             'id'=>'max_width_767px',
