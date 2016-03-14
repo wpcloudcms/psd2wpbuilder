@@ -242,11 +242,11 @@ div#select2-drop, div#ui-datepicker-div {
 }
 @media screen and (min-width: 1600px) {
     .full-width {
-        max-width: (1600px - @grid-gutter-width);
+        max-width:1600px;
     }
 }
 @media screen and (min-width: 1900px) {
     .full-width {
-        max-width: (1900px - @grid-gutter-width);
+        max-width:1900px;
     }
 }
