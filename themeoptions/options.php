@@ -169,7 +169,7 @@ Redux::setSection( $opt_name, array(
             "min"       => "0",
             "step"      => ".5",
             "max"       => "100",
-            'required' => array('sidebar_layout','=','onlyleftsidebar';'sidebar_layout','=','onlyrightsidebar'),
+            'required' => array('sidebar_layout','=','onlyleftsidebar'),
             ),
         array(
             'id'=>'sidebar_width',
@@ -180,7 +180,7 @@ Redux::setSection( $opt_name, array(
             "min"       => "0",
             "step"      => ".5",
             "max"       => "50",
-            'required' => array('sidebar_layout','=','onlyleftsidebar';'sidebar_layout','=','onlyrightsidebar'),
+            'required' => array('sidebar_layout','=','onlyleftsidebar'),
             ),
         array(
             'id'=>'slider_abovebelow_widget',
