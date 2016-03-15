@@ -768,7 +768,7 @@ if (isset($virtue_premium['left_sidebar_width'])) {
   $left_sidebar_width = '';
 } 
 if (isset($virtue_premium['main_content_width'])) {
-  $main_content_width = '@media (min-width: 992px){div#ktmain{width:'.$virtue_premium['main_content_width'].'%;}}';
+  $main_content_width = '@media (min-width: 992px){div#ktmain.com-md-8{width:'.$virtue_premium['main_content_width'].'%;}}';
 }  else {
   $main_content_width = '';
 }
