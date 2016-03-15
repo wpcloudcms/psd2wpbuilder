@@ -180,18 +180,6 @@ Redux::setSection( $opt_name, array(
             "min"       => "0",
             "step"      => ".5",
             "max"       => "100",
-            'required' => array('sidebar_layout','=','onlyleftsidebar'),
-            ),
-        array(
-            'id'=>'main_content_width',
-            'type' => 'slider', 
-            'title' => __('Main Content width %', 'virtue'),
-            'subtitle' => __('', 'virtue'),
-            "default"       => "75",
-            "min"       => "0",
-            "step"      => ".5",
-            "max"       => "100",
-            'required' => array('sidebar_layout','=','onlyrightsidebar'),
             ),
         array(
             'id'=>'right_sidebar_width',
