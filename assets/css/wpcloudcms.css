@@ -158,7 +158,7 @@ aside#leftsidebar {
     max-width: 100%;
 }
 aside#ktsidebar {
-    float: left;
+    float: right;
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 100%;
