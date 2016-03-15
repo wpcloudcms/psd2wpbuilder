@@ -762,16 +762,22 @@ if (isset($virtue_premium['bootstrap_custom_css'])) {
 }  else {
   $bootstrap_custom_css = '';
 } 
+if (isset($virtue_premium['left_sidebar_width'])) {
+  $left_sidebar_width = '@media (min-width: 992px){aside#leftsidebar{width:'.$virtue_premium['left_sidebar_width'].'%;}}';
+}  else {
+  $left_sidebar_width = '';
+} 
 if (isset($virtue_premium['main_content_width'])) {
   $main_content_width = '@media (min-width: 992px){div#ktmain{width:'.$virtue_premium['main_content_width'].'%;}}';
 }  else {
   $main_content_width = '';
-} 
-if (isset($virtue_premium['sidebar_width'])) {
-  $sidebar_width = '@media (min-width: 992px){aside#ktsidebar{width:'.$virtue_premium['sidebar_width'].'%;} aside#leftsidebar{width:'.$virtue_premium['sidebar_width'].'%;}}';
+}
+if (isset($virtue_premium['right_sidebar_width'])) {
+  $right_sidebar_width = '@media (min-width: 992px){aside#ktsidebar{width:'.$virtue_premium['right_sidebar_width'].'%;}}';
 }  else {
-  $sidebar_width = '';
+  $right_sidebar_width = '';
 } 
+
 //if (isset($virtue_premium['bootstrap_custom_css']) && $virtue_premium['bootstrap_custom_css'] == 'col-md-sm-above-768px-991px') {
 //  $col_md_sm_above_768px_991px = '@media (max-width:991px){'.$virtue_premium['max_width_991px'].'} @media (max-width:991px and min-width:768px){'.$virtue_premium['max_width_991px_and_min_width_768px'].'} @media (min-width:768px){'.$virtue_premium['min_width_768px'].'}';
 //} else {
@@ -797,7 +803,7 @@ if (!empty($virtue_premium['custom_js'])) {
 } else {
   $custom_js = '';
 }
-$kad_custom_css = '<style type="text/css">'.$main_content_width.$sidebar_width.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$copyrt_txt_transform.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$pmenu_padding.$pmenu_height.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$additional_css.$bootstrap_custom_css.$copyrightsclass.$pmenuclass.$primarymenu_sep.$featured_slider.$slider_box_layout.$site_box_shadow.'</style>
+$kad_custom_css = '<style type="text/css">'.$left_sidebar_width.$main_content_width.$right_sidebar_width.$second_menu_sep.$third_menu_sep.$site_width_below_992px.$site_width_above_992px.$boxed_layout.$content_top_margin.$site_top_margin.$site_bottom_margin.$site_logo_width.$page_title.$logo_padding_top.$logo_padding_bottom.$header_border.$logo_padding_left.$logo_padding_right.$menu_margin_top.$menu_margin_bottom.$font_family.$color_iconmenubg.$color_iconmenu.$color_primary30.$link_text_color.$color_grayfont.$color_footerfont.$copyrt_txt_transform.$fontfamily_copyrt_text.$credit_link_color.$color_primary.$color_smenu_hover.$color_tmenu_hover.$color_smenu_bg_hover.$color_tmenu_bg_hover.$color_tmenu_hover.$color_tmenu_bg_hover.$color_mmenu_hover.$color_pmenu_hover.$bgcolor_copyrt_div.$color_pmenu_bg_hover.$color_mmenu_bg_hover.$contentclass.$topbarclass.$headerclass.$menuclass.$thirdmenuclass.$featureclass.$mobileclass.$footerclass.$boxedclass.$logolayoutwidget.$topbar_mobile.$body_color.$portfoliobread.$shopordering.$ptitle_uppercase.$x2logo.$ptitle_minheight.$pmenu_padding.$pmenu_height.$smenu_padding.$smenu_height.$tmenu_padding.$tmenu_height.$animate.$topbar_layout.$mdropdown_background.$mdropdown_font.$mdropdown_border.$scrolling_background.$centermenuwidthoutput.$show_author.$show_postedin.$show_comment.$stickymobile.$page_max_width.$show_date.$wp_image_border.$menu_layout_center.$copyright_layout.$mobilebtn.$color_mmenu_search_color.$color_mmenu_search_color_moz.$color_mmenu_search_color_mozz.$color_mmenu_search_color_ms.$color_mmenu_search_color_kit.$custom_css.$additional_css.$bootstrap_custom_css.$copyrightsclass.$pmenuclass.$primarymenu_sep.$featured_slider.$slider_box_layout.$site_box_shadow.'</style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 '.$custom_js.'
