@@ -163,7 +163,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'main_content_width',
             'type' => 'slider', 
-            'title' => __('Main Content width', 'virtue'),
+            'title' => __('Main Content width %', 'virtue'),
             'subtitle' => __('', 'virtue'),
             "default"       => "75",
             "min"       => "0",
@@ -174,7 +174,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'sidebar_width',
             'type' => 'slider', 
-            'title' => __('Sidebar width', 'virtue'),
+            'title' => __('Sidebar width %', 'virtue'),
             'subtitle' => __('', 'virtue'),
             "default"       => "25",
             "min"       => "0",
