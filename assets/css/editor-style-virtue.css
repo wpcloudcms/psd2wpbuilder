@@ -382,7 +382,17 @@ pre code {
   overflow-y: scroll;
 }
 /* Added for Theme Columns */
-
+div.col-xs-12, div.col-sm-12, div.col-md-12, div.col-lg-12, div.span12, .row, .row-fluid, .container, .container-fluid, .full-width {
+border: 2px dashed #eee;
+background: #fff;
+width: 100%;
+padding: 10px;
+min-height: 150px;
+float:left;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 div.col-xs-11, div.col-sm-11, div.col-md-11, div.col-lg-11, div.span11 {
 border: 2px dashed #eee;
 background: #fff;
