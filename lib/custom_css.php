@@ -735,7 +735,7 @@ if(isset($virtue_premium['topbar_mobile']) && $virtue_premium['topbar_mobile'] =
     $topbar_mobile = '';
 }
 if (isset($virtue_premium['wrapper_header_height']) && !empty($virtue_premium['wrapper_header_height']) ) {
-    $wrapper_header_height = 'div#wrapper{height: '.$virtue_premium['wrapper_header_height'].'}';
+    $wrapper_header_height = 'div#wrapper{height: '.$virtue_premium['wrapper_header_height'].'px;}';
 } else {
     $wrapper_header_height = '';
 }
