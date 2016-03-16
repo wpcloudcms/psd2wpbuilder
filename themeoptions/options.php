@@ -556,17 +556,20 @@ Redux::setSection( $opt_name, array(
         ),
 ) );
 Redux::setSection( $opt_name, array(
-    'id' => 'home_slider',
-    'icon' => 'icon-images',
+    'id' => 'header',
+    'icon' => 'icon-page-break',
     'icon_class' => 'icon-large',
     'title' => __('Header Settings', 'virtue'),
-    'desc' => "",
+    'desc' => "<div class='redux-info-field'><h3>".__('Header Layout', 'virtue')."</h3></div>",
     'fields' => array(
-        array(
-            'id'=>'info_header_options',
-            'type' => 'info',
-            'desc' => __('Header Options', 'virtue'),
-            ),
+           array(
+            'id'=>'headersection_width',
+            'type' => 'select',
+            'title' => __('Header Width Boxed or Full', 'bigcloudcms'), 
+            'options' => array('boxed' => 'Boxed','full' => 'Full'),
+            'default' => 'boxed',
+            'width' => 'width:35%', 
+            ), 
         array(
             'id'=>'header_border',
             'type' => 'switch', 
