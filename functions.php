@@ -7,7 +7,8 @@ function custom_scripts() {
     
 //  wp_enqueue_style( 'google-font1', 'http://fonts.googleapis.com/css?family=Titillium+Web' );
     
-    wp_enqueue_style( 'custom-font', get_stylesheet_directory_uri().'/fonts/BebasNeue.woff' ); 
+    wp_register_style( 'custom-font', get_stylesheet_directory_uri().'/fonts/BebasNeue.woff' ); 
+    wp_enqueue_style('custom-font');
     
     wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
     
