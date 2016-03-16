@@ -19,7 +19,7 @@
 		</div><!--titleclass-->
 	<?php } ?>
         <div id="content">
-<?php if(isset($virtue_premium['home_sidebar_layout']) and $virtue_premium['home_sidebar_layout'] == 'full') { ?>
+<?php if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'full') { ?>
   <div class="container-fluid homepagecontent"> 
 <?php } else { ?>
  <div class="container homepagecontent"> 

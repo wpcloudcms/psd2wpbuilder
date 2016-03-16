@@ -274,11 +274,11 @@ if(isset($virtue_premium['header_border']) and $virtue_premium['header_border'] 
 } else {
   $header_border = '.container.slider-banner {padding: 0px;} .virtue_banner img {width: 100%;}';
 }
-if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') {
-  $boxed_layout = '.container.box {width: 100% !important;margin-left: auto !important;margin-right: auto !important; padding-left: 0px; padding-right: 0px;} .slider.container, .featured.container, .row-height.container { padding-left: 0px; padding-right: 0px;} .slider-left, .slider-right {padding: 0px 10px; margin-left: 0px; margin-right: 0px;}';
-} else {
-  $boxed_layout = '.container.box {margin-left: auto !important;margin-right: auto !important;}';
-}
+//if(isset($virtue_premium['boxed_layout']) and $virtue_premium['boxed_layout'] == 'wide') {
+//  $boxed_layout = '.container.box {width: 100% !important;margin-left: auto !important;margin-right: auto !important; padding-left: 0px; padding-right: 0px;} .slider.container, .featured.container, .row-height.container { padding-left: 0px; padding-right: 0px;} .slider-left, .slider-right {padding: 0px 10px; margin-left: 0px; margin-right: 0px;}';
+//} else {
+//  $boxed_layout = '.container.box {margin-left: auto !important;margin-right: auto !important;}';
+//}
 if(!empty($virtue_premium['header_bg_color'])) {
   $header_bg_color = $virtue_premium['header_bg_color'];
   } else {

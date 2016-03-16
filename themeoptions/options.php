@@ -142,10 +142,10 @@ Redux::setSection( $opt_name, array(
             'title' => __('Site Layout Style', 'virtue'), 
             'subtitle' => __('Select Boxed or Wide Site Layout Style', 'virtue'),
             'options' => array(
-                    'wide' => array('alt' => 'Wide Layout', 'img' => OPTIONS_PATH.'img/1c.png'),
+                    'full' => array('alt' => 'Wide Layout', 'img' => OPTIONS_PATH.'img/1c.png'),
                     'boxed' => array('alt' => 'Boxed Layout', 'img' => OPTIONS_PATH.'img/3cm.png'),
                 ),
-            'default' => 'wide',
+            'default' => 'boxed',
             ),
         array(
             'id'=>'sidebar_layout',
