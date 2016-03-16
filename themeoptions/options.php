@@ -139,8 +139,8 @@ Redux::setSection( $opt_name, array(
             'id'=>'boxed_layout',
             'type' => 'image_select',
             //'compiler'=> false,
-            'title' => __('Site Layout Style', 'virtue'), 
-            'subtitle' => __('Select Boxed or Wide Site Layout Style', 'virtue'),
+            'title' => __('Home Page Layout Style', 'virtue'), 
+            'subtitle' => __('Select full width Container-fluid for parallax or Container', 'virtue'),
             'options' => array(
                     'full' => array('alt' => 'Wide Layout', 'img' => OPTIONS_PATH.'img/1c.png'),
                     'boxed' => array('alt' => 'Boxed Layout', 'img' => OPTIONS_PATH.'img/3cm.png'),
