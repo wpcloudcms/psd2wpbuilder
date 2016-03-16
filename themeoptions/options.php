@@ -569,7 +569,17 @@ Redux::setSection( $opt_name, array(
             'options' => array('boxed' => 'Boxed','full' => 'Full'),
             'default' => 'boxed',
             'width' => 'width:35%', 
-            ), 
+            ),
+        array(
+            'id'=>'wrapper_header_height',
+            'type' => 'slider', 
+            'title' => __('Main wrapper Header Height px', 'virtue'),
+            'subtitle' => __('', 'virtue'),
+            "default"       => "100",
+            "min"       => "0",
+            "step"      => "1",
+            "max"       => "1000",
+            ),
         array(
             'id'=>'header_border',
             'type' => 'switch', 
