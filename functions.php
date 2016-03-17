@@ -51,14 +51,12 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 /**
  * WordPress function for redirecting users on login based on user role
  */
-function user_login_redirect( $url, $request, $user ){
-    if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+function user_login_redirect( $url, $user ){
         if( $user->has_cap( 'administrator' ) ) {
             $url = admin_url();
         } else {
             $url = home_url('/my-account/');
         }
-    }
     return $url;
 }
 add_filter('login_redirect', 'user_login_redirect', 10, 3 );
