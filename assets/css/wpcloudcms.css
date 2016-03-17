@@ -117,6 +117,9 @@ button.mfp-arrow-right {
     display: none;
 }
 @media (max-width:767px) {
+div#wrapper {
+    margin-bottom: 60px !important;
+}
     button.mfp-arrow-left {
     display: block;
 }
