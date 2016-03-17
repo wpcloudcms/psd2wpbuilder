@@ -59,9 +59,7 @@ function cm_redirect_users_by_role() {
     if ( 'subscriber' === $role_name ) {
         wp_redirect( '/my-account/' );
     } // if
-    else {
-        wp_redirect( '/test/' );
-    }
+    else { }
 } // cm_redirect_users_by_role
 add_action( 'admin_init', 'cm_redirect_users_by_role' );
 
