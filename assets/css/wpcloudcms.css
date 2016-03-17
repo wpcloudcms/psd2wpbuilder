@@ -199,6 +199,18 @@ iframe {
     width: 100%;
     height: auto;
 }
+div#mobile-nav-trigger {
+    z-index: 1000;
+    background-color: #fafafa;
+}
+div#kad-mobile-nav {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0px;
+    right: 0px;
+    width: 90%;
+    background-color: #fafafa;
+}
 hr {
     border: 1px solid #ddd;
     border-top: 1px;
