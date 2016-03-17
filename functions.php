@@ -34,6 +34,21 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
+/**
+ * WordPress function for redirecting users on login based on user role
+ */
+function user_login_redirect( $url, $request, $user ){
+    if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+        if( $user->has_cap( 'administrator' ) ) {
+            $url = admin_url();
+        } else {
+            $url = home_url('/my-account/');
+        }
+    }
+    return $url;
+}
+add_filter('login_redirect', 'user_login_redirect', 10, 3 );
+
 // Add Div with id and class Shortcode
 function div_shortcode( $atts, $content = null ) {
 
