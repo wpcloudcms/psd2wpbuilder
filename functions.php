@@ -26,8 +26,8 @@ function custom_scripts() {
     wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.css' );
     wp_enqueue_style('animate-css');
     
-//    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  = not working
-//    wp_enqueue_script('custom-js');
+    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  = not working
+    wp_enqueue_script('custom-js');
 
 
 	}
