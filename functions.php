@@ -57,15 +57,16 @@ if (in_array(‘subscriber’, $user->roles)) {
 show_admin_bar(false);
 }
 }
-
+add_action('after_setup_theme', 'remove_admin_bar');
 /**
  * WordPress function for redirecting users on login based on user role
  */
 function cm_redirect_users_by_role() {
  
-$user = wp_get_current_user();
-
-if (in_array(‘subscriber’, $user->roles)) {
+    $current_user   = wp_get_current_user();
+    $role_name      = $current_user->roles[0];
+ 
+    if ( 'subscriber' === $role_name ) {
         wp_redirect( '/my-account/' );
     } // if
     else { }
