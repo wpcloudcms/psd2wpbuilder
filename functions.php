@@ -48,6 +48,14 @@ function add_loginout_link( $items, $args ) {
 
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 
+
+function remove_admin_bar() {
+if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
+}
+}
+add_action('admin_init', 'remove_admin_bar');
+
 /**
  * WordPress function for redirecting users on login based on user role
  */
@@ -58,7 +66,6 @@ function cm_redirect_users_by_role() {
  
     if ( 'subscriber' === $role_name ) {
         wp_redirect( '/my-account/' );
-         show_admin_bar(false);
     } // if
     else { }
 } // cm_redirect_users_by_role
