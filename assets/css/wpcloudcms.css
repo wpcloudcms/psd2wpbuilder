@@ -195,6 +195,10 @@ div#select2-drop, div#ui-datepicker-div, div#kad-mobile-nav {
     margin-right: auto;
     height: auto;
 }
+iframe {
+    width: 100%;
+    height: auto;
+}
 hr {
     border: 1px solid #ddd;
     border-top: 1px;
