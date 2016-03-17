@@ -53,9 +53,10 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 add_action('wp_enqueue_scripts', 'remove_admin_bar', 99 );
 add_action('admin_enqueue_scripts', 'remove_admin_bar', 99 );
 function remove_admin_bar() {
-$user = wp_get_current_user();
-
-if (in_array(‘subscriber’, $user->roles)) {
+    $current_user   = wp_get_current_user();
+    $role_name      = $current_user->roles[0];
+ 
+    if ( 'subscriber' === $role_name ) {
        echo '<style type="text/css">
       #wpadminbar { display: none; }
       body { margin-top: -32px !important; }
