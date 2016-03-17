@@ -51,14 +51,16 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 /**
  * WordPress function for redirecting users on login based on user role
  */
-function user_login_redirect( $url, $user ){
-       $cu = wp_get_current_user();
-    if ($cu->has_cap('edit_users')) {
-            $url = admin_url();
-        } else {
-            $url = home_url('/my-account/');
+function user_login_redirect(){
+     $user   = wp_get_current_user();
+     $role   = $current_user->roles[0];
+    
+    if ( $role === 'subscriber') {
+        wp_redirect( '/my-account/' );
+    } 
+    else {
+        wp_redirect( '/wp-admin/' );
         }
-    return $url;
 }
 add_filter('login_redirect', 'user_login_redirect', 10, 3 );
 
