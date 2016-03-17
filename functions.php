@@ -50,20 +50,18 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 
 
 // Disable wpadminbar for specific role (in this case, 'subscriber')
-add_action('wp_enqueue_scripts', 'hide_bar', 99 );
-add_action('admin_enqueue_scripts', 'hide_bar', 99 );
-function hide_bar() {
-   if (!current_user_can('administrator') && !is_admin()) {
+add_action('wp_enqueue_scripts', 'remove_admin_bar', 99 );
+add_action('admin_enqueue_scripts', 'remove_admin_bar', 99 );
+function remove_admin_bar() {
+$user = wp_get_current_user();
+
+if (in_array(‘subscriber’, $user->roles)) {
        echo '<style type="text/css">
       #wpadminbar { display: none; }
       body { margin-top: -32px !important; }
    </style>';
-   }
-    else {
-        echo '<style type="text/css">
-      body { margin-top: 32px !important; }
-   </style>';
-    }
+}
+        else { }
 }
 /**
  * WordPress function for redirecting users on login based on user role
