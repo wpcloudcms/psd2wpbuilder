@@ -221,6 +221,9 @@ hr {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+div#wpmem_login, div#wpmem_reg {
+    display: none;
+}
 ul#wp-admin-bar-top-secondary {
     margin-top: -10px;
 }
