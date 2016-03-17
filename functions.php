@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 function add_loginout_link( $items, $args ) {
     if (is_user_logged_in() && $args->theme_location == 'primary_navigation') {
-        $items .= '<li><a href="'. wp_logout_url(/) .'"><span>Sign Out</span></a></li>';
+        $items .= '<li><a href="'. wp_logout_url('/') .'"><span>Sign Out</span></a></li>';
     }
     else {}
     return $items;
