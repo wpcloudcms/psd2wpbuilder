@@ -170,7 +170,7 @@ aside#ktsidebar {
     width: 100%;
 }
 div#wrapper {
-    margin-bottom: 0px !important;
+    margin-bottom: 0px;
     padding: 0px;
 }
 .headerclass {
