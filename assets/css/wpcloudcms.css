@@ -210,6 +210,8 @@ div#kad-mobile-nav {
     right: 0px;
     width: 90%;
     background-color: #fafafa;
+    margin-top: -10px;
+    border-top: 1px solid #FFF;
 }
 hr {
     border: 1px solid #ddd;
