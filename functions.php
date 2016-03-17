@@ -53,11 +53,17 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 add_action('wp_enqueue_scripts', 'hide_bar', 99 );
 add_action('admin_enqueue_scripts', 'hide_bar', 99 );
 function hide_bar() {
-   if (!current_user_can('administrator') && !is_admin())
+   if (!current_user_can('administrator') && !is_admin()) {
        echo '<style type="text/css">
       #wpadminbar { display: none; }
       body { margin-top: -32px !important; }
    </style>';
+   }
+    else {
+        echo '<style type="text/css">
+      body { margin-top: -32px !important; }
+   </style>';
+    }
 }
 /**
  * WordPress function for redirecting users on login based on user role
