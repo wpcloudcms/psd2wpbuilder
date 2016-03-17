@@ -13,10 +13,6 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
     margin-right: auto !important;
     Height:auto !important;
 }
-iframe {
-    width: 100%;
-    height: auto !important;
-}
 }
 @media (min-width: 992px) {
 .contentclass {
@@ -60,6 +56,10 @@ ul.sf-dropdown-menu li a {
 @media (max-width: 767px) {
 a.flex-prev, a.flex-next {
     display: none;
+}
+iframe {
+    width: 100%;
+    height: auto !important;
 }
 }
 @media (max-width: 600px) {
