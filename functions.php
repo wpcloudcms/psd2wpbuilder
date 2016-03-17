@@ -35,6 +35,20 @@ function custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 /**
+ * WordPress function for logout menu
+ */
+
+function add_loginout_link( $items, $args ) {
+    if (is_user_logged_in() && $args->theme_location == 'primary-menu') {
+        $items .= '<li><a href="'. wp_logout_url() .'">Sign Out</a></li>';
+    }
+    else {}
+    return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
+
+/**
  * WordPress function for redirecting users on login based on user role
  */
 function user_login_redirect( $url, $request, $user ){
