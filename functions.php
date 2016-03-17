@@ -52,7 +52,8 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
  * WordPress function for redirecting users on login based on user role
  */
 function user_login_redirect( $url, $user ){
-        if( $user->has_cap( 'administrator' ) ) {
+       $cu = wp_get_current_user();
+    if ($cu->has_cap('edit_users')) {
             $url = admin_url();
         } else {
             $url = home_url('/my-account/');
