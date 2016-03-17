@@ -49,18 +49,15 @@ function add_loginout_link( $items, $args ) {
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 
 
-// Disable for specific role (in this case, 'subscriber')
-function remove_admin_bar() {
- 
-    $current_user   = wp_get_current_user();
-    $role_name      = $current_user->roles[0];
- 
-    if ( 'subscriber' === $role_name ) {
-show_admin_bar(false);
+// Disable wpadminbar for specific role (in this case, 'subscriber')
+add_action('wp_enqueue_scripts', 'hide_bar', 99 );
+add_action('admin_enqueue_scripts', 'hide_bar', 99 );
+function hide_bar() {
+   if( is_user_logged_in()) echo '<style type="text/css">
+      #wpadminbar { display: none; }
+      body { margin-top: -32px !important; }
+   </style>';
 }
-    else { }
-}
-add_action('after_setup_theme', 'remove_admin_bar');
 /**
  * WordPress function for redirecting users on login based on user role
  */
