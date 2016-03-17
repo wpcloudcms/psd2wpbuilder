@@ -13,6 +13,10 @@ div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
     margin-right: auto !important;
     Height:auto !important;
 }
+iframe {
+    width: 100%;
+    height: auto !important;
+}
 }
 @media (min-width: 992px) {
 .contentclass {
@@ -196,10 +200,6 @@ div#select2-drop, div#ui-datepicker-div, div#kad-mobile-nav {
 .no-container {
     margin-left: auto;
     margin-right: auto;
-    height: auto;
-}
-iframe {
-    width: 100%;
     height: auto;
 }
 div#mobile-nav-trigger {
