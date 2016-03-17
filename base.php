@@ -17,7 +17,7 @@
       <div class="container">
 <?php } else { ?>
  <div id="wrapper" class="container">
-     <div class="container">
+     <div class="header container">
 <?php } ?>
   <!--[if lt IE 8]><div class="alert"> <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'virtue'); ?></div><![endif]-->
   <?php
