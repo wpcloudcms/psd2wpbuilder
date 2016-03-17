@@ -54,8 +54,7 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
-
-add_action('after_setup_theme', 'remove_admin_bar');
+add_action('admin_init', 'remove_admin_bar');
 
 /**
  * WordPress function for redirecting users on login based on user role
