@@ -48,6 +48,15 @@ function add_loginout_link( $items, $args ) {
 
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
 /**
  * WordPress function for redirecting users on login based on user role
  */
