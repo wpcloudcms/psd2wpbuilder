@@ -49,12 +49,14 @@ function add_loginout_link( $items, $args ) {
 add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 
 
+// Disable for specific role (in this case, 'subscriber')
 function remove_admin_bar() {
-if ( ! current_user_can( 'manage_options' ) ) {
-    show_admin_bar( false );
+$user = wp_get_current_user();
+
+if (in_array(‘subscriber’, $user->roles)) {
+show_admin_bar(false);
 }
 }
-add_action('admin_init', 'remove_admin_bar');
 
 /**
  * WordPress function for redirecting users on login based on user role
