@@ -190,6 +190,11 @@ div#select2-drop, div#ui-datepicker-div, div#kad-mobile-nav {
     z-index: 10000000000 !important;
     position: absolute;
 }
+.no-container {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
 hr {
     border: 1px solid #ddd;
     border-top: 1px;
