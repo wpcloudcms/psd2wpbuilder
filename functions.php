@@ -56,6 +56,7 @@ function hide_bar() {
    if (!current_user_can('administrator') && !is_admin())
        echo '<style type="text/css">
       #wpadminbar { display: none; }
+      body { margin-top: -32px !important; }
    </style>';
 }
 /**
