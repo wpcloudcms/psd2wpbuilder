@@ -58,6 +58,7 @@ function remove_admin_bar() {
     if ( 'subscriber' === $role_name ) {
 show_admin_bar(false);
 }
+    else { }
 }
 add_action('after_setup_theme', 'remove_admin_bar');
 /**
