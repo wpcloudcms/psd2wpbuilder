@@ -51,18 +51,20 @@ add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
 /**
  * WordPress function for redirecting users on login based on user role
  */
-function user_login_redirect(){
-     $user   = wp_get_current_user();
-     $role   = $current_user->roles[0];
-    
-    if ( $role === 'subscriber') {
+function cm_redirect_users_by_role() {
+ 
+    $current_user   = wp_get_current_user();
+    $role_name      = $current_user->roles[0];
+ 
+    if ( 'subscriber' === $role_name ) {
         wp_redirect( '/my-account/' );
-    } 
+    } // if
     else {
-        wp_redirect( '/wp-admin/' );
-        }
-}
-add_filter('login_redirect', 'user_login_redirect', 10, 3 );
+        wp_redirect( '/test/' );
+    }
+} // cm_redirect_users_by_role
+add_action( 'admin_init', 'cm_redirect_users_by_role' );
+
 
 // Add Div with id and class Shortcode
 function div_shortcode( $atts, $content = null ) {
