@@ -202,6 +202,9 @@ iframe {
 div#mobile-nav-trigger {
     z-index: 1000;
     background-color: #fafafa;
+    top: -10px !important;
+    padding: 0px;
+    margin: 0px;
 }
 div#kad-mobile-nav {
     margin-left: auto !important;
