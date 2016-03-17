@@ -61,7 +61,7 @@ function hide_bar() {
    }
     else {
         echo '<style type="text/css">
-      body { margin-top: -32px !important; }
+      body { margin-top: 32px !important; }
    </style>';
     }
 }
