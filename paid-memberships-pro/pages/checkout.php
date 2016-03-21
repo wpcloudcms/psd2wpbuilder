@@ -19,11 +19,35 @@
     <div class="price_box">
         <?php if(isset($_GET["level"]) && trim($_GET["level"]) == '1'){
    echo '<div class="frm_radio">
-    <label for="field_tata9-0"><input type="radio" name="item_meta[15]" id="field_tata9-0" value="Monthly Plan : $79 Billed today and Monthly" checked="checked" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Monthly Plan : $79 Billed today and Monthly</label></div>
+    <label for="field_tata9-0"><input type="radio" name="item_meta[15]" id="field_tata9-0" value="Monthly Plan : $79 Billed today and Monthly" checked="checked" data-frmval="Monthly Plan : $79 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $79 Billed today and Monthly</label></div>
     <div class="frm_radio">
     <label for="field_tata9-1"><input type="radio" name="item_meta[15]" id="field_tata9-1" value="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$948</s> $828 Billed today and Yearly</label></div>';}
-else{
-   echo '';} ?>
+elseif (isset($_GET["level"]) && trim($_GET["level"]) == '2'){
+    echo '<div class="frm_radio">
+    <label for="field_tata9-02"><input type="radio" name="item_meta[152]" id="field_tata9-02" value="Monthly Plan : $99 Billed today and Monthly" checked="checked" data-frmval=" Monthly Plan : $99 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $99 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-021"><input type="radio" name="item_meta[152]" id="field_tata9-021" value="Yearly Plan : <s>$1188</s> $948 Billed today and Yearly" data-frmval="Yearly Plan : <s>$1188</s> $948 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$1188</s> $948 Billed today and Yearly</label></div>';}
+elseif (isset($_GET["level"]) && trim($_GET["level"]) == '3'){
+    echo '<div class="frm_radio">
+    <label for="field_tata9-03"><input type="radio" name="item_meta[153]" id="field_tata9-03" value="Monthly Plan : $199 Billed today and Monthly" checked="checked" data-frmval="Monthly Plan : $199 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $199 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-031"><input type="radio" name="item_meta[153]" id="field_tata9-031" value="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-frmval="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly</label></div>';}
+elseif (isset($_GET["level"]) && trim($_GET["level"]) == '4'){
+   echo '<div class="frm_radio">
+    <label for="field_tata9-0"><input type="radio" name="item_meta[15]" id="field_tata9-0" value="Monthly Plan : $79 Billed today and Monthly" data-frmval="Monthly Plan : $79 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $79 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-1"><input type="radio" name="item_meta[15]" id="field_tata9-1" value="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$948</s> $828 Billed today and Yearly</label></div>';}
+elseif (isset($_GET["level"]) && trim($_GET["level"]) == '5'){
+    echo '<div class="frm_radio">
+    <label for="field_tata9-02"><input type="radio" name="item_meta[152]" id="field_tata9-02" value="Monthly Plan : $99 Billed today and Monthly" data-frmval=" Monthly Plan : $99 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $99 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-021"><input type="radio" name="item_meta[152]" id="field_tata9-021" value="Yearly Plan : <s>$1188</s> $948 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$1188</s> $948 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$1188</s> $948 Billed today and Yearly</label></div>';}
+else (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
+    echo '<div class="frm_radio">
+    <label for="field_tata9-03"><input type="radio" name="item_meta[153]" id="field_tata9-03" value="Monthly Plan : $199 Billed today and Monthly" data-frmval="Monthly Plan : $199 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $199 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-031"><input type="radio" name="item_meta[153]" id="field_tata9-031" value="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly</label></div>';}
+        ?>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
