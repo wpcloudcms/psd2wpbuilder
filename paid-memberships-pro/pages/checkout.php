@@ -227,7 +227,7 @@ else{
 					do_action('pmpro_checkout_after_password');
 				?>
 
-				<div>
+				<div class="email">
 					<label for="bemail"></label>
 					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
 				</div>
