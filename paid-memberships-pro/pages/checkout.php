@@ -46,7 +46,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
     echo '<div class="frm_radio">
     <label for="field_tata9-03"><input type="radio" name="item_meta[153]" id="field_tata9-03" value="Monthly Plan : $199 Billed today and Monthly" data-frmval="Monthly Plan : $199 Billed today and Monthly" data-reqmsg="This field cannot be blank."> Monthly Plan : $199 Billed today and Monthly</label></div>
     <div class="frm_radio">
-    <label for="field_tata9-031"><input type="radio" name="item_meta[153]" id="field_tata9-031" value="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly</label></div>';
+    <label for="field_tata9-031"><input type="radio" name="item_meta[153]" id="field_tata9-031" value="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly</label></div>';}
     else {
     echo "";}
         ?>
