@@ -615,6 +615,7 @@ else{
 						<label for="CVV"><?php _e('CVV', 'pmpro');?></label>
 						<input class="input" id="CVV" name="CVV" type="text" size="4" value="<?php if(!empty($_REQUEST['CVV'])) { echo esc_attr($_REQUEST['CVV']); }?>" class=" <?php echo pmpro_getClassForField("CVV");?>" />  <small>(<a href="javascript:void(0);" onclick="javascript:window.open('<?php echo pmpro_https_filter(PMPRO_URL)?>/pages/popup-cvv.html','cvv','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=475');"><?php _e("what's this?", 'pmpro');?></a>)</small>
 					</div>
+                    <div>test123</div>
                     <div class="country">
 					<label for="bcountry"></label>
 					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
