@@ -1,6 +1,6 @@
 <?php
 	global $gateway, $pmpro_review, $skip_account_fields, $pmpro_paypal_token, $wpdb, $current_user, $pmpro_msg, $pmpro_msgt, $pmpro_requirebilling, $pmpro_level, $pmpro_levels, $tospage, $pmpro_show_discount_code, $pmpro_error_fields;
-	global $discount_code, $username, $password, $password2, $bfirstname, $blastname, $baddress1, $baddress2, $bcity, $bstate, $bzipcode, $bcountry, $bphone, $bemail, $CardType, $AccountNumber, $ExpirationMonth,$ExpirationYear;
+	global $discount_code, $username, $password, $password2, $bfirstname, $blastname, $baddress1, $baddress2, $bcity, $bstate, $bzipcode, $bcountry, $bphone, $bemail, $bconfirmemail, $CardType, $AccountNumber, $ExpirationMonth,$ExpirationYear;
 
 	/**
 	 * Filter to set if PMPro uses email or text as the type for email field inputs.
@@ -220,20 +220,19 @@
 					<label for="bemail"><?php _e('E-mail Address', 'pmpro');?></label>
 					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
 				</div>
-<!--
 				<?php
-					// $pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", true);
-					// if($pmpro_checkout_confirm_email)
+					$pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", true);
+					if($pmpro_checkout_confirm_email)
 					{
 					?>
 					<div>
-						<label for="bconfirmemail"><?php // _e('Confirm E-mail Address', 'pmpro');?></label>
-						<input id="bconfirmemail" name="bconfirmemail" type="<?php // echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php // echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php // echo esc_attr($bconfirmemail)?>" />
+						<label for="bconfirmemail"><?php _e('Confirm E-mail Address', 'pmpro');?></label>
+						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
 
 					</div>
 					<?php
 					}
-					// else
+					else
 					{
 					?>
 					<input type="hidden" name="bconfirmemail_copy" value="1" />
@@ -242,9 +241,8 @@
 				?>
 
 				<?php
-					// do_action('pmpro_checkout_after_email');
+					do_action('pmpro_checkout_after_email');
 				?>
--->
 
 				<div class="pmpro_hidden">
 					<label for="fullname"><?php _e('Full Name', 'pmpro');?></label>
@@ -436,24 +434,9 @@
 					}
 					else
 					{
-				?>
-				<div>
-					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
-					<select name="bcountry" class=" <?php echo pmpro_getClassForField("bcountry");?>">
-						<?php
-							global $pmpro_countries, $pmpro_default_country;
-							if(!$bcountry)
-								$bcountry = $pmpro_default_country;
-							foreach($pmpro_countries as $abbr => $country)
-							{
-							?>
-							<option value="<?php echo $abbr?>" <?php if($abbr == $bcountry) { ?>selected="selected"<?php } ?>><?php echo $country?></option>
-							<?php
-							}
-						?>
-					</select>
-				</div>
-				<?php
+					?>
+						<input type="hidden" name="bcountry" value="US" />
+					<?php
 					}
 				?>
 				<div>
@@ -466,28 +449,27 @@
 					{
 						if(!$bemail && $current_user->user_email)
 							$bemail = $current_user->user_email;
-						//if(!$bconfirmemail && $current_user->user_email)
-							//$bconfirmemail = $current_user->user_email;
+						if(!$bconfirmemail && $current_user->user_email)
+							$bconfirmemail = $current_user->user_email;
 					}
 				?>
 				<div>
 					<label for="bemail"><?php _e('E-mail Address', 'pmpro');?></label>
 					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
 				</div>
-<!--
 				<?php
-					// $pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", true);
-					// if($pmpro_checkout_confirm_email)
+					$pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", true);
+					if($pmpro_checkout_confirm_email)
 					{
 					?>
 					<div>
-						<label for="bconfirmemail"><?php // _e('Confirm E-mail', 'pmpro');?></label>
-						<input id="bconfirmemail" name="bconfirmemail" type="<?php // echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php // echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php // echo esc_attr($bconfirmemail)?>" />
+						<label for="bconfirmemail"><?php _e('Confirm E-mail', 'pmpro');?></label>
+						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
 
 					</div>
 					<?php
 						}
-						// else
+						else
 						{
 					?>
 					<input type="hidden" name="bconfirmemail_copy" value="1" />
@@ -495,7 +477,6 @@
 						}
 					?>
 				<?php } ?>
--->
 			</td>
 		</tr>
 	</tbody>
