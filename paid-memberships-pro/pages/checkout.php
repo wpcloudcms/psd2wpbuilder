@@ -48,7 +48,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
     <div class="frm_radio">
     <label for="field_tata9-031"><input type="radio" name="item_meta[153]" id="field_tata9-031" value="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$2388</s> $1908 Billed today and Yearly</label></div>';
     else {
-    echo '';}
+    echo "";}
         ?>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
