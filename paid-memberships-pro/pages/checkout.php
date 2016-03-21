@@ -17,9 +17,21 @@
     <div class="frm_title start"><h2>START MY PLAN</h2></div>
     <div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
     <div class="price_box">
-        <?php $yearly = 3; ?>
-    <div class="col-md-6 monthly">#monthly</div>
-    <div class="col-md-6 yearly">#yealry</div>
+        <?php if(isset($_GET["level"]) && trim($_GET["level"]) == '1'){
+   echo '<div id="frm_field_15_container" class="frm_form_field form-field  frm_required_field frm_none_container">
+    <label class="frm_primary_label">Plans<span class="frm_required">*</span></label>
+    <div class="frm_opt_container">	
+    <div class="frm_radio">
+    <label for="field_tata9-0"><input type="radio" name="item_meta[15]" id="field_tata9-0" value="Monthly Plan : $79 Billed today and Monthly" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Monthly Plan : $79 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-1"><input type="radio" name="item_meta[15]" id="field_tata9-1" value="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$948</s> $828 Billed today and Yearly</label></div>
+</div> 
+</div>';
+}
+else{
+   echo '';
+} ?>
+        #yealry</div>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
