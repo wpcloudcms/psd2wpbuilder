@@ -14,8 +14,8 @@
 <div id="pmpro_level-<?php echo $pmpro_level->id; ?>">
 <form id="pmpro_form" class="pmpro_form fadeInDown animated" action="<?php if(!empty($_REQUEST['review'])) echo pmpro_url("checkout", "?level=" . $pmpro_level->id); ?>" method="post">
     
-    <div class="frm_title start">START MY PLAN</div>
-    <div class="frm_title upgrade">UPGRADE MY PLAN</div>
+    <div class="frm_title start"><h2>START MY PLAN</h2></div>
+    <div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
     <div class="price_box">
         <?php $yearly = 3; ?>
     <div class="col-md-6 monthly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level)); ?></div>
