@@ -18,12 +18,9 @@
     <div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
     <div class="price_box">
         <?php if(isset($_GET["level"]) && trim($_GET["level"]) == '1'){
-   echo 'level 1';
-}
+   echo 'level 1';}
 else{
-   echo '';
-} ?>
-        #yealry</div>
+   echo '';} ?>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
