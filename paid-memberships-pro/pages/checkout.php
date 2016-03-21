@@ -243,7 +243,7 @@
 				<?php
 					do_action('pmpro_checkout_after_email');
 				?>
-                <div>
+                <div class="country">
 					<label for="bcountry"></label>
 					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
                         <option value="<?php _e('Country', 'pmpro');?>"><?php _e('Country', 'pmpro');?></option>
