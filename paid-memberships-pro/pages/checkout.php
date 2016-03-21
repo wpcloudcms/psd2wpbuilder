@@ -16,7 +16,7 @@
 
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
-
+  <div class="close"><a href="/pricing/">X</a></div>
 	<?php if($pmpro_msg)
 		{
 	?>
