@@ -245,7 +245,7 @@
 				?>
                 <div>
 					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
-					<select name="bcountry" class=" <?php echo pmpro_getClassForField("bcountry");?>">
+					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
 						<?php
 							global $pmpro_countries, $pmpro_default_country;
 							if(!$bcountry)
@@ -582,12 +582,12 @@
 					?>
 
 					<div class="pmpro_payment-account-number">
-						<label for="AccountNumber"><?php _e('Card Number', 'pmpro');?></label>
-						<input id="AccountNumber" name="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" value="<?php echo esc_attr($AccountNumber)?>" data-encrypted-name="number" autocomplete="off" />
+						<label for="AccountNumber"></label>
+						<input id="AccountNumber" name="AccountNumber" placeholder="<?php _e('Card Number', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" value="<?php echo esc_attr($AccountNumber)?>" data-encrypted-name="number" autocomplete="off" />
 					</div>
 
 					<div class="pmpro_payment-expiration">
-						<label for="ExpirationMonth"><?php _e('Expiration Date', 'pmpro');?></label>
+						<label for="ExpirationMonth" class="expdate"><?php _e('Expiration Date', 'pmpro');?></label>
 						<select id="ExpirationMonth" name="ExpirationMonth" class=" <?php echo pmpro_getClassForField("ExpirationMonth");?>">
 							<option value="01" <?php if($ExpirationMonth == "01") { ?>selected="selected"<?php } ?>>01</option>
 							<option value="02" <?php if($ExpirationMonth == "02") { ?>selected="selected"<?php } ?>>02</option>
