@@ -19,7 +19,7 @@
     <div class="price_box">
         <?php $yearly = 3; ?>
     <div class="col-md-6 monthly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level)); ?></div>
-    <div class="col-md-6 yearly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level+($yearly))); ?></div>
+    <div class="col-md-6 yearly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level)+($yearly)); ?></div>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
