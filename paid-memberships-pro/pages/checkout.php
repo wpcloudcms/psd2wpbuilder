@@ -246,6 +246,7 @@
                 <div>
 					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
 					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
+                        <option value=" "><?php _e('Country', 'pmpro');?></option>
 						<?php
 							global $pmpro_countries, $pmpro_default_country;
 							if(!$bcountry)
@@ -430,8 +431,9 @@
 					{
 				?>
 				<div>
-					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
-					<select name="bcountry" class=" <?php echo pmpro_getClassForField("bcountry");?>">
+					<label for="bcountry"></label>
+					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
+                        <option value=" "><?php _e('Country', 'pmpro');?></option>
 						<?php
 							global $pmpro_countries, $pmpro_default_country;
 							if(!$bcountry)
