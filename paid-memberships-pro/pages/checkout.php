@@ -18,7 +18,10 @@
     <div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
     <div class="price_box">
         <?php if(isset($_GET["level"]) && trim($_GET["level"]) == '1'){
-   echo 'level 1';}
+   echo '<div class="frm_radio">
+    <label for="field_tata9-0"><input type="radio" name="item_meta[15]" id="field_tata9-0" value="Monthly Plan : $79 Billed today and Monthly" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Monthly Plan : $79 Billed today and Monthly</label></div>
+    <div class="frm_radio">
+    <label for="field_tata9-1"><input type="radio" name="item_meta[15]" id="field_tata9-1" value="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" checked="checked" data-frmval="Yearly Plan : <s>$948</s> $828 Billed today and Yearly" data-reqmsg="This field cannot be blank."> Yearly Plan : <s>$948</s> $828 Billed today and Yearly</label></div>';}
 else{
    echo '';} ?>
     </div>
