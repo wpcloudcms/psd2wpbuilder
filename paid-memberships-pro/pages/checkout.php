@@ -209,7 +209,7 @@ else{
 					if($pmpro_checkout_confirm_password)
 					{
 					?>
-					<div>
+					<div class="paswd2">
 						<label for="password2"></label>
 						<input id="password2" name="password2" type="password" placeholder="<?php _e('Confirm Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password2");?>" size="30" value="<?php echo esc_attr($password2)?>" />
 					</div>
@@ -236,7 +236,7 @@ else{
 					if($pmpro_checkout_confirm_email)
 					{
 					?>
-					<div>
+					<div class="confemail">
 						<label for="bconfirmemail"></label>
 						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('Confirm E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
 
