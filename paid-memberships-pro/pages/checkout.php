@@ -836,3 +836,7 @@ else{
 jQuery("input[name=submit-checkout]").after('<input type="hidden" name="javascriptok" value="1" />');
 -->
 </script>
+
+<div class="frm_opt_container iagree">	
+    <div class="frm_checkbox" id="frm_checkbox_21-0"><label for="field_9hqv5-0"><input type="checkbox" name="item_meta[21][]" id="field_9hqv5-0" value="I agree to the <a href=&quot;/terms/&quot; target=&quot;_blank&quot;>terms of service</a>" data-reqmsg="This field cannot be blank."> I agree to the <a href="/terms/" target="_blank">terms of service</a></label></div>
+</div>
