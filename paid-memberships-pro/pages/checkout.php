@@ -584,7 +584,7 @@
 					?>
 
 					<div class="pmpro_payment-account-number">
-						<label for="AccountNumber"></label>
+						<label for="AccountNumber" class="cardno"></label>
 						<input id="AccountNumber" name="AccountNumber" placeholder="<?php _e('Card Number', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" value="<?php echo esc_attr($AccountNumber)?>" data-encrypted-name="number" autocomplete="off" />
 					</div>
 
