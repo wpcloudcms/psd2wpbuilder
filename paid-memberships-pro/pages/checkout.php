@@ -17,9 +17,9 @@
     <div class="frm_title start">START MY PLAN</div>
     <div class="frm_title upgrade">UPGRADE MY PLAN</div>
     <div class="price_box">
-        <?php $yearly = 12; ?>
+        <?php $yearly = 3; ?>
     <div class="col-md-6 monthly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level)); ?></div>
-    <div class="col-md-6 yearly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level)*($yearly)); ?></div>
+    <div class="col-md-6 yearly"><?php echo wpautop(pmpro_getLevelCost($pmpro_level+($yearly))); ?></div>
     </div>
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
