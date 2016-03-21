@@ -251,6 +251,22 @@ else{
 				<?php
 					do_action('pmpro_checkout_after_email');
 				?>
+                 <div class="country">
+					<label for="bcountry"></label>
+					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
+						<?php
+							global $pmpro_countries, $pmpro_default_country;
+							if(!$bcountry)
+								$bcountry = $pmpro_default_country;
+							foreach($pmpro_countries as $abbr => $country)
+							{
+							?>
+							<option value="<?php echo $abbr?>" <?php if($abbr == $bcountry) { ?>selected="selected"<?php } ?>><?php echo $country?></option>
+							<?php
+							}
+						?>
+					</select>
+				</div>
 				<div class="pmpro_hidden">
 					<label for="fullname"><?php _e('Full Name', 'pmpro');?></label>
 					<input id="fullname" name="fullname" type="text" class="input <?php echo pmpro_getClassForField("fullname");?>" size="30" value="" /> <strong><?php _e('LEAVE THIS BLANK', 'pmpro');?></strong>
@@ -605,22 +621,6 @@ else{
 							?>
 						</select>
 					</div>
-                     <div class="country">
-					<label for="bcountry"></label>
-					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
-						<?php
-							global $pmpro_countries, $pmpro_default_country;
-							if(!$bcountry)
-								$bcountry = $pmpro_default_country;
-							foreach($pmpro_countries as $abbr => $country)
-							{
-							?>
-							<option value="<?php echo $abbr?>" <?php if($abbr == $bcountry) { ?>selected="selected"<?php } ?>><?php echo $country?></option>
-							<?php
-							}
-						?>
-					</select>
-				</div>
 					<?php
 						$pmpro_show_cvv = apply_filters("pmpro_show_cvv", true);
 						if($pmpro_show_cvv)
