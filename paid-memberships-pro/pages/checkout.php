@@ -12,7 +12,7 @@
 	$pmpro_email_field_type = apply_filters('pmpro_email_field_type', true);
 ?>
 <div id="pmpro_level-<?php echo $pmpro_level->id; ?>">
-<form id="pmpro_form" class="pmpro_form" action="<?php if(!empty($_REQUEST['review'])) echo pmpro_url("checkout", "?level=" . $pmpro_level->id); ?>" method="post">
+<form id="pmpro_form" class="pmpro_form fadeInDown animated" action="<?php if(!empty($_REQUEST['review'])) echo pmpro_url("checkout", "?level=" . $pmpro_level->id); ?>" method="post">
 
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
