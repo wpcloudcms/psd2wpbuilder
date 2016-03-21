@@ -244,9 +244,9 @@
 					do_action('pmpro_checkout_after_email');
 				?>
                 <div>
-					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
+					<label for="bcountry"></label>
 					<select name="bcountry" class="country <?php echo pmpro_getClassForField("bcountry");?>">
-                        <option value=" "><?php _e('Country', 'pmpro');?></option>
+                        <option value="<?php _e('Country', 'pmpro');?>"><?php _e('Country', 'pmpro');?></option>
 						<?php
 							global $pmpro_countries, $pmpro_default_country;
 							if(!$bcountry)
