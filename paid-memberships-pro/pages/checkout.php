@@ -181,8 +181,8 @@
 		<tr>
 			<td>
 				<div>
-					<label for="username"><?php _e('Username', 'pmpro');?></label>
-					<input id="username" name="username" type="text" class="input <?php echo pmpro_getClassForField("username");?>" size="30" value="<?php echo esc_attr($username)?>" />
+					<label for="username"></label>
+					<input id="username" name="username" type="text" placeholder="<?php _e('Username', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("username");?>" size="30" value="<?php echo esc_attr($username)?>" />
 				</div>
 
 				<?php
@@ -190,8 +190,8 @@
 				?>
 
 				<div>
-					<label for="password"><?php _e('Password', 'pmpro');?></label>
-					<input id="password" name="password" type="password" class="input <?php echo pmpro_getClassForField("password");?>" size="30" value="<?php echo esc_attr($password)?>" />
+					<label for="password"></label>
+					<input id="password" name="password" type="password" placeholder="<?php _e('Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password");?>" size="30" value="<?php echo esc_attr($password)?>" />
 				</div>
 				<?php
 					$pmpro_checkout_confirm_password = apply_filters("pmpro_checkout_confirm_password", true);
@@ -199,8 +199,8 @@
 					{
 					?>
 					<div>
-						<label for="password2"><?php _e('Confirm Password', 'pmpro');?></label>
-						<input id="password2" name="password2" type="password" class="input <?php echo pmpro_getClassForField("password2");?>" size="30" value="<?php echo esc_attr($password2)?>" />
+						<label for="password2"></label>
+						<input id="password2" name="password2" type="password" placeholder="<?php _e('Confirm Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password2");?>" size="30" value="<?php echo esc_attr($password2)?>" />
 					</div>
 					<?php
 					}
@@ -217,8 +217,8 @@
 				?>
 
 				<div>
-					<label for="bemail"><?php _e('E-mail Address', 'pmpro');?></label>
-					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
+					<label for="bemail"></label>
+					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
 				</div>
 				<?php
 					$pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", true);
@@ -226,8 +226,8 @@
 					{
 					?>
 					<div>
-						<label for="bconfirmemail"><?php _e('Confirm E-mail Address', 'pmpro');?></label>
-						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
+						<label for="bconfirmemail"></label>
+						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('Confirm E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
 
 					</div>
 					<?php
@@ -243,7 +243,22 @@
 				<?php
 					do_action('pmpro_checkout_after_email');
 				?>
-
+                <div>
+					<label for="bcountry"><?php _e('Country', 'pmpro');?></label>
+					<select name="bcountry" class=" <?php echo pmpro_getClassForField("bcountry");?>">
+						<?php
+							global $pmpro_countries, $pmpro_default_country;
+							if(!$bcountry)
+								$bcountry = $pmpro_default_country;
+							foreach($pmpro_countries as $abbr => $country)
+							{
+							?>
+							<option value="<?php echo $abbr?>" <?php if($abbr == $bcountry) { ?>selected="selected"<?php } ?>><?php echo $country?></option>
+							<?php
+							}
+						?>
+					</select>
+				</div>
 				<div class="pmpro_hidden">
 					<label for="fullname"><?php _e('Full Name', 'pmpro');?></label>
 					<input id="fullname" name="fullname" type="text" class="input <?php echo pmpro_getClassForField("fullname");?>" size="30" value="" /> <strong><?php _e('LEAVE THIS BLANK', 'pmpro');?></strong>
