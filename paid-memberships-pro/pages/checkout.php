@@ -452,7 +452,7 @@
 					else
 					{
 					?>
-						<input type="hidden" name="bcountry" value="US" />
+						<input type="hidden" name="bcountry" value="Country" />
 					<?php
 					}
 				?>
