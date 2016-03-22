@@ -227,7 +227,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 				?>
 
 				<div>
-					<label for="password"></label>
+					<label for="password hidden"></label>
 					<input id="password" name="password" type="password" placeholder="<?php _e('Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password");?>" size="30" value="<?php echo esc_attr($password)?>" />
                     <input type="hidden" class="randpass" value="Generate" onClick="generate();" tabindex="2">
 				</div>
@@ -236,7 +236,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 					if($pmpro_checkout_confirm_password)
 					{
 					?>
-					<div class="paswd2">
+					<div class="paswd2 hidden">
 						<label for="password2"></label>
 						<input id="password2" name="password2" type="password" placeholder="<?php _e('Confirm Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password2");?>" size="30" value="<?php echo esc_attr($password2)?>" />
 					</div>
