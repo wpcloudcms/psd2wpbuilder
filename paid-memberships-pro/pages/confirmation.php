@@ -3,15 +3,9 @@
 	
 	if($pmpro_msg)
 	{
-	?>
-<div class="div#frm_form_14">
+	?>   
     
-    <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
-    <hr/>
-<?php echo do_shortcode( '[formidable id=14]' ); ?>
-    
-    
-		<div class="pmpro_message <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?></div>
+		<div class="pmpro_message <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?>
 	<?php
 	}
 	
@@ -25,6 +19,13 @@
 	if(!empty($level_message))
 		$confirmation_message .= "\n" . stripslashes($level_message) . "\n";
 ?>	
+            </div>
+
+<div class="div#frm_form_14">
+    
+    <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
+    <hr/>
+<?php echo do_shortcode( '[formidable id=14]' ); ?>
 
 <?php if(!empty($pmpro_invoice) && !empty($pmpro_invoice->id)) { ?>		
 	
