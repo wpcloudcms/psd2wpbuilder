@@ -24,8 +24,11 @@
 <div class="pop_over_effect">
     <div class="close"><a href="/thank-you/">X</a></div>
     <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
+    
+<div class="pop_over_content">
     <p>We'he just created a new account for you and your new order! From now on, your user name is : <strong><?php echo $current_user->user_email ?></strong> for all your website security needs. Please go ahead and set a secret password for future management of orders.</p>
 <?php echo do_shortcode( '[formidable id=14]' ); ?>
+    </div>
 
 <?php if(!empty($pmpro_invoice) && !empty($pmpro_invoice->id)) { ?>		
 	
