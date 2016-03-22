@@ -5,6 +5,12 @@
 	{
 	?>
 <div class="div#frm_form_14">
+    
+    <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
+    <hr/>
+<?php echo do_shortcode( '[formidable id=14]' ); ?>
+    
+    
 		<div class="pmpro_message <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?></div>
 	<?php
 	}
@@ -36,10 +42,7 @@
 		
 		echo apply_filters("the_content", $confirmation_message);		
 	?>
-<div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
-<?php 
-    echo do_shortcode( '[formidable id=14]' );
-?>
+
 	<h3 hidden>
 		<?php printf(__('Invoice #%s on %s', 'pmpro'), $pmpro_invoice->code, date_i18n(get_option('date_format'), $pmpro_invoice->timestamp));?>		
 	</h3>
