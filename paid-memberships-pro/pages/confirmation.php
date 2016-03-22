@@ -10,9 +10,9 @@
 	}
 	
 	if(empty($current_user->membership_level))
-		$confirmation_message = "<div class='hidden'><p>" . __('Your payment has been submitted. Your membership will be activated shortly.', 'pmpro') . "</p>";
+		$confirmation_message = "<div class='hidden'><p>" . __('Your payment has been submitted. Your membership will be activated shortly.', 'pmpro') . "</p></div>";
 	else
-		$confirmation_message = "<p>" . sprintf(__('Thank you for your membership to %s. Your %s membership is now active.', 'pmpro'), get_bloginfo("name"), $current_user->membership_level->name) . "</p></div>";		
+		$confirmation_message = "<p>" . sprintf(__('<div class="hidden">Thank you for your membership to %s. Your %s membership is now active.', 'pmpro'), get_bloginfo("name"), $current_user->membership_level->name) . "</p></div>";		
 	
 	//confirmation message for this level
 	$level_message = $wpdb->get_var("SELECT l.confirmation FROM $wpdb->pmpro_membership_levels l LEFT JOIN $wpdb->pmpro_memberships_users mu ON l.id = mu.membership_id WHERE mu.status = 'active' AND mu.user_id = '" . $current_user->ID . "' LIMIT 1");
