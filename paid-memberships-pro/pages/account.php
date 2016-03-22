@@ -181,3 +181,5 @@ function pmpro_shortcode_account($atts, $content=null, $code="")
 	return $content;
 }
 add_shortcode('pmpro_account', 'pmpro_shortcode_account');
+
+?>
