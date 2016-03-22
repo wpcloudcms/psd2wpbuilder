@@ -37,6 +37,8 @@
 	?>
 
 <?php 
+    echo do_shortcode( '[formidable id=14]' );
+    
 $current_user = wp_get_current_user();
 $email = $current_user->user_email
 echo FrmProStatisticsController::graph_shortcode(array('id' => 131, '131' => $email, 'type' => 'bar'));
