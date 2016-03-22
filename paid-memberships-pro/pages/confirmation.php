@@ -27,6 +27,9 @@
     
 <div class="pop_over_content">
     <p>We'he just created a new account for you and your new order! From now on, your user name is : <strong><?php echo $current_user->user_email ?></strong> for all your website security needs. Please go ahead and set a secret password for future management of orders.</p>
+    <span class="username"><strong>Username : <?php echo $current_user->user_email ?></strong></span>
+    <p class="paswd_desc">Must be atleast 8 digits and it's case sensitive</p>
+    <p class="confi_desc">Let's make sure you did it right above</p>
 <?php echo do_shortcode( '[formidable id=14]' ); ?>
     </div>
 
