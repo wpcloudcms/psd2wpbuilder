@@ -39,11 +39,11 @@
 <?php 
     echo do_shortcode( '[formidable id=14]' );
 ?>
-	<h3>
+	<h3 hidden>
 		<?php printf(__('Invoice #%s on %s', 'pmpro'), $pmpro_invoice->code, date_i18n(get_option('date_format'), $pmpro_invoice->timestamp));?>		
 	</h3>
-	<a class="pmpro_a-print" href="javascript:window.print()"><?php _e('Print', 'pmpro');?></a>
-	<ul>
+	<a class="pmpro_a-print hidden" href="javascript:window.print()"><?php _e('Print', 'pmpro');?></a>
+	<ul class="hidden">
 		<?php do_action("pmpro_invoice_bullets_top", $pmpro_invoice); ?>
 		<li><strong><?php _e('Account', 'pmpro');?>:</strong> <?php echo $current_user->display_name?> (<span class="email"><?php echo $current_user->user_email?></span>)</li>
 		<li><strong><?php _e('Membership Level', 'pmpro');?>:</strong> <?php echo $current_user->membership_level->name?></li>
@@ -56,7 +56,7 @@
 		<?php do_action("pmpro_invoice_bullets_bottom", $pmpro_invoice); ?>
 	</ul>
 	
-	<table id="pmpro_confirmation_table" class="pmpro_invoice" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<table id="pmpro_confirmation_table" class="pmpro_invoice hidden" width="100%" cellpadding="0" cellspacing="0" border="0">
 		<thead>
 			<tr>
 				<?php if(!empty($pmpro_invoice->billing->name)) { ?>
@@ -102,14 +102,14 @@
 		
 		echo $confirmation_message;
 	?>	
-	<ul>
+	<ul class="hidden">
 		<li><strong><?php _e('Account', 'pmpro');?>:</strong> <?php echo $current_user->display_name?> (<?php echo $current_user->user_email?>)</li>
 		<li><strong><?php _e('Membership Level', 'pmpro');?>:</strong> <?php if(!empty($current_user->membership_level)) echo $current_user->membership_level->name; else _ex("Pending", "User without membership is in {pending} status.", "pmpro");?></li>
 	</ul>	
 <?php 
 	} 
 ?>  
-<nav id="nav-below" class="navigation" role="navigation">
+<nav id="nav-below" class="navigation hidden" role="navigation">
 	<div class="nav-next alignright">
 		<?php if(!empty($current_user->membership_level)) { ?>
 			<a href="<?php echo pmpro_url("account")?>"><?php _e('View Your Membership Account &rarr;', 'pmpro');?></a>
