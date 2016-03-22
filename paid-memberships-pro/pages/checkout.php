@@ -229,6 +229,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 				<div>
 					<label for="password"></label>
 					<input id="password" name="password" type="password" placeholder="<?php _e('Password', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("password");?>" size="30" value="<?php echo esc_attr($password)?>" />
+                    <input type="hidden" class="randpass" value="Generate" onClick="generate();" tabindex="2">
 				</div>
 				<?php
 					$pmpro_checkout_confirm_password = apply_filters("pmpro_checkout_confirm_password", true);
