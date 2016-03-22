@@ -1,4 +1,9 @@
 <?php
+/*
+	Shortcode to show membership account information
+*/
+function pmpro_shortcode_account($atts, $content=null, $code="")
+{
 	global $wpdb, $pmpro_msg, $pmpro_msgt, $pmpro_levels, $current_user, $levels;
 	
 	// $atts    ::= array of attributes
@@ -174,4 +179,5 @@
 	ob_end_clean();
 	
 	return $content;
-?>
+}
+add_shortcode('pmpro_account', 'pmpro_shortcode_account');
