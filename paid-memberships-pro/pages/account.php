@@ -113,7 +113,7 @@
 	
 		<?php if(in_array('invoices', $sections) && !empty($invoices)) { ?>		
 		<div id="pmpro_account-invoices" class="pmpro_box">
-			<h3><?php _e("Past Invoices", "pmpro");?></h3>
+			<h3><?php _e("PAYMENT HISTORY", "pmpro");?></h3>
 			<table width="100%" cellpadding="0" cellspacing="0" border="0">
 				<thead>
 					<tr>
