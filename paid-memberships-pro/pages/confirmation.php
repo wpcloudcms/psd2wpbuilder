@@ -5,12 +5,12 @@
 	{
 	?>   
     
-		<div class="pmpro_message <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?></div>
+		<div class="hidden <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?></div>
 	<?php
 	}
 	
 	if(empty($current_user->membership_level))
-		$confirmation_message = "<div class='pmpro_message'><p>" . __('Your payment has been submitted. Your membership will be activated shortly.', 'pmpro') . "</p>";
+		$confirmation_message = "<div class='hidden'><p>" . __('Your payment has been submitted. Your membership will be activated shortly.', 'pmpro') . "</p>";
 	else
 		$confirmation_message = "<p>" . sprintf(__('Thank you for your membership to %s. Your %s membership is now active.', 'pmpro'), get_bloginfo("name"), $current_user->membership_level->name) . "</p></div>";		
 	
@@ -33,7 +33,7 @@
 		$pmpro_invoice->getUser();
 		$pmpro_invoice->getMembershipLevel();			
 				
-		$confirmation_message .= "<div class='pmpro_message'><p>" . sprintf(__('A welcome email with a copy of your initial membership invoice has been sent to %s.', 'pmpro'), $pmpro_invoice->user->user_email) . "</p></div>";
+		$confirmation_message .= "<div class='hidden'><p>" . sprintf(__('A welcome email with a copy of your initial membership invoice has been sent to %s.', 'pmpro'), $pmpro_invoice->user->user_email) . "</p></div>";
 		
 		//check instructions		
 		if($pmpro_invoice->gateway == "check" && !pmpro_isLevelFree($pmpro_invoice->membership_level))
