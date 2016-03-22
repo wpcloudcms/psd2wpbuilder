@@ -13,7 +13,7 @@
 ?>
 <div id="pmpro_level-<?php echo $pmpro_level->id; ?>">
 <form name="pmproform" id="pmpro_form" class="pmpro_form fadeIn animated" action="<?php if(!empty($_REQUEST['review'])) echo pmpro_url("checkout", "?level=" . $pmpro_level->id); ?>" method="post">
-    
+      <input type="hidden" name="length" value="8">
     <div class="frm_title start"><h2>START MY PLAN</h2></div>
     <div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
     <div class="price_box">
