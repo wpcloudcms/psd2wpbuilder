@@ -21,7 +21,7 @@
 ?>	
             </div>
 
-<div class="div#frm_form_14">
+<div class="pop_over_effect">
     
     <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
     <hr/>
