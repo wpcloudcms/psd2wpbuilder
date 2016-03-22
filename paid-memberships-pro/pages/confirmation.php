@@ -24,7 +24,6 @@
 <div class="pop_over_effect">
     
     <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
-    <hr/>
 <?php echo do_shortcode( '[formidable id=14]' ); ?>
 
 <?php if(!empty($pmpro_invoice) && !empty($pmpro_invoice->id)) { ?>		
