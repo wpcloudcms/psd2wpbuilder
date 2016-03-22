@@ -4,6 +4,7 @@
 	if($pmpro_msg)
 	{
 	?>
+<div class="div#frm_form_14">
 		<div class="pmpro_message <?php echo $pmpro_msgt?>"><?php echo $pmpro_msg?></div>
 	<?php
 	}
@@ -35,7 +36,7 @@
 		
 		echo apply_filters("the_content", $confirmation_message);		
 	?>
-
+<div class="frm_title upgrade"><h2>UPGRADE MY PLAN</h2></div>
 <?php 
     echo do_shortcode( '[formidable id=14]' );
 ?>
@@ -118,3 +119,4 @@
 		<?php } ?>
 	</div>
 </nav>
+</div>
