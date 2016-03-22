@@ -219,7 +219,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 			<td>
 				<div>
 					<label for="username"></label>
-					<input id="username" name="username" type="text" placeholder="<?php _e('Username', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("username");?>" size="30" value="<?php echo esc_attr($username)?>" />
+					<input id="username" name="username" type="text" placeholder="<?php _e('E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("username");?>" size="30" value="<?php echo esc_attr($username)?>" />
 				</div>
 
 				<?php
@@ -253,7 +253,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 					do_action('pmpro_checkout_after_password');
 				?>
 
-				<div class="email">
+				<div class="email hidden">
 					<label for="bemail"></label>
 					<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail)?>" />
 				</div>
@@ -262,7 +262,7 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 					if($pmpro_checkout_confirm_email)
 					{
 					?>
-					<div class="confemail">
+					<div class="confemail hidden">
 						<label for="bconfirmemail"></label>
 						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" placeholder="<?php _e('Confirm E-mail Address', 'pmpro');?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail)?>" />
 
