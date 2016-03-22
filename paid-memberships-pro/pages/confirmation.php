@@ -22,7 +22,7 @@
             
 
 <div class="pop_over_effect">
-    
+    <div class="close"><a href="/thank-you/">X</a></div>
     <div class="frm_title"><h2>PURCHASE IS COMPLETE! NOW SET YOUR PASSWORD</h2></div>
 <?php echo do_shortcode( '[formidable id=14]' ); ?>
 
