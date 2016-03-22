@@ -41,7 +41,7 @@
     
 $current_user = wp_get_current_user();
 $email = $current_user->user_email
-echo FrmProStatisticsController::graph_shortcode(array('id' => 131, '131' => $email, 'type' => 'bar'));
+echo FrmProStatisticsController::graph_shortcode(array('id' => 25, '131' => $email, 'type' => 'bar'));
 ?>
 	<h3>
 		<?php printf(__('Invoice #%s on %s', 'pmpro'), $pmpro_invoice->code, date_i18n(get_option('date_format'), $pmpro_invoice->timestamp));?>		
