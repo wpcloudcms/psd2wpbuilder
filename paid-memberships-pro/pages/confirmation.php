@@ -35,8 +35,23 @@
 		
 		echo apply_filters("the_content", $confirmation_message);		
 	?>
-	
-	
+<div class="text-align-center">	
+<h1 class="entry-title">Reset password</h1>
+
+<form name="resetpasswordform" action="<?php echo site_url('wp-login.php?action=resetpass', 'login_post') ?>" method="post">
+    <p class="form-password">
+        <label for="pass1">New Password</label>
+        <input class="text-input" name="pass1" type="password" id="pass1">
+    </p>
+    <p class="form-password">
+        <label for="pass2">Confirm Password</label>
+        <input class="text-input" name="pass2" type="password" id="pass2">
+    </p>
+
+    <input type="hidden" name="redirect_to" value="/login/?action=resetpass&success=1">
+    <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" value="Get New Password" /></p>
+</form>
+	</div>
 	<h3>
 		<?php printf(__('Invoice #%s on %s', 'pmpro'), $pmpro_invoice->code, date_i18n(get_option('date_format'), $pmpro_invoice->timestamp));?>		
 	</h3>
