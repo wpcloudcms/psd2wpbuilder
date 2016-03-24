@@ -3,7 +3,11 @@
 Template Name: Fullwidth Ajax Page
 */
 ?>
-
+	<div id="pageheader" class="titleclass">
+		<div class="col-sm-12">
+			<?php //get_template_part('templates/page', 'header'); ?>
+		</div><!--container-->
+	</div><!--titleclass-->
 	
         <div id="content">
      <div class="container">
