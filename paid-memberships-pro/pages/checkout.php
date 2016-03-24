@@ -790,8 +790,8 @@ elseif (isset($_GET["level"]) && trim($_GET["level"]) == '6'){
 		<?php } ?>
         
         <div class="form-footer">
-        <span class="col-md-9"><p>Secured Payment Powered by</p></span>
-        <span class="col-md-3"><img src="/wp-content/uploads/2016/03/stripe_footer.png"></span>
+        <span class="col-md-8"><p>Secured Payment Powered by</p></span>
+        <span class="col-md-4"><img src="/wp-content/uploads/2016/03/stripe_footer.png"></span>
         </div>
 
 		<span id="pmpro_processing_message" style="visibility: hidden;">
