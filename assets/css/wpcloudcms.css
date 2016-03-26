@@ -227,6 +227,11 @@ div#wpmem_login, div#wpmem_reg {
 ul#wp-admin-bar-top-secondary {
     margin-top: -10px;
 }
+.boxed #wrapper.container {
+    -webkit-box-shadow: none; 
+    box-shadow: none;
+    margin-bottom: none;
+}
 @media (max-width: 543px) {
 .pad5 {padding: 1px;} .pad10 {padding: 2px;} .pad15 {padding: 3px;} .pad20 {padding: 4px;} .pad25 {padding: 5px;} 
 .pad30 {padding: 6px;} .pad60 {padding: 12px;} .pad120 {padding: 24px;}
