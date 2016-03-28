@@ -43,12 +43,14 @@ if($pmpro_msg)
 <div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
 <div class="col-xs-2 toggle"> <a id="toggle2" href="#"><img class="toggle1 size-full wp-image-118 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/monthly_billing_button.png" alt="monthly_billing_button" width="70" height="35" /></a>
 <a id="toggle1" href="#"><img class="toggle2 hidden size-full wp-image-119 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/annual_billing_button.png" alt="annual_billing_button" width="70" height="35" /></a></div>
-<div class="col-xs-3 annual billing">Annual Billing
+<div class="col-xs-3 annual billing">Annual Billing<br>
 Save 50%</div>
 <div class="col-xs-2"></div>
 </div>
 <div class="toggle1 monthly black pb60" style="text-align: center;">Click yearly above and save up to $480 on annual plans</div>
 <div class="toggle2 annual pb60 hidden" style="text-align: center;">Save up to $480 on yearly subscriptions</div>
+
+<div>Current Plan: <?php echo $current_user->membership_level->name?> @ <?php echo pmpro_getLevelCost($level, true, true);?></div>
 <div class="toggle1">
 <div id="shaon-pricing-table" class="row shaon-pricing-table skin-blue style-2">
 <div class="col-md-12">
