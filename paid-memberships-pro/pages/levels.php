@@ -29,15 +29,17 @@ if($pmpro_msg)
 <?php
 }
 ?>
+<!--
 <?php	
-	$count = 0;
-	foreach($pmpro_levels as $level)
-	{
-	  if(isset($current_user->membership_level->ID))
-		  $current_level = ($current_user->membership_level->ID == $level->id);
-	  else
-		  $current_level = false;
+	//$count = 0;
+	//foreach($pmpro_levels as $level)
+	//{
+	  //if(isset($current_user->membership_level->ID))
+		 // $current_level = ($current_user->membership_level->ID == $level->id);
+	 // else
+		 // $current_level = false;
 	?>
+-->
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
 <div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
@@ -273,7 +275,7 @@ tempor incididunt ut labore et dolore magna aliqua.</div>
 		</td>
 	</tr>
 	<?php
-	}
+	//}
 	?>
 </tbody>
 </table>
