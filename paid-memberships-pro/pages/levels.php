@@ -29,16 +29,7 @@ if($pmpro_msg)
 <?php
 }
 ?>
-<table id="pmpro_levels_table" class="pmpro_checkout">
-<thead>
-  <tr>
-	<th><?php _e('Level', 'pmpro');?></th>
-	<th><?php _e('Price', 'pmpro');?></th>	
-	<th>&nbsp;</th>
-  </tr>
-</thead>
-<tbody>
-	<?php	
+<?php	
 	$count = 0;
 	foreach($pmpro_levels as $level)
 	{
@@ -47,7 +38,201 @@ if($pmpro_msg)
 	  else
 		  $current_level = false;
 	?>
-	<tr class="<?php if($count++ % 2 == 0) { ?>odd<?php } ?><?php if($current_level == $level) { ?> active<?php } ?>">
+<div class="row toggleswitch">
+<div class="col-xs-2"></div>
+<div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
+<div class="col-xs-2 toggle"> <a id="toggle2" href="#"><img class="toggle1 size-full wp-image-118 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/monthly_billing_button.png" alt="monthly_billing_button" width="70" height="35" /></a>
+<a id="toggle1" href="#"><img class="toggle2 hidden size-full wp-image-119 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/annual_billing_button.png" alt="annual_billing_button" width="70" height="35" /></a></div>
+<div class="col-xs-3 annual billing">Annual Billing
+Save 50%</div>
+<div class="col-xs-2"></div>
+</div>
+<div class="toggle1 monthly black pb60" style="text-align: center;">Click yearly above and save up to $480 on annual plans</div>
+<div class="toggle2 annual pb60 hidden" style="text-align: center;">Save up to $480 on yearly subscriptions</div>
+<div class="toggle1">
+<div id="shaon-pricing-table" class="row shaon-pricing-table skin-blue style-2">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4">
+<div class="free pricing-table small">
+<ul>
+<ul>
+	<li class="wppt-package-name top-li-first">
+<h5>SMALL</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>79 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+Minimum 3 months signup</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even blue-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=1">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="free pricing-table medium">
+<ul>
+<ul>
+	<li class="wppt-package-name ">
+<h5>MEDIUM</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>99 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+Minimum 3 months signup</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even free-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=2">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="free pricing-table large">
+<ul>
+<ul>
+	<li class="wppt-package-name top-li-last">
+<h5>LARGE</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>199 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+Minimum 3 months signup</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even free-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=3">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="toggle2 hidden">
+<div id="shaon-pricing-table" class="row shaon-pricing-table skin-blue style-2">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4">
+<div class="free pricing-table small">
+<ul>
+<ul>
+	<li class="wppt-package-name top-li-first">
+<h5>SMALL</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>69 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+(billed yearly)</p>
+<p class="usave">you save $120</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even blue-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=4">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="free pricing-table medium">
+<ul>
+<ul>
+	<li class="wppt-package-name ">
+<h5>MEDIUM</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>79 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+(billed yearly)</p>
+<p class="usave">you save $120</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even free-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=5">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="free pricing-table large">
+<ul>
+<ul>
+	<li class="wppt-package-name top-li-last">
+<h5>LARGE</h5>
+</li>
+	<li class="wppt-package-info free-row-2">
+<div class="wppt-info-circle">
+<h1>159 <span class="dollar">$</span></h1>
+<p class="usdpermo"><strong>USD Per Month</strong>
+(billed yearly)</p>
+<p class="usave">you save $120</p>
+
+</div></li>
+	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
+	<li class="feature pricing-content-row-even free-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
+	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
+	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
+	<li class="pricing-footer <?php if($current_level == $level) { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=6">CHOOSE</a></li>
+</ul>
+</ul>
+<div class="price-bottom"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center pb60">If you don't need a monthly support plan you can <a href="/single-job/">Order a single job for $29</a>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</div>
+
+<table id="pmpro_levels_table" class="pmpro_checkout">
+<thead>
+  <tr>
+	<th><?php _e('Levels', 'pmpro');?></th>
+	<th><?php _e('Prices', 'pmpro');?></th>	
+	<th>&nbsp;</th>
+  </tr>
+</thead>
+<tbody>
+	
+	<tr class="<?php if($count++ % 2 == 0) { ?>odd<?php } ?>">
 		<td><?php echo $current_level ? "<strong>{$level->name}</strong>" : $level->name?></td>
 		<td>
 			<?php 
@@ -92,7 +277,7 @@ if($pmpro_msg)
 	?>
 </tbody>
 </table>
-<nav id="nav-below" class="navigation" role="navigation">
+<nav id="nav-below" class="navigation hidden" role="navigation">
 	<div class="nav-previous alignleft">
 		<?php if(!empty($current_user->membership_level->ID)) { ?>
 			<a href="<?php echo pmpro_url("account")?>"><?php _e('&larr; Return to Your Account', 'pmpro');?></a>
