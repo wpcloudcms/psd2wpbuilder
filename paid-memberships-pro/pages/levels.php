@@ -38,7 +38,7 @@ if($pmpro_msg)
 	  else
 		  $current_level = 'false'
 	?>
-<div class="row plan">Current Plan: <?php echo $current_user->membership_level->name?> @ <?php echo pmpro_getLevelCost($level, true, true);?></div>
+<div class="row nowplan">Current Plan: <?php echo $current_user->membership_level->name?> @ <?php echo pmpro_getLevelCost($level, true, true);?></div>
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
 <div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
