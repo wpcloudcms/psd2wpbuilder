@@ -218,9 +218,7 @@ Minimum 3 months signup</p>
 </div>
 </div>
 </div>
-<div class="text-center pb60">If you don't need a monthly support plan you can <a href="/single-job/">Order a single job for $29</a>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.</div>
+<div class="text-center pb60"></div>
 
 <div class="hidden"> <table id="pmpro_levels_table" class="pmpro_checkout">
 <thead>
