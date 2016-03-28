@@ -5,7 +5,7 @@
         $(".toggle2").addClass("hidden");
         $(".toggle1").removeClass("hidden");
         $(".annual.billing").addClass("black");
-        $(".annual.billing").removeClass("black");
+        $(".monthly.billing").removeClass("black");
 
     });
     $("#toggle2").click(function(){
@@ -14,6 +14,6 @@
         $(".toggle1").addClass("hidden");
         $(".toggle2").removeClass("hidden");
         $(".monthly.billing").addClass("black");
-        $(".monthly.billing").removeClass("black");
+        $(".annual.billing").removeClass("black");
     });
 });
