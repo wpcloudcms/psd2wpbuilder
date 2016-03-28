@@ -33,9 +33,9 @@ if($pmpro_msg)
 	//$count = 0;
 	//foreach($pmpro_levels as $level)
 	//{
-	  if(isset($current_user->membership_level->ID))
+	  //if(isset($current_user->membership_level->ID))
 		  $current_level = ($current_user->membership_level->ID == $level->id);
-	  else
+	  //else
 		  echo '$current_level'
 	?>
 <div class="row toggleswitch">
@@ -72,7 +72,7 @@ Minimum 3 months signup</p>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '1') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=1">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '1') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=1">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
