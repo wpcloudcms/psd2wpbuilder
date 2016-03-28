@@ -97,7 +97,7 @@ Minimum 3 months signup</p>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '2') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=2">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '2') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=2">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -122,7 +122,7 @@ Minimum 3 months signup</p>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '3') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=3">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '3') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=3">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -156,7 +156,7 @@ Minimum 3 months signup</p>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '4') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=4">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '4') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=4">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -208,7 +208,7 @@ Minimum 3 months signup</p>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '6') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=6">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '6') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=6">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
