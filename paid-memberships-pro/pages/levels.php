@@ -224,7 +224,7 @@ Minimum 3 months signup</p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.</div>
 
-<table id="pmpro_levels_table" class="pmpro_checkout">
+<div class="hidden"> <table id="pmpro_levels_table" class="pmpro_checkout">
 <thead>
   <tr>
 	<th><?php _e('Levels', 'pmpro');?></th>
@@ -278,7 +278,7 @@ tempor incididunt ut labore et dolore magna aliqua.</div>
 	//}
 	?>
 </tbody>
-</table>
+</table></div>
 <nav id="nav-below" class="navigation hidden" role="navigation">
 	<div class="nav-previous alignleft">
 		<?php if(!empty($current_user->membership_level->ID)) { ?>
