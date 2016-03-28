@@ -108,7 +108,7 @@ Save 50%</div>
 <div class="free pricing-table large">
 <ul>
 <ul>
-	<li class="wppt-package-name top-li-last">
+	<li class="wppt-package-name top-li-last"> 
 <h5>LARGE</h5>
 </li>
 	<li class="wppt-package-info free-row-2">
