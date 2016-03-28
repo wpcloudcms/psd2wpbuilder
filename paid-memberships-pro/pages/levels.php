@@ -65,7 +65,7 @@ Save 50%</div>
 <div class="wppt-info-circle">
 <h1>79 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-Minimum 3 months signup</p>
+<br>Minimum 3 months signup</p>
 
 </div></li>
 	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
@@ -90,7 +90,7 @@ Minimum 3 months signup</p>
 <div class="wppt-info-circle">
 <h1>99 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-Minimum 3 months signup</p>
+<br>Minimum 3 months signup</p>
 
 </div></li>
 	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
@@ -115,7 +115,7 @@ Minimum 3 months signup</p>
 <div class="wppt-info-circle">
 <h1>199 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-Minimum 3 months signup</p>
+<br>Minimum 3 months signup</p>
 
 </div></li>
 	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
@@ -148,7 +148,7 @@ Minimum 3 months signup</p>
 <div class="wppt-info-circle">
 <h1>69 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-(billed yearly)</p>
+<br>(billed yearly)</p>
 <p class="usave">you save $120</p>
 
 </div></li>
@@ -174,7 +174,7 @@ Minimum 3 months signup</p>
 <div class="wppt-info-circle">
 <h1>79 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-(billed yearly)</p>
+<br>(billed yearly)</p>
 <p class="usave">you save $120</p>
 
 </div></li>
@@ -200,7 +200,7 @@ Minimum 3 months signup</p>
 <div class="wppt-info-circle">
 <h1>159 <span class="dollar">$</span></h1>
 <p class="usdpermo"><strong>USD Per Month</strong>
-(billed yearly)</p>
+<br>(billed yearly)</p>
 <p class="usave">you save $120</p>
 
 </div></li>
