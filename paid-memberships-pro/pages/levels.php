@@ -29,7 +29,6 @@ if($pmpro_msg)
 <?php
 }
 ?>
-<!--
 <?php	
 	//$count = 0;
 	//foreach($pmpro_levels as $level)
@@ -37,9 +36,8 @@ if($pmpro_msg)
 	  if(isset($current_user->membership_level->ID))
 		  $current_level = ($current_user->membership_level->ID == $level->id);
 	  else
-		  $current_level = false;
+		  echo ' .$current_level. '
 	?>
--->
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
 <div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
