@@ -41,7 +41,7 @@ if($pmpro_msg)
 <div class="row nowplan">Current Plan: <?php echo $current_user->membership_level->name?></div>
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
-<div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
+<div class="col-xs-3 monthly black billing">Monthly Billing</div>
 <div class="col-xs-2 toggle"> <a id="toggle2" href="#"><img class="toggle1 size-full wp-image-118 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/monthly_billing_button.png" alt="monthly_billing_button" width="70" height="35" /></a>
 <a id="toggle1" href="#"><img class="toggle2 hidden size-full wp-image-119 aligncenter" src="http://everythingwp.bigcloudcms.com/wp-content/uploads/2016/03/annual_billing_button.png" alt="annual_billing_button" width="70" height="35" /></a></div>
 <div class="col-xs-3 annual billing">Annual Billing<br>
