@@ -38,6 +38,7 @@ if($pmpro_msg)
 	  else
 		  $current_level = 'false'
 	?>
+<div class="row plan">Current Plan: <?php echo $current_user->membership_level->name?> @ <?php echo pmpro_getLevelCost($level, true, true);?></div>
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
 <div class="col-xs-3 monthly black billing" style="text-align: right;">Monthly Billing</div>
@@ -49,8 +50,6 @@ Save 50%</div>
 </div>
 <div class="toggle1 monthly black pb60" style="text-align: center;">Click yearly above and save up to $480 on annual plans</div>
 <div class="toggle2 annual pb60 hidden" style="text-align: center;">Save up to $480 on yearly subscriptions</div>
-
-<div>Current Plan: <?php echo $current_user->membership_level->name?> @ <?php echo pmpro_getLevelCost($level, true, true);?></div>
 <div class="toggle1">
 <div id="shaon-pricing-table" class="row shaon-pricing-table skin-blue style-2">
 <div class="col-md-12">
