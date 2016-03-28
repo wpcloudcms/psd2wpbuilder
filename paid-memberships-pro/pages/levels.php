@@ -33,10 +33,10 @@ if($pmpro_msg)
 	//$count = 0;
 	//foreach($pmpro_levels as $level)
 	//{
-	  //if(isset($current_user->membership_level->ID))
+	  if(isset($current_user->membership_level->ID))
 		  $current_level = ($current_user->membership_level->ID == $level->id);
-	  //else
-		  echo '$current_level'
+	  else
+		  $current_level = 'false'
 	?>
 <div class="row toggleswitch">
 <div class="col-xs-2"></div>
