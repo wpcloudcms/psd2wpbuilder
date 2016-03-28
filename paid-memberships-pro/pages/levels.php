@@ -69,6 +69,7 @@ Save 50%</div>
 Minimum 3 months signup</p>
 
 </div></li>
+    <li><?php echo $current_level ? "<strong>{$level->name}</strong>" : $level->name?></li>
 	<li class="feature first-feature pricing-content-row-odd yep"><label class="label label-success"></label>   <span class="ftr">TIMESHEET</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray yep"><label class="label label-success"></label>   <span class="ftr">PROJECT SUMMERY</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
