@@ -34,4 +34,11 @@
   <!--[if lt IE 9]>
       <script src="<?php echo get_template_directory_uri() . '/assets/js/vendor/respond.min.js';?>"></script>
     <![endif]-->
+    <script>
+$(function() {  
+
+    jQuery.scrollSpeed(100, 800);
+
+});
+</script>
 </head>
