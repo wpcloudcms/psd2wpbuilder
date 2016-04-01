@@ -36,7 +36,7 @@
     <![endif]-->
     <script>
     $(function() {
-        $.scrollSpeed(100, 800);
+        jQuery.scrollSpeed(100, 800);
     });
     </script>
 </head>
