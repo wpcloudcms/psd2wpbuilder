@@ -36,9 +36,4 @@ $(document).ready(function(){
     $('.anim10').css('opacity', 0);
     $('.anim11').css('opacity', 0);
     $('.anim12').css('opacity', 0);
-     
-  $('.anim1').waypoint(function() {
-      $('.anim1').addClass('fadeInLeft animated');
-  }, { offset: '50%' });
- 
 });
