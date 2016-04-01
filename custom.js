@@ -1,4 +1,9 @@
-    $(document).ready(function(){
+$(window).load(function() {
+    $(".loader").css("opacity", 0), setTimeout(function() {
+            $(".loader").hide()
+        }, 600),
+});
+$(document).ready(function(){
     $("#toggle1").click(function(){
         $(".toggle1").show();
         $(".toggle2").hide();
@@ -15,10 +20,4 @@
         $(".annual.billing").addClass("black");
         $(".monthly.billing").removeClass("black");
     });
-});
-
-$(window).load(function() {
-    $(".loader").css("opacity", 0), setTimeout(function() {
-            $(".loader").hide()
-        }, 600),
 });
