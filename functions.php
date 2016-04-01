@@ -28,6 +28,9 @@ function custom_scripts() {
     
      wp_enqueue_script( 'waypoints-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js');
     
+    wp_register_script( 'scrollSpeed-js', get_stylesheet_directory_uri() . '/assets/js/jQuery.scrollSpeed.js');  
+    wp_enqueue_script('scrollSpeed-js');
+    
     wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  
     wp_enqueue_script('custom-js');
 
