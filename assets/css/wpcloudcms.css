@@ -35,6 +35,10 @@
     -webkit-animation-delay: -1s;
     animation-delay: -1s;
 }
+.anim-hidden {
+visibility: hidden;
+}
+}
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
 }

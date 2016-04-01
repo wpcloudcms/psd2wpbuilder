@@ -39,12 +39,12 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function() {
-    $('.hidden').each(function(){
+    $('.anim-hidden').each(function(){
     var imagePos = $(this).offset().top;
 
     var topOfWindow = $(window).scrollTop();
         if (imagePos < topOfWindow+400) {
-            $(this).removeClass("hidden").addClass("animated");
+            $(this).removeClass("anim-hidden").addClass("animated");
         }
     });
 });
