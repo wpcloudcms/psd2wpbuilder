@@ -38,7 +38,6 @@ $(document).ready(function(){
     $('.anim12').css('opacity', 0);
 });
 //<! for scroll animation using animate.css https://github.com/harconst/scroll-animations/blob/master/index.html //
-        $(function(){
             function onScrollInit( items, trigger ) {
                 items.each( function() {
                 var osElement = $(this),
@@ -62,4 +61,3 @@ $(document).ready(function(){
             }
             onScrollInit( $('.os-animation') );
             onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
-});
