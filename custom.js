@@ -1,8 +1,3 @@
- $(function(){
-     $(".loader").css("opacity", 0), setTimeout(function() {
-            $(".loader").hide()
-        }, 600),
-    });
 $(document).ready(function(){
     $("#toggle1").click(function(){
         $(".toggle1").show();
@@ -38,30 +33,4 @@ $(document).ready(function(){
     $('.anim10').css('opacity', 0);
     $('.anim11').css('opacity', 0);
     $('.anim12').css('opacity', 0);
-});
-
- $(function(){
- function onScrollInit( items, trigger ) {
- items.each( function() {
- var osElement = $(this),
- osAnimationClass = osElement.attr('data-os-animation'),
- osAnimationDelay = osElement.attr('data-os-animation-delay');
- 
- osElement.css({
- '-webkit-animation-delay': osAnimationDelay,
- '-moz-animation-delay': osAnimationDelay,
- 'animation-delay': osAnimationDelay
- });
- var osTrigger = ( trigger ) ? trigger : osElement;
- 
- osTrigger.waypoint(function() {
- osElement.addClass('animated').addClass(osAnimationClass);
- },{
- triggerOnce: true,
- offset: '90%'
- });
- });
- }
- onScrollInit( $('.os-animation') );
- onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
 });
