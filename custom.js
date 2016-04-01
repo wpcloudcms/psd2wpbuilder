@@ -37,14 +37,29 @@ $(document).ready(function(){
     $('.anim11').css('opacity', 0);
     $('.anim12').css('opacity', 0);
 });
-
-$(window).scroll(function() {
-    $('.anim-hidden').each(function(){
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+400) {
-            $(this).removeClass("anim-hidden").addClass("animated");
-        }
-    });
+//<! for scroll animation using animate.css https://github.com/harconst/scroll-animations/blob/master/index.html //
+        $(function(){
+            function onScrollInit( items, trigger ) {
+                items.each( function() {
+                var osElement = $(this),
+                    osAnimationClass = osElement.attr('data-os-animation'),
+                    osAnimationDelay = osElement.attr('data-os-animation-delay');
+                  
+                    osElement.css({
+                        '-webkit-animation-delay':  osAnimationDelay,
+                        '-moz-animation-delay':     osAnimationDelay,
+                        'animation-delay':          osAnimationDelay
+                    });
+                    var osTrigger = ( trigger ) ? trigger : osElement;
+                    
+                    osTrigger.waypoint(function() {
+                        osElement.addClass('animated').addClass(osAnimationClass);
+                        },{
+                            triggerOnce: true,
+                            offset: '90%'
+                    });
+                });
+            }
+            onScrollInit( $('.os-animation') );
+            onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
 });

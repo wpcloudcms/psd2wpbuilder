@@ -35,10 +35,12 @@
     -webkit-animation-delay: -1s;
     animation-delay: -1s;
 }
-.anim-hidden {
-visibility: hidden;
-}
-}
+        .os-animation{
+            opacity: 0;
+        }  
+        .os-animation.animated{
+            opacity: 1;
+        }   
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
 }
