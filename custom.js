@@ -40,7 +40,6 @@ $(document).ready(function(){
     $('.anim12').css('opacity', 0);
 });
 
-<script type="text/javascript">//<![CDATA[ 
  $(function(){
  function onScrollInit( items, trigger ) {
  items.each( function() {
@@ -65,5 +64,4 @@ $(document).ready(function(){
  }
  onScrollInit( $('.os-animation') );
  onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
-});//]]> 
- </script>
+});
