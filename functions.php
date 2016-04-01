@@ -26,6 +26,9 @@ function custom_scripts() {
     
     wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
     
+    wp_register_script( 'waypoints-js', get_stylesheet_directory_uri() . '/assets/js/jquery.waypoints.min.js');  
+    wp_enqueue_script('waypoints-js');
+    
     wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.min.js');  
     wp_enqueue_script('custom-js');
 
