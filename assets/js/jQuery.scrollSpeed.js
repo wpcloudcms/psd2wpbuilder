@@ -4,7 +4,7 @@
 
 (function($) {
     
-    jQuery.scrollSpeed = function(step, speed, easing) {
+    $.scrollSpeed = function(step, speed, easing) {
         
         var $document = $(document),
             $window = $(window),
@@ -89,13 +89,13 @@
         });       
     };
     
-    jQuery.easing.default = function (x,t,b,c,d) {
+    $.easing.default = function (x,t,b,c,d) {
     
         return -c * ((t=t/d-1)*t*t*t - 1) + b;
     };
     
-})(jQuery);
+})($);
 
-    jQuery(function() {
-        jQuery.scrollSpeed(100, 800);
+    $(function() {
+        $.scrollSpeed(100, 800);
     });
