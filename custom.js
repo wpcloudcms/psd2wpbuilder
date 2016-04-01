@@ -16,3 +16,9 @@
         $(".monthly.billing").removeClass("black");
     });
 });
+
+$(window).load(function() {
+    $(".loader").css("opacity", 0), setTimeout(function() {
+            $(".loader").hide()
+        }, 600),
+});
