@@ -21,3 +21,26 @@ $(document).ready(function(){
         $(".monthly.billing").removeClass("black");
     });
 });
+    
+$(document).ready(function(){
+ 
+  // hide our element on page load
+    $('.anim1').css('opacity', 0);
+    $('.anim2').css('opacity', 0);
+    $('.anim3').css('opacity', 0);
+    $('.anim4').css('opacity', 0);
+    $('.anim4').css('opacity', 0);
+    $('.anim5').css('opacity', 0);
+    $('.anim6').css('opacity', 0);
+    $('.anim7').css('opacity', 0);
+    $('.anim8').css('opacity', 0);
+    $('.anim9').css('opacity', 0);
+    $('.anim10').css('opacity', 0);
+    $('.anim11').css('opacity', 0);
+    $('.anim12').css('opacity', 0);
+     
+  $('.anim1').waypoint(function() {
+      $('.anim1').addClass('fadeInLeft animated');
+  }, { offset: '50%' });
+ 
+});

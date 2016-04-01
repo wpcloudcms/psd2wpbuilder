@@ -14,7 +14,7 @@ function custom_scripts() {
           
     wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
     
-    wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.min.css' );
+    wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
     wp_enqueue_style('wpcloudcms-css');
     
     wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.min.css' );
@@ -29,7 +29,7 @@ function custom_scripts() {
     wp_register_script( 'waypoints-js', get_stylesheet_directory_uri() . '/assets/js/jquery.waypoints.min.js');  
     wp_enqueue_script('waypoints-js');
     
-    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.min.js');  
+    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  
     wp_enqueue_script('custom-js');
 
 
