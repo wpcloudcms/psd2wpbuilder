@@ -67,7 +67,5 @@
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
      </div>
     </div> 
-</div>
 </div><!--Wrapper-->
 </body>
-</html>
