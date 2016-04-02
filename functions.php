@@ -39,6 +39,19 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
+function footerscrollscript() {
+    if( wp_script_is( 'jquery', 'done' ) ) {
+    ?>
+    <script>
+$(function() {  
+    jQuery.scrollSpeed(100, 800);
+});
+</script>
+    <?php
+    }
+}
+add_action( 'wp_footer', 'footerscrollscript' );
+
 /**
  * WordPress function for logout menu
  */
