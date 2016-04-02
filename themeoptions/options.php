@@ -571,9 +571,9 @@ Redux::setSection( $opt_name, array(
             'width' => 'width:35%', 
             ),
         array(
-            'id'=>'wrapper_header_height',
+            'id'=>'main_header_height',
             'type' => 'slider', 
-            'title' => __('Main wrapper Header Height px', 'virtue'),
+            'title' => __('Main Header Height px', 'virtue'),
             'subtitle' => __('', 'virtue'),
             "default"       => "100",
             "min"       => "0",
