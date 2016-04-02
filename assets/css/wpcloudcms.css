@@ -46,7 +46,10 @@
 }
 
 section#topbar .container .row {height: auto; margin: auto;}
-
+.full-slider {
+    padding-left: 20px;
+    padding-right: 20px;  
+    }
 @media (max-width: 991px) {
 div#logo, div#thelogo, .kad-header-widget, .col-md-left, .col-md-right {
     width: 100% !important;
