@@ -44,7 +44,12 @@
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
 }
-
+.revealOnScroll.animated {
+    visibility: visible;
+}
+.revealOnScroll {
+    visibility: hidden;
+}
 section#topbar .container .row {height: auto; margin: auto;}
 .full-slider {
     padding-left: 20px;
