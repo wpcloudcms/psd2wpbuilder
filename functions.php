@@ -30,9 +30,6 @@ function custom_scripts() {
     wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
     
      wp_enqueue_script( 'waypoints-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js');
-    
-    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  
-    wp_enqueue_script('custom-js');
 
 
 	}
@@ -40,6 +37,11 @@ function custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 function footerscrollscript() {
+    
+    wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  
+    wp_enqueue_script('custom-js');
+    
+    
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
     <script>
