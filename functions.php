@@ -29,7 +29,7 @@ function custom_scripts() {
     
     wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' );
     
-     wp_enqueue_script( 'waypoints-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js');
+//     wp_enqueue_script( 'waypoints-js', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js');
 
 
 	}
