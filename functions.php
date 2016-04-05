@@ -10,7 +10,7 @@ function custom_scripts() {
 //    wp_register_style( 'custom-font', get_stylesheet_directory_uri().'/fonts/BebasNeue.woff' ); 
 //    wp_enqueue_style('custom-font');
     
-    wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
+ //   wp_enqueue_style( 'arial-narrow', 'http://allfont.net/allfont.css?fonts=arial-narrow' ); 
           
 //    wp_enqueue_style( 'bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
     
