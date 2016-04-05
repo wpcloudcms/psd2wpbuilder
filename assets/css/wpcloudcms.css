@@ -40,7 +40,15 @@
         }  
         .os-animation.animated{
             opacity: 1;
-        }   
+        }
+nav#nav-main ul.sf-menu>li::after {
+    background-color: #ccc;
+    height: 2px;
+    width: 70%;
+    top: 35px;
+    left: 15%;
+    right: 15%;
+}
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
 }
