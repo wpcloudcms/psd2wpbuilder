@@ -1,4 +1,13 @@
 $(document).ready(function(){
+$(".loader").css("opacity", 0), setTimeout(function() {
+            $(".loader").hide()
+        }, 600),
+    $("nav#nav-main").css({"display" : "block"});
+    $("i.beforelogin").closest("li").addClass("beforelogin");
+    $("i.afterlogin").closest("li").addClass("afterlogin");
+});
+
+$(document).ready(function(){
     $("#toggle1").click(function(){
         $(".toggle1").show();
         $(".toggle2").hide();
