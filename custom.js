@@ -5,7 +5,7 @@ $(".loader").css("opacity", 0), setTimeout(function() {
     $("nav#nav-main").css({"display" : "block"});
     $("i.beforelogin").closest("li").addClass("beforelogin");
     $("i.afterlogin").closest("li").addClass("afterlogin");
-    $("nav#nav-main ul li a span").insertAfter("::after");
+    $("::after").insertAfter("nav#nav-main ul li a span");
 });
 
 $(document).ready(function(){
