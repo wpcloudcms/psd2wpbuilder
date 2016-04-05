@@ -41,7 +41,7 @@
         .os-animation.animated{
             opacity: 1;
         }
-main ul.sf-menu>li a p {
+nav#nav-main ul.sf-menu>li a p {
     background-color: #27D3A3;
     height: 2px;
     width: 0%;
