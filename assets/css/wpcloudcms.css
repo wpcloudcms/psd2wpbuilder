@@ -47,6 +47,7 @@ nav#nav-main ul.sf-menu>li a p {
     width: 0%;
     left: 50%;
     position: relative;
+    margin-top: -10px;
     -webkit-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
     -moz-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
     -ms-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
