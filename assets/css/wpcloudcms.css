@@ -41,13 +41,21 @@
         .os-animation.animated{
             opacity: 1;
         }
-nav#nav-main ul.sf-menu>li::after {
-    background-color: #ccc;
+main ul.sf-menu>li a p {
+    background-color: #27D3A3;
     height: 2px;
-    width: 70%;
-    top: 35px;
-    left: 15%;
-    right: 15%;
+    width: 0%;
+    left: 50%;
+    position: relative;
+    -webkit-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+}
+nav#nav-main ul.sf-menu>li a:hover p {
+    width: 110%;
+    left: -5%;
 }
 #topcontrol>div {
     background: rgba(0,0,0,0.3) !important;
