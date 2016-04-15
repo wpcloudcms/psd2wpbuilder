@@ -41,6 +41,9 @@ function footerscrollscript() {
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
     <script>
+        $(".loader").css("opacity", 0), setTimeout(function() {
+            $(".loader").hide()
+        }, 600),
 $(function() {  
     jQuery.scrollSpeed(100, 800);
 });
