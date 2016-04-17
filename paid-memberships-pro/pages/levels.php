@@ -73,7 +73,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '1') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=1">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '1') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_101">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -98,7 +98,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '2') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=2">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '2') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_100">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -123,7 +123,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '3') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=3">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '3') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_102">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -157,7 +157,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '4') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=4">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '4') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_103">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -183,7 +183,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '5') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=5">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_level == '5') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_104">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -209,7 +209,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '6') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="/membership-account/membership-checkout/?level=6">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '6') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="http://#ppsShowPopUp_105">CHOOSE</a></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
