@@ -374,6 +374,9 @@ ul#wp-admin-bar-top-secondary {
 div#content {
     margin-top: 40px;
 }
+ h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}    
 }
 
 @media (min-width: 768px) {
