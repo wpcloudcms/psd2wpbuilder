@@ -370,6 +370,10 @@ ul#wp-admin-bar-top-secondary {
 
 .ml-a{margin-left:auto;} .ml5 {margin-left:2px;} .ml10 {margin-left:4px;} .ml15 {margin-left:6px;} .ml20 {margin-left:8px;} .ml25 {margin-left:10px;} 
 .ml30 {margin-left:12px;} .ml60 {margin-left:24px;} .ml120 {margin-left:48px;}
+
+div#content {
+    margin-top: 40px;
+}
 }
 
 @media (min-width: 768px) {
