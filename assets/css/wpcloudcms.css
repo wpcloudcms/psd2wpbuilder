@@ -10,6 +10,9 @@
     transition: all .5s ease;
     opacity: 1;
 }
+#wpadminbar ul li {
+    margin-top: -5px;
+} 
 .spinner {
     width: 40px;
     height: 40px;
@@ -135,6 +138,9 @@ iframe {
 header#kad-banner {
     top: 0% !important;
     padding: 0px !important;
+}
+ #wpadminbar {
+    margin-top: -46px;
 }
 }
 @media (min-width: 600px) {
@@ -275,13 +281,16 @@ div#mobile-nav-trigger {
     margin: 0px;
 }
 div#kad-mobile-nav {
-    margin-left: auto !important;
-    margin-right: auto !important;
+margin-left: 20px !important;
+    margin-right: 20px !important;
     left: 0px;
     right: 0px;
-    padding: 0px 20px;
     background-color: #fafafa;
     margin-top: -10px;
+    width: auto;
+}
+button.nav-trigger-case.mobileclass {
+    background-color: #fff;
 }
 hr {
     border: 1px solid #ddd;
@@ -377,11 +386,16 @@ div#content {
  h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
-    
+
 }
 
 @media (min-width: 768px) {
-
+button.nav-trigger-case.collapsed.mobileclass span.kad-menu-name {
+    display: none;
+}
+    button.nav-trigger-case.collapsed.mobileclass {
+    width: 50px;
+    }
 }
 
 @media (max-width: 991px) {
