@@ -129,6 +129,10 @@ ul.sf-dropdown-menu li a {
 a.flex-prev, a.flex-next {
     display: none;
 }
+    .col2-set, .row, .row-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
 iframe {
     width: 100%;
     height: auto !important;
