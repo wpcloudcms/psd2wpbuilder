@@ -1,0 +1,937 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" id="pmpro_frontend-css" href="https://everythingwp.co/wp-content/plugins/paid-memberships-pro/css/frontend.css?ver=1.8.9" type="text/css" media="screen">
+<link rel="stylesheet" id="kadence_app-css" href="https://everythingwp.co/wp-content/themes/bigcloudcms/assets/css/virtue.css?ver=350" type="text/css" media="all">
+<script type="text/javascript" src="https://everythingwp.co/wp-includes/js/jquery/jquery.js?ver=1.12.3"></script>
+<script type="text/javascript" src="https://everythingwp.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0"></script>
+<script type="text/javascript" src="https://everythingwp.co/wp-content/plugins/paid-memberships-pro/js/paid-memberships-pro.js?ver=4.5"></script>
+<script type="text/javascript" src="https://everythingwp.co/wp-content/plugins/paid-memberships-pro/js/jquery.creditCardValidator.js?ver=4.5"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js?ver=4.5"></script> 
+<script type="text/javascript">var light_error = "The Image could not be loaded.", light_of = "%curr% of %total%", light_load = "Loading...";</script><style type="text/css">div#header{height: 100px;}@media (min-width: 992px){aside#leftsidebar{width:25%;}}@media (min-width: 992px){div#ktmain.com-md-8{width:67%;}}@media (min-width: 992px){aside#ktsidebar{width:33%;}}@media (min-width: 992px) {.container {width: 970px;}}@media (min-width: 1200px) {.container {width: 1200px;}}.main.container {margin-top:0px;}div#wrapper {margin-top:0px;}.footertext {margin-bottom:0px !important;}div#logo, div#thelogo {width:400px;} @media (max-width: 991px) {div#logo, div#thelogo {width: 100%;}}.page-header {display: none;}#logo {padding-top:25px;}#logo {padding-bottom:10px;}.flexslider .slides, .virtue_banner {zoom: 1;}#logo {margin-left:0px;}#logo {margin-right:0px;}#nav-main, .nav-main {margin-top:22px;}#nav-main, .nav-main  {margin-bottom:22px;}.headerfont, .tp-caption, .yith-wcan-list li, .yith-wcan .yith-wcan-reset-navigation, ul.yith-wcan-label li a {font-family:Lato;} 
+  .topbarmenu ul li {font-family:Lato;} 
+  #kadbreadcrumbs {font-family:Lato;}a, a:active, a:hover, a:link, a:visited, a:focus, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover, .woocommerce-message:before, .woocommerce-info:before, #nav-secnd ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name, .nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a, .testimonialbox .kadtestimoniallink:hover, .star-rating {color:#6fd1a9;}.credit p, .credit span, .credit a, .credit span a {text-transform:none;}.credit p, .credit span, .credit a, .credit span a {font-family:Arial Narrow, Arial, sans-serif !important;}.footerclass {background:#121212    ;}.sidebar a, .product_price, .select2-container .select2-choice, .kt_product_toggle_container .toggle_grid, .kt_product_toggle_container .toggle_list, .kt_product_toggle_container_list .toggle_grid, .kt_product_toggle_container_list .toggle_list {color:#727272;}.portfolionav {padding: 10px 0 10px;}.woocommerce-ordering {margin: 16px 0 0;}.product_item .product_details h5 {text-transform: none;}.product_item .product_details h5 {min-height:40px;}nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {padding-left:40px; padding-right:40px; width: auto;} nav#nav-main {float:right; margin-top:22px;} nav#nav-main ul li span {text-transform:uppercase;}nav#nav-main ul.sf-menu>li a, nav#nav-main ul.sf-menu>li>a {line-height:25px;}#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {padding-left:10px; padding-right:10px; width: auto;} nav#nav-secnd {float:none; margin-top:20px;} nav#nav-secnd ul li span {text-transform:none;}#nav-secnd ul.sf-menu>li a, #nav-secnd ul.sf-menu>li>a {line-height:5px;}#nav-third ul.sf-menu>li, #nav-third ul.sf-menu>li>a {padding-left:10px; padding-right:10px; width: auto;} nav#nav-third {float:none; width:100%; margin-top:20px;} nav#nav-third ul li span {text-transform:none;}#nav-sthird ul.sf-menu>li, #nav-third ul.sf-menu>li>a {line-height:5px;}.kad-header-style-two .nav-main ul.sf-menu > li {width: 33.333333%;}[class*="wp-image"] {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;border:none;}[class*="wp-image"]:hover {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;border:none;} .light-dropshaddow {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;}.credit { text-align: right; } 
+
+div#popmake-overlay {
+    opacity: 0.5;
+    background-color: rgba(0,0,0,0.5);
+}
+span.popmake-close {
+    right: -45px !important;
+    padding: 15px !important;
+    font-size: 24px !important;
+    background-color: #2A2A2A !important;
+}
+.popmake.theme-159 .popmake-title, .popmake.theme-default-theme .popmake-title {
+     font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.frm_radio:nth-child(1) {
+    width: 46%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    float: left;
+    margin-left: 40px;
+}
+.frm_radio:nth-child(2) {
+width: 46%;
+    padding: 20px 10px;
+    border: 1px solid #ddd;
+    border-left: 0px;
+    float: left;
+    position: relative;
+    top: -118px;
+    left: 52% !important;
+}
+div#frm_field_126_container {
+    padding-top: 25px !important;
+}
+input#field_g8uyq, input#field_ndum, input#field_78cis, input#field_6t0i, input#field_wmdmg, span#select2-chosen-1 {
+    height: 45px;
+    border-radius: 2px;
+}
+input[type="submit"] {
+    color: #fff !important;
+    background-color: #A0A0A0 !important;
+    border-radius: 1px !important;
+    border: 0px !important;
+    width: 100% !important;
+    height: 50px !important;
+}
+
+div#s2id_field_qw9dy {
+    border: 1px solid #A0A0A0;
+    border-radius: 0px;
+    height: 45px;
+    width: 250px !important;
+}
+a.select2-choice {
+    border: 0px !important;
+    margin-top: 1px;
+}
+span#select2-chosen-1 {
+    color: #333;
+}
+div#frm_checkbox_21-0 a {
+    color: #6DC8E5;
+}
+div#frm_checkbox_21-0 label, div#frm_checkbox_111-0 label {
+    font-size: 18px !important;
+    margin-left: 15px;
+}
+li.menu-upgrade.afterlogin a span {
+    color: #19C085;
+}
+input[type="checkbox"]#field_9hqv5-0, input[type="checkbox"]#field_9hqv53-0 {
+    width: 20px;
+    border-width: 0;
+    transition: all .3s linear;
+    height: 20px;
+    border-radius: 1px;
+    border: 2px solid rgba(160, 160, 160, 0.75);
+    margin-top: 10px !important;
+}
+form#form_8zutz .frm_submit {
+    text-align: center;
+}
+form#form_rokfu .frm_submit input[type="submit"], form#form_8zutz input[type="submit"] {
+    background-color: #19C085 !important;
+    max-width: 140px;
+}
+.frm_radio label {
+    font-size: 14px !important;
+}
+input[type="radio"] {
+width: 26px;
+    height: 26px;
+    margin: 0px 8px;
+    background: url(https://everythingwp.co/wp-content/uploads/2016/03/radio-off.png) left center no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+form#pmpro_form .frm_radio input {
+    border: none !important;
+}
+input[type="radio"]:checked {
+    background: url(https://everythingwp.co/wp-content/uploads/2016/03/radio-on.png) left center no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.frm_radio label s {
+    color: rgba(255, 0, 0, 0.55);
+}
+.frm_radio {
+    padding-left: 52px !important;
+}
+input[type="radio"] {
+    position: absolute;
+margin-left: -35px !important;
+}
+.frm_error {
+    position: absolute;
+    right: 30px;
+}
+div#wrapper {
+    border-bottom: 1px solid #ccc;
+}
+body.page-id-249 .entry-content h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #666;
+}
+body.page-id-249 .entry-content p {
+    color: #333;
+}
+li.wppt-package-name h5 {
+    text-transform: uppercase;
+    color: #aaa;
+    padding-top: 20px !important;
+}
+body.page-id-249 .free.pricing-table h1 {
+    font-size: 135px;
+    font-weight: 300;
+    letter-spacing: -10px;
+text-align: center;
+}
+body.page-id-249 li.pricing-footer.footer-row a {
+    border: 0px;
+    padding: 20px 50px;
+    background-color: #19C085;
+    border-radius: 1px;
+    color: #fff;
+}
+.stripe-footer img {
+    float: right;
+    margin-right: 25px;
+    margin-top: -10px;
+}
+.stripe-footer {
+    color: #333;
+    margin-left: 22px;
+    font-size: 18px;
+}
+.kad-mobile-nav .kad-nav-inner li.current-menu-item>a {
+    background: #19C085;
+}
+.page-id-54 .entry-content {
+    padding: 0 2%;
+}
+form#form_8zutz {
+    padding: 0 15%;
+}
+form#form_rqjid input[type="submit"] {
+    min-width: 140px;
+    float: left !important;
+    height: 45px !important;
+margin-top: 0px;
+background-color: #19C085 !important;
+}
+.faq_form {
+    max-width: 70%;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+}
+body.logged-in li.beforelogin {
+    display: none;
+}
+li.afterlogin {
+    display: none;
+}
+body.logged-in li.afterlogin, table#pmpro_pricing_fields div#pmpro_level_cost p {
+    display: block;
+}
+nav#nav-main {
+    display: none;
+}
+.membership-checkout div#wrapper, .membership-confirmation div#wrapper, .membership-checkout footer#containerfooter, .membership-confirmation footer#containerfooter, .membership-checkout .footertext.clearfix, .membership-confirmation .footertext.clearfix, span.pmpro_thead-msg, table#pmpro_pricing_fields p, .membership-checkout table#pmpro_pricing_fields,  .membership-checkout .pmpro_payment-cvv label, .membership-checkout p#pmpro_account_loggedin, .frm_title.upgrade, span.pmpro_thead-msg {
+    display: none;
+}
+.pmpro_payment-cvv {
+    position: relative;
+    top: -62px !important;
+    left: 140px !important;
+    max-width: 150px !important;
+}
+div#pmpro_message {
+    margin: 20px 50px;
+    position: relative;
+    top: -35px;
+}
+.membership-checkout table, .membership-checkout tbody, .membership-checkout tr, .membership-checkout td {
+    min-height: 50px;
+    height: 20px;
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.membership-checkout table tbody {
+height: 50px;
+}
+.membership-checkout thead {
+    display: none;
+}
+.membership-checkout table thead th {
+    padding-left: 50px !important;
+}
+span.pmpro_thead-name {
+    width: 100%;
+}
+table#pmpro_payment_information_fields {
+height: auto !important;
+    top: -30px;
+    position: relative;
+}
+form.pmpro_form .frm_radio label {
+    width: 95% !important;
+    display: block;
+}
+ .membership-confirmation .frm_title {
+    border-bottom: 1px solid #ccc;
+}
+.membership-confirmation input {
+    margin-bottom: 25px !important;
+}
+span.username, p.paswd_desc, p.confi_desc {
+    position: relative;
+}
+p.paswd_desc {
+    top: 50px;
+    margin-bottom: -15px;
+}
+p.confi_desc {
+    top: 125px;
+    margin-bottom: -50px;
+}
+.close {
+    display: none;
+}
+.col-sm-3.monthly.billing {
+    text-align: right;
+}
+.ppsMainFrame {
+border: 0px !important;
+border-radius: 0px !important;
+}
+.membership-checkout form#pmpro_form, .pop_over_effect {
+    position: absolute;
+    left: -10px;
+    margin-left: 0px;
+    max-width: 600px;
+    width: 100%;
+}
+/*
+.membership-checkout, .membership-confirmation {
+    background: url(https://everythingwp.co/wp-content/uploads/2016/04/everythingwp.co-pricing.jpg) center top no-repeat;
+    height: 1000px;
+    background-color: #B2B2B2;
+}
+.membership-checkout .wrap.clearfix.contentclass.hfeed, .membership-confirmation .wrap.clearfix.contentclass.hfeed {
+    background-color: #B2B2B2;
+}
+*/
+input#CVV {
+    background: url(/wp-content/uploads/2016/03/cvv_bg.png) center top no-repeat;
+    background-position: 70px 6px;
+}
+form#pmpro_form input {
+    height: 45px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 520px !important;
+padding-left: 5px;
+    font-size: 15px;
+margin: 0px 30px;
+}
+.country {
+margin-top: 96px !important;
+    width: 40%;
+    position: relative;
+    left: 80%;
+    margin-left: -115px !important;
+}
+select.country {
+height: 45px;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    width: 240px !important;
+    max-width: 500px !important;
+    left: 45% !important;
+    top: 0px;
+    margin-top: 0px !important;
+    position: relative;
+    right: 0px !important;
+    width: 100%;
+}
+input#CVV {
+    width: 128px !important;
+}
+.iagree { display: none; }
+.pmpro_payment-expiration label {
+    position: relative;
+    top: 45px;
+    left: 100px;
+    font-size: 12px;
+    min-width: 100px !important;
+    color: #999;
+}
+input#password {
+    width: 42% !important;
+}
+.paswd2 {
+position: relative;
+    top: -64px;
+    left: 51% !important;
+    width: 42% !important;
+}
+.email {
+    position: relative;
+    top: -66px;
+    width: 42% !important;
+    left: 38px;
+}
+.confemail {
+    position: relative;
+    top: -130px;
+    left: 51%;
+    width: 42%;
+}
+.membership-confirmation .frm_error {
+    margin-top: -60px !important;
+    margin-right: 30px !important;
+}
+.membership-checkout .close, .membership-confirmation .close {
+    position: absolute;
+    right: -45px;
+    top: 0px;
+    background-color: #000 !important;
+    padding: 12px 0px;
+    z-index: 100000000000000000 !important;
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+margin-top: 0px;
+}
+.pop_over_content {
+    padding: 20px 50px;
+}
+form.pmpro_form select {
+    z-index: 1000000000000;
+}
+.pop_over_content p {
+    font-size: 15px;
+}
+.close a {
+ padding: 12px 15px;
+color: #fff !important;
+}
+#pmpro_account .pmpro_box {
+    border: none;
+padding: 35px 45px;
+}
+div#pmpro_account .pmpro_box h3 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+font-size: 22px;
+}
+div#pmpro_account .pmpro_box {
+    background-color: #F7F7F7;
+}
+select#ExpirationMonth, select#ExpirationYear {
+    height: 45px;
+    font-size: 18px;
+}
+.pmpro_payment-expiration {
+   margin-left: 30px !important;
+margin-top: 25px !important;
+}
+.pmpro_payment-account-number label {
+    visibility: hidden;
+}
+form.pmpro_form .pmpro_submit {
+margin-left: 0px !important;
+    padding: 0px 10px;
+    height: 50px;
+     margin-top: 70px;
+}
+.copytext_left ul li a {
+    color: #777;
+    font-size: 15px;
+}
+.frm_opt_container.iagree {
+    margin-top: 80px;
+    margin-left: -35px;
+}
+.copytext_left ul li {
+    list-style: none;
+float: left;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+span#pmpro_submit_span {
+    width: 100%;
+margin-top: 25px;
+}
+.membership-confirmation .nav-next.alignright {
+    display: none;
+}
+span.pmpro_asterisk {
+    display: none;
+}
+table#pmpro_user_fields {
+top: -50px !important;
+    position: relative;
+}
+.frm_title h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 35px;
+    padding: 10px;
+}
+.price_box {
+    float: left;
+    width: 100%;
+max-height: 145px;
+margin-top: -20px !important;
+}
+.price_box .col-md-6 {
+    border: 1px solid #ccc;
+    padding: 10px;
+margin-left: 20px;
+margin-right: 20px;
+    float: left !important;
+}
+.col-md-6.monthly {
+    width: 35%;
+    margin-left: 50px;
+}
+.col-md-6.yearly {
+    width: 35%;
+    margin-right: 50px;
+}
+div#frm_checkbox_21-0 label {
+width: 100% !important;
+    left: 35px !important;
+    position: relative;
+    text-align: left;
+    margin-top: -15px;
+    margin-bottom: 20px;
+display: block;
+}
+input#field_9hqv5-0 {
+    position: relative;
+    top: 5px;
+}
+form.pmpro_form label, .pmpro_payment-cvv small, .page-id-58 table#pmpro_levels_table, .page-id-58 nav#nav-below {
+    display: none;
+}
+form#pmpro_form {
+    margin-top: -45px;
+}
+.gframert {
+    margin-bottom: 0px !important;
+    position: absolute;
+    top: 0px;
+    height: 85%;
+    left: 10px;
+   background-color: rgba(0, 0, 0, 0.01);
+    width: 95%;
+}
+.gframelt {
+    margin-bottom: 0px !important;
+    position: absolute;
+    top: 75px;
+    height: 80px;
+    left: 45px;
+    background-color:rgba(0, 0, 0, 0.01);
+    width: 42%;
+}
+a.pmpro_a-print, .page-id-432 input#field_igblt, input#password, input#password2, .page-id-432 input#field_3ie0m, .page-id-432 div#frm_checkbox_136-0, div#pmpro_account-profile .pmpro_actionlinks {
+    display: none;
+}
+.page-id-432 .entry-content div.row {
+width: 100%;
+    padding: 30px 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-align: left;
+}
+div#pmpro_cancel {
+    text-align: center;
+}
+.form-footer p {
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+}
+.form-footer {
+    height: 75px;
+    top: 35px !important;
+    position: relative;
+    width: 95%;
+    left: 15px;
+}
+div#pmpro_level-7 .frm_title.start,  div#pmpro_level-7 .frm_title.upgrade {
+    display: none;
+}
+.frm_title.single {
+    margin-top: 30px;
+    height: 60px !important;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px !important;
+}
+.sf-menu a {
+transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+}
+input#field_78cis, input#field_wmdmg {
+    border-radius: 0px;
+}
+input#field_ndum, input#field_g8uyq, input#field_ip210 {
+    margin-left: 13px;
+    width: 96%;
+}
+div#popmake-157 {
+    background-color: #fff;
+position: relative;
+}
+input#field_wmdmg, input#field_wmdmg3 {
+    background: url(https://everythingwp.co/wp-content/uploads/2016/03/cvv_bg.png) right center no-repeat;
+}
+div#select2-drop, div#ui-datepicker-div {
+    z-index: 10000000000 !important;
+}
+div#popmake-283 .popmake-title {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+input#field_g8uyq3, input#field_ndum3 {
+    padding: 20px;
+    border-radius: 2px;
+    margin: 5px 15px;
+    width: 95%;
+}
+input#field_78cis3, input#field_wmdmg3 {
+    border-radius: 0px;
+    border: 1px solid #A0A0A0;
+    padding: 20px;
+}
+div#s2id_field_qw9dy3 { 
+    border-radius: 0px;
+    border: 1px solid #A0A0A0;
+width: 245px;
+}
+.black {
+    color: #000 !important;
+}
+.col-xs-3.billing {
+    color: #ccc;
+}
+@font-face {
+	font-family: 'proximanovalight';
+	src: url('/wp-content/themes/psd2wpbuilder/fonts/proximanovalight.eot');
+	src: local('proximanovalight'), url('/wp-content/themes/psd2wpbuilder/fonts/proximanovalight.woff') format('woff'), url('/wp-content/themes/psd2wpbuilder/fonts/proximanovalight.ttf') format('truetype');
+}
+body {
+    font-family: 'proximanovalight'!important;
+    margin-bottom: 40px;
+}
+h1, h2, h3, h4 {
+    font-family: 'proximanovalight'!important;
+}
+.free.pricing-table h1 {
+ font-family: 'Lato'!important;
+}
+li.feature.yep span {
+    color: #333;
+}
+input[type="checkbox"]#field_9hqv5-0 {
+    background: url(https://everythingwp.co/wp-content/uploads/2016/03/un-tick.png) left center no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 0px;
+    background-position: 0px -2px;
+    width: 25px;
+    height: 22px;
+}
+input[type="checkbox"]#field_9hqv5-0:checked {
+    background: url(https://everythingwp.co/wp-content/uploads/2016/03/tick.png) left center no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 0px;
+    background-position: 0px -2px;
+    width: 25px;
+    height: 22px;
+}
+form#form_rokfu .frm_submit {
+    width: 190px;
+    float: right;
+}
+div#frm_form_10_container, body.page-id-316 p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type=submit]:hover {
+    background-color: #19C085 !important;
+}
+.price-bottom {
+    height: 2px;
+    background: #5cc0d4;
+    background: -moz-linear-gradient(-45deg, #5cc0d4 0%, #88d0c4 51%, #b5e4af 100%);
+    background: -webkit-linear-gradient(-45deg, #5cc0d4 0%,#88d0c4 51%,#b5e4af 100%);
+    background: linear-gradient(135deg, #5cc0d4 0%,#88d0c4 51%,#b5e4af 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cc0d4', endColorstr='#b5e4af',GradientType=1 );
+}
+.free.pricing-table.medium .price-bottom {
+    top: 20px;
+    position: relative;
+}
+.login-form {
+    background-color: #fff; 
+    padding: 24px 23px 20px;
+    position: relative; 
+    border-radius: 0px;
+}
+.login-form .login-field {
+ border-color: #eaeaea;
+    font-size: 17px;
+    text-indent: 3px;
+    border-radius: 0px;
+    height: 50px;
+    max-width: 500px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.fui-user:before, .fui-lock:before {
+    content: " ";
+}
+.login-form:before {
+display:none;
+}
+input.btn.btn-primary.btn-lg.btn-block {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    border-radius: 2px !important;
+}
+.page-id-11 a.reg {
+    display: none;
+}
+.page-id-11 .form-group:nth-child(5) {
+    color: #fff;
+}
+.page-id-11 a.lostp {
+    font-size: 18px;
+    color: #999;
+    font-weight: bold;
+}
+.login-form p {
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+span.fullstripe-form-title {
+    display: none;
+}
+.pmpro_actionlinks a.switch {
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin: 20px 30px 0px 0px;
+    background-color: #19C085;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.pmpro_actionlinks a.cancel {
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin: 20px 30px 0px 0px;
+    background-color: #999;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+li.pricing-footer.active a {
+    background: #5cc0d4;
+    background: -moz-linear-gradient(-45deg, #5cc0d4 0%, #88d0c4 51%, #b5e4af 100%);
+    background: -webkit-linear-gradient(-45deg, #5cc0d4 0%,#88d0c4 51%,#b5e4af 100%);
+    background: linear-gradient(135deg, #5cc0d4 0%,#88d0c4 51%,#b5e4af 100%);
+    border: 0px;
+    padding: 2px;
+}
+li.pricing-footer.active a span {
+    background-color: #fff;
+    padding: 13px 25px;
+}
+body.upgrade img.toggle2.wp-image-119 {
+    margin-top: 26px;
+}@media (max-width: 543px){.aboveheader .col-md-12 h1 {
+    font-size: 20px;
+    padding: 20px;
+}
+.fredcarousel {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 6% 0;
+}
+.fredcarousel .tcol-ss-12 {
+    min-width: 200px !important;
+}
+div#shaon-pricing-table {
+    width: 100% !important;
+}
+.free.pricing-table h5, .wppt-info-circle h1 {
+    text-align: center;
+}
+.caroufredsel_wrapper {
+    min-width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+form#form_rokfu .frm_submit {
+    width: auto;
+    float: none;
+}
+.hdr-widget1 {
+    position: relative;
+    top: -50px !important;
+}
+.hdr-widget1 h1 {
+    background-color: rgba(29, 30, 50, 0.5);
+}
+h2 { font-size: 28px !important; }
+.credit {
+    text-align: center;
+}
+.footertext.clearfix img {
+    position: relative;
+    top: 0px;
+}
+.footernav ul li a {
+    line-height: 10px;
+    margin: 10px 0px;
+}
+.free.pricing-table.singlejob {
+    padding: 20px;
+    width: auto;
+}
+h1 {
+    font-size: 24px;
+}
+.sign-up-2 h4 {
+font-size: 16px !important;
+    margin-bottom: 35px;
+}
+.sign-up-2bg {
+padding: 25px !important;
+}} 
+body.home.page .container.slider-banner {display: block;} body.home.page .full-slider {display: block;} .container.slider-banner {display: none;} .full-slider {display: none;}.full-slider img {width: 100%;}.boxed #wrapper.container {-webkit-box-shadow:none !important; box-shadow:none !important;}</style>
+<script>
+$(document).ready(function(){
+    $(".page.home div#thelogo img").attr("src", "https://everythingwp.co/wp-content/uploads/2016/04/logo-dark.png");
+    $(".pmpro_payment-account-number input").attr("placeholder", "Card Number");
+    $(".pmpro_payment-cvv input").attr("placeholder", "CVV");
+    $("body.logged-in .frm_title.start").addClass("hidden");
+    $("body.logged-in .frm_title.upgrade").addClass("show");
+    $("li.pricing-footer.active a").addClass("disabled");
+    $("li.pricing-footer.active a").html("<span>CURRENT PLAN</span>");
+    $(".ppsMainFrame").attr("scrolling", "no");
+         $("ul#menu-main-menu-1").append("<li class='menu-signout afterlogin'><a href='https://everythingwp.co/wp-login.php?action=logout&amp;_wpnonce=64f4fcdc4a&amp;redirect_to=https://everythingwp.co/sign-in/'><span>Sign Out</span><p></p></a></li>");
+});
+$(function () { 
+    $('input#CVV').change(function() {
+       if ($(this).val().length === 0)
+          $('.iagree').hide();
+       else
+          $('.iagree').show();
+    });
+});
+$(function () {   
+var $bemail = $("#bemail"); 
+var $bconfirmemail = $("#bconfirmemail");
+var $pass = $("input#field_h7wt3"); 
+var $password = $("input#password"); 
+var $password2 = $("input#password2"); 
+
+$("#username").keyup(function() {
+    $bemail.val(this.value);
+     $bconfirmemail.val(this.value);
+     $password.val(this.value);
+     $password2.val(this.value);
+});
+$("#username").blur(function() {
+    $bemail.val(this.value);
+    $bconfirmemail.val(this.value);
+    $password.val(this.value);
+    $password2.val(this.value);
+});
+$("input#field_lcsvd").keyup(function() {
+    $pass.val(this.value);
+});
+$("input#field_lcsvd").blur(function() {
+    $pass.val(this.value);
+});
+});
+
+$(document).ready(function(){
+    var _value = $(this).find('.email').text();
+    $(this).find('#field_igblt').attr('value', _value);
+});
+$(document).ready(function(){
+    $('.page-id-432 input[type="submit"]').attr('value', 'SET NOW');
+});
+
+</script>				<script type="text/javascript">
+					<!--
+					// this identifies your website in the createToken call below
+					Stripe.setPublishableKey('pk_test_7poXrCyXxYZD35688UUhrziQ');
+
+					var pmpro_require_billing = true;
+
+					jQuery(document).ready(function() {
+						jQuery("#pmpro_form, .pmpro_form").submit(function(event) {
+
+						//double check in case a discount code made the level free
+						if(pmpro_require_billing)
+						{
+							//build array for creating token
+							var args = {
+								number: jQuery('#AccountNumber').val(),								
+								exp_month: jQuery('#ExpirationMonth').val(),
+								exp_year: jQuery('#ExpirationYear').val()
+															};
+
+							//add CVC if not blank
+							if(jQuery('#CVV').val().length)
+								args['cvc'] = jQuery('#CVV').val();
+
+							//add first and last name if not blank
+							if (jQuery('#bfirstname').length && jQuery('#blastname').length)
+								args['name'] = jQuery.trim(jQuery('#bfirstname').val() + ' ' + jQuery('#blastname').val());
+
+							//create token
+							Stripe.createToken(args, stripeResponseHandler);
+
+							// prevent the form from submitting with the default action
+							return false;
+						}
+						else
+							return true;	//not using Stripe anymore
+						});
+					});
+
+					function stripeResponseHandler(status, response) {
+						if (response.error) {
+							// re-enable the submit button
+							jQuery('.pmpro_btn-submit-checkout').removeAttr("disabled");
+
+							//hide processing message
+							jQuery('#pmpro_processing_message').css('visibility', 'hidden');
+
+							// show the errors on the form
+							alert(response.error.message);
+							jQuery(".payment-errors").text(response.error.message);
+						} else {
+							var form$ = jQuery("#pmpro_form, .pmpro_form");
+							// token contains id, last4, and card type
+							var token = response['id'];
+							// insert the token into the form so it gets submitted to the server
+							form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+
+							//console.log(response);
+
+							//insert fields for other card fields
+							if(jQuery('#CardType[name=CardType]').length)
+								jQuery('#CardType').val(response['card']['brand']);
+							else
+								form$.append("<input type='hidden' name='CardType' value='" + response['card']['brand'] + "'/>");
+							form$.append("<input type='hidden' name='AccountNumber' value='XXXXXXXXXXXXX" + response['card']['last4'] + "'/>");
+							form$.append("<input type='hidden' name='ExpirationMonth' value='" + ("0" + response['card']['exp_month']).slice(-2) + "'/>");
+							form$.append("<input type='hidden' name='ExpirationYear' value='" + response['card']['exp_year'] + "'/>");
+
+							// and submit
+							form$.get(0).submit();
+						}
+					}
+					-->
+				</script>
+				<!--[if lt IE 9]>
+<script src="https://everythingwp.co/wp-content/themes/bigcloudcms/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+<style type="text/css" title="dynamic-css" class="options-output">header #logo a.brand,.logofont{font-family:Lato;line-height:40px;font-weight:400;font-style:normal;font-size:32px;}.kad_tagline{font-family:Lato;line-height:20px;font-weight:400;font-style:normal;color:#444444;font-size:14px;}.credit p, .credit span{font-family:Lato;line-height:18px;font-weight:400;font-style:normal;color:#777777;font-size:13px;}.product_item .product_details h5{font-family:Lato;line-height:20px;font-weight:normal;font-style:700;font-size:16px;}h1{font-family:Lato;line-height:40px;font-weight:300;font-style:normal;color:#000000;font-size:35px;}h2{font-family:Lato;line-height:40px;font-weight:400;font-style:normal;font-size:32px;}h3{font-family:Lato;line-height:40px;font-weight:700;font-style:normal;color:#000000;font-size:18px;}h4{font-family:Lato;line-height:40px;font-weight:400;font-style:normal;font-size:24px;}h5{font-family:Lato;line-height:24px;font-weight:normal;font-style:normal;font-size:28px;}body{font-family:Lato;line-height:26px;font-weight:400;font-style:normal;color:#727272;font-size:16px;}#nav-main ul.sf-menu a, .nav-main ul.sf-menu a{font-family:Lato;line-height:20px;font-weight:400;font-style:normal;color:#000000;font-size:14px;}#nav-secnd ul.sf-menu a{font-family:Lato;line-height:22px;font-weight:400;font-style:normal;font-size:18px;}#nav-third ul.sf-menu a{font-family:Lato;line-height:22px;font-weight:400;font-style:normal;font-size:18px;}.kad-nav-inner .kad-mnav, .kad-mobile-nav .kad-nav-inner li a,.nav-trigger-case{font-family:Lato;line-height:20px;font-weight:400;font-style:normal;font-size:16px;}</style>  <!--[if lt IE 9]>
+      <script src="https://everythingwp.co/wp-content/themes/bigcloudcms/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>

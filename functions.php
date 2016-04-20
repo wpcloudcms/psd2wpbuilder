@@ -16,14 +16,8 @@ function custom_scripts() {
     
     wp_register_style( 'wpcloudcms-css', get_stylesheet_directory_uri().'/assets/css/wpcloudcms.css' );
     wp_enqueue_style('wpcloudcms-css');
-    
-    wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.min.css' );
-    wp_enqueue_style('animate-css');
-    
-    wp_enqueue_script( 'js-lib-1', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js');          
-        
-    wp_register_script( 'scrollSpeed-js', get_stylesheet_directory_uri() . '/jQuery.scrollSpeed.js');  
-    wp_enqueue_script('scrollSpeed-js');
+
+    wp_enqueue_script( 'js-lib-1', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js');  
     
 //  wp_enqueue_script( 'js-lib-2', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js');
     
@@ -33,14 +27,41 @@ function custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
-function footerscrollscript() {
+function headerscripts() {
+    
+    if( wp_script_is( 'jquery', 'done' ) ) {
+    ?>
+    <script>
+    $(function(){
+   if ($('body').hasClass('membership-checkout')) {
+        $("link#formidable-css, link#pmpro_print-css, link#siteorigin-panels-front-css, link#pp-bootstrap-css, link#pp-flat-ui-css, link#ppcore-css, link#wpcloudcms-css-css, link#animate-css-css, link#virtue_skin-css, link#kadence_child-css, link#redux-google-fonts-virtue_premium-css, div#wrapper, footer#containerfooter, .footertext.clearfix").remove();
+       $("script[src*='jquery-migrate.min.js'], script[src*='jquery.min.js'], script[src*='wp-emoji-release.min.js']").remove();
+         }
+    if ($('body').hasClass('pricing')) {
+        $("link#formidable-css, link#pmpro_print-css, link#pp-bootstrap-css, link#pp-flat-ui-css, link#ppcore-css, link#animate-css-css").remove();
+        $("script[src*='jquery-migrate.min.js'], script[src*='jquery.min.js'], script[src*='wp-emoji-release.min.js']").remove();
+    }
+});
+</script>
+    <?php
+    }
+}
+add_action( 'wp_head', 'headerscripts' );
+
+function footerscripts() {
+    
+    wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.min.css' );
+    wp_enqueue_style('animate-css');        
+        
+    wp_register_script( 'scrollSpeed-js', get_stylesheet_directory_uri() . '/jQuery.scrollSpeed.js');  
+    wp_enqueue_script('scrollSpeed-js');
     
     wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js');  
     wp_enqueue_script('custom-js');
     
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
-    <script>
+    <script>		   
         $(".loader").css("opacity", 0), setTimeout(function() {
             $(".loader").hide()
         }, 600),
@@ -51,7 +72,7 @@ $(function() {
     <?php
     }
 }
-add_action( 'wp_footer', 'footerscrollscript' );
+add_action( 'wp_footer', 'footerscripts' );
 
 /**
  * WordPress function for logout menu
