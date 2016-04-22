@@ -71,6 +71,73 @@ nav#nav-main ul.sf-menu>li a:hover p {
 .revealOnScroll {
     visibility: hidden;
 }
+
+footer#containerfooter {
+    z-index: -1;
+    position: relative;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    padding: 60px 25%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+        -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+/* The Close Button */
+.close {
+    color: #fff;
+    float: right;
+        margin-right: -55px;
+    margin-top: -20px;
+    padding: 5px 10px;
+    background-color: #000;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {padding: 2px 16px;
+        float: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; 
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0px !important;
+    height: 620px;}
+iframe {
+  display: none;
+    top: 0px;
+    margin-top: 0px;
+    position: absolute;
+    left: 0px;
+}
 section#topbar .container .row {height: auto; margin: auto;}
 .full-slider {
     padding-left: 20px;
@@ -237,7 +304,6 @@ aside#leftsidebar {
     max-width: 100%;
 }
 aside#ktsidebar {
-    float: right;
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 100%;
@@ -278,7 +344,7 @@ div#select2-drop, div#ui-datepicker-div, div#kad-mobile-nav {
     height: auto;
 }
 div#mobile-nav-trigger {
-    z-index: 1000;
+    z-index: 0;
     background-color: #fafafa;
     top: -10px !important;
     padding: 0px;

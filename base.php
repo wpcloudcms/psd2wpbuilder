@@ -1,7 +1,9 @@
 <?php 
-  do_action('get_header');
-  get_template_part('templates/head');
-
+if (is_page('Membership Checkout')) { 
+  do_action('get_header'); get_template_part('templates/headlanding');
+} else { 
+    do_action('get_header'); get_template_part('templates/head');
+}  
   global $virtue_premium; 
   if(isset($virtue_premium["smooth_scrolling"]) && $virtue_premium["smooth_scrolling"] == '1') {$scrolling = '1';}  else if(isset($pinnacle["smooth_scrolling"]) && $pinnacle["smooth_scrolling"] == '2') { $scrolling = '2';} else {$scrolling = '0';}
   if(isset($virtue_premium["smooth_scrolling_hide"]) && $virtue_premium["smooth_scrolling_hide"] == '1') {$scrolling_hide = '1';} else {$scrolling_hide = '0';} 
@@ -13,9 +15,17 @@
   ?>
 <body <?php body_class(); ?> data-smooth-scrolling="<?php echo esc_attr($scrolling);?>" data-smooth-scrolling-hide="<?php echo esc_attr($scrolling_hide);?>" data-jsselect="<?php echo esc_attr($select2_select);?>" data-product-tab-scroll="<?php echo esc_attr($pscroll); ?>" data-animate="<?php echo esc_attr($animate);?>" data-sticky="<?php echo esc_attr($sticky);?>">
     <div class="loader"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>
-       <?php if(isset($virtue_premium['headersection_width']) and $virtue_premium['headersection_width'] == 'full') { ?>
-  <div id="wrapper">
+<?php 
+    if (is_page('Membership Checkout')) { 
+        do_action('kt_beforeheader'); 
+       do_action('kt_afterheader'); include kadence_template_path(); 
+} else { 
+  ?> 
+    <?php if(isset($virtue_premium['headersection_width']) and $virtue_premium['headersection_width'] == 'full') { ?>
+    <div id="wrapper">
       <div class="container">
+             </div><!-- /.content -->
+  </div><!-- /.wrap -->
 <?php } else { ?>
  <div id="wrapper" class="container">
      <div id="header" class="container">
@@ -58,14 +68,21 @@
       </div><!-- /.row-->
           </div>
     </div><!-- /.content -->
-  </div><!-- /.wrap -->
-
-<?php do_action('get_footer'); get_template_part('templates/footer'); ?>
-<div class="footertext clearfix">
+  </div><!-- /.wrap --> <?php
+} 
+ ?>
+<?php 
+    if (is_page('Membership Checkout')) { 
+} else { 
+  do_action('get_footer'); get_template_part('templates/footer');
+      ?>  <div class="footertext clearfix">
     <div class="container">
     <div class="credit">
     <?php $footertext = $virtue_premium['footer_text']; echo do_shortcode($footertext); ?>
      </div>
     </div> 
 </div><!--Wrapper-->
+<div class="overlay" aria-hidden="true"></div><?php
+} 
+ ?>
 </body>

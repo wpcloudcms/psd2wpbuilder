@@ -31,7 +31,7 @@ function headerscripts() {
     
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
-    <script>
+    <script>  
     $(function(){
    if ($('body').hasClass('membership-checkout')) {
         $("link#formidable-css, link#pmpro_print-css, link#siteorigin-panels-front-css, link#pp-bootstrap-css, link#pp-flat-ui-css, link#ppcore-css, link#wpcloudcms-css-css, link#animate-css-css, link#virtue_skin-css, link#kadence_child-css, link#redux-google-fonts-virtue_premium-css, div#wrapper, footer#containerfooter, .footertext.clearfix").remove();
@@ -61,13 +61,62 @@ function footerscripts() {
     
     if( wp_script_is( 'jquery', 'done' ) ) {
     ?>
+
     <script>		   
         $(".loader").css("opacity", 0), setTimeout(function() {
             $(".loader").hide()
         }, 600),
 $(function() {  
     jQuery.scrollSpeed(100, 800);
-});
+}); 
+         $('#btnpricing1').click(function() { 
+        $('#iframel1').attr('src', '/membership-account/membership-checkout/?level=1');
+        $('#iframel2').attr('src', '').attr('style', 'display: none;');
+        $('#iframel3').attr('src', '').attr('style', 'display: none;');
+        $('#iframel4').attr('src', '').attr('style', 'display: none;');
+        $('#iframel5').attr('src', '').attr('style', 'display: none;');
+        $('#iframel6').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing2').click(function() { 
+        $('#iframel2').attr('src', '/membership-account/membership-checkout/?level=2');
+        $('#iframel1').attr('src', '').attr('style', 'display: none;');
+        $('#iframel3').attr('src', '').attr('style', 'display: none;');
+        $('#iframel4').attr('src', '').attr('style', 'display: none;');
+        $('#iframel5').attr('src', '').attr('style', 'display: none;');
+        $('#iframel6').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing3').click(function() { 
+        $('#iframel3').attr('src', '/membership-account/membership-checkout/?level=3'); 
+        $('#iframel1').attr('src', '').attr('style', 'display: none;');
+        $('#iframel2').attr('src', '').attr('style', 'display: none;');
+        $('#iframel4').attr('src', '').attr('style', 'display: none;');
+        $('#iframel5').attr('src', '').attr('style', 'display: none;');
+        $('#iframel6').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing4').click(function() { 
+        $('#iframel4').attr('src', '/membership-account/membership-checkout/?level=4'); 
+        $('#iframel1').attr('src', '').attr('style', 'display: none;');
+        $('#iframel2').attr('src', '').attr('style', 'display: none;');
+        $('#iframel3').attr('src', '').attr('style', 'display: none;');
+        $('#iframel5').attr('src', '').attr('style', 'display: none;');
+        $('#iframel6').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing5').click(function() { 
+        $('#iframel5').attr('src', '/membership-account/membership-checkout/?level=5');
+        $('#iframel1').attr('src', '').attr('style', 'display: none;');
+        $('#iframel2').attr('src', '').attr('style', 'display: none;');
+        $('#iframel3').attr('src', '').attr('style', 'display: none;');
+        $('#iframel4').attr('src', '').attr('style', 'display: none;');
+        $('#iframel6').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing6').click(function() { 
+        $('#iframel6').attr('src', '/membership-account/membership-checkout/?level=6');
+        $('#iframel1').attr('src', '').attr('style', 'display: none;');
+        $('#iframel2').attr('src', '').attr('style', 'display: none;');
+        $('#iframel3').attr('src', '').attr('style', 'display: none;');
+        $('#iframel4').attr('src', '').attr('style', 'display: none;');
+        $('#iframel5').attr('src', '').attr('style', 'display: none;');
+    });
 </script>
     <?php
     }
