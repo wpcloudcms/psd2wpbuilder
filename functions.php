@@ -69,6 +69,9 @@ function footerscripts() {
 $(function() {  
     jQuery.scrollSpeed(100, 800);
 }); 
+         if ($('input[type="checkbox"]#field_9hqv5-0').is(':checked')) {
+   $("input.pmpro_btn.pmpro_btn-submit-checkout").addClass("checked");
+}
          $('#btnpricing1').click(function() { 
         $('#iframel1').attr('src', '/membership-account/membership-checkout/?level=1');
         $('#iframel2').attr('src', '').attr('style', 'display: none;');

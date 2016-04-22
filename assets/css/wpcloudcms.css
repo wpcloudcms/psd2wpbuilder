@@ -128,7 +128,7 @@ footer#containerfooter {
     margin-left: auto;
     margin-right: auto;
     max-width: 600px; 
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: #fff !important;
     border: 0px !important;
     height: 620px;}
 iframe {
@@ -137,6 +137,9 @@ iframe {
     margin-top: 0px;
     position: absolute;
     left: 0px;
+}
+.loading {
+    padding: 30% 25%;
 }
 section#topbar .container .row {height: auto; margin: auto;}
 .full-slider {
@@ -202,7 +205,7 @@ margin-right: auto !important;
 }
 iframe {
     width: 100%;
-    height: auto !important;
+    height: auto;
 }
 }
 @media (max-width: 600px) {

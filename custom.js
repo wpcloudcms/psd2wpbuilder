@@ -4,7 +4,6 @@ $(document).ready(function(){
     $("i.afterlogin").closest("li").addClass("afterlogin");
     $("nav#nav-main ul li a span").after("<p>");
 });
-
 $(document).ready(function(){
     $("#toggle1").click(function(){
         $(".toggle1").show();
