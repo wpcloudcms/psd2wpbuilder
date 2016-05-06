@@ -41,6 +41,11 @@ function headerscripts() {
         $("link#formidable-css, link#pmpro_print-css, link#pp-bootstrap-css, link#pp-flat-ui-css, link#ppcore-css, link#animate-css-css").remove();
         $("script[src*='jquery-migrate.min.js'], script[src*='jquery.min.js'], script[src*='wp-emoji-release.min.js']").remove();
     }
+    if ($('body').hasClass('single-job')) {
+        $("link#formidable-css, link#pmpro_print-css, link#pp-bootstrap-css, link#pp-flat-ui-css, link#ppcore-css, link#animate-css-css").remove();
+        $("script[src*='jquery-migrate.min.js'], script[src*='jquery.min.js'], script[src*='wp-emoji-release.min.js']").remove();
+    }
+
 });
 </script>
     <?php
@@ -51,8 +56,8 @@ add_action( 'wp_head', 'headerscripts' );
 function footerscripts() {
     
     wp_register_style( 'animate-css', get_stylesheet_directory_uri().'/assets/css/animate.min.css' );
-    wp_enqueue_style('animate-css');        
-        
+    wp_enqueue_style('animate-css');  
+    
     wp_register_script( 'scrollSpeed-js', get_stylesheet_directory_uri() . '/jQuery.scrollSpeed.js');  
     wp_enqueue_script('scrollSpeed-js');
     
@@ -79,6 +84,7 @@ $(function() {
         $('#iframel4').attr('src', '').attr('style', 'display: none;');
         $('#iframel5').attr('src', '').attr('style', 'display: none;');
         $('#iframel6').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
     });
     $('#btnpricing2').click(function() { 
         $('#iframel2').attr('src', '/membership-account/membership-checkout/?level=2');
@@ -87,6 +93,7 @@ $(function() {
         $('#iframel4').attr('src', '').attr('style', 'display: none;');
         $('#iframel5').attr('src', '').attr('style', 'display: none;');
         $('#iframel6').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
     });
     $('#btnpricing3').click(function() { 
         $('#iframel3').attr('src', '/membership-account/membership-checkout/?level=3'); 
@@ -95,6 +102,7 @@ $(function() {
         $('#iframel4').attr('src', '').attr('style', 'display: none;');
         $('#iframel5').attr('src', '').attr('style', 'display: none;');
         $('#iframel6').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
     });
     $('#btnpricing4').click(function() { 
         $('#iframel4').attr('src', '/membership-account/membership-checkout/?level=4'); 
@@ -103,6 +111,7 @@ $(function() {
         $('#iframel3').attr('src', '').attr('style', 'display: none;');
         $('#iframel5').attr('src', '').attr('style', 'display: none;');
         $('#iframel6').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
     });
     $('#btnpricing5').click(function() { 
         $('#iframel5').attr('src', '/membership-account/membership-checkout/?level=5');
@@ -111,6 +120,7 @@ $(function() {
         $('#iframel3').attr('src', '').attr('style', 'display: none;');
         $('#iframel4').attr('src', '').attr('style', 'display: none;');
         $('#iframel6').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
     });
     $('#btnpricing6').click(function() { 
         $('#iframel6').attr('src', '/membership-account/membership-checkout/?level=6');
@@ -119,6 +129,11 @@ $(function() {
         $('#iframel3').attr('src', '').attr('style', 'display: none;');
         $('#iframel4').attr('src', '').attr('style', 'display: none;');
         $('#iframel5').attr('src', '').attr('style', 'display: none;');
+        $('#iframel7').attr('src', '').attr('style', 'display: none;');
+    });
+    $('#btnpricing7').click(function() { 
+        $('#iframel7').attr('src', '/membership-account/membership-checkout/?level=7');
+    {modal.style.display = "block"; iframe7.style.display = "block"; span.style.display = "block";} 
     });
 </script>
     <?php

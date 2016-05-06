@@ -32,25 +32,30 @@ var iframe3 = document.getElementById('iframel3');
 var iframe4 = document.getElementById('iframel4');
 var iframe5 = document.getElementById('iframel5');
 var iframe6 = document.getElementById('iframel6');
+var iframe7 = document.getElementById('iframel7');
 
 // Get the button that opens the modal
     var btn1 = document.getElementById("btnpricing1");
-    var btn2 = document.getElementById("btnpricing2");
+    var btn2 = document.getElementById("btnpricing2"); 
     var btn3 = document.getElementById("btnpricing3");
     var btn4 = document.getElementById("btnpricing4");
     var btn5 = document.getElementById("btnpricing5");
     var btn6 = document.getElementById("btnpricing6");
+    var btn7 = document.getElementById("btnpricing7");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
+window.onload = function(){
 btn1.onclick = function() {modal.style.display = "block"; iframe1.style.display = "block"; span.style.display = "block";}
 btn2.onclick = function() {modal.style.display = "block"; iframe2.style.display = "block"; span.style.display = "block";}
 btn3.onclick = function() {modal.style.display = "block"; iframe3.style.display = "block"; span.style.display = "block";}
 btn4.onclick = function() {modal.style.display = "block"; iframe4.style.display = "block"; span.style.display = "block";}
 btn5.onclick = function() {modal.style.display = "block"; iframe5.style.display = "block"; span.style.display = "block";}
 btn6.onclick = function() {modal.style.display = "block"; iframe6.style.display = "block"; span.style.display = "block";}
+btn7.onclick = function() {modal.style.display = "block"; iframe7.style.display = "block"; span.style.display = "block";}
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";

@@ -73,7 +73,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '1') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_101">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '1') { ?> active<?php } ?> footer-row"><button id="btnpricing1" class="btn-pricing l1 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -98,7 +98,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '2') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_100">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '2') { ?> active<?php } ?> footer-row"><button id="btnpricing2" class="btn-pricing l2 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -123,7 +123,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '3') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_102">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '3') { ?> active<?php } ?> footer-row"><button id="btnpricing3" class="btn-pricing l3 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -157,7 +157,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even blue-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '4') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_103">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '4') { ?> active<?php } ?> footer-row"><button id="btnpricing4" class="btn-pricing l4 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -183,7 +183,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_level == '5') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_104">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_level == '5') { ?> active<?php } ?> footer-row"><button id="btnpricing5" class="btn-pricing l5 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -209,7 +209,7 @@ Save 50%</div>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">TEAM AND CLIENTS</span></li>
 	<li class="feature pricing-content-row-even free-row-gray nope"><label class="label label-success"></label>   <span class="ftr">REPORTS</span></li>
 	<li class="feature pricing-content-row-odd nope"><label class="label label-success"></label>   <span class="ftr">PAYMENT AND INVOICE</span></li>
-	<li class="pricing-footer <?php if($current_user->membership_level->ID == '6') { ?> active<?php } ?> footer-row"><a class="btn-pricing btn btn-block" href="https://everythingwp.co/upgrade/#ppsShowPopUp_105">CHOOSE</a></li>
+	<li class="pricing-footer <?php if($current_user->membership_level->ID == '6') { ?> active<?php } ?> footer-row"><button id="btnpricing6" class="btn-pricing l6 btn btn-block" href="#">UPGRADE</button></li>
 </ul>
 </ul>
 <div class="price-bottom"></div>
@@ -276,6 +276,22 @@ Save 50%</div>
 	?>
 </tbody>
 </table></div>
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+<div class="modal-body">
+<span class="close">×</span>
+<div class="loading"></div>
+<iframe id="iframel1" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+<iframe id="iframel2" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+<iframe id="iframel3" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+<iframe id="iframel4" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+<iframe id="iframel5" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+<iframe id="iframel6" src="" class="pricing-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+</div>
+</div>
+</div>
 <nav id="nav-below" class="navigation hidden" role="navigation">
 	<div class="nav-previous alignleft">
 		<?php if(!empty($current_user->membership_level->ID)) { ?>
