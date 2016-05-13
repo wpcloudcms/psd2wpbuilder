@@ -180,7 +180,7 @@ function remove_admin_bar() {
 
 function my_editbilling_shortcode( $attr ) {
     ob_start();
-    get_template_part( 'templates/editbilling' );
+    get_template_part( 'paid-memberships-pro/pages/editbilling' );
     return ob_get_clean();
 }
 add_shortcode( 'edit_billing', 'my_editbilling_shortcode' );
