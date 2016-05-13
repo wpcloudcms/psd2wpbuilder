@@ -14,10 +14,9 @@ if (is_page('Membership Checkout')) {
   if(isset($virtue_premium['select2_select'])) {$select2_select = $virtue_premium['select2_select'];} else {$select2_select = '1';}
   ?>
 <body <?php body_class(); ?> data-smooth-scrolling="<?php echo esc_attr($scrolling);?>" data-smooth-scrolling-hide="<?php echo esc_attr($scrolling_hide);?>" data-jsselect="<?php echo esc_attr($select2_select);?>" data-product-tab-scroll="<?php echo esc_attr($pscroll); ?>" data-animate="<?php echo esc_attr($animate);?>" data-sticky="<?php echo esc_attr($sticky);?>">
-    <div class="loader">
-        <div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div></div></div>
+
+    <div class="siteloader-wrap transition-enabled" style="transition: none;opacity: 1;transform: translateZ(0px);"><div class="siteloader-inner"><div class="siteloader-cell"><div class="siteloader"><div class="siteloader-extra"></div></div></div></div></div>
+    
 <?php 
     if (is_page('Membership Checkout')) { 
         do_action('kt_beforeheader'); 

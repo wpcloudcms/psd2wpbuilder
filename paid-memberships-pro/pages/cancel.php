@@ -45,7 +45,7 @@
 				{ 
 					?>
 					<hr />
-					<h3><?php _e("My Memberships", "pmpro");?></h3>
+					<h3><?php _e("Current Plan", "pmpro");?></h3>
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
 						<thead>
 							<tr>

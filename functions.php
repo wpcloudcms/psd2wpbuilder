@@ -68,9 +68,12 @@ function footerscripts() {
     ?>
 
     <script>		   
-        $(".loader").css("opacity", 0), setTimeout(function() {
-            $(".loader").hide()
-        }, 600),
+    jQuery(window).load(function() {
+        // will first fade out the loading animation
+	jQuery(".siteloader-cell").delay(200).fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery(".siteloader-wrap").delay(200).fadeOut();
+})
 $(function() {  
     jQuery.scrollSpeed(100, 800);
 }); 
@@ -171,6 +174,17 @@ function remove_admin_bar() {
 }
         else { }
 }
+/**
+ * Add editbilling.php into a post or page using shortcode [edit_billing]
+ */
+
+function my_editbilling_shortcode( $attr ) {
+    ob_start();
+    get_template_part( 'templates/editbilling' );
+    return ob_get_clean();
+}
+add_shortcode( 'edit_billing', 'my_editbilling_shortcode' );
+
 /**
  * WordPress function for redirecting users on login based on user role
  */

@@ -1,42 +1,66 @@
-.loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 9999;
-    text-align: center;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    transition: all .5s ease;
-    opacity: 1;
-}
 #wpadminbar ul li {
     margin-top: -5px;
 } 
-.spinner {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-left: -20px;
-    margin-top: -20px;
+#top .av-siteloader-wrap {
+    background-color: #ffffff;
 }
-.double-bounce1, .double-bounce2 {
-    width: 100%;
-    height: 100%;  
-    border-radius: 50%;
-    background-color: #31CCB2;
-    opacity: .6;
-    position: absolute;
+.siteloader-wrap {
+    position: fixed;
     top: 0;
     left: 0;
-    -webkit-animation: bounce 2s infinite ease-in-out;
-    animation: bounce 2s infinite ease-in-out;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    background: #fff;
+    display: block;
 }
-.double-bounce2 {
-    -webkit-animation-delay: -1s;
-    animation-delay: -1s;
+.siteloader-inner {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.siteloader-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.siteloader, .siteloader:after {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.siteloader {
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    margin: 0 auto;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 3px solid #000;
+    -webkit-animation: load8 0.8s infinite linear;
+    animation: load8 0.8s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes load8 {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% {-webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+.siteloader {
+    border-color: #C6C6C6;
+    border-left-color: #27D3A3;
+}
+body.home .loading {
+    display: none;
+}
+.siteorigin-panels-stretch.kt-panel-row-parallax-stellar {
+    background-position: 0% 0% !important;
 }
         .os-animation{
             opacity: 0;
@@ -398,6 +422,9 @@ ul#wp-admin-bar-top-secondary {
 .text-center {text-align: center;}
 .text-justify {text-align: justify;}
 .text-nowrap {text-align: inherit;}
+
+.kad-header-right {z-index: 0;}
+
 @media (max-width: 543px) {
 .pad5 {padding: 1px;} .pad10 {padding: 2px;} .pad15 {padding: 3px;} .pad20 {padding: 4px;} .pad25 {padding: 5px;} 
 .pad30 {padding: 6px;} .pad60 {padding: 12px;} .pad120 {padding: 24px;}
