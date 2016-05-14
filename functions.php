@@ -70,9 +70,9 @@ function footerscripts() {
     <script>		   
     jQuery(window).load(function() {
         // will first fade out the loading animation
-	jQuery(".siteloader-cell").delay(200).fadeOut();
+	jQuery(".siteloader-cell").delay(90).fadeOut();
         // will fade out the whole DIV that covers the website.
-	jQuery(".siteloader-wrap").delay(200).fadeOut();
+	jQuery(".siteloader-wrap").delay(100).fadeOut();
 })
 $(function() {  
     jQuery.scrollSpeed(100, 800);
